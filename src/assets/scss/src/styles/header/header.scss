@@ -1,7 +1,20 @@
 .site-header {
+  position: relative;
   background-color: $white;
   height: 80px;
   width: 100%;
+}
+
+
+.site-title {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.svef-logo {
+  width: 109px;
+  height: 17px;
 }
 
 .nav {
@@ -17,4 +30,10 @@
     justify-content: space-between;
   }
 }
+
+.side-menu {
+  position: absolute;
+}
+
+
 
