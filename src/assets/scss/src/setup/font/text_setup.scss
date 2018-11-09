@@ -1,0 +1,132 @@
+h1 {
+  font-family: $font-noto;
+  font-weight: 700;
+  line-height: 68px;
+  font-size: 50px;
+  @include breakpoint(medium down) {
+    font-size: 34px
+  }
+}
+
+h2 {
+  font-family: $font-noto;
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 34px;
+}
+
+h3 {
+  font-family: $font-noto;
+  font-weight: 700;
+  line-height: 36px;
+  font-size: 24px;
+  color: $black;
+}
+
+h4 {
+  line-height: 32px;
+  font-size: 18px;
+  color: $black;
+}
+
+p {
+  font-family: $font-overpass;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 15px;
+  color: $black;
+}
+
+.text {
+  @extend p;
+  &--large {
+    line-height: 28px;
+    font-size: 18px;
+  }
+  &--small {
+    line-height: 22px;
+    font-size: 13px;
+  }
+  &--quate {
+    line-height: normal;
+    font-size: 34px;
+  }
+  &--breadcrum {
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $black-40;
+  }
+  &--span-input-required {
+    font-weight: 300;
+    line-height: 22px;
+    font-size: 13px;
+    color: $darkBlue-40;
+  }
+  &--span-input-error {
+    font-weight: bold;
+    line-height: normal;
+    font-size: 12px;
+    color: $orange;
+  }
+  &--orange {
+    color: $orange;
+  }
+}
+
+a {
+  font-family: $font-overpass;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: $black;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.link-text {
+  &--menu {
+    line-height: 22px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+button {
+  font-family: $font-overpass;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+label {
+  font-family: $font-overpass;
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 13px;
+  color: $black;
+}
+
+input[type="text"], input[type="checkbox"] {
+  font-family: $font-overpass;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 15px;
+  color: $darkBlue;
+}
+
+
+select {
+  @extend .link-text-menu;
+}
+
+
