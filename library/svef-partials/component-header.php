@@ -2,7 +2,10 @@
 		<nav class="nav" role="navigation">
 
 				<div class="nav__logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<?php svef_partial('library/svef/icons/sveflogo.svg') ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+
+				</a>
 				</div>
 
 			<div class="nav__items">
@@ -19,9 +22,10 @@
 			</div>
 		</nav>
 
-		<menu style="">
+		<menu style="side-menu">
 			<div class="">
-				<?php # foundationpress_top_bar_r(); ?>
+				<?php foundationpress_top_bar_r(); ?>
+				<?php foundationpress_footer(); ?>
 			</div>
 		</menu>
 
