@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
+import Header from './partials/component-header';
 
 window.$ = $;
 
@@ -9,3 +10,5 @@ window.$ = $;
 import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
+
+Header.init();

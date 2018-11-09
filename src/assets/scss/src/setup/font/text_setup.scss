@@ -93,6 +93,7 @@ a {
 
 .link-text {
   &--menu {
+    @extend a;
     line-height: 22px;
     font-size: 12px;
     text-transform: uppercase;

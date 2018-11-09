@@ -1,10 +1,16 @@
 .site-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: $white;
   height: 80px;
   width: 100%;
+  z-index: 1;
+  &--shadow {
+    transition: box-shadow 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 4px 12px lighten($black-40, 70);
+  }
 }
-
 
 .site-title {
   visibility: hidden;
@@ -28,11 +34,70 @@
     width: 210px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  &__home {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  &__icon {
+    position: relative;
+    width: 20px;
+    height: 9px;
+    &__line {
+      position: absolute;
+      right: 0;
+      width: 12px;
+      height: 1px;
+      background-color: $black;
+      transition: width 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &__line:last-child {
+      bottom: 0;
+      width: 20px;
+    }
+  }
+  &__menu-button {
+    width: 64px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &--clicked {
+      .nav__icon {
+        &__line {
+          width: 20px;
+        }
+        &__line:last-child {
+          width: 12px;
+        }
+      }
+    }
   }
 }
 
+
+
 .side-menu {
   position: absolute;
+  top: 80px;
+  margin: 0;
+  right: -60vw;
+  width: 50vw;
+  height: 100vh;
+  background-color: $darkBlue;
+  transition: right 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &--active {
+    right: 0;
+  }
+
 }
 
 
