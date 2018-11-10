@@ -32,6 +32,7 @@
   align-items: center;
   &__items {
     width: 210px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,6 +51,7 @@
     position: relative;
     width: 20px;
     height: 9px;
+    z-index: -1;
     &__line {
       position: absolute;
       right: 0;
@@ -65,11 +67,13 @@
   }
   &__menu-button {
     width: 64px;
+    height: 100%;
     display: flex;
     background-color: transparent;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 1;
     &--clicked {
       .nav__icon {
         &__line {
