@@ -130,4 +130,10 @@ select {
   @extend .link-text--menu;
 }
 
+.body--contrast {
+  h1, h2, h3, h4, p, a, .text, label, button, input[type="text"], input[type="checkbox"] {
+    color: $white;
+  }
+}
+
 

@@ -9,11 +9,13 @@ const Header = {
     this.header = this.body.querySelector('.site-header')
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
+    this.btnContrast = this.body.querySelector('.nav__suprise')
   },
   addEvents() {
     this.btnMenu.addEventListener('click', this.handleMenuClick.bind(this))
     this.body.addEventListener('click', this.clickedOutSideMenu.bind(this))
     this.body.addEventListener('keyup', this.escapeMenu.bind(this))
+    this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
   handleMenuClick(e) {
@@ -43,6 +45,13 @@ const Header = {
     if (this.sideMenu.classList.contains('side-menu--active') && e.code == 'Escape') {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
+    }
+  },
+  clickSiteContrast(e) {
+    if (!this.body.classList.contains('body--contrast')) {
+      this.body.classList.add('body--contrast')
+    } else {
+      this.body.classList.remove('body--contrast')
     }
   }
 }

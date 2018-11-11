@@ -18,7 +18,7 @@
 					is  en
 				</div>
 				<div class="nav__suprise">
-					o
+
 				</div>
 				<button id="btnMenu" class="nav__menu-button link-text--menu" >
 					<span class="nav__icon">
