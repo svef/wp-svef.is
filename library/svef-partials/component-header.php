@@ -1,4 +1,4 @@
-<header class="site-header" role="banner">
+<header class="site-header">
 		<nav class="nav" role="navigation">
 
 				<div class="nav__logo">

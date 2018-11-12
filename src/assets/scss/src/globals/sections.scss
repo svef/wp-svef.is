@@ -1,0 +1,35 @@
+.section {
+  &__bg-color {
+    &--default {
+      height: 800px;
+      background: $bgGray;
+    }
+  }
+  &__image {
+    .hero-image {
+      position: absolute;
+      width: 56vw;
+      height: 100%;
+      max-height: 600px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__paragraph {
+    min-height: 240px;
+    max-height: 240px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    svg {
+      margin-left: 20px;
+    }
+  }
+}
+
+.body--contrast {
+  .section__bg-color--default {background: $darkBlue;}
+}
