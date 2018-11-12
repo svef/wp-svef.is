@@ -116,7 +116,11 @@ label {
   font-size: 13px;
   color: $black;
 }
-
+li {
+  a {
+    color: $black;
+  }
+}
 input[type="text"], input[type="checkbox"] {
   font-family: $font-overpass;
   font-weight: 300;
@@ -129,9 +133,17 @@ input[type="text"], input[type="checkbox"] {
 select {
   @extend .link-text--menu;
 }
-
+.section {
+  &__bg-color {
+    &--dark {
+      h1, h2, h3, h4, p, a, .text, label, button, li, input[type="text"], input[type="checkbox"] {
+        color: $white;
+      }
+    }
+  }
+}
 .body--contrast {
-  h1, h2, h3, h4, p, a, .text, label, button, input[type="text"], input[type="checkbox"] {
+  h1, h2, h3, h4, p, a, .text, label, button, li, input[type="text"], input[type="checkbox"] {
     color: $white;
   }
 }

@@ -1,0 +1,44 @@
+.statistics {
+    input {
+        background: $white;
+        font-family: $font-oswald;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 160px;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 120px;
+        color: $darkBlue;
+        outline: none;
+        cursor: default;
+        &:focus {
+            outline: none;
+            border: none; 
+            box-shadow: none;
+        }
+    }
+    .slider, .slider-fill {
+        height: 2px;
+        background-color: $darkBlue;
+        cursor: pointer;
+        &__year {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            font-weight: 600;
+            line-height: normal;
+            font-size: 12px;
+            color: $darkBlue;
+            opacity: 0.4;
+        }
+    }
+    .slider-handle {
+        width: 30px;
+        height: 30px;
+        background-color: $orange;
+        border: 12px solid $white;
+    }
+}

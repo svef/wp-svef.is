@@ -8,7 +8,7 @@
 					<div class="section__info grid-container grid-x">
 						<div class="cell large-5 large-offset-6 top-text-padding">
 							<h2 class="section__title">Uppskeruhátíð vefiðnaðarins</h2>
-							<p class="section__paragraph">Samtök vefiðnaðarins eru fagsamtök þeirra er starfa að vefmálum á Íslandi. Samtökin hafa það að markmiði að miðla þekkingu og efla fagleg vinnubrögð í greininni.</p>
+							<p class="section__paragraphTall">Samtök vefiðnaðarins eru fagsamtök þeirra er starfa að vefmálum á Íslandi. Samtökin hafa það að markmiði að miðla þekkingu og efla fagleg vinnubrögð í greininni.</p>
 						</div>
 						<div class="section__link cell large-5 large-offset-6">
 							<a href="">Read article</a>
