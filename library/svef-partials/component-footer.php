@@ -1,8 +1,8 @@
-<footer class="footer section--dark">
+<footer class="section section--footer section-dark">
     <div class="footer-container grid-x">
         <div class="footer__info cell small-6">
             <div class="footer__intro">
-             <?php svef_partial("library/svef/icons/sveflogo.svg"); ?>
+                <?php svef_partial("library/svef/icons/sveflogo.svg"); ?>
                 <p class="text--small">Samtök vefiðnaðarins (SVEF) eru fagsamtök þeirra er starfa að vefmálum á Íslandi. Samtökin hafa það að markmiði að miðla þekkingu og efla fagleg vinnubrögð í greininni.</p>
             </div>
             <div class="grid-x" >
