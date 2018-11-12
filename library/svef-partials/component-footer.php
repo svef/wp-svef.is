@@ -1,4 +1,4 @@
-<footer class="section section--footer section__bg-color--dark grid-container full">
+<footer class="section section--footer section__bg-color--dark grid-container full less-margin--bottom">
     <div class="footer grid-container grid-x">
         <div class="footer__info cell large-4">
             <div class="footer__intro">
@@ -20,17 +20,17 @@
                             </li>
                             <li class="socialmedia">
                                 <a href="#" target="_blank">
-                                    <?php 
+                                    <?php
                                     $classArray = array("facebookIcon" => "icon--white");
                                     svef_partial("library/svef/icons/facebook.svg", $classArray ); ?>
                                 </a>
                                 <a href="#" target="_blank">
-                                    <?php 
+                                    <?php
                                     $classArray = array("instagramIcon" => "icon--white");
                                     svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
                                 </a>
                                 <a href="#" target="_blank">
-                                <?php 
+                                <?php
                                     $classArray = array("twitterIcon" => "icon--white");
                                     svef_partial("library/svef/icons/twitter.svg", $classArray ); ?>
                                 </a>

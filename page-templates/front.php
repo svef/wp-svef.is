@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-
+<?php svef_partial("library/svef-partials/component-events"); ?>
 
 
 <?php get_footer();

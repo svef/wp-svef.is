@@ -54,6 +54,7 @@ require_once( 'library/responsive-images.php' );
 
 /** SVEF custom functions */
 require_once('library/svef/custom_functions.php');
+require_once('library/svef/custom_functions-gmap.php');
 
 require_once('library/custom-posttypes.php');
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */

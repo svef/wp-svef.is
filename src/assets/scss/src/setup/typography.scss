@@ -13,6 +13,10 @@ h2 {
   font-weight: 700;
   line-height: 48px;
   font-size: 34px;
+  @include breakpoint(medium down) {
+    font-size: 24px;
+  }
+
 }
 
 h3 {
@@ -21,6 +25,9 @@ h3 {
   line-height: 36px;
   font-size: 24px;
   color: $black;
+  @include breakpoint(medium down) {
+    font-size: 18px;
+  }
 }
 
 h4 {
@@ -95,7 +102,17 @@ a {
     @extend a;
     line-height: 22px;
     font-size: 12px;
+  }
+  &--dull {
+    opacity: 0.8;
+    text-transform: lowercase;
+  }
+  &--upper-case {
     text-transform: uppercase;
+
+  }
+  &--normal-case {
+    text-transform: initial;
   }
 }
 

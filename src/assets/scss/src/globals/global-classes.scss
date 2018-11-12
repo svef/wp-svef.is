@@ -1,3 +1,13 @@
+.link-arrow {
+  &--white {
+    fill: white;
+  }
+  &--orange {
+    fill: $orange !important;
+  }
+}
+
+
 .body--contrast{
   background: $darkBlue;
   transition: all 400ms ease;
@@ -9,9 +19,21 @@
 }
 .top-text-padding {
   padding-top: 190px;
+  @include breakpoint(small down){
+    padding-top: 80px;
+  }
 }
 .icon--white {
   path {
     fill: $white;
+  }
+}
+
+.less-margin {
+  &--top {
+    margin-top: 0;
+  }
+  &--bottom {
+    margin-bottom: 0 !important;
   }
 }
