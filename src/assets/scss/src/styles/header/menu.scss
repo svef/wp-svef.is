@@ -1,6 +1,8 @@
 .side-menu {
 
   &__inner {
+    position: relative;
+    right: 0;
     padding: 80px 100px 0 0;
   }
 
@@ -26,9 +28,11 @@
       position: relative;
       transition: all 400ms ease;
       &::after {
+        transition: all 400ms ease;
         content: '';
         position: absolute;
         visibility: hidden;
+        opacity: 0;
         right:0;
         top: 50%;
         margin-top: -6px;
@@ -41,6 +45,7 @@
           padding-right: 50px;
           &::after{
             visibility: visible;
+            opacity: 1;
           }
       }
     }

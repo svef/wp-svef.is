@@ -12,7 +12,7 @@
 				</div>
 
 			<div class="nav__items">
-				<div class="nav__lang link-text--menu">
+				<div class="nav__lang link-text--menu link-text--menu--upper-case">
 					is  en
 				</div>
 				<div class="nav__suprise">

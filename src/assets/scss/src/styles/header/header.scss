@@ -11,7 +11,7 @@
   justify-content: center;
   &--shadow {
     box-shadow: 0 4px 12px lighten($black-40, 70);
-    height: 40px;
+    height: 60px;
   }
 }
 
@@ -104,6 +104,10 @@
   height: 100vh;
   background-color: $darkBlue;
   transition: right 400ms $transition;
+  @include breakpoint(small down) {
+    width: 100vw;
+    right:-101vw;
+  }
   &--active {
     right: 0;
   }

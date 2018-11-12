@@ -1,4 +1,4 @@
-<section class="section section--statistics grid-container">
+<section class="section section--statistics section--margin-bottom grid-container">
     <div class="statistics grid-x grid-margin-x">
         <div class="cell small-12">
             <input class="statistics__spanNumber" type="number" id="sliderOutput1" readonly>
