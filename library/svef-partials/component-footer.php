@@ -7,10 +7,8 @@
             </div>
             <div class="grid-x" >
                 <div class="cell small-6">
-                    <p>link</p>
-                    <p>link</p>
-                    <p>link</p>
-                    <p>link</p>
+								<?php foundationpress_footer(); ?>
+
                 </div>
                 <div class="cell small-6">
                     <div>

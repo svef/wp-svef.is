@@ -7,6 +7,8 @@
   width: 100%;
   z-index: 1;
   transition: all 800ms $transition;
+  display: flex;
+  justify-content: center;
   &--shadow {
     box-shadow: 0 4px 12px lighten($black-40, 70);
     height: 40px;
@@ -20,6 +22,7 @@
 }
 
 .nav {
+  width: 100%;
   max-width: rem-calc(1440);
   margin: 0 40px;
   display: flex;
