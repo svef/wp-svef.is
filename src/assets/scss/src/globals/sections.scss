@@ -1,8 +1,12 @@
 .section {
+  margin-bottom: 140px !important;
   &__bg-color {
     &--default {
       height: 800px;
       background: $bgGray;
+    }
+    &--dark {
+      background: $darkBlue;
     }
   }
   &__image {
@@ -16,7 +20,7 @@
       background-position: center;
     }
   }
-  &__paragraph {
+  &__paragraphTall {
     min-height: 240px;
     max-height: 240px;
   }

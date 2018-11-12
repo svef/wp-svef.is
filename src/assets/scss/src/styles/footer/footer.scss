@@ -1,4 +1,16 @@
-.footer {
-    width: 100%;
-    height: 500px;
+.section--footer {
+    height: 440px;
+    .footer {
+        width: 100%;
+        padding-top: 100px;
+        .socialmedia {
+            margin: 24px 0;
+            a {
+                margin: 0 24px 0 0;
+            }
+        }
+        &__links {
+            margin-top: 40px;
+        }
+    }
 }

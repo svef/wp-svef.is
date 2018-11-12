@@ -24,7 +24,7 @@ import { Interchange } from 'foundation-sites/js/foundation.interchange';
 // import { ResponsiveMenu } from 'foundation-sites/js/foundation.responsiveMenu';
 // import { ResponsiveToggle } from 'foundation-sites/js/foundation.responsiveToggle';
 // import { Reveal } from 'foundation-sites/js/foundation.reveal';
-// import { Slider } from 'foundation-sites/js/foundation.slider';
+import { Slider } from 'foundation-sites/js/foundation.slider';
 import { SmoothScroll } from 'foundation-sites/js/foundation.smoothScroll';
 // import { Sticky } from 'foundation-sites/js/foundation.sticky';
 // import { Tabs } from 'foundation-sites/js/foundation.tabs';
@@ -86,7 +86,7 @@ Foundation.plugin(Interchange, 'Interchange');
 
 // Foundation.plugin(Reveal, 'Reveal');
 
-// Foundation.plugin(Slider, 'Slider');
+Foundation.plugin(Slider, 'Slider');
 
 Foundation.plugin(SmoothScroll, 'SmoothScroll');
 
