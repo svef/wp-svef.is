@@ -1,5 +1,7 @@
 import GlobalFunctions from '../global-functions'
+
 const Header = {
+
   init() {
     this.cacheDom()
     this.addEvents()
@@ -55,5 +57,6 @@ const Header = {
     }
   }
 }
+
 
 module.exports = Header;
