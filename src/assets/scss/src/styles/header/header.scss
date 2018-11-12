@@ -6,24 +6,18 @@
   height: 80px;
   width: 100%;
   z-index: 1;
-  transition: all 400ms $transition;
+  transition: all 800ms $transition;
   &--shadow {
     box-shadow: 0 4px 12px lighten($black-40, 70);
-    height: 60px;
-    // .nav {
-    //   height: 60px;
-    // }
+    height: 40px;
   }
 }
-
-
 
 .site-title {
   visibility: hidden;
   height: 0;
   width: 0;
 }
-
 
 .nav {
   max-width: rem-calc(1440);
@@ -61,7 +55,7 @@
   &__icon {
     position: relative;
     width: 20px;
-    height: 9px;
+    height: 8px;
     z-index: -1;
     &__line {
       position: absolute;
@@ -98,8 +92,6 @@
   }
 }
 
-
-
 .side-menu {
   position: absolute;
   top: 100%;
@@ -107,18 +99,16 @@
   right: -60vw;
   width: 50vw;
   height: 100vh;
-  background-color: $black;
+  background-color: $darkBlue;
   transition: right 400ms $transition;
   &--active {
     right: 0;
   }
-
 }
-
 
 .body--contrast {
   .site-header {
-    background-color: $black;
+    background-color: $darkBlue;
   }
   .nav {
     &__suprise {
