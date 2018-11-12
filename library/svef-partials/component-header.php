@@ -1,8 +1,6 @@
 <header class="site-header">
 		<nav class="nav" role="navigation">
-
 				<div class="nav__logo">
-
 					<a class="nav__home" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
 							$aSvg = array('class_name' => 'svef-logo');
@@ -31,7 +29,7 @@
 		</nav>
 
 		<menu class="side-menu">
-			<div class="">
+			<div class="side-menu__inner">
 				<?php foundationpress_top_bar_r(); ?>
 
 			</div>

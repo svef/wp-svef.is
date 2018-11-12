@@ -1,0 +1,69 @@
+.side-menu {
+
+  &__inner {
+    padding: 80px 100px 0 0;
+  }
+
+}
+
+.side-menu__list {
+  overflow: scroll;
+  li {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    height: auto;
+    flex-flow: column;
+    margin-bottom: 35px;
+    transition: all 400ms ease;
+
+    a {
+      @extend h3;
+      color: $white;
+      text-align: right;
+      margin-bottom: 28px;
+      margin-left: 0;
+      position: relative;
+      transition: all 400ms ease;
+      &::after {
+        content: '';
+        position: absolute;
+        visibility: hidden;
+        right:0;
+        top: 50%;
+        margin-top: -6px;
+        width: 33px;
+        height: 12px;
+        background-image: url('../images/icons/linkarrow.svg');
+        z-index: 4;
+      }
+      &:hover {
+          padding-right: 50px;
+          &::after{
+            visibility: visible;
+          }
+      }
+    }
+
+    ul {
+      padding-right: 30px;
+      li {
+        margin-bottom: 0;
+        height: 30px;
+        a {
+          @extend .link-text--menu;
+          height: 100%;
+          margin-bottom: 1px;
+          color: $white;
+          &:hover {
+            color: $orange;
+            padding-right: 0;
+            &::after{
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}
