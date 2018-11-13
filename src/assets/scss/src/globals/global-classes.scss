@@ -7,7 +7,6 @@
   }
 }
 
-
 .body--contrast{
   background: $darkBlue;
   transition: all 400ms ease;
@@ -35,5 +34,17 @@
   }
   &--bottom {
     margin-bottom: 0 !important;
+  }
+}
+.btnMain {
+  background-color: $white;
+  min-width: 184px;
+  border: 1px solid $darkBlue;
+  padding: 15px 40px;
+  transition: box-shadow 300ms ease, background-color 200ms ease, color 200ms ease, left 300ms ease;
+  &:hover, &:active, &:focus {
+    color: $white;
+    background-color: $darkBlue;
+    box-shadow: 6px 6px $blue, -6px -6px $orange;
   }
 }

@@ -12,6 +12,7 @@ const Header = {
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
     this.btnContrast = this.body.querySelector('.nav__suprise')
+    this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
   },
   addEvents() {
     this.btnMenu.addEventListener('click', this.handleMenuClick.bind(this))
@@ -25,9 +26,11 @@ const Header = {
     if(this.btnMenu.classList.contains('nav__menu-button--clicked')) {
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideMenu.classList.remove('side-menu--active')
+      this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
     } else {
       this.btnMenu.classList.add('nav__menu-button--clicked')
       this.sideMenu.classList.add('side-menu--active')
+      this.sideSignupOverlay.classList.add('side-signup-overlay--active')
     }
   },
   windowScrollHandler(e) {
