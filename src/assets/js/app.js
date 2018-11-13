@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
 import Header from './partials/component-header';
+import Signup from './partials/component-signup';
+import Imagegallery from './partials/component-imagegallery';
 
 window.$ = $;
 
@@ -10,7 +12,8 @@ window.$ = $;
 import './lib/foundation-explicit-pieces';
 
 Header.init();
-
+Signup.init();
+Imagegallery.init();
 
 $(document).foundation();
 

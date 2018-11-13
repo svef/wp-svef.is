@@ -27,8 +27,9 @@
   "dependencies": {
     "foundation-sites": "6.4.3",
     "jquery": "~3.0.0",
-    "what-input": "^4.1.3",
-    "motion-ui": "~1.2.2"
+    "motion-ui": "~1.2.2",
+    "owl.carousel": "^2.3.4",
+    "what-input": "^4.1.3"
   },
   "devDependencies": {
     "ansi-colors": "^1.0.1",
@@ -39,7 +40,7 @@
     "browser-sync": "^2.10.0",
     "dateformat": "^3.0.2",
     "fancy-log": "^1.3.2",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "4.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.3.1",
