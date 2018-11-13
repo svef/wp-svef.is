@@ -7,7 +7,6 @@
   }
 }
 
-
 .body--contrast{
   background: $darkBlue;
   transition: all 400ms ease;
@@ -23,6 +22,15 @@
     padding-top: 80px;
   }
 }
+.top-text-margin {
+  margin-top: 190px;
+  @include breakpoint(small down){
+    margin-top: 80px;
+  }
+}
+.extra-padd-left-10 {
+  padding-left: 10px;
+}
 .icon--white {
   path {
     fill: $white;
@@ -31,9 +39,15 @@
 
 .less-margin {
   &--top {
-    margin-top: 0;
+    margin-top: 0 !important;
+
   }
   &--bottom {
     margin-bottom: 0 !important;
   }
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
 }
