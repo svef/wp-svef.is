@@ -4,7 +4,7 @@
 					<div class="hero-image" style="background-image: url(<?php echo get_stylesheet_directory_uri() . '/dist/assets/images/hero_image1.jpg' ?>)">
 					</div>
         </div>
-				<div class="section__bg-color--default cell small-12 medium-12 large-10 ">
+				<div class="section__bg-color--default section__bg-height--normal cell small-12 medium-12 large-10 ">
 					<div class="section__info grid-container grid-x">
 						<div class="cell medium-6 medium-offset-5 large-5 large-offset-6 top-text-padding">
 							<h2 class="section__title">Uppskeruhátíð vefiðnaðarins</h2>

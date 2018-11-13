@@ -13,19 +13,23 @@
 }
 .section__event {
   padding: 60px 0;
-  a {
-    display: inline-flex;
-    flex-flow: column ;
+  &:first-child {
+    padding: 100px 0  60px;
   }
-  &:last-child {
-    padding: 60px 0 100px !important;
+  &--last {
+    padding:60px 0 100px;
+  }
+
+  span {
+    display: block;
   }
 
   h2 {
     position: relative;
-    display: inline-flex;
+    display: inline-block;
+    transition: all 400ms 200ms $transition;
     svg {
-      transition: all 400ms $transition;
+      transition: all 400ms 300ms $transition;
       position: absolute;
       top: 18px;
       right: 0;
@@ -35,7 +39,7 @@
     }
   }
   &--border {
-    transition: all 400ms $transition;
+    transition: all 1000ms 400ms $transition;
     padding-left: 20px;
     border-left: 1px solid $white;
   }
@@ -44,6 +48,7 @@
       border-left: 1px solid $orange;
     }
     h2 {
+      color: $orange;
       svg {
         opacity: 1;
         visibility: visible;
