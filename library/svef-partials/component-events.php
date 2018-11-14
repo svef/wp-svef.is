@@ -1,5 +1,5 @@
 
-<section class="section section--events section--margin-bottom section__bg-color--dark grid-container full ">
+<section class="section section--events section--margin-bottom section__bg-color--dark">
 	<?php $a_intro_text = array(
 		'full_grid_off' => false,
 		'title' => 'SVEF viðburðir',
@@ -7,7 +7,7 @@
 		'margin_bottom' => false
 		); ?>
 	<?php svef_partial("library/svef-partials/component-introtext", $a_intro_text); ?>
-	<div class="section__inner large-10 large-offset-2 grid-container grid-x">
+	<div class="section__inner grid-container">
 		<div class="grid-x">
 		<?php
 			$args = array (
@@ -32,10 +32,10 @@
 						$link_target = $direct_link_isset ? $direct_link['target'] : '' ;
 
 						$event_count++;
-						$event_offset = $event_count % 2 ? 6 : 1;
+						$event_offset = $event_count % 2 ? 7 : 2;
 
 				?>
-						<div class="section__event small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> grid-margin-x">
+						<div class="section__event small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
 							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
 								<span class="link-text--menu link-text--dull"><?php the_time('j M Y') ?></span>
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
@@ -48,7 +48,7 @@
 
 				<?php endwhile; endif; wp_reset_query(); ?>
 
-			<div class="section__link small-10 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-8">
+			<div class="section__link small-10 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-7">
 				<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page ">Skoða alla viðburði <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
 			</div>
 		</div> <!-- grid-x -->
