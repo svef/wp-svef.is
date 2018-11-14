@@ -9,21 +9,62 @@
   &__bg-height {
     &--normal {
       height: 800px;
-      @include breakpoint(small down) {
-        height: 500px;
-      }
+      // @include breakpoint(small down) {
+      //   height: 500px;
+      // }
       @include breakpoint(medium down) {
-        height: 800px;
+        height: 500px;
       }
     }
   }
   &__bg-color {
     &--default {
       background: $bgGray;
-
+    }
+    &--red {
+      background: $pink;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+      a {
+        color: $white;
+      }
+      svg {
+        fill: $white;
+        path {
+          fill: $white;
+        }
+      }
+    }
+    &--blue {
+      background: $blue;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+      a {
+        color: $white;
+      }
+      svg {
+        fill: $white;
+        path {
+          fill: $white;
+        }
+      }
     }
     &--dark {
       background: $darkBlue;
+      svg {
+        fill: $white;
+        path {
+          fill: $white;
+        }
+      }
     }
 
   }
@@ -73,5 +114,13 @@
 }
 
 .body--contrast {
-  .section__bg-color--default {background: $darkBlue;}
+  .section__bg-color--default {
+    background: $darkBlue;
+    svg {
+      fill: $white;
+      path {
+        fill: $white;
+      }
+    }
+  }
 }

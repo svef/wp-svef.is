@@ -15,7 +15,7 @@
                 </div>
                 <div class="step">
                     <h4>Félagsgjöld</h4>
-                    <p>Félagsgjald SVEF er 14.900 krónur og er skráning öllum opin. 
+                    <p>Félagsgjald SVEF er 14.900 krónur og er skráning öllum opin.
                         Nemar greiða 7.900 krónur. Framvísa þarf skólaskírteini.
                         <br>
                         Félagsgjöldin eru m.a. notuð til þess að fjármagna íslensku vefverðlaunin, ráðstefnur og fræðslufundi ásamt tilfallandi kostnaði við rekstur samtakanna.
@@ -62,5 +62,4 @@
         </div>
     </div>
 </section>
-<div class="side-signup-overlay">
-</div>
+<div class="side-signup-overlay"></div>

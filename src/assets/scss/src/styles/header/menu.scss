@@ -72,3 +72,9 @@
     }
   }
 }
+
+.body--contrast {
+  .side-menu.side-menu__inner.side-menu__list li a {
+    color: $white !important;
+  }
+}

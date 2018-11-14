@@ -127,6 +127,12 @@
     &__icon__line {
       background-color: $white;
     }
+    &__menu-button {
+      color: $white !important;
+    }
+  }
+  .side-menu.side-menu__inner.side-menu__list li a {
+    color: $white !important;
   }
 }
 

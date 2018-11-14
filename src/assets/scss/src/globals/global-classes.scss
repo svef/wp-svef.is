@@ -28,8 +28,11 @@
     margin-top: 80px;
   }
 }
-.extra-padd-left-10 {
+.extra-large-padd-left-10 {
   padding-left: 10px;
+  @include breakpoint(medium down) {
+    padding-left: 0;
+  }
 }
 .icon--white {
   path {
