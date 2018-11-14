@@ -35,7 +35,7 @@
 						$event_offset = $event_count % 2 ? 6 : 1;
 
 				?>
-						<div class="section__event small-10 small-offset-1 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?>">
+						<div class="section__event small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> grid-margin-x">
 							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
 								<span class="link-text--menu link-text--dull"><?php the_time('j M Y') ?></span>
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
@@ -46,9 +46,9 @@
 							</a>
 						</div>
 
-				<?php endwhile; endif; ?>
+				<?php endwhile; endif; wp_reset_query(); ?>
 
-			<div class="section__link small-10 small-offset-1 medium-10 medium-offset-1 large-2 large-offset-8">
+			<div class="section__link small-10 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-8">
 				<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page ">Skoða alla viðburði <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
 			</div>
 		</div> <!-- grid-x -->

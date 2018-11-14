@@ -1,31 +1,55 @@
 .section--c2a {
   .c2a-image {
     position: relative;
-    height: 500px;
-    right: 50px;
-    width: calc(100% + 20vw);
-    left: -14vw;
+    min-height: 500px;
     &--mask {
+      float: right;
+      width: calc(100% + 12vw);
+      right: 0px;
       clip-path: url('#mask');
+      height: 500px;
     }
-    img {
-      position: absolute;
-      top: 0;
-      left:0;
+    &--no-mask {
+      float: right;
+      width: calc(100% + 12vw);
+      right: 30px;
+    }
+    @include breakpoint(medium down) {
+      width: 100%;
+      min-height: 100px;
+      height: 300px;
+      right: 0;
+      top: -80px;
+    }
+    @include breakpoint(small down) {
+      top: -70px;
     }
   }
   .section__c2a-inner{
     position: relative;
+    display: flex;
+    align-items: center;
   }
   .section__link {
     &--absolute {
+      margin-top: 0;
       bottom: -15%;
+      @include breakpoint(medium down) {
+        bottom:0;
+      }
     }
   }
-
-  h2 {
-    display: flex;
-    align-items: flex-start;
+  .section__info {
+    @include breakpoint(medium down) {
+      position: relative;
+      top: -50px;
+    }
   }
-
+  h2 {
+    position: relative;
+    top: -10px;
+    @include breakpoint(medium down) {
+      top: 0;
+    }
+  }
 }

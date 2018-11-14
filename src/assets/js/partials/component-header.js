@@ -22,7 +22,6 @@ const Header = {
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
   handleMenuClick(e) {
-    e.preventDefault()
     if(this.btnMenu.classList.contains('nav__menu-button--clicked')) {
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideMenu.classList.remove('side-menu--active')
@@ -44,12 +43,14 @@ const Header = {
     if (e.target != this.btnMenu && this.sideMenu.classList.contains('side-menu--active') && !this.sideMenu.contains(e.target) && !GlobalFunctions.isDescendant(this.sideMenu, e.target)) {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
+      this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
     }
   },
   escapeMenu(e) {
     if (this.sideMenu.classList.contains('side-menu--active') && e.code == 'Escape') {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
+      this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
     }
   },
   clickSiteContrast(e) {

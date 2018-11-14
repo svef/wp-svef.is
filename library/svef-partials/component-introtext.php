@@ -12,8 +12,8 @@
 <section class="section<?php echo $margin_bottom_class ?>section--introtext grid-container full">
 	<div class="grid-x">
     <div class="introtext cell medium-10 medium-offset-1 large-10 large-offset-2 grid-x" >
-      <h2 class="section__title cell large-7"><?php echo $set_title; ?></h2>
-	    <p class="section__paragraph small-8 small-offset-1 medium-8 medium-offset-1 large-8 large-offset-1"><?php echo $set_paragraph; ?></p>
+      <h2 class="section__title cell small-10 small-offset-1 medium-8 medium-offset-0 large-7"><?php echo $set_title; ?></h2>
+	    <p class="section__paragraph small-8 small-offset-2 medium-8 medium-offset-1 large-8 large-offset-1"><?php echo $set_paragraph; ?></p>
 		</div>
 	</div>
 </section>
