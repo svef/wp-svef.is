@@ -1,0 +1,51 @@
+
+.imagesliderContainer {
+    padding: 180px 0;
+    overflow: hidden;
+    .owl-stage-outer {
+        overflow: visible !important;
+    }
+   
+    .owl-dots {
+    display: flex;
+    justify-content: center;
+        .owl-dot {
+            position: relative;
+            background: transparent;
+            width: 20px;
+            height: 20px;
+            border: none;
+            padding: 0 !important;
+            font: inherit;
+            transition: 0.4s ease all;
+            &:before {
+                position: absolute;
+                content: '';
+                background: $white;
+                width: 1.4px;
+                height: 100%;
+                left: 50%;
+                z-index: 1;
+                top: 0;
+            }
+        }
+        .owl-dot.active {
+            &:before {
+                top: -6px;
+            }
+        }
+    }
+    
+    &__allItems {
+      cursor: grab;
+      &__oneItem {
+        transition: 0.4s ease all;
+        margin: 0 5px;
+      }
+      .active &__oneItem {
+        position: relative;
+        top: -60px;
+      }
+    }
+  }
+  

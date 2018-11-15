@@ -1,18 +1,17 @@
-<section class="section section-imagegallery">
+<?php if($show_slider): ?>
+<section class="section section--imagegallery section__bg-color--dark section--margin-bottom">
 
-   <div class="owl-carousel owl-theme">
-    <div class="item"><h4>1</h4></div>
-    <div class="item"><h4>2</h4></div>
-    <div class="item"><h4>3</h4></div>
-    <div class="item"><h4>4</h4></div>
-    <div class="item"><h4>5</h4></div>
-    <div class="item"><h4>6</h4></div>
-    <div class="item"><h4>7</h4></div>
-    <div class="item"><h4>8</h4></div>
-    <div class="item"><h4>9</h4></div>
-    <div class="item"><h4>10</h4></div>
-    <div class="item"><h4>11</h4></div>
-    <div class="item"><h4>12</h4></div>
+<div class="imagesliderContainer">
+  <div id="myImageSlider" class="imagesliderContainer__allItems owl-carousel">
+    <?php foreach ($image_gallery as $image): ?>
+        <div class="imagesliderContainer__allItems__oneItem">
+        <img src="<?php echo $image['sizes']['large']; ?>" alt="" />
+        </div>
+    <?php endforeach; ?>
+  </div>
 </div>
 
+
 </section>
+
+<?php endif; ?>
