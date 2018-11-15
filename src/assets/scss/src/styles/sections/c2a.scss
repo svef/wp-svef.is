@@ -11,7 +11,7 @@
     }
     &--no-mask {
       float: right;
-      width: calc(100% + 12vw);
+      width: calc(100% + 5vw);
       right: 30px;
     }
     @include breakpoint(medium down) {

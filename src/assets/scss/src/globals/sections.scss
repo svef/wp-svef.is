@@ -1,5 +1,36 @@
 .section {
 
+  height: auto;
+
+  &__bg-fix {
+    position: absolute;
+    content: '';
+    right: 0;
+    height: 100%;
+    width: 30%;
+    z-index: -1;
+    height: 800px;
+    @include breakpoint(small down) {
+      height: 700px;
+      width: 100%;
+    }
+    @include breakpoint(medium down) {
+      height: 700px;
+
+    }
+    &--default {
+      background-color: $bgGray;
+    }
+    &--red {
+      background: $pink;
+    }
+    &--blue {
+      background: $blue;
+    }
+    &--dark {
+      background: $darkBlue;
+    }
+  }
   &--margin-bottom {
     margin-bottom: 140px !important;
   }
@@ -9,22 +40,19 @@
   &__bg-height {
     &--normal {
       height: 800px;
-      // @include breakpoint(small down) {
-      //   height: 500px;
-      // }
+      @include breakpoint(small down) {
+        height: 700px;
+      }
       @include breakpoint(medium down) {
-        height: 500px;
+        height: 700px;
+
       }
     }
   }
   &__bg-color {
     &--default {
       background: $bgGray;
-      &--absolute {
-        position: absolute;
-        width: 100%;
-        z-index: -1;
-      }
+
     }
     &--red {
       background: $pink;
@@ -71,11 +99,15 @@
         }
       }
     }
-
+    &--absolute {
+      position: absolute !important;
+      z-index: -1;
+    }
   }
   &__image {
     position: relative;
-    .hero-image2 {
+
+    .hero-image {
       float:right;
       right: 0;
       position: absolute;
@@ -86,22 +118,14 @@
       background-repeat: no-repeat;
       background-position: center;
       z-index: 0;
-    }
-    .hero-image {
-      position: absolute;
-      width: 56vw;
-      height: 100%;
-      max-height: 600px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+
+      @include breakpoint(medium down) {
+        width: 60vw;
+      }
       @include breakpoint(small down){
         position:relative;
         width: 100vw;
         height: 400px;
-      }
-      @include breakpoint(medium down) {
-        width: 36vw;
       }
     }
     .c2a-image {
@@ -117,6 +141,14 @@
   &__paragraphTall {
     min-height: 240px;
     max-height: 240px;
+    @include breakpoint(small down) {
+      max-height: 120px;
+      min-height: 120px;
+    }
+    @include breakpoint(small down) {
+      max-height: 90px;
+      min-height: 90px;
+    }
   }
   &__link {
     display: flex;
@@ -127,6 +159,9 @@
     }
     &--absolute {
       position: absolute
+    }
+    @include breakpoint(small down) {
+      margin-top: 20px;
     }
   }
 }
@@ -140,6 +175,5 @@
         fill: $white;
       }
     }
-
   }
 }
