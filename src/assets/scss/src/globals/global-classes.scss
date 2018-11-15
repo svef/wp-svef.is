@@ -18,8 +18,11 @@
 }
 .top-text-padding {
   padding-top: 190px;
-  @include breakpoint(small down){
+  @include breakpoint(medium down){
     padding-top: 80px;
+  }
+  @include breakpoint(small down){
+    padding-top: 40px;
   }
 }
 .top-text-margin {
