@@ -27,7 +27,14 @@ get_header(); ?>
 			svef_partial("library/svef-partials/component-c2a", $a_c2a);
 		?>
 
-		<?php svef_partial("library/svef-partials/component-imagegallery"); ?>
+		<?php 
+			$a_image_slider = array(
+				'show_slider' => get_field('show_slider'),
+				'image_gallery' => get_field('image_gallery')
+			);
+		?>
+
+		<?php svef_partial("library/svef-partials/component-imagegallery", $a_image_slider); ?>
 
 	</article>
 <?php endwhile; ?>
