@@ -20,7 +20,7 @@
 
 				<?php
 					$event_count = 0;
-					$a_link_arrow = array('link_arrow' => 'link-arrow--white');
+					$a_link_arrow = array('link_arrow' => 'link_arrow link-arrow--white');
 					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 						$image_gallery = get_field('image_gallery');
 						$direct_link_isset = get_field('direct_link_off_page');
