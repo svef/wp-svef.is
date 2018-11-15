@@ -36,6 +36,19 @@ get_header(); ?>
 
 		<?php svef_partial("library/svef-partials/component-imagegallery", $a_image_slider); ?>
 
+		<?php 
+
+			$a_jobfeed = array(
+				'jobfeed_title' => get_field('jobfeed_title'),
+				'jobfeed_text' => get_field('jobfeed_text'),
+				'jobfeed_image' => get_field('jobfeed_image')
+			);
+		?>
+
+
+		<?php svef_partial("library/svef-partials/component-jobfeed", $a_jobfeed ); ?>
+
+
 	</article>
 <?php endwhile; ?>
 <?php get_footer();

@@ -41,7 +41,7 @@
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
 								<h3 class="less-margin--top less-margin--bottom"><?php echo $location_name; ?></h3>
 								<p class="section__event--border link-text--menu link-text--menu--normal-case">
-									<?php echo get_the_excerpt(); ?>
+									<?php echo get_the_excerpt($the_query->the_post()); ?>
 								</p>
 							</a>
 						</div>

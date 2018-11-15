@@ -24,30 +24,26 @@ const Imagegallery = {
     	    stopOnHover : true,
             lazyLoad: true,
             responsive: {
-                // 300: {
-                //     items: 1,
-                //     stagePadding: 40
-                // },
-                // 600: {
-                //     items: 1,
-                //     stagePadding: 60
-                // },
-                // 1000: {
-                //     items: 1,
-                //     stagePadding: 100
-                // },
-                // 1400: {
-                //     items: 1,
-                //     stagePadding: 140
-                // },
-                // 1600: {
-                //     items: 1,
-                //     stagePadding: 350
-                // },
-                // 1800: {
-                //     items: 1,
-                //     stagePadding: 400
-                // }
+                300: {
+                    items: 1,
+                    margin: 5,
+                    stagePadding: 40
+                },
+                600: {
+                    items: 1,
+                    margin: 10,
+                    stagePadding: 40
+                },
+                1000: {
+                    items: 1,
+                    margin: 20,
+                    stagePadding: 200
+                },
+                1400: {
+                    items: 1,
+                    margin: 35,
+                    stagePadding: 340
+                }
             }
         })
 
