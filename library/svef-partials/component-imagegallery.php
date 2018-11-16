@@ -1,4 +1,5 @@
 <?php if($show_slider): ?>
+
 <section class="section section--imagegallery section__bg-color--dark section--margin-bottom">
 
 <div class="imagesliderContainer">

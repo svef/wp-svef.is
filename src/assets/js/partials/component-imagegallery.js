@@ -8,7 +8,7 @@ const Imagegallery = {
         $(this.imageGallery).owlCarousel(
 
         //image slider
-        $("#myImageSlider").owlCarousel({
+        $('#myImageSlider').owlCarousel({
             stagePadding: 340,
             loop: true,
             margin: 35,
@@ -18,10 +18,10 @@ const Imagegallery = {
             autoplayTimeout: 10000,
             navigation : false,
             slideSpeed : 500,
-   		    paginationSpeed : 800,
-    	    rewindSpeed : 1000,
+            paginationSpeed : 800,
+    	      rewindSpeed : 1000,
             singleItem: true,
-    	    stopOnHover : true,
+    	      stopOnHover : true,
             lazyLoad: true,
             responsive: {
                 300: {
@@ -52,9 +52,10 @@ const Imagegallery = {
       cacheDom: function () {
         this.body = document.querySelector('body')
         this.imageGallery = this.body.querySelector('.owl-carousel')
+        this.slider = this.body.querySelector('#myImageSlider')
       },
       addEvents() {
-    
+
       }
 }
 

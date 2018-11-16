@@ -1,0 +1,52 @@
+.bg-color {
+  &--default {
+    background-color: $bgGray;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+  &--red {
+    background-color: $pink;
+  }
+  &--dark {
+    background-color: $darkBlue;
+  }
+}
+
+.bg-col-partial {
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index: 0;
+  }
+  &--75 {
+    &--default {
+      &::before {
+        background-color: $bgGray;
+        height: 75%
+      }
+    }
+    &--red {
+      &::before {
+        background-color: $pink;
+        height: 75%
+      }
+    }
+    &--blue {
+      &::before{
+        background-color: $blue;
+        height: 75%
+      }
+    }
+    &--dark {
+      &::before{
+        background-color: $darkBlue;
+        height: 75%
+      }
+    }
+  }
+}

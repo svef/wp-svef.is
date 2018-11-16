@@ -104,6 +104,7 @@
       z-index: -1;
     }
   }
+
   &__image {
     position: relative;
 
@@ -162,6 +163,12 @@
     }
     @include breakpoint(small down) {
       margin-top: 20px;
+    }
+  }
+  &__winners-slider--inner {
+    padding-left: calc((100vw - 75rem) / 2);
+    @include breakpoint(large down) {
+      padding-left: 0.9357rem;
     }
   }
 }

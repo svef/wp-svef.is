@@ -1,0 +1,37 @@
+.section__winners-slider {
+  height: 676px;
+}
+.winners-slide {
+  max-width: 413px;
+  margin: 0;
+  z-index: 1;
+  height: auto;
+  overflow:hidden;
+  cursor: pointer;
+  &:hover {
+    .winners-slide__text {
+      max-height: 200px;
+    }
+  }
+  &__img {
+    width: 413px;
+    height: 294px;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    margin-bottom: 39px;
+  }
+  // &__category {
+
+  // }
+  &__heading {
+    margin: 4px 0;
+  }
+  &__text {
+    border-left: 1px white solid;
+    padding: 0 34px 0 9px;
+    height: auto;
+    max-height: 0;
+    transition: max-height 300ms $transition;
+  }
+}
