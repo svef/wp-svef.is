@@ -1,13 +1,17 @@
 .section {
     &--boardmembers {
         .boardmember-cards {
-            display: flex;
-            align-items: center;
+            padding-bottom: 140px;
         }
         .board-info {
+            position: relative;
+            padding-top: 160px;
             @include breakpoint(small down) {
                 order: -1;
                 margin-bottom: 40px;
+            }
+            .board-info-text {
+                min-height: 140px;
             }
         }
         .card {
@@ -16,6 +20,7 @@
             margin-bottom: 40px;
             box-shadow: $cardShadow;
             transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            position: relative;
             .member-image {
                 position: relative;
                 height: 400px;

@@ -23,29 +23,44 @@
     width:100%;
     z-index: 0;
   }
+  &--93 {
+    &--default {
+      &::before {
+        background-color: $bgGray;
+        height: 93%;
+        @include breakpoint(medium down) {
+          height: 95%;
+        }
+        @include breakpoint(small down) {
+          background-color: transparent;
+        }
+      }
+    }
+    
+  }
   &--75 {
     &--default {
       &::before {
         background-color: $bgGray;
-        height: 75%
+        height: 75%;
       }
     }
     &--red {
       &::before {
         background-color: $pink;
-        height: 75%
+        height: 75%;
       }
     }
     &--blue {
       &::before{
         background-color: $blue;
-        height: 75%
+        height: 75%;
       }
     }
     &--dark {
       &::before{
         background-color: $darkBlue;
-        height: 75%
+        height: 75%;
       }
     }
   }
