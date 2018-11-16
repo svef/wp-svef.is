@@ -18,7 +18,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-	<?php svef_partial('library/svef-partials/component-header'); ?>
-
-
-
+	<?php
+		svef_partial('library/svef-partials/component-header');
+		svef_partial('library/svef-partials/component-signup');
+	?>

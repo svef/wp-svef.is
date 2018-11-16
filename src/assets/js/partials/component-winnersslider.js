@@ -31,28 +31,28 @@ const WinnersSlider = {
     stopOnHover : true,
     lazyLoad: true,
     responsive: {
-        300: {
-            items: 1,
+        0: {
+            items: 2,
+            margin: 166,
+            stagePadding: 0
+        },
+        640: {
+            items: 3,
             margin: 0,
             stagePadding: 0
         },
-        600: {
-            items: 1,
+        910: {
+            items: 3,
             margin: 0,
             stagePadding: 0
         },
-        1000: {
-            items: 4,
-            margin: 0,
-            stagePadding: 0
-        },
-        1400: {
+        1200: {
             items: 4,
             margin: 0,
             stagePadding: 0
         }
     }
-}
+  }
 }
 
 module.exports = WinnersSlider

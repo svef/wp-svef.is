@@ -3,6 +3,7 @@
 }
 .winners-slide {
   max-width: 413px;
+  min-width: 300px;
   margin: 0;
   z-index: 1;
   height: auto;
@@ -33,5 +34,12 @@
     height: auto;
     max-height: 0;
     transition: max-height 300ms $transition;
+    @include breakpoint(small down) {
+      max-height: 200px;
+    }
+  }
+  @include breakpoint(small down) {
+    width:
+    100%;
   }
 }
