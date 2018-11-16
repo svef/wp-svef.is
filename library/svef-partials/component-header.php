@@ -4,11 +4,10 @@
 					<a class="nav__home" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
 							$aSvg = array('class_name' => 'svef-logo');
-						  svef_partial('library/svef/icons/sveflogo.svg', $aSvg);
+						  	svef_partial('library/svef/icons/sveflogo.svg', $aSvg);
 						?>
 					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-
-				</a>
+					</a>
 				</div>
 
 			<div class="nav__items">

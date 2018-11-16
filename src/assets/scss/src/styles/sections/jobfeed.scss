@@ -15,7 +15,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 400ms 200ms $transition;
+            // transition: all 400ms 200ms $transition;
+            box-shadow: $cardShadow;
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
             .card-title-arrow {
                 display: flex;
                 align-items: center;
@@ -37,6 +39,7 @@
                 color: rgba(255, 255, 255, 0.8);
             }
             &:hover {
+                box-shadow: $cardShadowHover;
                 p.text--large, p.text--small {
                     color: $white;
                 }

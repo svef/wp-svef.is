@@ -64,6 +64,17 @@ p {
   font-size: 20px;
   text-align: center;
   }
+  &--cardsmall {
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    }
+  &--card-undertitle {
+    font-weight: 400;
+    line-height: normal;
+    font-size: 16px;
+  }
   &--breadcrum {
     font-style: normal;
     font-weight: bold;
