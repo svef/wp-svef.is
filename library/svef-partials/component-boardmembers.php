@@ -1,4 +1,4 @@
-<section class="section section--margin-bottom section--boardmembers ">
+<section class="section section--margin-bottom section--boardmembers bg-col-partial bg-col-partial--93--default">
     <div class="grid-container">
         <div class="boardmember-cards grid-x grid-padding-x">
             <div class="cell medium-6 large-4">
@@ -19,7 +19,7 @@
             </div>
             <div class="cell board-info medium-6 large-7">
                 <h2>Stjórnarmeðlimir SVEF árið 2018</h2>
-                <p>SVEF veit hve mikilvægt það fyrir fólkið í bransanum að vera vakandi fyrir nýjungum því í tækniheiminum eru breytingar örar og ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert. Ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert.</p>
+                <p class="board-info-text">SVEF veit hve mikilvægt það fyrir fólkið í bransanum að vera vakandi fyrir nýjungum því í tækniheiminum eru breytingar örar og ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert. Ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert.</p>
                 <a href="#" >Skoða nánar</a>
                 <?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
             </div>
