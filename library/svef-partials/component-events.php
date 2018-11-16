@@ -20,7 +20,7 @@
 
 				<?php
 					$event_count = 0;
-					$a_link_arrow = array('link_arrow' => 'link-arrow--white');
+					$a_link_arrow = array('link_arrow' => 'link_arrow link-arrow--white');
 					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 						$image_gallery = get_field('image_gallery');
 						$direct_link_isset = get_field('direct_link_off_page');
@@ -41,7 +41,7 @@
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
 								<h3 class="less-margin--top less-margin--bottom"><?php echo $location_name; ?></h3>
 								<p class="section__event--border link-text--menu link-text--menu--normal-case">
-									<?php echo get_the_excerpt($the_query->the_post()); ?>
+									<?php echo get_the_excerpt(); ?>
 								</p>
 							</a>
 						</div>

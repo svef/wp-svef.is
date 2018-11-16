@@ -56,6 +56,6 @@ require_once( 'library/responsive-images.php' );
 require_once('library/svef/custom_functions.php');
 require_once('library/svef/custom_functions-gmap.php');
 
-require_once('library/custom-posttypes.php');
+require_once('library/events-custom-post-types.php');
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
