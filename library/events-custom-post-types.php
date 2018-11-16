@@ -6,9 +6,9 @@
 			array(
 				'labels' => array(
 					'name' => _x('events', 'Post Type General Name', 'foundationpress'),
-					'singular_name' => _x('events', 'Post Type Singular Name', 'foundationpress'),
-					'menu_name' => __('events', 'foundationpress'),
-					'name_admin_bar' => __('events posts', 'foundationpress'),
+					'singular_name' => _x('Event', 'Post Type Singular Name', 'foundationpress'),
+					'menu_name' => __('Events', 'foundationpress'),
+					'name_admin_bar' => __('Event posts', 'foundationpress'),
 					'archives' => __('Item Archives', 'foundationpress'),
 					'attributes' => __('Item Attributes', 'foundationpress'),
 					'parent_item_colon' => __('Parent Item:', 'foundationpress'),
