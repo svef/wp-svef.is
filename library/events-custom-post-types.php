@@ -37,7 +37,7 @@
 				'description' => __('post for events sections', 'foundationpress'),
 
 				'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats'),
-				'taxonomies' => array('category', 'post_tag'),
+				'taxonomies' => array('events_cat'),
 				'hierarchical' => false,
 				'public' => true,
 				'show_ui' => true,
@@ -70,8 +70,8 @@
 		array('events'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Categories', 'foundationpress' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Category', 'foundationpress' ), /* single taxonomy name */
+				'name' => __( 'Events categories', 'foundationpress' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Events category', 'foundationpress' ), /* single taxonomy name */
 				'search_items' =>  __( 'Search Categories', 'foundationpress' ), /* search title for taxomony */
 				'all_items' => __( 'All Categories', 'foundationpress' ), /* all title for taxonomies */
 				'parent_item' => __( 'Parent Category', 'foundationpress' ), /* parent title for taxonomy */

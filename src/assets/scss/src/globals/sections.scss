@@ -168,6 +168,33 @@
       margin-top: 20px;
     }
   }
+  &__label {
+    position: relative;
+    margin-bottom:  20px;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/down-caret.svg');
+      width: 14px;
+      height: 8px;
+      top: 50%;
+      margin-top: -4px;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  &__select {
+    border: none;
+    appearance: none;
+    outline: none;
+    background-image: none;
+    margin: 0;
+    text-transform: uppercase;
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
   &__winners-slider--inner {
     padding-left: calc((100vw - 75rem) / 2);
     @include breakpoint(large down) {

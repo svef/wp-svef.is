@@ -8,10 +8,16 @@
   z-index: 1;
   height: auto;
   overflow:hidden;
-  cursor: pointer;
+  cursor: grab;
   &:hover {
     .winners-slide__text {
       max-height: 200px;
+    }
+  }
+
+  &__link {
+    &:hover {
+      cursor: url('../images/icons/cursor-hover.svg'), auto;
     }
   }
   &__img {
@@ -33,7 +39,7 @@
     padding: 0 34px 0 9px;
     height: auto;
     max-height: 0;
-    transition: max-height 300ms $transition;
+    transition: max-height 600ms $transition;
     @include breakpoint(small down) {
       max-height: 200px;
     }
