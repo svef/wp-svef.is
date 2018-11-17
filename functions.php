@@ -53,9 +53,12 @@ require_once( 'library/sticky-posts.php' );
 require_once( 'library/responsive-images.php' );
 
 /** SVEF custom functions */
+require_once('library/svef/custom_ajax.php');
 require_once('library/svef/custom_functions.php');
 require_once('library/svef/custom_functions-gmap.php');
 
 require_once('library/events-custom-post-types.php');
+require_once('library/boardmembers-custom-post-types.php');
+require_once('library/winners-custom-post-types.php');
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
