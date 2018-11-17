@@ -42,6 +42,11 @@
     fill: $white;
   }
 }
+.icon--dark40 {
+  path {
+    fill: $darkBlue-40;
+  }
+}
 
 .less-margin {
   &--top {
