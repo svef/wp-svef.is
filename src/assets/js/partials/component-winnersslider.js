@@ -16,7 +16,10 @@ const WinnersSlider = {
 
   },
   addEvent() {
-    this.select.addEventListener('change', this.getSelectValue.bind(this))
+    /** in the app.js we defined a new function in the $.fn object and can therefore access it from our $ object just like other jQUERY functions stored there */
+    $(this.select).exists( () => {
+      this.select.addEventListener('change', this.getSelectValue.bind(this))
+    })
   },
   setCarousel(slider, sliderOptions) {
     $(slider).owlCarousel(sliderOptions)
@@ -68,8 +71,8 @@ const WinnersSlider = {
   sliderOptions : {
     stagePadding: 0,
     loop: true,
-    // margin: 0,
-    // items: -1,
+    margin: 0,
+    items: 3,
     autoplay: true,
     autoplaySpeed: 1500,
     autoplayTimeout: 10000,
@@ -97,7 +100,7 @@ const WinnersSlider = {
             stagePadding: 0
         },
         1200: {
-            items: 4,
+            items: 3,
             margin: 0,
             stagePadding: 0
         }

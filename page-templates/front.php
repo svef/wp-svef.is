@@ -4,16 +4,36 @@ Template Name: Front
 */
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 		<?php svef_partial("library/svef-partials/component-hero"); ?>
-		<?php svef_partial("library/svef-partials/component-introtext"); ?>
-		<?php svef_partial("library/svef-partials/component-statistics"); ?>
-		<?php svef_partial("library/svef-partials/component-events"); ?>
+
+
+		<?php
+		/** muna að bæta við array til að hafa ticker!! */
+		$a_intro = array('title' => get_field('intro_title'), 'paragraph' => get_field('intro_text'),'margin_bottom' => true, 'margin_bottom_inner' => false);
+		svef_partial("library/svef-partials/component-introtext", $a_intro); ?>
+
+		<?php
+
+			svef_partial("library/svef-partials/component-statistics"); ?>
+
+
+		<?php
+			$a_events = array(
+				'title' => get_field('intro_title_event_inner'),
+				'paragraph' => get_field('intro_text_event_inner'),
+				'margin_bottom' => false,
+				'margin_bottom_inner' => true
+			);
+			svef_partial("library/svef-partials/component-events" , $a_events);
+		?>
 
 		<?php
 			$a_c2a = array(
-				'intro_title' 	=> get_field('intro_title'),
-				'intro_text' 		=> get_field('intro_text'),
+				'intro_title' 	=> get_field('intro_title_inner'),
+				'intro_text' 		=> get_field('intro_text_inner'),
 				'c2a_title' 		=> get_field('c2a_title'),
 				'c2a_text' 			=> get_field('c2a_text'),
 				'c2a_cool_mask' => get_field('c2a_cool_mask'),
@@ -48,6 +68,24 @@ get_header(); ?>
 		<?php svef_partial("library/svef-partials/component-jobfeed", $a_jobfeed ); ?>
 
 
+		<?php
+			if(get_field('add_second_c2a')):
+				$a_c2a_2nd = array(
+					'intro_title' 	=> get_field('intro_title_inner-2'),
+					'intro_text' 		=> get_field('intro_text_inner-2'),
+					'c2a_title' 		=> get_field('c2a_title-2'),
+					'c2a_text' 			=> get_field('c2a_text-2'),
+					'c2a_cool_mask' => get_field('c2a_cool_mask-2'),
+					'c2a_image' 		=> get_field('c2a_image-2'),
+					'c2a_action' 		=> get_field('c2a_action-2'),
+					'c2a_bg_color'  => get_field('c2a_bg_color-2')
+				);
+
+				svef_partial("library/svef-partials/component-c2a", $a_c2a_2nd);
+			endif;
+		?>
+
 	</article>
+
 <?php endwhile; ?>
 <?php get_footer();

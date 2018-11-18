@@ -1,5 +1,5 @@
 <header class="site-header">
-		<nav class="nav" role="navigation">
+		<nav class="nav grid-container" role="navigation">
 				<div class="nav__logo">
 					<a class="nav__home" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
@@ -11,26 +11,29 @@
 				</div>
 
 			<div class="nav__items">
-				<div class="nav__lang link-text--menu link-text--menu--upper-case">
-					is  en
-				</div>
-				<div class="nav__suprise">
+				<ul class="nav__lang">
 
-				</div>
+					<?php
+						if(function_exists('pll_the_languages')){
+							pll_the_languages( array('display_names_as' => 'slug', 'hide_if_no_translation' => 1) );
+						} else {
+							echo '';
+						}
+					?>
+				</ul>
+				<button class="nav__suprise"></button>
 				<button id="btnMenu" class="nav__menu-button link-text--menu" >
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
 						<span class="nav__icon__line"></span>
 					</span>
-					Menu
+					<?php pll_e('valm'); ?>
 				</button>
 			</div>
 		</nav>
-
 		<menu class="side-menu">
 			<div class="side-menu__inner">
 				<?php foundationpress_top_bar_r(); ?>
-
 			</div>
 		</menu>
 

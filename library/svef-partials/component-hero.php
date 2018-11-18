@@ -17,7 +17,7 @@
 							<p class="section__paragraphTall small-10 small-offset-1 medium-offset-0 large-offset-0">Samtök vefiðnaðarins eru fagsamtök þeirra er starfa að vefmálum á Íslandi. Samtökin hafa það að markmiði að miðla þekkingu og efla fagleg vinnubrögð í greininni.</p>
 						</div>
 						<div class="section__link cell small-5 small-offset-1 medium-5 medium-offset-0 large-5 large-offset-0">
-							<a href="">Read article</a>
+							<a href=""><?php echo pll__('Lesa grein'); ?></a>
 							<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
 						</div>
 					</div>

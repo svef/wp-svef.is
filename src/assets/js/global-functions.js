@@ -25,7 +25,8 @@ const GlobalFunctions = {
         ajaxOptions.data = arguments[2]
     }
     return $.ajax(ajaxOptions)
-}
+  }
+
 }
 
 module.exports = GlobalFunctions

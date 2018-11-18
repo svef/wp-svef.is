@@ -45,6 +45,15 @@
     align-items: center;
     height: 80px;
   }
+  &__lang {
+    display: flex;
+    justify-content: space-between;
+    min-width: 40px;
+    text-transform: uppercase;
+    & .current-lang {
+      text-decoration: underline;
+    }
+  }
   &__suprise {
     cursor: pointer;
     width: 15px;
@@ -130,6 +139,7 @@
     &__menu-button {
       color: $white !important;
     }
+
   }
   .side-menu.side-menu__inner.side-menu__list li a {
     color: $white !important;
