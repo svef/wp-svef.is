@@ -11,6 +11,7 @@ register_nav_menus(
 	array(
 		'top-bar-r'  => esc_html__( 'Main menu', 'foundationpress' ),
 		'Footer'  => esc_html__( 'Footer', 'foundationpress' ),
+		'Winners_select' => esc_html__('Winners', 'foundationpress')
 
 	)
 );
@@ -52,6 +53,21 @@ if ( ! function_exists( 'foundationpress_footer' ) ) {
 	}
 }
 
+if ( ! function_exists( 'foundationpress_select' ) ) {
+	function foundationpress_select() {
+		wp_nav_menu(
+			array(
+				'container'      => false,
+				'menu_class'     => 'select__menu',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+				'theme_location' => 'Winners_select',
+				'depth'          => 3,
+				'fallback_cb'    => false
+				// 'walker'         => new Foundationpress_footer_Walker(),
+			)
+		);
+	}
+}
 // /**
 //  * Mobile navigation - topbar (default) or offcanvas
 //  */
