@@ -25,6 +25,7 @@ const WinnersSlider = {
     $(slider).trigger('destroy.owl.carousel')
   },
   getSelectValue(e) {
+    // console.log(e.target.value)
     const ajaxReques = {'action' : 'ajax_request', 'id': e.target.value}
     Global.postAjax(ajaxReques).done(this.changeSlider)
 
@@ -32,7 +33,7 @@ const WinnersSlider = {
 
   changeSlider(res) {
     // console.log(res)
-    WinnersSlider.sliderHeader.innerHTML = ''
+    // WinnersSlider.sliderHeader.innerHTML = ''
     WinnersSlider.destroyCarousel(WinnersSlider.slider)
     let newSlider = ''
     const acf = res.acf
@@ -58,7 +59,7 @@ const WinnersSlider = {
                     </div>`
 
     }
-    WinnersSlider.sliderHeader.innerHTML = res.post.post_title
+    // WinnersSlider.sliderHeader.innerHTML = res.post.post_title
     WinnersSlider.slider.innerHTML = ''
     WinnersSlider.slider.insertAdjacentHTML('beforeend', newSlider)
     WinnersSlider.setCarousel(WinnersSlider.slider, WinnersSlider.sliderOptions)

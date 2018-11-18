@@ -25,10 +25,10 @@ if(!function_exists('get_menu_to_select')){
 
             $menu_id  = get_page_by_title( $m->title, OBJECT, 'winners' )->ID;
             $menu_title = $m->title;
-						$options .= "<option value=\"$menu_id\">$menu_title</option>";
+						$options .= "<option value=\"$menu_id\"><h2>$menu_title</h2></option>";
         }
 		}
-		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select">';
+		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select section__select--winners">';
 		$select .= $options;
 		$select .= '</select>';
 

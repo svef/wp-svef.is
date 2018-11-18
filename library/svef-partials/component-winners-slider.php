@@ -2,21 +2,20 @@
 	<div class="grid-container">
 		<div class="grid-x">
 			<?php
+				$args = array (
+					'post_type'       => 'winners',
+					'posts_per_page'	=>  1,
+					'order'						=> 'ASC',
+				);
+				$the_winners_query = new WP_Query( $args );
+				$first_post_title = $the_winners_query->posts[0];
+			?>
 
-
-
-
-
-
-					$a_select_options = $options_query->posts;
-					?>
-
-			<h2 id="sliderHeading" class="small-6 small-offset-1"><?php echo $a_select_options[0]->post_title; ?></h2>
+			<!-- <h2 id="sliderHeading" class="small-6 small-offset-1"><?php # echo $first_post_title->post_title; ?></h2> -->
 		</div>
 		<div class="grid-x ">
-			<label for="selectYear" class="section__label small-2 small-offset-2">
+			<label for="selectYear" class="section__label small-5 small-offset-1 medium-5 large-4">
 				<?php echo get_menu_to_select('winners-select'); ?>
-
 				<?php svef_partial('library/svef/icons/down-caret.svg'); ?>
 			</label>
 		</div>
@@ -26,12 +25,7 @@
 		<div id="winnersSlider" class="section__winners-slider--inner owl-carousel">
 
 			<?php
-					$args = array (
-						'post_type'       => 'winners',
-						'posts_per_page'	=>  1,
-						'order'						=> 'ASC',
-					);
-					$the_winners_query = new WP_Query( $args );
+
 
 					if ($the_winners_query->have_posts()) : while ($the_winners_query->have_posts()) : $the_winners_query->the_post();
 					$loop_of_winners = get_field('winners_slider');
