@@ -33,7 +33,7 @@
 				</div>
 
 					<div class="section__link section__link--absolute cell small-2 small-offset-5 medium-2 medium-offset-9 large-2 large-offset-6 grid-x">
-						<a class="small-6 small-offset-2 medium-10 medium-offset-1 large-5 large-offset-2" href="<?php echo $c2a_action['url']; ?>" target="<?php echo $c2a_action['target'] ?>" ><?php echo $c2a_action['title'] ?></a>
+						<a class="small-6 small-offset-2 medium-10 medium-offset-1 large-5 large-offset-2" href="<?php echo $c2a_action['url']; ?>" target="<?php echo $c2a_action['target'] ?>" ><?php pll_e('Nánar'); ?></a>
 						<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
 					</div>
 

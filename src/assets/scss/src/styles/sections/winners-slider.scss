@@ -2,7 +2,8 @@
   height: 676px;
 }
 .winners-slide {
-  max-width: 413px;
+  // max-width: 413px;
+  width: 100%;
   min-width: 300px;
   margin: 0;
   z-index: 1;
@@ -21,18 +22,20 @@
     }
   }
   &__img {
-    width: 413px;
+
     height: 294px;
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
     margin-bottom: 39px;
+    margin-right: 0;
   }
   // &__category {
 
   // }
   &__heading {
     margin: 4px 0;
+    padding-right: 20px;
   }
   &__text {
     border-left: 1px white solid;
