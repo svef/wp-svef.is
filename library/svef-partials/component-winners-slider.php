@@ -2,15 +2,11 @@
 	<div class="grid-container">
 		<div class="grid-x">
 			<?php
-					var_dump(wp_get_menu_array('winners-select'));
-					$args_select = array (
-						'post_type'       => 'winners',
-						'posts_per_page'	=>  -1,
-						'order'						=> 'ASC',
-					);
 
 
-					$options_query = new WP_Query( $args_select );
+
+
+
 
 					$a_select_options = $options_query->posts;
 					?>
@@ -19,11 +15,8 @@
 		</div>
 		<div class="grid-x ">
 			<label for="selectYear" class="section__label small-2 small-offset-2">
-				<select id="selectWinnerYear" name="selectYear" class="section__select">
-					<?php foreach ($a_select_options as $option): ?>
-						<option value="<?php echo $option->ID?>"><?php echo $option->post_title; ?></option>
-					<?php  endforeach; wp_reset_query(); ?>
-				</select>
+				<?php echo get_menu_to_select('winners-select'); ?>
+
 				<?php svef_partial('library/svef/icons/down-caret.svg'); ?>
 			</label>
 		</div>

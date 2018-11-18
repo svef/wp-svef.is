@@ -14,21 +14,25 @@ if(!function_exists('svef_partial')){
 	}
 }
 
-if(!function_exists('wp_get_menu_array')){
-	function wp_get_menu_array($current_menu) {
+if(!function_exists('get_menu_to_select')){
+	function get_menu_to_select($current_menu) {
 
     $array_menu = wp_get_nav_menu_items($current_menu);
-    $menu = array();
+		$menu = array();
+		$options = '';
     foreach ($array_menu as $m) {
         if (empty($m->menu_item_parent)) {
 
-            $menu[]->id      =   get_page_by_title( $m->title, OBJECT, 'winners' )->ID;
-            $menu[]->title       =   $m->title;
-
+            $menu_id  = get_page_by_title( $m->title, OBJECT, 'winners' )->ID;
+            $menu_title = $m->title;
+						$options .= "<option value=\"$menu_id\">$menu_title</option>";
         }
-    }
+		}
+		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select">';
+		$select .= $options;
+		$select .= '</select>';
 
-    return $menu;
+    return $select;
 
 	}
 }
