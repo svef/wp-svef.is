@@ -25,32 +25,41 @@ const WinnersSlider = {
     $(slider).trigger('destroy.owl.carousel')
   },
   getSelectValue(e) {
+    // console.log(e.target.value)
     const ajaxReques = {'action' : 'ajax_request', 'id': e.target.value}
     Global.postAjax(ajaxReques).done(this.changeSlider)
 
   },
 
   changeSlider(res) {
-    console.log(res)
-    WinnersSlider.sliderHeader.innerHTML = ''
+    // console.log(res)
+    // WinnersSlider.sliderHeader.innerHTML = ''
     WinnersSlider.destroyCarousel(WinnersSlider.slider)
     let newSlider = ''
     const acf = res.acf
     const aWinners = acf.winners_slider
     let winner
+    let winnerHasUrl
+    let winnerHasUrlBegin
+    let winnerHasUrlEnd
     for (let i = 0; i < aWinners.length; i++) {
       winner = aWinners[i]
+      winnerHasUrlBegin = winner.winner_url ? `<a class="winners-slide__link" href="${winner.winner_url}" target="_blank">` : '';
+      winnerHasUrlEnd = winner.winner_url ? `</a>` : '';
+
       newSlider += `<div class="winners-slide">
+                      ${winnerHasUrlBegin}
                       <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.medium});"></div>
                       <div class="section__text-color--white winners-slide__category">${winner.winner_category}</div>
                       <h3 class="section__text-color--white winners-slide__heading">${winner.winner_name}</h3>
                       <div class="section__text-color--white text--small winners-slide__text">
                         ${winner.winner_notes}
                       </div>
+                      ${winnerHasUrlEnd}
                     </div>`
 
     }
-    WinnersSlider.sliderHeader.innerHTML = res.post.post_title
+    // WinnersSlider.sliderHeader.innerHTML = res.post.post_title
     WinnersSlider.slider.innerHTML = ''
     WinnersSlider.slider.insertAdjacentHTML('beforeend', newSlider)
     WinnersSlider.setCarousel(WinnersSlider.slider, WinnersSlider.sliderOptions)
