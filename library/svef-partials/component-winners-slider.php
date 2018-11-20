@@ -35,6 +35,7 @@
 			?>
 
 				<div class="winners-slide">
+
 				<?php $site_url = $winner['winner_url'] ? $winner['winner_url'] : ''; echo $winner['winner_url'] ? '<a class="winners-slide__link" href="'.$site_url['url'].'" target="_blank">' : ''; ?>
 					<div class="winners-slide__img" style="background-image: url(<?php echo $winner['winner_screenshot']['sizes']['large']; ?>);"></div>
 					<div class="section__text-color--white winners-slide__category"><?php echo $winner['winner_category']; ?></div>

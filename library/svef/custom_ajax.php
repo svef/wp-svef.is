@@ -28,4 +28,16 @@ function ajax_handle_request(){
     // IMPORTANT: don't forget to "exit"
     exit;
 }
+
+add_action('wp_ajax_nopriv_ajax_scrape_rss', 'ajax_scrape_rss');
+add_action('wp_ajax_ajax_scrape_rss', 'ajax_scrape_rss');
+
+function ajax_scrape_rss(){
+
+	$tvinna =parseRssToJson ('https://tvinna.is/feed');
+
+	print $tvinna;
+	// IMPORTANT: don't forget to "exit"
+	exit;
+}
 ?>
