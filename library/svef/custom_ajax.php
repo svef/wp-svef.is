@@ -29,13 +29,13 @@ function ajax_handle_request(){
     exit;
 }
 
-add_action('wp_ajax_nopriv_ajax_scrape_rss', 'ajax_scrape_rss');
+// We register this function to be accessibel to the wp-ajax handler that lives inside the bowels of wordpress
+add_action('wp_ajax_nopriv_ajax_scrape_rss', 'ajax_scrape_rss'); // make shure you dont have to be logged in to the backend to access this.
 add_action('wp_ajax_ajax_scrape_rss', 'ajax_scrape_rss');
 
 function ajax_scrape_rss(){
-
-	$tvinna =parseRssToJson ('https://tvinna.is/feed');
-
+	// we call our function defined in library/svef/custom-scraper.php
+	$tvinna = parseRssToJson ('https://tvinna.is/feed');
 	print $tvinna;
 	// IMPORTANT: don't forget to "exit"
 	exit;

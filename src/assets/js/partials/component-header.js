@@ -1,4 +1,4 @@
-import GlobalFunctions from '../global-functions'
+import Global from '../global-functions'
 
 const Header = {
 
@@ -7,7 +7,8 @@ const Header = {
     this.addEvents()
   },
   cacheDom: function () {
-    this.body = document.querySelector('body')
+    this.body = Global.body;
+    // this.body = document.querySelector('body')
     this.header = this.body.querySelector('.site-header')
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
@@ -40,7 +41,7 @@ const Header = {
     }
   },
   clickedOutSideMenu(e) {
-    if (e.target != this.btnMenu && this.sideMenu.classList.contains('side-menu--active') && !this.sideMenu.contains(e.target) && !GlobalFunctions.isDescendant(this.sideMenu, e.target)) {
+    if (e.target != this.btnMenu && this.sideMenu.classList.contains('side-menu--active') && !this.sideMenu.contains(e.target) && !Global.isDescendant(this.sideMenu, e.target)) {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
