@@ -9,7 +9,8 @@ const WinnersSlider = {
     this.setCarousel(this.slider, this.sliderOptions)
   },
   cacheDOM() {
-    this.body = document.querySelector('body')
+    this.body = Global.body
+    // this.body = document.querySelector('body')
     this.slider = this.body.querySelector('#winnersSlider')
     this.select = this.body.querySelector('#selectWinnerYear')
     this.sliderHeader = this.body.querySelector('#sliderHeading')

@@ -12,7 +12,7 @@ window.$ = $;
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 import './lib/foundation-explicit-pieces'
-
+Global.cacheBody();
 // A function that checks if a element exists, Comes in handy when we dont want to load scripts that run on other pages than are currently loaded
 $.fn.exists = function (callback) {
   var args = [].slice.call(arguments, 1);

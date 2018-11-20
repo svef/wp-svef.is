@@ -1,13 +1,11 @@
 import $ from 'jquery'
 
 const GlobalFunctions = {
-  // init() {
 
-  // },
-  // setElements() {
-  // },
-  // chacheDOM() {
-  // },
+  cacheBody() {
+    this.body = document.querySelector('body')
+    return this.body
+  },
   isDescendant(parent, child) {
     var node = child.parentNode;
     while (node != null) {
