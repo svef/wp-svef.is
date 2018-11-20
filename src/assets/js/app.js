@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import Global from './global-functions'
 import whatInput from 'what-input'
 import Header from './partials/component-header'
 import Signup from './partials/component-signup'
@@ -24,6 +25,7 @@ $.fn.exists = function (callback) {
 
 
 /** invoke our scipts */
+// Global.init()
 Header.init()
 Signup.init()
 

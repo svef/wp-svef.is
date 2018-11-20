@@ -24,7 +24,7 @@
                     )
 
                     );
-                    $the_query = new WP_Query( $args ); 
+                    $the_query = new WP_Query( $args );
             ?>
             <?php
                 $boardmember_count = 0;
@@ -53,13 +53,13 @@
                     $boardmember_order2 = $boardmember_count % 2 ? 2 : 1;
                     $grid_offset1 = $boardmember_count % 2 ? 1 : 0;
                     $grid_offset2 = $boardmember_count % 2 ? 0 : 2;
-                    
+
             ?>
 
             <div class="boardmembersMax-each cell large-12">
-            
-                <div class="section__bg-fix section__bg-fix--default section__bg-fix--color" aria-hidden></div>
-                
+
+                <div class="section__bg-fix section__bg-fix--default section__bg-fix--color" aria-hidden="true"></div>
+
                 <div class="member_inner grid-x grid-padding-x">
                     <div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-10 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >
                     </div>
@@ -79,7 +79,7 @@
                                     <?php
                                     $classArray = array("emailIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/email.svg", $classArray ); ?>
-                                </a> 
+                                </a>
                             <?php endif; ?>
                             <?php if($website) : ?>
                                 <a href="<?php echo $website; ?>" target="_blank">
@@ -100,7 +100,7 @@
                                     <?php
                                     $classArray = array("instagramIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
-                                </a>      
+                                </a>
                             <?php endif; ?>
                             <?php if($twitter) : ?>
                                 <a href="<?php echo $twitter; ?>" target="_blank">
@@ -136,12 +136,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <?php endwhile; endif;  wp_reset_query(); ?>
-            
-            
+
+
         </div>
     </div>
 
-	
+
 </section>

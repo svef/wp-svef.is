@@ -13,7 +13,7 @@
 	}
   ?>
 <section class="section section--margin-bottom section--c2a ">
-	<div class="section__bg-fix section__bg-fix--<?php echo $c2a_bg_color['label']; ?>" aria-hidden></div>
+	<div class="section__bg-fix section__bg-fix--<?php echo $c2a_bg_color['label']; ?>" aria-hidden="true"></div>
 
 	<div class="c2a grid-container grid-x">
 		<!-- <div class="cell small-12 large-2"></div> -->
