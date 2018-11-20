@@ -47,64 +47,86 @@
                     $use_gif_image = get_field('use_gif_image');
                     $boardmember_gif_image = get_field('boardmember_gif_image');
                     $boardmember_gif_image = $boardmember_gif_image ? $boardmember_gif_image : $boardmember_image;
+
+                    $boardmember_count++;
+                    $boardmember_order1 = $boardmember_count % 2 ? 1 : 2;
+                    $boardmember_order2 = $boardmember_count % 2 ? 2 : 1;
+                    $grid_offset1 = $boardmember_count % 2 ? 1 : 0;
+                    $grid_offset2 = $boardmember_count % 2 ? 0 : 2;
             ?>
 
-            <div class="cell large-12">
+            <div class="boardmembersMax-each cell large-12">
             
-                <div class="section__bg-fix section__bg-fix-77 section__bg-fix--default" aria-hidden></div>
-                <div class="member_each grid-x grid-padding-x">
-                    <div class="cell large-4 large-offset-1">
+                <div class="section__bg-fix section__bg-fix-77 section__bg-fix--color" aria-hidden></div>
+                <div class="member_inner grid-x grid-padding-x">
+                    <div class="cell large-4 large-offset-<?php echo $grid_offset1; ?> large-order-<?php echo $boardmember_order1; ?>">
                         <div class="member-image">
                             <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
                             <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
                         </div>
                     </div>
-                    <div class="member-info-section cell large-6">
+                    <div class="member-info-section cell large-6 large-offset-<?php echo $grid_offset2; ?> large-order-<?php echo $boardmember_order2; ?>">
                         <h3><?php echo $boardmember_fullname; ?></h3>
                         <p class="text--card-undertitle"><?php echo $boardmember_role; ?> - <?php echo $boardmember_job_title; ?></p>
                         <div class="member-social">
 
-                            <a href="mailto:<?php echo $email; ?>" target="_blank">
-                                <?php
-                                $classArray = array("emailIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/email.svg", $classArray ); ?>
-                            </a>
-                            
-                            <a href="<?php echo $website; ?>" target="_blank">
-                                <?php
-                                $classArray = array("websiteIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/website.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $facebook; ?>" target="_blank">
-                                <?php
-                                $classArray = array("facebookIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/facebook.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $instagram; ?>" target="_blank">
-                                <?php
-                                $classArray = array("instagramIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $twitter; ?>" target="_blank">
-                            <?php
-                                $classArray = array("twitterIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/twitter.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $linkedin; ?>" target="_blank">
-                                <?php
-                                $classArray = array("linkedinIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/linkedin.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $behance; ?>" target="_blank">
-                                <?php
-                                $classArray = array("behanceIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/behance.svg", $classArray ); ?>
-                            </a>
-                            <a href="<?php echo $dribble; ?>" target="_blank">
-                                <?php
-                                $classArray = array("dribbleIcon" => "icon--dark40");
-                                svef_partial("library/svef/icons/dribble.svg", $classArray ); ?>
-                            </a>
+                            <?php if($email) : ?>
+                                <a href="mailto:<?php echo $email; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("emailIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/email.svg", $classArray ); ?>
+                                </a> 
+                            <?php endif; ?>
+                            <?php if($website) : ?>
+                                <a href="<?php echo $website; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("websiteIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/website.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+                            <?php if($facebook) : ?>
+                                <a href="<?php echo $facebook; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("facebookIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/facebook.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+                            <?php if($instagram) : ?>
+                                <a href="<?php echo $instagram; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("instagramIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
+                                </a>      
+                            <?php endif; ?>
+                            <?php if($twitter) : ?>
+                                <a href="<?php echo $twitter; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("twitterIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/twitter.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+                            <?php if($linkedin) : ?>
+                                <a href="<?php echo $linkedin; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("linkedinIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/linkedin.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+                            <?php if($behance) : ?>
+                                <a href="<?php echo $behance; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("behanceIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/behance.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+                            <?php if($dribble) : ?>
+                                <a href="<?php echo $dribble; ?>" target="_blank">
+                                    <?php
+                                    $classArray = array("dribbleIcon" => "icon--dark40");
+                                    svef_partial("library/svef/icons/dribble.svg", $classArray ); ?>
+                                </a>
+                            <?php endif; ?>
+
                         </div>
                         <p><?php echo $boardmember_text; ?></p>
                     </div>
