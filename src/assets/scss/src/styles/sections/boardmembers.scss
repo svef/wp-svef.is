@@ -81,9 +81,42 @@
         }
         .boardmembersMax-all {
             padding-bottom: 140px;
+            .boardmembersMax-each:nth-child(even) {
+               .section__bg-fix {
+                position: absolute;
+                content: '';
+                left: 0;
+                height: 100%;
+                width: 30%;
+                z-index: -1;
+                height: 800px;
+                &--color {
+                    background-color: $white;
+                  }
+               }
+               .section__bg-fix-77 {
+                width: 77%;
+              }
+            }
+            .boardmembersMax-each:nth-child(odd) {
+            .section__bg-fix {
+                position: absolute;
+                content: '';
+                right: 0;
+                height: 100%;
+                width: 30%;
+                z-index: -1;
+                height: 800px;
+                &--color {
+                    background-color: $bgGray;
+                  }
+                }
+                .section__bg-fix-77 {
+                    width: 77%;
+                  }
+            }
         }
-        .member_each {
-            // background-color: $bgGray;
+        .member_inner {
             height: 790px;
             margin-bottom: 40px;
             position: relative;
@@ -116,26 +149,30 @@
                     background-position: center;
                     opacity: 1;
                 }
-                &:hover {
+                &:hover { 
                     .member-image-jpg {
                         opacity: 0;
-                    }
-                }
+                    }   
+                } 
             }
+            
             .member-info-section {
                 h3 {
-                    margin-bottom: -6px;
+                    margin-bottom: 12px;
                 }
                 .member-social {
                     display: flex;
                     align-items: baseline;
-                    margin-top: 20px;
                     a {
                         margin-right: 20px;
+                        margin-top: 10px;
+                        margin-bottom: 20px
                     }
                 }
-         
-            } 
+                p {
+                    margin-top: 0;
+                }
+            }
 
         }
     }  

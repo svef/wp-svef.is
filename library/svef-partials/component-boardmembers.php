@@ -30,7 +30,6 @@
                     $boardmember_fullname = get_field('boardmember_fullname');
                     $boardmember_role = get_field('boardmember_role');
                     $boardmember_job_title = get_field('boardmember_job_title');
-                   
                     $boardmember_image = get_field('boardmember_image');
                     $use_gif_image = get_field('use_gif_image');
                     $boardmember_gif_image = get_field('boardmember_gif_image');
@@ -38,18 +37,20 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card">
-                    <div class="member-image">
+                    <a href="/SVEF/um-svef/stjorn">
                         <div class="member-image">
-                            <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
-                            <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                            <div class="member-image">
+                                <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
+                                <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-section">
-                        <p class="text--cardsmall"><?php echo $boardmember_fullname; ?></p>
-                        <div class="card-line"></div>
-                        <p><?php echo $boardmember_role; ?></p>
-                        <p class="text--small"><?php echo $boardmember_job_title; ?></p>
-                    </div>
+                        <div class="card-section">
+                            <p class="text--cardsmall"><?php echo $boardmember_fullname; ?></p>
+                            <div class="card-line"></div>
+                            <p><?php echo $boardmember_role; ?></p>
+                            <p class="text--small"><?php echo $boardmember_job_title; ?></p>
+                        </div>
+                    </a>                   
                 </div>
             </div>
             
@@ -103,18 +104,20 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card">
-                    <div class="member-image">
+                    <a href="/SVEF/um-svef/stjorn">
                         <div class="member-image">
-                            <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
-                            <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                            <div class="member-image">
+                                <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
+                                <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-section">
-                        <p class="text--cardsmall"><?php echo $boardmember_fullname; ?></p>
-                        <div class="card-line"></div>
-                        <p><?php echo $boardmember_role; ?></p>
-                        <p class="text--small"><?php echo $boardmember_job_title; ?></p>
-                    </div>
+                        <div class="card-section">
+                            <p class="text--cardsmall"><?php echo $boardmember_fullname; ?></p>
+                            <div class="card-line"></div>
+                            <p><?php echo $boardmember_role; ?></p>
+                            <p class="text--small"><?php echo $boardmember_job_title; ?></p>
+                        </div>
+                    </a>
                 </div>
             </div>
             
