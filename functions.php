@@ -53,10 +53,12 @@ require_once( 'library/sticky-posts.php' );
 require_once( 'library/responsive-images.php' );
 
 /** SVEF custom functions */
-require_once('library/svef/custom_ajax.php');
+require_once('library/svef/lib/simple_html_dom.php');
 require_once('library/svef/custom_translations.php');
 require_once('library/svef/custom_functions.php');
 require_once('library/svef/custom_functions-gmap.php');
+require_once('library/svef/custom-scraper.php');
+require_once('library/svef/custom_ajax.php');
 
 require_once('library/events-custom-post-types.php');
 require_once('library/boardmembers-custom-post-types.php');
