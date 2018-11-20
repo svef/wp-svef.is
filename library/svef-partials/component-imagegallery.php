@@ -5,8 +5,7 @@
 <div class="imagesliderContainer">
   <div id="myImageSlider" class="imagesliderContainer__allItems owl-carousel">
     <?php foreach ($image_gallery as $image): ?>
-        <div class="imagesliderContainer__allItems__oneItem">
-        <img src="<?php echo $image['sizes']['large']; ?>" alt="" />
+        <div class="imagesliderContainer__allItems__oneItem" style="background-image: url(<?php echo $image['sizes']['large'] ?>)">
         </div>
     <?php endforeach; ?>
   </div>

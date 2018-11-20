@@ -78,11 +78,14 @@
     &--boardmembersMax {
         .introtext {
             margin: 160px 0;
+            @include breakpoint(small down) {
+                margin: 100px 0;
+            }
         }
         .boardmembersMax-all {
             padding-bottom: 140px;
             .boardmembersMax-each:nth-child(even) {
-               .section__bg-fix {
+            .section__bg-fix {
                 position: absolute;
                 content: '';
                 left: 0;
@@ -90,13 +93,16 @@
                 width: 30%;
                 z-index: -1;
                 height: 800px;
+                @include breakpoint(medium down) {
+                    height: 700px;
+                }
                 &--color {
                     background-color: $white;
-                  }
-               }
-               .section__bg-fix-77 {
-                width: 77%;
-              }
+                }
+            }
+            .section__bg-color--default {
+                    background-color: $white;
+            }
             }
             .boardmembersMax-each:nth-child(odd) {
             .section__bg-fix {
@@ -107,13 +113,21 @@
                 width: 30%;
                 z-index: -1;
                 height: 800px;
+                @include breakpoint(medium down) {
+                    height: 700px;
+                }
                 &--color {
                     background-color: $bgGray;
-                  }
+                    @include breakpoint(small down) {
+                        background-color: $white;
+                    }
                 }
-                .section__bg-fix-77 {
-                    width: 77%;
-                  }
+                }
+                @include breakpoint(small down) {
+                    .section__bg-color--default {
+                        background-color: $white;
+                }
+                }
             }
         }
         .member_inner {
@@ -122,6 +136,13 @@
             position: relative;
             display: flex;
             align-items: center;
+            @include breakpoint(medium down) {
+                height: 660px;
+              }
+            @include breakpoint(small down) {
+                height: 100%;
+                padding-bottom: 60px;
+            }
             .member-image {
                 position: relative;
                 height: 500px;
