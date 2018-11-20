@@ -6,7 +6,10 @@ const Members = {
   init() {
     this.cacheDOM()
     this.addEvent()
-    this.getJobFeed()
+    $(this.jobFeed).exists(() => {
+      this.getJobFeed()
+
+    })
 
   },
   cacheDOM() {
@@ -42,11 +45,12 @@ const Members = {
       offset = i < 1 ? 2 : i == 1 ? 0 : i > 1 && i % 2 ? 0 : 1
       feedData = feed[i]
       cardTitle = feedData.rss.title
+      cardTitle = cardTitle.length < 20 ? cardTitle : cardTitle.substring(0, 20) + ' ...'
       cardCompany = feedData.scrape.company
-      cardLink = feedData.rss
+      cardLink = feedData.rss.link
       cardDate = feedData.scrape.date
       cards += `<div class="section--jobfeed__feed-card cell large-5 large-offset-${offset}">
-                  <a href="${cardLink}">
+                  <a href="${cardLink}" target="_blank">
                       <p class="text--small">${cardDate}</p>
                       <div class="card-title-arrow">
                           <p class="text--card">${cardTitle} ${Global.linkArrow('link-arrow link-arrow--white')}</p>
@@ -56,7 +60,7 @@ const Members = {
               </div>`
 
     }
-    console.log(cards)
+    // console.log(cards)
     Members.jobFeedContaier.insertAdjacentHTML('beforeend', cards)
   }
 }

@@ -1,5 +1,5 @@
 <section class="section section--margin-bottom section--hero2" >
-		<div class="section__bg-fix section__bg-fix--default" aria-hidden></div>
+		<div class="section__bg-fix section__bg-fix--default" aria-hidden="true"></div>
     <div class="hero grid-container" >
 			<div class="grid-x">
 				<div class="section__image cell small-10 small-offset-1 medium-6 medium-offset-0 large-7 large-offset-0">

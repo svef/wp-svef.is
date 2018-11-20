@@ -18,42 +18,31 @@
         </div>
     </div>
     <div class="section--jobfeed__feed grid-x grid-margin-x">
-        <div class="section--jobfeed__feed-card cell large-5 large-offset-2">
-            <a href="#">
-                <p class="text--small">19. okt 2018</p>
-                <div class="card-title-arrow">
-                    <p class="text--card">Vefhönnuður <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></p>
-                </div>
-                <p class="text--large">Avista</p>
-            </a>
-				</div>
-        <div class="section--jobfeed__feed-card cell large-5">
-            <a href="#">
-                <p class="text--small">19. okt 2018</p>
-                <div class="card-title-arrow">
-                    <p class="text--card">Frammenda forritari <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></p>
-                </div>
-                <p class="text--large">Hugsmiðjan</p>
-            </a>
-         </div>
-         <div class="section--jobfeed__feed-card cell large-5 large-offset-1">
-            <a href="#">
-                <p class="text--small">15. okt 2018</p>
-                <div class="card-title-arrow">
-                    <p class="text--card">Sérfræðingur á sviði... <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></p>
-                </div>
-                <p class="text--large">Póst- og fjarskiptastofnun</p>
-            </a>
-         </div>
-         <div class="section--jobfeed__feed-card cell large-5">
-            <a href="#">
-                <p class="text--small">12. okt 2018</p>
-                <div class="card-title-arrow">
-                    <p class="text--card">Viðmótsforritari  <?php svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></p>
-                </div>
-                <p class="text--large">Kolibri</p>
-            </a>
-         </div>
+				<?php
+					for ($i=0; $i <= 3 ; $i++):
+
+						if($i == 0) {	$offset = 2;}
+						elseif($i == 1) { $offset = 0; }
+						elseif($i > 2 && $i % 2) { $offset = 0; } else { $offset = 1; }
+						// $offset = $i < 1 ? 2 : $i == 2 ? 0 : $i > 2 && $i % 2 ? 0 : 1;
+
+				?>
+						<div class="section--jobfeed__feed-card cell large-5 large-offset-<?php echo $offset; ?>">
+							<div class="card--spinner loader-container">
+								<ul role="progressbar", aria-busy="true", aria-label="Loading domino shop">
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+									<li role="presentation"></li>
+								</ul>
+							</div>
+						</div>
+
+				<?php endfor; ?>
+
 
 
     </div>

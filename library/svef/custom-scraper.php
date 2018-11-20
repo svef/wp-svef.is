@@ -26,7 +26,7 @@ if(!function_exists()) {
 				$i++;
 				$a_job['title'] = $company->nodes[0]->parent->children[0]->nodes[0]->_[4];
 				//  break;
-				if($i > 1) {
+				if($i > 0) {
 					break;
 				}
 			}
@@ -44,11 +44,10 @@ if(!function_exists()){
 
 			$arrOfJobs[] = array( 'rss' => $entry, 'scrape' => scrapeTvinna($entry->link));
 			$i++;
-			if($i >= 10 ) {
+			if($i >= 4 ) {
 				break;
 			}
 		}
-
 		// return $jRes;
 		$jRes = json_encode($arrOfJobs, JSON_UNESCAPED_SLASHES);
 		return $jRes;
