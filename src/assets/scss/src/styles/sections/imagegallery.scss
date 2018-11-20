@@ -2,6 +2,9 @@
 .imagesliderContainer {
     padding: 180px 0;
     overflow: hidden;
+    @include breakpoint(small down) {
+        padding: 100px 0 60px 0;
+    }
     .owl-stage-outer {
         overflow: visible !important;
     }
@@ -9,6 +12,9 @@
     .owl-dots {
     display: flex;
     justify-content: center;
+    @include breakpoint(small down) {
+        margin-top: 60px;
+    }
         .owl-dot {
             position: relative;
             background: transparent;
@@ -37,15 +43,30 @@
     }
     
     &__allItems {
-      cursor: grab;
-      &__oneItem {
-        transition: 0.4s ease all;
-        margin: 0 5px;
-      }
-      .active &__oneItem {
+        cursor: grab;
         position: relative;
-        top: -60px;
-      }
+        &__oneItem {
+            position: absolute;
+            transition: 0.4s ease all;
+            margin: 0 5px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include breakpoint(small down) {
+                height: 300px;
+            }
+        }
+        .active &__oneItem {
+            position: relative;
+            top: -60px;
+            @include breakpoint(small down) {
+                top: 0;
+            }
+        }
     }
   }
   

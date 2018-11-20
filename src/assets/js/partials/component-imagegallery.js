@@ -24,25 +24,35 @@ const Imagegallery = {
     	      stopOnHover : true,
             lazyLoad: true,
             responsive: {
-                300: {
+                0: {
                     items: 1,
-                    margin: 5,
-                    stagePadding: 40
+                    margin: 0,
+                    stagePadding: 0
                 },
-                600: {
-                    items: 1,
-                    margin: 10,
-                    stagePadding: 40
-                },
-                1000: {
+                641: {
                     items: 1,
                     margin: 20,
-                    stagePadding: 200
+                    stagePadding: 60
                 },
-                1400: {
+                911: {
+                    items: 1,
+                    margin: 20,
+                    stagePadding: 180
+                },
+                1201: {
                     items: 1,
                     margin: 35,
-                    stagePadding: 340
+                    stagePadding: 320
+                },
+                1441: {
+                    items: 1,
+                    margin: 35,
+                    stagePadding: 360
+                },
+                2000: {
+                    items: 2,
+                    margin: 35,
+                    stagePadding: 400
                 }
             }
         })
