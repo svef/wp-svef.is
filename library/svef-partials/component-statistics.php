@@ -7,7 +7,7 @@
             <div class="slider" data-slider data-initial-start="304" data-end="304" data-step="20">
             <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
             <span class="slider-fill" data-slider-fill></span>
-            <ul class="slider__year">
+            <ul class="slider__year show-for-medium">
                 <li>2004</li>
                 <li>2005</li>
                 <li>2006</li>

@@ -126,7 +126,7 @@
       @include breakpoint(small down){
         position:relative;
         width: 100vw;
-        height: 400px;
+        height: 300px;
       }
     }
     .c2a-image {
@@ -163,6 +163,11 @@
     }
     @include breakpoint(small down) {
       margin-top: 20px;
+    }
+    &--hero {
+      @include breakpoint(small down) {
+        margin-top: 120px;
+      }
     }
   }
   &__label {

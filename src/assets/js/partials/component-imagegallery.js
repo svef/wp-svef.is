@@ -3,18 +3,16 @@ import 'owl.carousel';
 import Global from '../global-functions'
 const Imagegallery = {
     init() {
-        this.cacheDom()
-        this.addEvents()
-        $(this.imageGallery).owlCarousel(this.carouselOptions)
-      },
-      cacheDom: function () {
-        this.body = Global.body
-        // this.body = document.querySelector('body')
-        this.imageGallery = this.body.querySelector('.owl-carousel')
-        this.slider = this.body.querySelector('#myImageSlider')
-      },
-      addEvents() {
-  },
+      this.cacheDom()
+      $(this.slider).owlCarousel(this.carouselOptions)
+
+    },
+    cacheDom: function () {
+      this.body = Global.body
+      // this.body = document.querySelector('body')
+      this.slider = this.body.querySelector('#myImageSlider')
+    },
+
   carouselOptions: {
     stagePadding: 340,
     loop: true,

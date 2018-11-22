@@ -1,8 +1,60 @@
-.hero {
+.section .hero {
   position: relative;
   // &__image {
   //   .hero-image {
 
   //   }
   // }
+
+}
+
+
+#heroSlider {
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - 75rem);
+    margin: 40px 0 0 0;
+    @include breakpoint(large down) {
+      width: 8.33%;
+      justify-content: center;
+      margin: 40px 0 0 0;
+    }
+    @include breakpoint(medium down) {
+      margin: 80px 0 0 0;
+    }
+    @include breakpoint(small down) {
+      margin-top: 60px;
+      width: 100vw;
+      justify-content: flex-end;
+      margin:-20px 0 0;
+      padding-right: 30px;
+    }
+    .owl-dot {
+      position: relative;
+      background: transparent;
+      width: 20px;
+      height: 20px;
+      border: none;
+      padding: 0 !important;
+      font: inherit;
+      transition: 0.4s ease all;
+      &:before {
+        position: absolute;
+        content: '';
+        background: $black;
+        width: 1.4px;
+        height: 100%;
+        left: 50%;
+        z-index: 1;
+        top: 0;
+      }
+    }
+    .owl-dot.active {
+      &:before {
+        top: -6px;
+      }
+    }
+  }
 }
