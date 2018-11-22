@@ -8,7 +8,7 @@
     .owl-stage-outer {
         overflow: visible !important;
     }
-   
+
     .owl-dots {
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@
             }
         }
     }
-    
+
     &__allItems {
         cursor: grab;
         position: relative;
@@ -69,4 +69,3 @@
         }
     }
   }
-  

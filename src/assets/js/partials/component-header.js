@@ -5,6 +5,8 @@ const Header = {
   init() {
     this.cacheDom()
     this.addEvents()
+    this.navBarScrollBehaviour(this.header)
+
   },
   cacheDom: function () {
     this.body = Global.body;
@@ -60,6 +62,25 @@ const Header = {
     } else {
       this.body.classList.remove('body--contrast')
     }
+  },
+  navBarScrollBehaviour(header) {
+    let statPos = 0
+    let scrollPos = 0
+    let scrollUp
+    $(window).scroll(function(event) {
+      var st = $(this).scrollTop();
+      scrollPos = $(document).scrollTop();
+      if (scrollPos > 80) {
+        $(header).addClass('scrolledTop');
+        if (st < statPos){
+          scrollUp = true;
+          $(header).removeClass('scrolledTop');
+        } else {
+          scrollUp = false;
+        }
+        statPos = st;
+      }
+    });
   }
 }
 

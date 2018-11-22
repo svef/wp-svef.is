@@ -6,6 +6,7 @@ import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import Members from './partials/component-members'
+import HeroSlider from "./partials/component-hero-slider";
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -30,7 +31,7 @@ Header.init()
 Signup.init()
 
 
-
+HeroSlider.init()
 Imagegallery.init()
 WinnersSlider.init()
 Members.init()

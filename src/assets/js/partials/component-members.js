@@ -62,7 +62,6 @@ const Members = {
                       <p class="text--large">${cardCompany}</p>
                   </a>
               </div>`
-
     }
     // console.log(cards)
     // and then we insert our newly produced html to the container

@@ -6,7 +6,7 @@
   height: 80px;
   width: 100%;
   z-index: 8;
-  transition: all 800ms $transition;
+  transition: all 400ms $transition;
   display: flex;
   justify-content: center;
   &--shadow {
@@ -29,6 +29,9 @@
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  @include breakpoint(small down) {
+    margin: 0 10px;
+  }
   &__items {
     width: 210px;
     height: 100%;
@@ -145,6 +148,11 @@
     color: $white !important;
   }
 }
+
+.scrolledTop {
+  transform: translateY(-100%) !important;
+}
+
 
 
 
