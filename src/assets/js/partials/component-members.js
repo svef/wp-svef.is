@@ -4,10 +4,8 @@ import Global from '../global-functions'
 const Members = {
   init() {
     this.cacheDOM()
-    this.addEvent()
     $(this.jobFeed).exists(() => {
       this.getJobFeed()
-
     })
   },
   cacheDOM() {
@@ -15,18 +13,14 @@ const Members = {
     this.jobFeed = this.body.querySelector('.section--jobfeed')
     this.jobFeedContaier = this.body.querySelector('.section--jobfeed__feed')
   },
-  addEvent() {
-    $(this.jobFeed).exists(() => {
-      this.jobFeed.addEventListener('load', this.getJobFeed.bind(this))
-    })
-  },
+
   getJobFeed() {
     // Here we call the action we defined in library/svef/custom-scraper.php but only if we are on a page with the member section loaded
-    $(this.jobFeed).exists(() => {
+
       const ajaxReques = { 'action': 'ajax_scrape_rss' }
-      // instead of using a success function inside out $.ajax function in the Global functins file we can tag a done() function and wait for the promize to resolce and then run our handleDataFeed function
+      // instead of using a success function inside out $.ajax function in the Global functins file we can tag a done() function and wait for the promize to resolve and then run our handleDataFeed function
       Global.postAjax(ajaxReques).done(this.handleDataFeed)
-    })
+
   },
   handleDataFeed(feed) {
     // console.log(feed)

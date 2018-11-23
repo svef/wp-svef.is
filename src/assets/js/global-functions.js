@@ -4,6 +4,7 @@ const GlobalFunctions = {
 
   cacheBody() {
     this.body = document.querySelector('body')
+
     return this.body
   },
   isDescendant(parent, child) {
@@ -17,6 +18,7 @@ const GlobalFunctions = {
     return false;
   },
   postAjax(dataObj) {
+
     let ajaxOptions = {
       type: 'POST',
       url: myAjax.ajaxurl,
@@ -26,9 +28,7 @@ const GlobalFunctions = {
         console.log(err);
       }
     }
-    if (arguments.length > 2) {
-        ajaxOptions.data = arguments[2]
-    }
+
     return $.ajax(ajaxOptions)
   },
 

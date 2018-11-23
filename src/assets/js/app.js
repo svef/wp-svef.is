@@ -6,7 +6,8 @@ import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import Members from './partials/component-members'
-import HeroSlider from "./partials/component-hero-slider";
+import HeroSlider from "./partials/component-hero-slider"
+import LoadMorePosts from './partials/component-loadmore'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -23,8 +24,6 @@ $.fn.exists = function (callback) {
   return this;
 }
 
-
-
 /** invoke our scipts */
 // Global.init()
 Header.init()
@@ -35,7 +34,7 @@ HeroSlider.init()
 Imagegallery.init()
 WinnersSlider.init()
 Members.init()
-
+LoadMorePosts.init()
 
 /** invoke foundation */
 $(document).foundation()
