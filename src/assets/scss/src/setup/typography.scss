@@ -114,6 +114,15 @@ a {
   }
 }
 
+.content-ul {
+  list-style: disc;
+  li {
+    font-family: $font-overpass;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .link-text {
   &--menu {
     @extend a;

@@ -9,7 +9,7 @@
     height: 100%;
     width: 30%;
     z-index: -1;
-    height: 800px;
+    // height: 800px;
     @include breakpoint(small down) {
       height: 700px;
       width: 100%;
@@ -38,7 +38,7 @@
   }
   &__bg-height {
     &--normal {
-      height: 800px;
+      min-height: 70vh;
       @include breakpoint(small down) {
         height: 700px;
       }

@@ -2,16 +2,19 @@
     height: 790px;
     display: flex;
     align-items: center;
-    padding-left: 0.625rem; 
+    padding-left: 0.625rem;
     padding-left: 0.9375rem;
+    &::after {
+
+    }
     .logos-all {
         height: 680px;
         padding: 40px 20px;
         background: $bgGray;
         overflow: scroll;
         .logo-each {
-            display: flex; 
-            align-items: center; 
+            display: flex;
+            align-items: center;
             justify-content: center;
             height: 200px;
             svg {
@@ -19,5 +22,5 @@
             }
         }
     }
-    
+
 }
