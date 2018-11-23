@@ -1,15 +1,19 @@
 .bg-color {
   &--default {
     background-color: $bgGray;
+    color: $black;
   }
   &--blue {
     background-color: $blue;
+    color: $white;
   }
   &--red {
     background-color: $pink;
+    color: $white;
   }
   &--dark {
     background-color: $darkBlue;
+    color: $white;
   }
 }
 
@@ -36,7 +40,7 @@
         }
       }
     }
-    
+
   }
   &--75 {
     &--default {
