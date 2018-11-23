@@ -38,8 +38,9 @@ get_header(); ?>
 
 		svef_partial('library/svef-partials/component-winners-slider');
 
-	?>
+		svef_partial('library/svef-partials/component-logowall');
 
+	?>
 
 
 
