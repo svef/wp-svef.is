@@ -1,6 +1,6 @@
 .article {
-  &--content {
-    p, ul {
+  &__content {
+    p {
       @include xy-cell(10);
       @include xy-cell-offset(2);
       @include breakpoint(medium down) {
@@ -9,7 +9,7 @@
       }
     }
     ul {
-      @extend .content-ul;
+      @extend .text--content-ul;
       list-style-position: inside;
     }
   }

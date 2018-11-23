@@ -29,8 +29,9 @@
                     </p>
                 </div>
             </div>
-            <div class="side-signup__form" style="padding: 20px 0;">
-                <form action="">
+						<div class="side-signup__form" style="padding: 20px 0;">
+						<?php echo do_shortcode('[gravityform id="1" title="true" description="true"]'); ?>
+                <!-- <form action="">
                     <h3>Persónu upplýsingar</h3>
                     <input type="text">
                     <input type="text">
@@ -56,7 +57,7 @@
                     <button type="submit" value="Submit" class="btnMain">
                         Skráning í svef
                     </button>
-                </form>
+                </form> -->
 
             </div>
         </div>
