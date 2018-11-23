@@ -99,6 +99,13 @@ p {
   &--orange {
     color: $orange;
   }
+  &--content-ul {
+    list-style: disc;
+    li {
+      @extend p;
+      font-weight: 600;
+    }
+  }
 }
 
 a {
@@ -114,14 +121,7 @@ a {
   }
 }
 
-.content-ul {
-  list-style: disc;
-  li {
-    font-family: $font-overpass;
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
+
 
 .link-text {
   &--menu {
