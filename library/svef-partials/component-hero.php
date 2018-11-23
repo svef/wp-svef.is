@@ -40,12 +40,6 @@
 				<?php endwhile; ?>
 			</div>
 
-
-
-
-
-
-
 		<?php else : ?>
 		<div class="grid-x">
 			<div class="section__image cell small-10 small-offset-1 medium-6 medium-offset-0 large-7 large-offset-0">
