@@ -20,23 +20,24 @@
 		<div class="section__bg-color--<?php echo $c2a_bg_color['label']; ?> section__bg-height--normal align-center cell small-12 medium-12 large-10 large-offset-1">
 
 			<div class="section__c2a-inner grid-x ">
-				<div class="section__image cell small-8 small-offset-2 medium-6 medium-offset-0 large-6 large-offset-0">
+				<div class="section__image cell small-8 small-offset-2 medium-6 medium-offset-1 large-6 large-offset-0">
 					<div class="c2a-image<?php echo $mask; ?>" style="background-image: url(<?php echo $c2a_image['sizes']['large']; ?>);">
 						<?php svef_partial('library/svef/icons/maskTwoSqrs.svg'); ?>
 					</div>
 				</div>
-				<div class="cell small-12 medium-5 large-5 grid-x ">
-					<div class="section__info cell medium- medium-offset-1 large-10 large-offset-1 " >
+				<div class="cell section__info small-8 small-offset-2 medium-6 medium-offset-2 large-5 large-offset-1 grid-x ">
+					<div></div>
+					<div class="" >
 						<h2 class="section__title less-margin--top"><?php echo $c2a_title; ?></h2>
-						<p class="section__pragraphTall small-6 small-offset-2 medium-10 medium-offset-1 large-offset-0"><?php echo $c2a_text; ?></p>
+						<p class="section__pragraphTall"><?php echo $c2a_text; ?></p>
 					</div>
-				</div>
 
-					<div class="section__link section__link--absolute cell small-2 small-offset-5 medium-2 medium-offset-9 large-2 large-offset-6 grid-x">
-						<a class="small-6 small-offset-2 medium-10 medium-offset-1 large-5 large-offset-2" href="<?php echo $c2a_action['url']; ?>" target="<?php echo $c2a_action['target'] ?>" ><?php pll_e('Nánar'); ?></a>
+
+					<div class="section__link cell small-4 small-offset-5 medium-4 medium-offset-9 large-5 large-offset-0 grid-x">
+						<a class="" href="<?php echo $c2a_action['url']; ?>" target="<?php echo $c2a_action['target'] ?>" ><?php pll_e('Nánar'); ?></a>
 						<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
 					</div>
-
+				</div>
 			</div>
 		</div>
 	</div>

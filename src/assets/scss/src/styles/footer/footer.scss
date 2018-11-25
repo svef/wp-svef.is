@@ -28,7 +28,9 @@
 .body--contrast {
   .section--footer {
     .svef-logo {
-      fill: $orange
+      fill: $orange;
+      path { fill: $orange;}
+
     }
   }
 }

@@ -34,11 +34,15 @@ add_action('wp_ajax_nopriv_ajax_scrape_rss', 'ajax_scrape_rss'); // make shure y
 add_action('wp_ajax_ajax_scrape_rss', 'ajax_scrape_rss');
 
 function ajax_scrape_rss(){
-	// we call our function defined in library/svef/custom-scraper.php
-	$tvinna = parseRssToJson ('https://tvinna.is/feed');
-	print $tvinna;
-	// IMPORTANT: don't forget to "exit"
-	exit;
+	try {
+		// we call our function defined in library/svef/custom-scraper.php
+		$tvinna = parseRssToJson ('https://tvinna.is/feed');
+		print $tvinna;
+		// IMPORTANT: don't forget to "exit"
+		exit;
+	} catch (Exception $err ) {
+		print json_encode($err, true);
+	}
 }
 
 

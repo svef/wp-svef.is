@@ -105,3 +105,97 @@
 
   }
 }
+
+.gform_wrapper h3.gform_title {
+  display: none !important;
+}
+
+.frmsignup {
+
+  .gform_fields {
+    .gsection {
+      border-bottom: none;
+    }
+    .gfield {
+      margin: 0 0 40px;
+      padding: 0;
+      padding-right: 0 !important;
+
+    }
+  }
+}
+
+.gfield {
+  .gfield_label {
+    display: flex !important;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 22px !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    .gfield_required {
+      color: $black-40;
+      @extend .text--small;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+  }
+  .ginput_container {
+    input {
+      border: none;
+      border-bottom: 1px solid $black-40;
+      background: transparent;
+      box-shadow: none;
+    }
+    .chosen-container {
+      .chosen-single {
+        border: none;
+        border-bottom: 1px solid $black-40;
+        background: none;
+        box-shadow: none;
+        height: 40px;
+      }
+    }
+    .chosen-container-active.chosen-with-drop{
+      .chosen-single {
+        border: none;
+        background: $bgGray;
+        background-image: none;
+        box-shadow: none;
+      }
+      .chosen-drop {
+        border: none;
+        background: $bgGray;
+      }
+    }
+  }
+}
+
+.chosen-container-active.chosen-with-drop{
+
+  .chosen-drop {
+    box-shadow: $cardShadow;
+    .chosen-search {
+      .chosen-search-input {
+        border: none;
+        border-bottom: 1px solid $black-40;
+        height: 40px;
+      }
+    }
+    .chosen-results {
+      .active-result.result-selected {
+        height: 40px !important;
+        line-height: 32px !important;
+      }
+      .active-result.result-selected.highlighted {
+        background-image: none;
+        background-color: $black-10;
+        color: $black;
+        @extend .text--small;
+      }
+    }
+  }
+}
+
+
+
