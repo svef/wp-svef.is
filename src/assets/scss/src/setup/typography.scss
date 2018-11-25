@@ -44,6 +44,10 @@ p {
   color: $black;
 }
 
+ul {
+  list-style: none;
+}
+
 .text {
   @extend p;
   &--large {

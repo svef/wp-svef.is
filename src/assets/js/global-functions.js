@@ -1,10 +1,8 @@
 import $ from 'jquery'
 
 const GlobalFunctions = {
-
   cacheBody() {
     this.body = document.querySelector('body')
-
     return this.body
   },
   isDescendant(parent, child) {

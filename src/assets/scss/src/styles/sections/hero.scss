@@ -1,16 +1,21 @@
 .section--hero {
   position: relative;
   min-height: 70vh;
+
 }
 
-.section .hero {
+.section__info {
   position: relative;
+  height: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   // &__image {
   //   .hero-image {
 
   //   }
   // }
-
 }
 
 

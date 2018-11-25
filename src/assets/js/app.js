@@ -6,8 +6,9 @@ import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import Members from './partials/component-members'
-import HeroSlider from "./partials/component-hero-slider"
+import HeroSlider from './partials/component-hero-slider'
 import LoadMorePosts from './partials/component-loadmore'
+
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
