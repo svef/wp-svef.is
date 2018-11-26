@@ -7,65 +7,23 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="grid-container">
         <div class="supportors-logos" >
             <div class="logos-all grid-x grid-padding-x medium-8 medium-offset-2 cell large-10 large-offset-2">
-                <div class="logo-each logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo1.svg", $classArray );
-                    ?>
+                <?php 
+                $a_supporter_logos = get_field('supporter_logo', 'option');
+                shuffle($a_supporter_logos);
+                for( $i=0; $i < count($a_supporter_logos); $i++ ) : 
+                  
+                        $visability = $i>5 ? 'hidden_logo' : 'visible_logo';
+                    
+                ?>
+                <div class="client-logo logo-each logo-each cell small-6 medium-6 large-4 <?php echo $visability; ?>"> 
+                    <img src="<?php echo $a_supporter_logos[$i]['sizes']['large']; ?>" alt="">
                 </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo2.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo3.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo4.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo5.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo6.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo7.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo8.svg", $classArray );
-                    ?>
-                </div>
-                <div class="logo-each cell medium-6 large-4">
-                    <?php
-                        $classArray = array("companyLogo" => "icon--dark40");
-                        svef_partial("library/svef/logos/logo9.svg", $classArray );
-                    ?>
-                </div>
+                <?php endfor; ?> 
+
             </div>
         </div>
     </div>

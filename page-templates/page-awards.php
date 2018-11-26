@@ -22,11 +22,24 @@ get_header(); ?>
 			'is_slide_show' => get_field('is_slide_show')
 		);
 
-		svef_partial('library/svef-partials/component-hero', $a_hero_options);
+		$hero_is_slider = get_field('is_slide_show');
 
+		$a_hero_options = $her_is_slider ? array(
+			'hero_slider' => get_field('hero_slider'),
+			'hero_background_color' => get_field('hero_background_color'),
+			'is_slide_show' => get_field('is_slide_show')
+			) : array(
+			'hero_img' => get_field('hero_img'),
+			'hero_title' => get_field('hero_title'),
+			'hero_text' => get_field('hero_text'),
+			'hero_link' => get_field('hero_link'),
+			'hero_background_color' => get_field('hero_background_color'),
+			'is_slide_show' => get_field('is_slide_show')
+		);
 
-		echo '<h3>eitthvað texta field sem kemur bara fyrir hér</h3>';
+		svef_partial("library/svef-partials/component-hero", $a_hero_options);
 
+		svef_partial("library/svef-partials/component-quotetext");
 
 		$a_c2a = array(
 			'intro_title' 	=> get_field('intro_title_inner'),
@@ -45,8 +58,8 @@ get_header(); ?>
 		$a_intro_text = array(
 			'title' => get_field('intro_title'),
 			'paragraph' => get_field('intro_text'),
-			'margin_bottom' => true,
-			'margin_bottom_inside' => false
+			'margin_bottom' => false,
+			'margin_bottom_inside' => true
 		);
 		svef_partial('library/svef-partials/component-introtext', $a_intro_text);
 

@@ -7,8 +7,8 @@ import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import Members from './partials/component-members'
 import HeroSlider from './partials/component-hero-slider'
+import Logowall from './partials/component-logowall'
 import LoadMorePosts from './partials/component-loadmore'
-
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -35,6 +35,7 @@ HeroSlider.init()
 Imagegallery.init()
 WinnersSlider.init()
 Members.init()
+Logowall.init()
 LoadMorePosts.init()
 
 /** invoke foundation */
