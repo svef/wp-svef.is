@@ -12,15 +12,16 @@
                 <img src="<?php echo $jobfeed_image['sizes']['large']; ?>" alt="">
             </div>
         </div>
-        <div class="section__info cell large-6" >
+        <div class="section__info section__info--center cell large-6" >
+
             <h2 class="section__title"><?php echo $jobfeed_title; ?></h2>
-            <p class="section__pragraphTall"><?php echo $jobfeed_text; ?></p>
+						<p class="section__pragraphTall--off"><?php echo $jobfeed_text; ?></p>
+
         </div>
     </div>
     <div class="section--jobfeed__feed grid-x grid-margin-x">
 				<?php
 					for ($i=0; $i <= 3 ; $i++):
-
 						if($i == 0) {	$offset = 2;}
 						elseif($i == 1) { $offset = 0; }
 						elseif($i > 2 && $i % 2) { $offset = 0; } else { $offset = 1; }

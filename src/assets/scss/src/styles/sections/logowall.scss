@@ -8,8 +8,9 @@
         height: 500px;
         display: flex;
         align-items: center;
-        padding-left: 0.625rem; 
+        padding-left: 0.625rem;
         padding-left: 0.9375rem;
+        position: relative;
         @include breakpoint(medium down) {
             height: 700px;
         }
@@ -27,8 +28,8 @@
                 padding: 30px 0 0 0;
             }
             .logo-each {
-                display: flex; 
-                align-items: center; 
+                display: flex;
+                align-items: center;
                 justify-content: center;
                 height: 200px;
                 @include breakpoint(small down) {
@@ -45,8 +46,9 @@
                         max-width: 80px;
                     }
                 }
-            
+
             }
         }
-        
+
     }
+  }
