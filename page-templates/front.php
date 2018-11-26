@@ -8,6 +8,7 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php
+
 		$hero_is_slider = get_field('is_slide_show');
 
 		$a_hero_options = $her_is_slider ? array(

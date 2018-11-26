@@ -2,7 +2,6 @@ import $ from 'jquery'
 import 'owl.carousel'
 import Global from '../global-functions'
 
-
 const HeroSlider = {
   init(){
     this.cacheDom()
@@ -10,15 +9,11 @@ const HeroSlider = {
   },
   cacheDom(){
     this.body = Global.body
-
     this.heroSlider = this.body.querySelector('#heroSlider')
-
   },
 
   setOwlCarousel(slider, options) {
-
     $(slider).owlCarousel(options);
-
   },
   sliderOptions : {
     stagePadding: 0,
@@ -58,8 +53,6 @@ const HeroSlider = {
       }
     }
   }
-
-
 }
 module.exports =  HeroSlider
 

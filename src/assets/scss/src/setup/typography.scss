@@ -44,6 +44,10 @@ p {
   color: $black;
 }
 
+ul {
+  list-style: none;
+}
+
 .text {
   @extend p;
   &--large {
@@ -99,6 +103,13 @@ p {
   &--orange {
     color: $orange;
   }
+  &--content-ul {
+    list-style: disc;
+    li {
+      @extend p;
+      font-weight: 600;
+    }
+  }
 }
 
 a {
@@ -113,6 +124,8 @@ a {
     text-decoration: none;
   }
 }
+
+
 
 .link-text {
   &--menu {

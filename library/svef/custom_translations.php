@@ -12,5 +12,8 @@
 
 		// Header section
 		pll_register_string('Header', 'valm', 'SVEF');
+
+		// Show more button
+		pll_register_string('Elements', 'Sjá fleiri'. 'SVEF');
 	}
 ?>

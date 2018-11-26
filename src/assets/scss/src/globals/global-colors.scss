@@ -1,18 +1,35 @@
 .bg-color {
   &--default {
     background-color: $bgGray;
+    // color: $black;
   }
   &--blue {
     background-color: $blue;
+    // color: $white;
   }
   &--red {
     background-color: $pink;
+    // color: $white;
   }
   &--dark {
     background-color: $darkBlue;
+    // color: $white;
   }
 }
-
+.text-color {
+  &--default {
+    color: $black;
+  }
+  &--blue {
+    color: $white;
+  }
+  &--red {
+    color: $white;
+  }
+  &--dark {
+    color: $white;
+  }
+}
 .bg-col-partial {
   position: relative;
   &::before{
@@ -36,7 +53,7 @@
         }
       }
     }
-    
+
   }
   &--75 {
     &--default {

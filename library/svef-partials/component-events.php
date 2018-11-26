@@ -10,21 +10,30 @@
 	?>
 	<?php svef_partial("library/svef-partials/component-introtext", $a_intro_text); ?>
 	<div class="section__inner grid-container">
-		<div class="grid-x">
+		<div class="grid-x events-container">
 		<?php
-			$args = array (
+			// var_dump($paged);
+			$args = $events_page ?
+			array (
 				'post_type'       => 'events',
-				'posts_per_page'	=>  3,
+				'posts_per_page'	=>    5,
 				'order'						=> 'ASC',
+				'paged' 					=> $paged
+			) :
+			array (
+					'post_type'       => 'events',
+					'posts_per_page'	=>    3,
+					'order'						=> 'ASC',
 
 				);
-				$the_query = new WP_Query( $args ); ?>
+				$the_query = new WP_Query( $args );?>
 
 				<?php
 					$event_count = 0;
 					$a_link_arrow = array('link_arrow' => 'link_arrow link-arrow--white');
 					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 						$image_gallery = get_field('image_gallery');
+						$event_date = get_field('event_start_date');
 						$direct_link_isset = get_field('direct_link_off_page');
 						$direct_link = get_field('direct_link');
 						$location_name = get_field('event_location_name');
@@ -39,7 +48,7 @@
 				?>
 						<div class="section__event small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
 							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
-								<span class="link-text--menu link-text--dull"><?php echo date_i18n('j M Y') ?></span>
+								<span class="link-text--menu link-text--dull"><?php echo $event_date; ?></span>
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
 								<h3 class="less-margin--top less-margin--bottom"><?php echo $location_name; ?></h3>
 								<p class="section__event--border link-text--menu link-text--menu--normal-case">
@@ -49,10 +58,35 @@
 						</div>
 
 				<?php endwhile; endif; wp_reset_query(); ?>
-
-			<div class="section__link small-10 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-7">
-				<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php echo pll__('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
+					</div> <!-- grid-x -->
+				</div> <!-- enter section inner -->
+			<?php if(!$events_page) : ?>
+			<div class="section__inner grid-container">
+				<div class="grid-x">
+					<div class="section__link small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-7">
+						<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php echo pll__('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
+					</div>
+				</div>
 			</div>
-		</div> <!-- grid-x -->
-	</div> <!-- enter section inner -->
+			<?php else : ?>
+			<div class="section__inner grid-container">
+				<div class="grid-x">
+					<div class="section__link small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
+						<button id="btnGetMoreEvents" data-current-page="<?php echo $paged; ?>" class="section--events__page btnShowMore"><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
+					</div>
+				</div>
+			</div>
+				<!-- <div class="section__loader--events-page card--spinner loader-container small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
+					<ul role="progressbar", aria-busy="true", aria-label="Loading domino shop">
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+						<li role="presentation"></li>
+					</ul>
+				</div> -->
+			<?php endif; ?>
+
 </section>

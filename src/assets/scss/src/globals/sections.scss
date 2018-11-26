@@ -12,13 +12,13 @@
     height: 100%;
     width: 30%;
     z-index: -1;
-    height: 800px;
+    // height: 800px;
     @include breakpoint(small down) {
       height: 700px;
       width: 100%;
     }
     @include breakpoint(medium down) {
-      height: 700px;
+      height: 0px;
     }
     &--default {
       background-color: $bgGray;
@@ -41,7 +41,9 @@
   }
   &__bg-height {
     &--normal {
-      height: 800px;
+      min-height: 800px;
+      max-height: 800px;
+      height: 100%;
       @include breakpoint(small down) {
         height: 700px;
       }
@@ -49,6 +51,10 @@
         height: 700px;
 
       }
+    }
+    &--slide-show {
+      min-height: 70vh;
+      height: 100%;
     }
   }
   &__bg-color {
@@ -98,6 +104,12 @@
         fill: $white;
         path {
           fill: $white;
+        }
+      }
+      .svef-logo {
+        fill: $orange;
+        path {
+          fill: $orange;
         }
       }
     }
@@ -154,10 +166,21 @@
       min-height: 90px;
     }
   }
+  &__info {
+    position: relative;
+    height: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
   &__link {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    // margin-top: 50px;
+
+
     svg {
       margin-left: 20px;
     }
@@ -216,6 +239,9 @@
       padding-left: 0.9357rem;
     }
   }
+  &__loader--events-page {
+    margin-top: 100px;
+  }
 }
 
 .body--contrast {
@@ -225,6 +251,12 @@
       fill: $white;
       path {
         fill: $white;
+      }
+    }
+    .svef-logo {
+      fill: $orange;
+      path {
+        fill: $orange;
       }
     }
   }
