@@ -15,9 +15,9 @@
                 $a_supporter_logos = get_field('supporter_logo', 'option');
                 shuffle($a_supporter_logos);
                 for( $i=0; $i < count($a_supporter_logos); $i++ ) : 
-                  
-                        $visability = $i>5 ? 'hidden_logo' : 'visible_logo';
-                    
+
+                    $visability = $i>5 ? 'hidden_logo' : 'visible_logo';
+                
                 ?>
                 <div class="client-logo logo-each logo-each cell small-6 medium-6 large-4 <?php echo $visability; ?>"> 
                     <img src="<?php echo $a_supporter_logos[$i]['sizes']['large']; ?>" alt="">

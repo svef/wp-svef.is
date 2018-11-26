@@ -76,13 +76,11 @@ const WinnersSlider = {
   },
 
   sliderOptions : {
-    stagePadding: 0,
+    stagePadding: 40,
     loop: true,
     margin: 0,
     items: 3,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    autoplayTimeout: 10000,
+    autoplay: false,
     navigation : false,
     slideSpeed : 500,
     paginationSpeed : 800,
@@ -92,24 +90,24 @@ const WinnersSlider = {
     lazyLoad: true,
     responsive: {
         0: {
-            items: 2,
-            margin: 166,
-            stagePadding: 0
+            items: 1,
+            margin: 0,
+            stagePadding:20
         },
         640: {
-            items: 3,
+            items: 2,
             margin: 0,
-            stagePadding: 0
+            stagePadding: 20
         },
         910: {
             items: 3,
             margin: 0,
-            stagePadding: 0
+            stagePadding: 40
         },
         1200: {
             items: 3,
             margin: 0,
-            stagePadding: 0
+            stagePadding: 60
         }
     }
   }
