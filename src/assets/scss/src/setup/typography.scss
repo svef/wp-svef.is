@@ -68,6 +68,14 @@ ul {
   font-size: 20px;
   text-align: center;
   }
+  &--under-title {
+
+    font-family: $font-noto;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 32px;
+
+  }
   &--cardsmall {
     font-weight: bold;
     line-height: normal;
@@ -78,6 +86,13 @@ ul {
     font-weight: 400;
     line-height: normal;
     font-size: 16px;
+  }
+  &--date {
+    font-family: $font-noto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
   }
   &--breadcrum {
     font-style: normal;
@@ -108,6 +123,22 @@ ul {
     li {
       @extend p;
       font-weight: 600;
+    }
+  }
+  &--collapse {
+    &-top {
+      margin-top: 0;
+    }
+    &-bottom {
+      margin-bottom: 0;
+    }
+  }
+  &--padding {
+    &-left {
+      padding-left: 16px;
+    }
+    &-right {
+      padding-right: 16px;
     }
   }
 }

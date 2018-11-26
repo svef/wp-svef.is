@@ -20,7 +20,7 @@ const HeroSlider = {
     loop: true,
     margin: 0,
     items: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1500,
     autoplayTimeout: 10000,
     navigation : false,

@@ -1,8 +1,12 @@
+.section__hero--relative {
+  position: relative;
+}
 .section--hero {
   position: relative;
   min-height: 70vh;
 
 }
+
 
 .section__info {
   position: relative;
@@ -17,6 +21,7 @@
   //   }
   // }
 }
+
 
 
 #heroSlider {

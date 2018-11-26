@@ -13,13 +13,13 @@
     width: 30%;
     z-index: -1;
     // height: 800px;
-    @include breakpoint(small down) {
-      height: 700px;
-      width: 100%;
-    }
-    @include breakpoint(medium down) {
-      height: 0px;
-    }
+    // @include breakpoint(small down) {
+    //   height: 700px;
+    //   width: 100%;
+    // }
+    // @include breakpoint(medium down) {
+    //   // height: 0px;
+    // }
     &--default {
       background-color: $bgGray;
     }
@@ -32,9 +32,18 @@
     &--dark {
       background: $darkBlue;
     }
+    &--right {
+      right: calc( ((100vw - 75rem) / -2) - 0.9357rem );
+      @include breakpoint(large down) {
+        right: - 0.9357rem;
+      }
+    }
   }
   &--margin-bottom {
     margin-bottom: 140px !important;
+  }
+  &--margin-top {
+    margin-top: 180px !important;
   }
   &--margin-bottom-inside {
     margin-bottom: 110px !important;
@@ -168,11 +177,17 @@
   }
   &__info {
     position: relative;
-    height: 100%;
-    min-height: 70vh;
+    height: auto;
+    // min-height: 60vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    &--center {
+      justify-content: center !important;
+    }
+    &--start {
+      justify-content: flex-start !important;
+    }
   }
 
   &__link {

@@ -2,8 +2,9 @@ import $ from 'jquery';
 import Global from '../global-functions'
 const Logowall = {
     init() {
-        this.cacheDom()
-        this.randomLogoSwap()
+      this.cacheDom()
+
+      $(this.visibleLogo).exists(()=>this.randomLogoSwap())
     },
     cacheDom() {
         this.body = Global.body
@@ -15,16 +16,16 @@ const Logowall = {
     },
     getImgSrcArray( array ) {
         //make array of visible img scr
-        let aImageSrc = []; 
+        let aImageSrc = [];
         for (let i = 0; i < array.length; i++) {
             let imageSrc = array[i].childNodes[1].getAttribute('src')
             aImageSrc.push(imageSrc)
-        } 
+        }
         return aImageSrc
-    }, 
+    },
     randomLogoSwap() {
 
-        
+
         //get visible image src array
         let aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
 
@@ -37,9 +38,9 @@ const Logowall = {
             // do something
 
             //get a random visible image src and choose it
-            let iRandomVisibleImgSrc = this.getRand(0, aVisibleImageSrc.length - 1)               
+            let iRandomVisibleImgSrc = this.getRand(0, aVisibleImageSrc.length - 1)
             let choosenVisibleLogo = this.visibleLogo[iRandomVisibleImgSrc].childNodes[1]
-        
+
             //get a random hidden image src and choose it
             let iRandomHiddenImgSrc = this.getRand(0, aHiddenImageSrc.length - 1)
             let choosenHiddenLogo = this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1]
@@ -56,7 +57,7 @@ const Logowall = {
             aHiddenImageSrc.push(aVisibleImageSrc[iRandomVisibleImgSrc])
 
             //console.log(aHiddenImageSrc);
-            
+
         }, 10000); // <- 1000ms = 1s
     }
 
@@ -64,7 +65,7 @@ const Logowall = {
     //     for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     //     return o;
     // }
-    
+
 
 }
 module.exports = Logowall;
