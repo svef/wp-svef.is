@@ -1,5 +1,8 @@
 .section__winners-slider {
   height: 676px;
+  .owl-stage {
+    padding-left: 0 !important;
+  }
 }
 .winners-slide {
   // max-width: 413px;
@@ -14,6 +17,9 @@
     .winners-slide__text {
       max-height: 200px;
     }
+    .winners-slide__img {
+      filter: grayscale(0);
+    }
   }
 
   &__link {
@@ -22,14 +28,13 @@
     }
   }
   &__img {
-
     height: 294px;
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
     margin-bottom: 39px;
     margin-right: 0;
-    filter: grayscale(100%);
+    filter: grayscale(80%);
   }
   // &__category {
 
