@@ -28,10 +28,12 @@
 									<h2 class="section__title"><?php echo $hero_slider_title; ?></h2>
 									<p class="section__paragraphTall small-10 small-offset-1 medium-offset-0 large-offset-0"><?php echo $hero_slider_text; ?></p>
 								</div>
-								<div class="section__link section__link--hero cell small-5 small-offset-1 medium-5 medium-offset-0 large-5 large-offset-0">
-									<a href="<?php echo $hero_slider_link['url'] ?>" target="<?php echo $hero_slider_link['target'] ?>"><?php echo pll__('Lesa grein'); ?></a>
-									<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
-								</div>
+								<?php if($hero_slider_link) : ?>
+									<div class="section__link section__link--hero cell small-5 small-offset-1 medium-5 medium-offset-0 large-5 large-offset-0">
+										<a href="<?php echo $hero_slider_link['url'] ?>" target="<?php echo $hero_slider_link['target'] ?>"><?php echo pll__('Lesa grein'); ?></a>
+										<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
+									</div>
+								<?php endif; ?>
 							</div>
 						</div>
 				</div>
@@ -55,13 +57,15 @@
 			<div class="cell small-12 medium-5 large-5 grid-x ">
 				<div class="section__info cell small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 top-text-padding">
 
-						<h2 class="section__title"><?php echo $hero_title; ?></h2>
-						<p class="section__paragraphTall small-10 small-offset-1 medium-offset-0 large-offset-0"><?php echo $hero_text; ?></p>
-
-					<div class="section__link section__link--hero cell small-5 small-offset-1 medium-5 medium-offset-0 large-5 large-offset-0">
-					<a href="<?php echo $hero_link['url'] ?>" target="<?php echo $hero_link['target'] ?>"><?php echo pll__('Lesa grein'); ?></a>
+					<h2 class="section__title"><?php echo $hero_title; ?></h2>
+					<p class="section__paragraphTall small-10 small-offset-1 medium-offset-0 large-offset-0"><?php echo $hero_text; ?></p>
+					
+					<?php if($hero_slider_link) : ?>
+						<div class="section__link section__link--hero cell small-5 small-offset-1 medium-5 medium-offset-0 large-5 large-offset-0">
+						<a href="<?php echo $hero_link['url'] ?>" target="<?php echo $hero_link['target'] ?>"><?php echo pll__('Lesa grein'); ?></a>
 						<?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
-					</div>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

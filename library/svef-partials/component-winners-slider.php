@@ -1,4 +1,4 @@
-<section class="section section--award-slider">
+<section class="section section--award-slider section--margin-bottom">
 	<div class="grid-container">
 		<div class="grid-x">
 			<?php

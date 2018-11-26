@@ -6,7 +6,8 @@ import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import Members from './partials/component-members'
-import HeroSlider from "./partials/component-hero-slider";
+import HeroSlider from './partials/component-hero-slider'
+import Logowall from './partials/component-logowall'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -35,6 +36,7 @@ HeroSlider.init()
 Imagegallery.init()
 WinnersSlider.init()
 Members.init()
+Logowall.init()
 
 
 /** invoke foundation */

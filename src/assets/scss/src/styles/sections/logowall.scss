@@ -1,23 +1,54 @@
-.supportors-logos {
-    height: 790px;
-    display: flex;
-    align-items: center;
-    padding-left: 0.625rem; 
-    padding-left: 0.9375rem;
-    .logos-all {
-        height: 680px;
-        padding: 40px 20px;
-        background: $bgGray;
-        overflow: scroll;
-        .logo-each {
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            height: 200px;
-            svg {
-                min-width: 200px;
-            }
+.section {
+    &--logowall {
+        .introtext {
+            margin-bottom: 40px;
         }
     }
-    
+    .supportors-logos {
+        height: 500px;
+        display: flex;
+        align-items: center;
+        padding-left: 0.625rem; 
+        padding-left: 0.9375rem;
+        @include breakpoint(medium down) {
+            height: 700px;
+        }
+        @include breakpoint(small down) {
+            height: 500px;
+        }
+        .logos-all {
+            height: 100%;
+            padding: 40px 40px 20px 40px;
+            background: $bgGray;
+            @include breakpoint(medium down) {
+                padding: 40px;
+            }
+            @include breakpoint(small down) {
+                padding: 30px 0 0 0;
+            }
+            .logo-each {
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+                height: 200px;
+                @include breakpoint(small down) {
+                    height: 140px;
+                }
+                img {
+                    max-width: 140px;
+                    max-height: 100px;
+                    @include breakpoint(medium down) {
+                        max-width: 120px;
+                    }
+                    @include breakpoint(small down) {
+                        max-height: 80px;
+                        max-width: 80px;
+                    }
+                }
+            
+            }
+        }
+        
+    }
+
 }

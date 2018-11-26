@@ -1,7 +1,10 @@
 .section {
-
   height: auto;
-
+  &--quotetext {
+    min-height: 790px;
+    display: flex;
+    align-items: center;
+  }
   &__bg-fix {
     position: absolute;
     content: '';

@@ -82,6 +82,12 @@
   }
 }
 
+.hidden_logo {
+  opacity: 0 !important;
+}
+.visible_logo {
+  opacity: 1 !important;
+}
 
 .body--contrast {
 
