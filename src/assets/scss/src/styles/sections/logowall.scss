@@ -48,7 +48,13 @@
                 }
 
             }
-        } 
+        }
     }
 }
 
+
+.body--contrast {
+  .section .supportors-logos .logos-all {
+    background: $blackBlue;
+  }
+}

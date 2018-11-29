@@ -59,8 +59,11 @@ const Header = {
   clickSiteContrast(e) {
     if (!this.body.classList.contains('body--contrast')) {
       this.body.classList.add('body--contrast')
+      document.cookie = "darkMode=true"
     } else {
       this.body.classList.remove('body--contrast')
+      window.history.replaceState(null, null, "/svef");
+      document.cookie = "darkMode=false"
     }
   },
   navBarScrollBehaviour(header) {
