@@ -9,6 +9,7 @@ import Members from './partials/component-members'
 import HeroSlider from './partials/component-hero-slider'
 import Logowall from './partials/component-logowall'
 import LoadMorePosts from './partials/component-loadmore'
+import Textticker from './partials/component-textticker'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -37,6 +38,7 @@ WinnersSlider.init()
 Members.init()
 Logowall.init()
 LoadMorePosts.init()
+Textticker.init()
 
 /** invoke foundation */
 $(document).foundation()

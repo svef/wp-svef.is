@@ -161,7 +161,7 @@ a {
 .link-text {
   &--menu {
     @extend a;
-    line-height: 22px;
+    line-height: 23px;
     font-size: 12px;
   }
   &--dull {
@@ -205,6 +205,41 @@ input[type="text"], input[type="checkbox"] {
   font-size: 15px;
   color: $darkBlue;
 }
+
+.h2TickerClass {
+  display: inline-block;
+  @include breakpoint(small down) {
+    margin-bottom: -10px;
+  }
+}
+.divTickerClass {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include breakpoint(small down) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.ticker_item span {
+  display: none;
+  z-index: 100;
+}
+.scroller {
+  height: 50px;
+  line-height: 40px;
+  margin-left: 7px;
+  overflow: hidden;
+  @include breakpoint(small down) {
+    margin-left: 0;
+  }
+}
+.scroller span {
+  display: block;
+  @extend h2;
+  color: $orange; 
+}
+
 
 
 select {

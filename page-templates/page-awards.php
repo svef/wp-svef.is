@@ -48,8 +48,8 @@ get_header(); ?>
 			'margin_bottom_inside' => true
 		);
 		svef_partial('library/svef-partials/component-introtext', $a_intro_text);
-
-		svef_partial('library/svef-partials/component-winners-slider');
+ 
+		svef_partial('library/svef-partials/component-winners-slider', ['winners_title' => get_field('winners_title')]);
 
 		svef_partial('library/svef-partials/component-logowall');
 

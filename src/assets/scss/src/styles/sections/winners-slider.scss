@@ -1,11 +1,27 @@
+.section--award-slider {
+  .section__label {
+    border-bottom: solid 2px $bgGray;
+  }
+}
+
 .section__winners-slider {
   height: 676px;
   .owl-stage {
     padding-left: 0 !important;
   }
+  &--inner {
+    @include breakpoint(large down) {
+    padding-left: 99px;
+    }
+    @include breakpoint(medium down) {
+      padding-left: 76px;
+    }
+    @include breakpoint(small down) {
+      padding-left: 0;
+    }
+  }
 }
 .winners-slide {
-  // max-width: 413px;
   width: 100%;
   min-width: 300px;
   margin: 0;
@@ -21,7 +37,14 @@
       filter: grayscale(0);
     }
   }
-
+  @include breakpoint(medium down) {
+    .winners-slide__text {
+      max-height: 200px;
+    }
+    .winners-slide__img {
+      filter: grayscale(0);
+    }
+  }
   &__link {
     &:hover {
       cursor: url('../images/icons/cursor-hover.svg'), auto;
@@ -29,19 +52,40 @@
   }
   &__img {
     height: 294px;
+    position: relative;
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
     margin-bottom: 39px;
     margin-right: 0;
     filter: grayscale(80%);
+    .showLink {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 60px;
+      @include breakpoint(small down) {
+        right: 30px;
+      }
+    }
+    @include breakpoint(medium down) {
+      height: 230px;
+    }
+    @include breakpoint(small down) {
+      height: 260px;
+    }
   }
-  // &__category {
-
-  // }
+  &__category {
+    @include breakpoint(small down) {
+      margin-left: 40px;
+    }
+  }
   &__heading {
     margin: 4px 0;
     padding-right: 20px;
+    @include breakpoint(small down) {
+      margin-left: 40px;
+     }
   }
   &__text {
     border-left: 1px white solid;
@@ -51,6 +95,7 @@
     transition: max-height 600ms $transition;
     @include breakpoint(small down) {
       max-height: 200px;
+      margin-left: 40px;
     }
   }
   @include breakpoint(small down) {

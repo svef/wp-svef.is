@@ -70,13 +70,13 @@
   &__icon {
     position: relative;
     width: 20px;
-    height: 8px;
+    height: 9px;
     z-index: -1;
     &__line {
       position: absolute;
       right: 0;
       width: 12px;
-      height: 1px;
+      height: 2px;
       background-color: $black;
       transition: width 400ms $transition;
     }

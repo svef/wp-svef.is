@@ -197,7 +197,7 @@
 
 
     svg {
-      margin-left: 20px;
+      margin-left: 16px;
     }
     &--absolute {
       position: absolute
@@ -214,11 +214,18 @@
   &__label {
     position: relative;
     margin-bottom:  40px;
+    width: 60%;
+    @include breakpoint(small down) {
+      width: 100%;
+    }
     .down-caret {
       position: absolute;
       top: 50%;
       margin-top: -4px;
-      right: 0;
+      right: 20px;
+      @include breakpoint(small down) {
+        right: 10px;
+      }
     }
   }
   &__select {
@@ -238,12 +245,12 @@
 
     &--winners {
       height: auto;
-      font-family: $font-noto;
-      font-weight: 700;
-      line-height: 48px;
-      font-size: 34px;
-      @include breakpoint(medium down) {
-        font-size: 24px;
+      font-family: $font-overpass;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      @include breakpoint(small down) {
+        font-size: 14px;
       }
     }
 
