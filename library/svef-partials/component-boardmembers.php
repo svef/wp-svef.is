@@ -1,4 +1,4 @@
-<section class="section section--margin-bottom section--boardmembers bg-col-partial bg-col-partial--93--default">
+<section class="section section--margin-bottom section--boardmembers bg-col-partial bg-col-partial--93--default" data-breadcrum="">
     <div class="grid-container">
         <div class="boardmember-cards grid-x grid-padding-x">
             <?php

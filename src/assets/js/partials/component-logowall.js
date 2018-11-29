@@ -10,6 +10,8 @@ const Logowall = {
         this.body = Global.body
         this.visibleLogo = this.body.querySelectorAll('.visible_logo')
         this.hiddenLogo = this.body.querySelectorAll('.hidden_logo')
+        this.aVisibleImageSrc = []
+        this.aHiddenImageSrc = []
     },
     getRand(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
@@ -27,38 +29,40 @@ const Logowall = {
 
 
         //get visible image src array
-        let aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
-
+         this.aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
+         console.log(this.aVisibleImageSrc)
         //get a hidden image src array
-        let aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
+         this.aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
 
 
         //setInterval every 5s
-        setInterval(() => {
+        // setInterval(() => {
             // do something
 
             //get a random visible image src and choose it
-            let iRandomVisibleImgSrc = this.getRand(0, aVisibleImageSrc.length - 1)
+            let iRandomVisibleImgSrc = this.getRand(0, this.aVisibleImageSrc.length )
             let choosenVisibleLogo = this.visibleLogo[iRandomVisibleImgSrc].childNodes[1]
 
             //get a random hidden image src and choose it
-            let iRandomHiddenImgSrc = this.getRand(0, aHiddenImageSrc.length - 1)
+            let iRandomHiddenImgSrc = this.getRand(0, this.aHiddenImageSrc.length)
             let choosenHiddenLogo = this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1]
-            choosenVisibleLogo.src = choosenHiddenLogo.src
 
             //put hidden logo src into visible logo src
-            let arrVisIndex = aVisibleImageSrc.findIndex(i => i == choosenVisibleLogo.src)
-            aVisibleImageSrc.splice(arrVisIndex, 1)
-            aVisibleImageSrc.push(aHiddenImageSrc[iRandomHiddenImgSrc])
 
-            //console.log(aVisibleImageSrc);
-            let arrHiddIndex = aVisibleImageSrc.findIndex(i => i == choosenHiddenLogo.src)
-            aHiddenImageSrc.splice(arrHiddIndex, 1)
-            aHiddenImageSrc.push(aVisibleImageSrc[iRandomVisibleImgSrc])
+            this.aVisibleImageSrc.filter(x => x != choosenHiddenLogo.src)
+            console.log(this.aVisibleImageSrclo)
+            this.aVisibleImageSrc.push(this.aHiddenImageSrc[iRandomHiddenImgSrc])
+            console.log(this.aVisibleImageSrc)
+
+            // //console.log(aVisibleImageSrc);
+            // let arrHiddIndex = aVisibleImageSrc.findIndex(i => i == choosenHiddenLogo.src)
+            // aHiddenImageSrc.splice(arrHiddIndex, 1)
+            // aHiddenImageSrc.push(aVisibleImageSrc[iRandomVisibleImgSrc])
 
             //console.log(aHiddenImageSrc);
 
-        }, 10000); // <- 1000ms = 1s
+            // choosenVisibleLogo.src = choosenHiddenLogo.src
+        // }, 10000); // <- 1000ms = 1s
     }
 
     //  shuffle(o) {

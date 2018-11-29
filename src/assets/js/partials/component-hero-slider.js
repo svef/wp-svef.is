@@ -33,13 +33,13 @@ const HeroSlider = {
     responsive: {
       0: {
           items: 1,
-          margin: 0,
-          stagePadding: 0
+          margin: 100,
+          stagePadding: -28
       },
       641: {
           items: 1,
-          margin: 0,
-          stagePadding: 0
+          margin: 100,
+          stagePadding: -42
       },
       911: {
           items: 1,

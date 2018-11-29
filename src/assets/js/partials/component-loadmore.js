@@ -54,7 +54,7 @@ const LoadMorePosts = {
       eventLocation = post.acf.event_location
       eventExcerpt = post.wp.custom_excerpt
       rendered_event += `
-      <div class="section__event small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset} ">
+      <div class="section__event small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
         <a href="${linkHref}" target="${linkTarget}">
           <span class="link-text--menu link-text--dull">${eventDate}</span>
           <h2 class="less-margin--top less-margin--bottom">${eventTitle}${Global.linkArrow(linkArrowClass)}</h2>

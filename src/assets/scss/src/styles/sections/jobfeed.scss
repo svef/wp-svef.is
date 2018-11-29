@@ -4,9 +4,15 @@
         align-items: center;
     }
     &--jobfeed {
+      @include breakpoint(small down) {
+        // @extend .grid-container-fluid;
+      }
         &__feed {
             position: relative;
             top: -100px;
+            @include breakpoint(medium down) {
+              top: 100px;
+            }
         }
         &__feed-card {
             height: 200px;
@@ -58,4 +64,7 @@
             }
         }
     }
+}
+.jobfeed-image {
+
 }
