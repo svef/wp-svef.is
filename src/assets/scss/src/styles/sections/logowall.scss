@@ -27,11 +27,13 @@
             @include breakpoint(small down) {
                 padding: 30px 0 0 0;
             }
+
             .logo-each {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 200px;
+
                 @include breakpoint(small down) {
                     height: 140px;
                 }
@@ -48,6 +50,17 @@
                 }
 
             }
+            .visible_logo {
+              opacity: 1 !important;
+              visibility: visible;
+              transition: all 1000ms 100ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            }
+            .fade-in-logo {
+              opacity: 0 !important;
+              visibility: hidden;
+              transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            }
         }
     }
 }
@@ -58,3 +71,6 @@
     background: $blackBlue;
   }
 }
+
+
+

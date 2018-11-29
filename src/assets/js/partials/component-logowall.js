@@ -1,69 +1,55 @@
 import $ from 'jquery';
 import Global from '../global-functions'
 const Logowall = {
-    init() {
-      this.cacheDom()
+  init() {
+    this.cacheDom()
 
-      $(this.visibleLogo).exists(()=>this.randomLogoSwap())
-    },
-    cacheDom() {
-        this.body = Global.body
-        this.visibleLogo = this.body.querySelectorAll('.visible_logo')
-        this.hiddenLogo = this.body.querySelectorAll('.hidden_logo')
-        this.aVisibleImageSrc = []
-        this.aHiddenImageSrc = []
-    },
-    getRand(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-    },
-    getImgSrcArray( array ) {
-        //make array of visible img scr
-        let aImageSrc = [];
-        for (let i = 0; i < array.length; i++) {
-            let imageSrc = array[i].childNodes[1].getAttribute('src')
-            aImageSrc.push(imageSrc)
-        }
-        return aImageSrc
-    },
-    randomLogoSwap() {
+    $(this.visibleLogo).exists(() => {
+      this.randomLogoSwap()
+      this.addEvent()
+    })
+  },
+  cacheDom() {
+    this.body = document.querySelector('body');
+    this.allLogos = this.body.querySelectorAll('.client-logo')
+    this.visibleLogo = this.body.querySelectorAll('.visible_logo')
+    this.hiddenLogo = this.body.querySelectorAll('.hidden_logo')
+  },
+  addEvent() {
 
-
-        //get visible image src array
-         this.aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
-         console.log(this.aVisibleImageSrc)
-        //get a hidden image src array
-         this.aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
-
-
-        //setInterval every 5s
-        // setInterval(() => {
-            // do something
-
-            //get a random visible image src and choose it
-            let iRandomVisibleImgSrc = this.getRand(0, this.aVisibleImageSrc.length )
-            let choosenVisibleLogo = this.visibleLogo[iRandomVisibleImgSrc].childNodes[1]
-
-            //get a random hidden image src and choose it
-            let iRandomHiddenImgSrc = this.getRand(0, this.aHiddenImageSrc.length)
-            let choosenHiddenLogo = this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1]
-
-            //put hidden logo src into visible logo src
-
-            this.aVisibleImageSrc.filter(x => x != choosenHiddenLogo.src)
-            console.log(this.aVisibleImageSrclo)
-            this.aVisibleImageSrc.push(this.aHiddenImageSrc[iRandomHiddenImgSrc])
-            console.log(this.aVisibleImageSrc)
-
-            // //console.log(aVisibleImageSrc);
-            // let arrHiddIndex = aVisibleImageSrc.findIndex(i => i == choosenHiddenLogo.src)
-            // aHiddenImageSrc.splice(arrHiddIndex, 1)
-            // aHiddenImageSrc.push(aVisibleImageSrc[iRandomVisibleImgSrc])
-
-            //console.log(aHiddenImageSrc);
-
-            // choosenVisibleLogo.src = choosenHiddenLogo.src
-        // }, 10000); // <- 1000ms = 1s
+  },
+  getRandomFromRange(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  },
+  getImgSrcArray( array ) {
+    //make array of visible img scr
+    let aImageSrc = [];
+    for (let i = 0; i < array.length; i++) {
+      let imageSrc = array[i].childNodes[1].src
+      aImageSrc.push(imageSrc)
     }
+    return aImageSrc
+  },
+  randomLogoSwap() {
+      //setInterval every 5s
+    setInterval(() => {
+      this.cacheDom()
+      let aAllLogos = this.getImgSrcArray(this.allLogos)
+      let aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
+      let aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
+      //get a random visible image src and choose it
+      let iRandomVisibleImgSrc = this.getRandomFromRange(0, aVisibleImageSrc.length)
+      let iRandomHiddenImgSrc = this.getRandomFromRange(0, aHiddenImageSrc.length)
+      this.visibleLogo[iRandomVisibleImgSrc].classList.add('fade-in-logo')
+      let srcIndex = aAllLogos.findIndex(x => x == this.visibleLogo[iRandomVisibleImgSrc].childNodes[1].src)
+      setTimeout(() => {
+        this.visibleLogo[iRandomVisibleImgSrc].childNodes[1].src = this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1].src
+        this.visibleLogo[iRandomVisibleImgSrc].classList.remove('fade-in-logo')
+        this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1].src = aAllLogos[srcIndex]
+      }, 1500);
+    }, 5000); // <- 1000ms = 1s
+  },
+
 
     //  shuffle(o) {
     //     for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
