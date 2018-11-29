@@ -77,3 +77,11 @@
     }
   }
 }
+
+.body--contrast {
+  #heroSlider  .owl-dots .owl-dot {
+    &::before {
+      background: $white;
+    }
+  }
+}
