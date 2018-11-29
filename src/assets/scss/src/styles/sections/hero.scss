@@ -3,47 +3,46 @@
 }
 .section--hero {
   position: relative;
-  min-height: 70vh;
-
+  min-height: 80vh;
+  max-height: 80vh;
 }
 
 
 .section__info {
   position: relative;
   height: 100%;
-  min-height: 60vh;
+  min-height: 74vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  // &__image {
-  //   .hero-image {
-
-  //   }
-  // }
+  @include breakpoint(medium down) {
+    min-height: 30vh;
+  }
 }
-
-
 
 #heroSlider {
 
   .owl-dots {
+    position: relative;
     display: flex;
     justify-content: center;
-    width: calc(100vw - 75rem);
-    margin: 40px 0 0 0;
+    width: calc(((100vw - 75rem)/2) + (100vw / 14.7) );
+    margin: calc((84vh - 74vh)/2) 0 0 0;
     @include breakpoint(large down) {
       width: 8.33%;
       justify-content: center;
-      margin: 40px 0 0 0;
+      // margin: 5vh 0 0 0;
     }
     @include breakpoint(medium down) {
-      margin: 80px 0 0 0;
+      width: 100%;
+      margin: 0;
     }
+
     @include breakpoint(small down) {
-      margin-top: 60px;
+      position: absolute;
       width: 100vw;
       justify-content: flex-end;
-      margin:-20px 0 0;
+      margin: -30vw 0 0;
       padding-right: 30px;
     }
     .owl-dot {
@@ -59,12 +58,17 @@
         position: absolute;
         content: '';
         background: $black;
-        width: 1.4px;
+        width: 2px;
         height: 100%;
         left: 50%;
         z-index: 1;
         top: 0;
+        @include breakpoint(medium down) {
+          background: $white;
+
+        }
       }
+
     }
     .owl-dot.active {
       &:before {

@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import Global from '../global-functions'
 
-const Members = {
+const JobFeed = {
   init() {
     this.cacheDOM()
     $(this.jobFeed).exists(() => {
@@ -27,7 +27,7 @@ const Members = {
     // here we have some fun with the data that just got returned to us from our scraper/rss feed
 
     // first we make shure the container is empty
-    Members.jobFeedContaier.innerHTML = ''
+    JobFeed.jobFeedContaier.innerHTML = ''
     let cards = ''
     let cardTitle = ''
     let cardCompany = ''
@@ -47,21 +47,21 @@ const Members = {
       cardCompany = feedData.scrape.company
       cardLink = feedData.rss.link
       cardDate = feedData.scrape.date
-      cards += `<div class="section--jobfeed__feed-card cell large-5 large-offset-${offset}">
+      cards += `<div class="section--jobfeed__feed-card cell small-12 small-offset-0 medium-6 medium-offset-0 large-5 large-offset-${offset}">
                   <a href="${cardLink}" target="_blank">
-                      <p class="text--small">${cardDate}</p>
-                      <div class="card-title-arrow">
-                          <p class="text--card">${cardTitle} ${Global.linkArrow('link-arrow link-arrow--white')}</p>
-                      </div>
-                      <p class="text--large">${cardCompany}</p>
+                    <p class="text--small">${cardDate}</p>
+                    <div class="card-title-arrow">
+                      <p class="text--card">${cardTitle} ${Global.linkArrow('link-arrow link-arrow--white')}</p>
+                    </div>
+                    <p class="text--large">${cardCompany}</p>
                   </a>
-              </div>`
+                </div>`
     }
     // console.log(cards)
     // and then we insert our newly produced html to the container
-    Members.jobFeedContaier.insertAdjacentHTML('beforeend', cards)
+    JobFeed.jobFeedContaier.insertAdjacentHTML('beforeend', cards)
   }
 }
 
 
-module.exports = Members
+module.exports = JobFeed

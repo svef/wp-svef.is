@@ -7,12 +7,12 @@
 
 <section class="section section--margin-bottom section--jobfeed grid-container">
     <div class="section__jobfeed-inner grid-x grid-margin-x">
-        <div class="section__image cell large-5">
+        <div class="section__image cell small-12 medium-5 large-5">
             <div class="jobfeed-image">
                 <img src="<?php echo $jobfeed_image['sizes']['large']; ?>" alt="">
             </div>
         </div>
-        <div class="section__info section__info--center cell large-6" >
+        <div class="section__info section__info--center cell small-10 small-offset-1 medium-6 medium-offset-0 large-6 medium-offset-0" >
 
             <h2 class="section__title"><?php echo $jobfeed_title; ?></h2>
 						<p class="section__pragraphTall--off"><?php echo $jobfeed_text; ?></p>
@@ -28,7 +28,7 @@
 						// $offset = $i < 1 ? 2 : $i == 2 ? 0 : $i > 2 && $i % 2 ? 0 : 1;
 
 				?>
-						<div class="section--jobfeed__feed-card cell large-5 large-offset-<?php echo $offset; ?>">
+						<div class="section--jobfeed__feed-card cell small-12 small-offset-0 medium-6 medium-offset-0 large-5 large-offset-<?php echo $offset; ?>">
 							<div class="card--spinner loader-container">
 								<ul role="progressbar", aria-busy="true", aria-label="Loading domino shop">
 									<li role="presentation"></li>
