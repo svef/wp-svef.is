@@ -8,6 +8,7 @@
  * @since FoundationPress 1.0.0
  */
 
+	$dark_mode = isset($_COOKIE['darkMode']) && $_COOKIE['darkMode'] == 'true' ? 'body--contrast' : '';
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -16,7 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class($dark_mode); ?>>
 
 	<?php
 		svef_partial('library/svef-partials/component-header');

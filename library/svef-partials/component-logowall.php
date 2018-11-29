@@ -17,7 +17,7 @@
                 $a_supporter_logos = get_field('supporter_logo', 'option');
                 shuffle($a_supporter_logos);
 
-                for( $i=0; $i < count($a_supporter_logos); $i++ ) : 
+                for( $i=0; $i < count($a_supporter_logos); $i++ ) :
 
                     $visability = $i>5 ? 'hidden_logo' : 'visible_logo';
 
