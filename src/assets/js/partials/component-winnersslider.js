@@ -100,7 +100,7 @@ const WinnersSlider = {
             stagePadding: 20
         },
         910: {
-            items: 3,
+            items: 2,
             margin: 0,
             stagePadding: 40
         },
@@ -108,7 +108,12 @@ const WinnersSlider = {
             items: 3,
             margin: 0,
             stagePadding: 60
-        }
+        },
+        1600: {
+          items: 4,
+          margin: 0,
+          stagePadding: 80
+      }
     }
   }
 }

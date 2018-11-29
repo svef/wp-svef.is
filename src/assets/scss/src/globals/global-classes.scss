@@ -77,6 +77,19 @@
   }
 }
 
+.section__link {
+  svg {
+    transform: translateX(0);
+    transition: all 300ms ease;
+  }
+  &:hover {
+    svg {
+      transform: translateX(6px);
+    }
+  }
+}
+
+
 .hidden_logo {
   opacity: 0 !important;
 }

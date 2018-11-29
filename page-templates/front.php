@@ -28,8 +28,12 @@ get_header(); ?>
 
 
 		<?php
-		/** muna að bæta við array til að hafa ticker!! */
-		$a_intro = array('title' => get_field('intro_title'), 'paragraph' => get_field('intro_text'),'margin_bottom' => true, 'margin_bottom_inner' => false);
+		$a_intro = array('title' => get_field('intro_title'), 
+		'paragraph' => get_field('intro_text'), 
+		'is_ticker' => true, 
+		'a_ticker_repeater' => get_field('text_ticker'),
+		'margin_bottom' => true, 
+		'margin_bottom_inner' => false);
 		svef_partial("library/svef-partials/component-introtext", $a_intro); ?>
 
 		<?php
