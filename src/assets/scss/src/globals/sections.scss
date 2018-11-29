@@ -284,23 +284,27 @@
 }
 
 .body--contrast {
-  .section__bg-color--default {
-    background: $blackBlue;
-    svg {
-      fill: $white;
-      path {
+  .section__bg-color{
+    &--default, &--red, &--blue {
+      background: $blackBlue;
+      svg {
         fill: $white;
+        path {
+          fill: $white;
+        }
       }
-    }
-    .svef-logo {
-      fill: $orange;
-      path {
+      .svef-logo {
         fill: $orange;
+        path {
+          fill: $orange;
+        }
       }
     }
   }
-  .section__bg-fix--default {
-    background-color: $darkBlue;
+  .section__bg-fix {
+    &--default, &--red, &--blue {
+      background-color: $blackBlue;
+    }
   }
   .section {
     &__label {
