@@ -1,0 +1,41 @@
+.section {
+  &__cookie {
+    position: fixed;
+    bottom: -100%;
+    min-height: 100px;
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: bottom 400ms $transition, opacity 300ms $transition, visibility 100ms 600ms $transition;
+    &--message {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: auto;
+      min-height: 100px;
+    }
+    &--link {
+      cursor: pointer;
+      color: $orange !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &--button {
+      color: $black;
+    }
+    &--active {
+      bottom: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__popup {
+    height: 100%;
+  }
+
+
+
+}
+

@@ -184,6 +184,7 @@ button {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: $black;
 }
 
 label {
@@ -237,7 +238,7 @@ input[type="text"], input[type="checkbox"] {
 .scroller span {
   display: block;
   @extend h2;
-  color: $orange; 
+  color: $orange;
 }
 
 
@@ -248,7 +249,7 @@ select {
 .section {
   &__bg-color {
     &--dark {
-      h1, h2, h3, h4, p, a, .text, label, button, li, input[type="text"], input[type="checkbox"] {
+      h1, h2, h3, h4, p, a, .text, label, li, input[type="text"], input[type="checkbox"] {
         color: $white;
       }
     }
