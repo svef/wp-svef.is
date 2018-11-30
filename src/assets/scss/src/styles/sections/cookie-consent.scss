@@ -34,8 +34,14 @@
   &__popup {
     height: 100%;
   }
+}
 
-
-
+.body--contrast {
+  .section__cookie--button {
+    color: $black;
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
