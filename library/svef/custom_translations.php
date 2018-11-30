@@ -15,5 +15,10 @@
 
 		// Show more button
 		pll_register_string('Elements', 'Sjá fleiri'. 'SVEF');
+
+		// cookie message
+		pll_register_string('Cookie', get_field('cookie_message', 'option'), 'SVEF');
+		pll_register_string('Cookie', 'Vefstefna SVEF', 'SVEF');
+		pll_register_string('Cookie', 'OK takk', 'SVEF');
 	}
 ?>

@@ -71,6 +71,23 @@
       }
     }
   }
+  .is-active {
+  > a {
+      padding-right: 50px;
+      &::after{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    > ul .is-active a {
+      color: $orange ;
+      padding-right: 0;
+      &::after{
+        visibility: hidden;
+        opacity: 0;
+    }
+  }
+}
 }
 
 .body--contrast {
