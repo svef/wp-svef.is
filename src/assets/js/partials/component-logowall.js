@@ -31,22 +31,38 @@ const Logowall = {
     return aImageSrc
   },
   randomLogoSwap() {
+    let aAllLogos = ''
+    let aVisibleImageSrc = ''
+    let aHiddenImageSrc = ''
+    let iRandomVisibleImgSrc = 0
+    let iRandomHiddenImgSrc = 0
       //setInterval every 5s
+    // We swap logos on a 5s interval
     setInterval(() => {
+      // On each interwal we have rearanged the dom element so we fetch the updated dom so we have the right data
       this.cacheDom()
-      let aAllLogos = this.getImgSrcArray(this.allLogos)
-      let aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
-      let aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
+      //  we use our Dom to array function to build the three arrays we need
+      // we need ann instanse of all the logos for when we update the hidden logos because we have already contaminated theh hidded logo array
+      aAllLogos = this.getImgSrcArray(this.allLogos)
+      aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
+      aHiddenImageSrc = this.getImgSrcArray(this.hiddenLogo)
       //get a random visible image src and choose it
-      let iRandomVisibleImgSrc = this.getRandomFromRange(0, aVisibleImageSrc.length)
-      let iRandomHiddenImgSrc = this.getRandomFromRange(0, aHiddenImageSrc.length)
+      iRandomVisibleImgSrc = this.getRandomFromRange(0, aVisibleImageSrc.length)
+      iRandomHiddenImgSrc = this.getRandomFromRange(0, aHiddenImageSrc.length)
+      // we fade out the the logo
       this.visibleLogo[iRandomVisibleImgSrc].classList.add('fade-in-logo')
+      // here we find the index of the src that is the same as we just will pass to the hidden dom then we can use this index to get the same path and pass that to the hidden arr
+      // this means that when we update the visible array we have a backup to pass to the hidden array
       let srcIndex = aAllLogos.findIndex(x => x == this.visibleLogo[iRandomVisibleImgSrc].childNodes[1].src)
+      // Delay the img swap to give fade out time to happen
       setTimeout(() => {
+        // We reset the visible selected DOM element to the one randomly taken from the hidden elements
         this.visibleLogo[iRandomVisibleImgSrc].childNodes[1].src = this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1].src
+        // remove the fade out
         this.visibleLogo[iRandomVisibleImgSrc].classList.remove('fade-in-logo')
+        // We reset the hiden elements DOM so we are ready for the next itterateion
         this.hiddenLogo[iRandomHiddenImgSrc].childNodes[1].src = aAllLogos[srcIndex]
-      }, 1500);
+      }, 550);
     }, 5000); // <- 1000ms = 1s
   },
 
