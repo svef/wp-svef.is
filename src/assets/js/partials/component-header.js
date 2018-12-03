@@ -77,7 +77,7 @@ const Header = {
     let scrollPos = 0
     let scrollUp
     $(window).scroll(function(event) {
-      var st = $(this).scrollTop();
+      let st = $(this).scrollTop();
       scrollPos = $(document).scrollTop();
       if (scrollPos > 80) {
         $(header).addClass('scrolledTop');

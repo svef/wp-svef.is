@@ -18,6 +18,9 @@
   @include breakpoint(medium down) {
     min-height: 30vh;
   }
+  @include breakpoint(small down) {
+    max-height: 20vh;
+  }
 }
 
 #heroSlider {
