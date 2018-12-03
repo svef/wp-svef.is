@@ -45,6 +45,9 @@ const GlobalFunctions = {
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   },
+  setTime(extraDays) {
+     return extraDays*24*60*60;
+  },
   getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

@@ -36,6 +36,9 @@
 				<?php foundationpress_top_bar_r(); ?>
 			</div>
 		</menu>
-
+		<?php svef_partial('library/svef-partials/component-signup'); ?>
+		<div class="side-signup-overlay"></div>
 	</header>
-
+	<button id="btnOpenSignup" class="btnMain btnSignup">
+        Skráning í svef
+    </button>

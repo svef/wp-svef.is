@@ -3,10 +3,12 @@ const TranslateLanguages = {
     return this.dictionary[string][lang];
   },
   dictionary: {
-    required: { is: 'skilyrt', en: 'required' } ,
+    required: { is: 'skilyrt', en: 'required' },
     skilyrt: { is: 'skilyrt', en: 'required' }
   },
-  currentLanguage(){return myAjax.currentLang}
+  currentLanguage() {
+    return myAjax.currentLang
+  }
 }
 
 module.exports = TranslateLanguages

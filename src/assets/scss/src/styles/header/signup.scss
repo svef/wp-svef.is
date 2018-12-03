@@ -1,7 +1,7 @@
 .side-signup {
-    position: fixed;
-    top: 0;
-    bottom:0;
+    position: absolute;
+
+    top:100%;
     left: -60vw;
     overflow-y:scroll;
     overflow-x:hidden;
@@ -22,16 +22,7 @@
     &__inner {
         padding: 120px 100px;
     }
-    .btnSignup {
-        position: fixed;
-        z-index: 99;
-        left: -28px;
-        top: 50vh;
-        transform: rotate(-90deg);
-        &--clicked {
-            left: calc(50vw - (184/2)*1px);
-        }
-      }
+
     &::-webkit-scrollbar{
         width: 0px;
     }
@@ -40,6 +31,16 @@
         background-color: transparent;
         -webkit-border-radius: 6px;
     }
+}
+.btnSignup {
+  position: fixed;
+  z-index: 99;
+  left: -28px;
+  top: 50vh;
+  transform: rotate(-90deg);
+  &--clicked {
+      left: calc(50vw - (184/2)*1px);
+  }
 }
 .side-signup__info {
     width: 100%;
@@ -86,9 +87,9 @@
     background-color: $black;
     opacity: 0;
     display: none;
-    position: fixed;
-    top: 0;
-    bottom:0;
+    position: absolute;
+    top: 100%;
+
     z-index: 1;
     transition: opacity 300ms ease;
     &--active {
@@ -99,10 +100,12 @@
 
 .body--contrast {
   .side-signup {
-    h1, h2, h3, h4, p, a, .btnSignup, .text, label, li, input[type="text"], input[type="checkbox"] {
+    h1, h2, h3, h4, p, a, .text, label, li, input[type="text"], input[type="checkbox"] {
       color: $black;
     }
-
+    .btnSignup {
+      color: $black;
+    }
   }
 }
 
