@@ -12,6 +12,12 @@
   &--shadow {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.03);
     height: 60px;
+    .side-menu {
+      height: calc(100vh - 60px);
+    }
+  }
+  @include breakpoint(small down) {
+    width: 100vw;
   }
 }
 
@@ -31,7 +37,9 @@
   align-items: center;
   z-index: 9;
   @include breakpoint(small down) {
-    margin: 0 10px;
+    // margin: 0 10px;
+    justify-content: space-between;
+    max-width: 96%;
   }
   &__items {
     width: 210px;
@@ -39,6 +47,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint(small down) {
+      justify-content: flex-end;
+    }
   }
   &__home {
     display: flex;
@@ -108,19 +119,40 @@
   }
 }
 
+.nav__items--mobile {
+  width: 100%;
+  height: 50px;
+  justify-content: space-around; /* fall back if space-evenly is not suported */
+  justify-content: space-evenly;
+}
+.nav__lang--mobile {
+  width: 80px;
+  li {
+    a {color: white;}
+  }
+  .current-lang a {color: $orange;}
+}
+.nav__suprise--mobile {
+  border-right: 7.5px solid $white;
+    border-top: 1px solid $white;
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+}
+
 .side-menu {
   position: absolute;
   top: 100%;
   margin: 0;
   right: -60vw;
   width: 50vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   z-index: 2;
   background-color: $darkBlue;
   transition: right 400ms $transition;
   @include breakpoint(small down) {
     width: 100vw;
     right:-101vw;
+    height: calc(100vh - 60px);
   }
   &--active {
     right: 0;
