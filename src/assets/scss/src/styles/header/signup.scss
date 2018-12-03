@@ -41,6 +41,15 @@
   &--clicked {
       left: calc(50vw - (184/2)*1px);
   }
+  @include breakpoint(small down) {
+    transform: rotate(0);
+    left: 50%;
+    margin-left: -92px;
+    top: auto;
+    bottom: 15px;
+    transition: all 400ms $transition;
+
+  }
 }
 .side-signup__info {
     width: 100%;

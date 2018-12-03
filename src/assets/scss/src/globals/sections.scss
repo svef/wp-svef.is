@@ -153,11 +153,13 @@
       height: 45vh;
       margin-bottom: 30px;
     }
+
     @include breakpoint(small down) {
-      // height: 45vh;
-      overflow: hidden;
+      height: 30vh;
+      // overflow: hidden;
       display: flex;
       align-items: center;
+      margin-bottom: 0;
     }
     .hero-image {
       float:right;
@@ -179,7 +181,7 @@
       @include breakpoint(small down){
         position:relative;
         width: 100vw;
-        // height: 300px;
+        height: 30vh;
 
       }
     }
@@ -190,6 +192,12 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+
+  &__image--c2a {
+    @include breakpoint(small down) {
+      height: auto;
     }
   }
 
@@ -221,6 +229,10 @@
     &--text {
       @include breakpoint(medium down) {
         margin-bottom: 40px;
+      }
+      @include breakpoint(small down) {
+        margin-bottom: 10px;
+        margin-top: 100px;
       }
     }
   }

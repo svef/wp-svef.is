@@ -30,6 +30,12 @@
     position: relative;
     display: flex;
     align-items: center;
+    height: 100%;
+    min-height: 790px;
+    @include breakpoint(medium down) {
+      min-height: 0;
+      height: auto;
+    }
   }
   .section__link {
     &--absolute {
@@ -44,6 +50,11 @@
     @include breakpoint(medium down) {
       position: relative;
       top: -50px;
+      min-height: 10vh;
+      height: auto;
+    }
+    @include breakpoint(small down) {
+      top:0;
     }
   }
   h2 {
