@@ -105,3 +105,43 @@
   }
 }
 
+//form error messeges/* Make the error stand out */
+
+.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+  max-width: calc(100% - 0px) !important;
+}
+.gform_wrapper .validation_message {
+  color: $warningRed !important;
+  margin-top: -10px !important;
+}
+.gform_wrapper .gfield_error .gfield_label {
+  color: unset !important;
+  .gfield_required {
+    color: $warningRed !important;
+  }
+}
+.validation_error, .validation_message {
+	position: absolute !important;
+}
+.gform_wrapper div.validation_error {
+  display: none !important;
+}
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+  border: unset !important;
+  border-bottom: 1px solid $warningRed !important;
+}
+.gform_wrapper .description, .gform_wrapper .gfield_description, .gform_wrapper .gsection_description, .gform_wrapper .instruction {
+  font-size: 12px;
+}
+.gform_wrapper .field_description_below .gfield_description {
+  padding-top: 10px;
+}
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent !important;
+  margin-bottom: 40px !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  box-sizing: unset !important;
+}
