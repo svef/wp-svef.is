@@ -11,6 +11,7 @@ import Logowall from './partials/component-logowall'
 import LoadMorePosts from './partials/component-loadmore'
 import Textticker from './partials/component-textticker'
 import Statisticslider from './partials/component-statistic'
+import CookieConsent from './partials/component-cookie-consent'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -41,6 +42,6 @@ Logowall.init()
 LoadMorePosts.init()
 Textticker.init()
 Statisticslider.init()
-
+CookieConsent.init()
 /** invoke foundation */
 $(document).foundation()

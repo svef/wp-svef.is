@@ -70,6 +70,7 @@
   border: 1px solid $darkBlue;
   padding: 15px 40px;
   transition: box-shadow 300ms ease, background-color 200ms ease, color 200ms ease, left 300ms ease;
+
   &:hover, &:active, &:focus {
     color: $white;
     background-color: $darkBlue;

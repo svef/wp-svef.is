@@ -90,6 +90,7 @@
     }
     &--blue {
       background: $blue;
+      color: $white;
       h2 {
         color: $white;
       }
@@ -108,6 +109,23 @@
     }
     &--dark {
       background: $darkBlue;
+      color: $white;
+      svg {
+        fill: $white;
+        path {
+          fill: $white;
+        }
+      }
+      .svef-logo {
+        fill: $orange;
+        path {
+          fill: $orange;
+        }
+      }
+    }
+    &--darker {
+      background: $blackBlue;
+      color: $white;
       svg {
         fill: $white;
         path {
@@ -212,7 +230,6 @@
     align-items: center;
     // margin-top: 50px;
 
-
     svg {
       margin-left: 16px;
     }
@@ -226,6 +243,9 @@
       @include breakpoint(small down) {
         margin-top: 20px;
       }
+    }
+    &--inline {
+      display: inline-flex;
     }
   }
   &__label {

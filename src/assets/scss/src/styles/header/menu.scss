@@ -4,6 +4,9 @@
     position: relative;
     right: 0;
     padding: 80px 100px 0 0;
+    @include breakpoint(small down) {
+     padding: 20px 50px 0 0;
+    }
   }
 
 }
@@ -18,6 +21,9 @@
     flex-flow: column;
     margin-bottom: 35px;
     transition: all 400ms ease;
+    @include breakpoint(small down) {
+      margin-bottom: 10px;
+    }
 
     a {
       @extend h3;
@@ -48,6 +54,9 @@
             opacity: 1;
           }
       }
+      @include breakpoint(small down) {
+        margin-bottom: 5px;
+      }
     }
 
     ul {
@@ -67,10 +76,28 @@
               visibility: hidden;
             }
           }
+
         }
       }
     }
   }
+  .is-active {
+  > a {
+      padding-right: 50px;
+      &::after{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    > ul .is-active a {
+      color: $orange ;
+      padding-right: 0;
+      &::after{
+        visibility: hidden;
+        opacity: 0;
+    }
+  }
+}
 }
 
 .body--contrast {

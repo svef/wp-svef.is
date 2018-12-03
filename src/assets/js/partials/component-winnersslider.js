@@ -14,7 +14,6 @@ const WinnersSlider = {
     this.slider = this.body.querySelector('#winnersSlider')
     this.select = this.body.querySelector('#selectWinnerYear')
     this.sliderHeader = this.body.querySelector('#sliderHeading')
-
   },
   addEvent() {
     /** in the app.js we defined a new function in the $.fn object and can therefore access it from our $ object just like other jQUERY functions stored there */

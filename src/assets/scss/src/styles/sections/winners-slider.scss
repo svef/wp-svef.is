@@ -32,6 +32,7 @@
   &:hover {
     .winners-slide__text {
       max-height: 200px;
+      opacity: 1;
     }
     .winners-slide__img {
       filter: grayscale(0);
@@ -92,7 +93,8 @@
     padding: 0 34px 0 9px;
     height: auto;
     max-height: 0;
-    transition: max-height 600ms $transition;
+    opacity: 0;
+    transition: max-height 600ms $transition, opacity 600ms  $transition;
     @include breakpoint(small down) {
       max-height: 200px;
       margin-left: 40px;

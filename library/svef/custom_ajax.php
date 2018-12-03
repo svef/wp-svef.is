@@ -51,7 +51,7 @@ function ajax_scrape_rss(){
 
 
 // We register this function to be accessible to the wp-ajax handler that lives inside the bowels of wordpress
-// add_action('wp_ajax_nopriv_get_next_page', 'get_next_page'); // make shure you dont have to be logged in to the backend to access this.
+add_action('wp_ajax_nopriv_get_next_events_page', 'get_next_events_page'); // make shure you dont have to be logged in to the backend to access this.
 add_action('wp_ajax_get_next_events_page', 'get_next_events_page');
 
 function get_next_events_page(){
@@ -81,9 +81,9 @@ function get_next_events_page(){
 	$a_combined_post_data['new_page_number'] = $page_number + 1;
 	$a_combined_post_data['max_num_pages'] = $the_query->max_num_pages;
 
-	$j_test = json_encode($a_combined_post_data, true);
+	$j_events = json_encode($a_combined_post_data, true);
 
-	echo $j_test ;
+	echo $j_events;
 	// IMPORTANT: don't forget to "exit"
 	exit;
 }
