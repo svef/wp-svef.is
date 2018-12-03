@@ -15,6 +15,7 @@ const Header = {
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
     this.btnContrast = this.body.querySelector('.nav__suprise')
+    this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
     this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
   },
   addEvents() {
@@ -22,6 +23,7 @@ const Header = {
     this.body.addEventListener('click', this.clickedOutSideMenu.bind(this))
     this.body.addEventListener('keyup', this.escapeMenu.bind(this))
     this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
+    this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
   handleMenuClick(e) {
@@ -29,10 +31,12 @@ const Header = {
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideMenu.classList.remove('side-menu--active')
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
+      this.body.style.overflow = 'auto';
     } else {
       this.btnMenu.classList.add('nav__menu-button--clicked')
       this.sideMenu.classList.add('side-menu--active')
       this.sideSignupOverlay.classList.add('side-signup-overlay--active')
+      this.body.style.overflow = 'hidden';
     }
   },
   windowScrollHandler(e) {
@@ -47,6 +51,7 @@ const Header = {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
+      this.body.style.overflow = 'auto';
     }
   },
   escapeMenu(e) {
@@ -54,6 +59,7 @@ const Header = {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
+      this.body.style.overflow = 'auto';
     }
   },
   clickSiteContrast(e) {
