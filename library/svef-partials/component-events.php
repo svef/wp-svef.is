@@ -70,7 +70,7 @@
 			<div class="section__inner grid-container">
 				<div class="grid-x">
 					<div class="section__link small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
-						<button id="btnGetMoreEvents" data-current-page="<?php echo $paged; ?>" class="section--events__page btnShowMore"><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
+						<button id="btnGetMoreEvents" data-current-page="<?php echo $paged; ?>" class="section--events__page btnShowMore text-color--blue"><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
 					</div>
 				</div>
 			</div>

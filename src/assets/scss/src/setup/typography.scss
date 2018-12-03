@@ -264,6 +264,9 @@ select {
   h1, h2, h3, h4, p, a, .text, label, button, li, input[type="text"], input[type="checkbox"] {
     color: $white;
   }
+  .btnSignup {
+    color: $black;
+  }
 }
 
 

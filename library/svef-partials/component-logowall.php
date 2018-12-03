@@ -4,7 +4,7 @@
         <div class="introtext" >
             <div class="grid-x grid-padding-x">
                 <h2 class="section__title cell medium-8 medium-offset-1 large-10 large-offset-1">Styrktaraðilar SVEF</h2>
-                <p class="section__paragraph cell medium-8 medium-offset-2 large-8 large-offset-2">SVEF á sér marga góða styrktaraðila sem eitthvað um það meira. Það er ein af blabla ástæðum þess að við getum haldið blabla og blal. Eitthvað meira mögulega og enn meira. Vera með! email linkur</p>
+                <p class="section__paragraph cell medium-9 medium-offset-2 large-8 large-offset-2">SVEF á sér marga góða styrktaraðila sem eitthvað um það meira. Það er ein af blabla ástæðum þess að við getum haldið blabla og blal. Eitthvað meira mögulega og enn meira. Vera með! email linkur</p>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                     $visability = $i>5 ? 'hidden_logo' : 'visible_logo';
 
                 ?>
-                <div class="client-logo logo-each logo-each cell small-6 medium-6 large-4 <?php echo $visability; ?>">
+                <div class="client-logo logo-each cell small-6 medium-6 large-4 <?php echo $visability; ?>">
                     <img src="<?php echo $a_supporter_logos[$i]['sizes']['large']; ?>" alt="">
                 </div>
                 <?php endfor; ?>

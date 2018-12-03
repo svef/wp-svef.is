@@ -21,5 +21,5 @@
 
 	<?php
 		svef_partial('library/svef-partials/component-header');
-		svef_partial('library/svef-partials/component-signup');
+
 	?>
