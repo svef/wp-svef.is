@@ -60,10 +60,10 @@ require_once('library/svef/custom_functions-gmap.php');
 require_once('library/svef/custom-scraper.php');
 require_once('library/svef/custom_ajax.php');
 
-require_once('library/events-custom-post-types.php');
-require_once('library/boardmembers-custom-post-types.php');
-
-require_once('library/winners-custom-post-types.php');
+/** SVEF custom post types */
+require_once('library/svef-custom-post-types/events-custom-post-types.php');
+require_once('library/svef-custom-post-types/boardmembers-custom-post-types.php');
+require_once('library/svef-custom-post-types/winners-custom-post-types.php');
 
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
