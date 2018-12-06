@@ -13,6 +13,7 @@ import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 import log           from 'fancy-log';
 import colors        from 'ansi-colors';
+import path          from 'path';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -111,6 +112,17 @@ const webpack = {
     },
     externals: {
       jquery: 'jQuery',
+    },
+    resolve: {
+      alias: {
+          "TweenLite": path.resolve('node_modules', 'gsap/src/minified/TweenLite.min.js'),
+          "TweenMax": path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js'),
+          "TimelineLite": path.resolve('node_modules', 'gsap/src/minified/TimelineLite.min.js'),
+          "TimelineMax": path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js'),
+          "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js'),
+          "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
+          "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js')
+      },
     },
   },
 

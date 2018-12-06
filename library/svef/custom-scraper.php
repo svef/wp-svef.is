@@ -53,74 +53,32 @@ if(!function_exists('parseRssToJson')){
 	function parseRssToJson ($url) {
 		try {
 				// we have a rss feed url taht we can use to get the XML string
-		$content = file_get_contents($url); // get XML string
-		$x = new SimpleXmlElement($content); // load XML string into object
+			$content = file_get_contents($url); // get XML string
+			$x = new SimpleXmlElement($content); // load XML string into object
 
-		$arrOfJobs = array();
-		// loop through posts
-		$i = 0;
-		foreach($x->channel->item as $entry) {
+			$arrOfJobs = array();
+			// loop through posts
+			$i = 0;
+			foreach($x->channel->item as $entry) {
 
-			$arrOfJobs[] = array( 'rss' => $entry, 'scrape' => scrapeTvinna($entry->guid));
-			$i++;
-			// we limit our response to 4 items because we are only goint to show 4 cards on the page
-			if($i >= 4 ) {
-				break;
+				$arrOfJobs[] = array( 'rss' => $entry, 'scrape' => scrapeTvinna($entry->guid));
+				$i++;
+				// we limit our response to 4 items because we are only goint to show 4 cards on the page
+				if($i >= 4 ) {
+					break;
+				}
 			}
-		}
 
-		// We are going to use this Feed with javaScript so we parse our $arrayOfJobs to a JSON object
-		$jRes = json_encode($arrOfJobs, JSON_UNESCAPED_SLASHES);
-		return $jRes;
+			// We are going to use this Feed with javaScript so we parse our $arrayOfJobs to a JSON object
+			$jRes = json_encode($arrOfJobs, JSON_UNESCAPED_SLASHES);
+			return $jRes;
 		} catch (Exception $err) {
-			$jErr = json_encode($arrOfJobs, true);
+			$jErr = json_encode($err, true);
 			return $jErr;
 		}
 
 	}
 
 }
-
-
-
-// add_filter('wp_handle_upload_prefilter', 'wpse47415_pre_upload');
-// add_filter('wp_handle_upload', 'wpse47415_post_upload');
-
-// function wpse47415_pre_upload($file){
-// 		$extension = substr(strrchr($file['name'],'.'),1);
-// 		if(!empty($file['error']) ||  $extension != 'svg') { return $path; }
-// 		add_filter('upload_dir', 'wpse47415_custom_upload_dir');
-// 		$file['name'] = $file['name'].'.php';
-//     return $file;
-// }
-
-// function wpse47415_post_upload($fileinfo){
-//     remove_filter('upload_dir', 'wpse47415_custom_upload_dir');
-//     return $fileinfo;
-// }
-
-// function wpse47415_custom_upload_dir($path){
-//     $extension = substr(strrchr($_POST['name'],'.'),1);
-//     if(!empty($path['error']) ||  $extension != 'svg') { return $path; } //error or other filetype; do nothing.
-//     $customdir = '/svg';
-//     $path['path']    = str_replace($path['subdir'], '', $path['path']); //remove default subdir (year/month)
-//     $path['url']     = str_replace($path['subdir'], '', $path['url']);
-//     $path['subdir']  = $customdir;
-//     $path['path']   .= '/test';
-// 		$path['url']    .= $customdir;
-// 		// var_dump($path);
-//     return $path;
-// }
-// function cc_mime_types($mimes) {
-// 	$mimes['svg'] = 'image/svg+xml';
-// 	$mimes['svg.php'] = 'image/svg+xml';
-//   return $mimes;
-// }
-// add_filter('upload_mimes', 'cc_mime_types');
-// if( function_exists('acf_add_options_page') ) {
-
-// 	acf_add_options_page();
-
-// }
 
 ?>
