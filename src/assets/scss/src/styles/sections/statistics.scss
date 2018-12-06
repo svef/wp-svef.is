@@ -5,10 +5,10 @@
         font-weight: 600;
         line-height: normal;
         font-size: 120px;
-        text-align: center;
+        text-align: right;
         border: none;
         box-shadow: none;
-        width: 100%;
+        min-width: 100px;
         height: 180px;
         margin-bottom: 60px;
         color: $darkBlue;
@@ -16,7 +16,7 @@
         cursor: default;
         &:focus {
             outline: none;
-            border: none; 
+            border: none;
             box-shadow: none;
         }
     }
@@ -128,13 +128,13 @@
     //     margin-top: -14px;
     // }
 
-    
-    // input[type=range]::-moz-range-progress { 
+
+    // input[type=range]::-moz-range-progress {
     //     height: 2px;
     //     background: red;
     // }
 	// input[type=range]::-ms-fill-lower {
-    //     height: 2px; 
+    //     height: 2px;
     //     background: green;
     // }
 }
@@ -146,7 +146,7 @@ $thumb-d: 26px;
 @mixin track($fill: 0) {
 	box-sizing: border-box;
 	border: none;
-    width: 100%; 
+    width: 100%;
     height: $track-h;
     background: $bgGray;
     margin: 18px 0;
@@ -164,7 +164,7 @@ $thumb-d: 26px;
 }
 
 @mixin thumb() {
-    width: $thumb-d; 
+    width: $thumb-d;
     height: $thumb-d;
     background: $orange;
     border: 8px solid $white;
@@ -185,37 +185,47 @@ $thumb-d: 26px;
 	width: 100%;
 	background: transparent;
 	font: 1em/1 arial, sans-serif;
-	
+
 	&::-webkit-slider-runnable-track {
 		@include track(1);
 	}
-	&::-moz-range-track { 
-        @include track; 
+	&::-moz-range-track {
+        @include track;
     }
-	&::-ms-track { 
-        @include track; 
+	&::-ms-track {
+        @include track;
     }
-	
-	&::-moz-range-progress { 
-        @include fill; 
+
+	&::-moz-range-progress {
+        @include fill;
     }
-	&::-ms-fill-lower { 
-        @include fill; 
+	&::-ms-fill-lower {
+        @include fill;
     }
-	
+
 	&::-webkit-slider-thumb {
 		margin-top: .5*($track-h - $thumb-d);
 		@include thumb;
 	}
-	&::-moz-range-thumb { 
-        @include thumb; 
+	&::-moz-range-thumb {
+        @include thumb;
     }
 	&::-ms-thumb {
 		margin-top: 0;
 		@include thumb;
 	}
-	
-	&::-ms-tooltip { 
-        display: none; 
+
+	&::-ms-tooltip {
+        display: none;
     }
+}
+
+
+.body--contrast {
+  .statistics {
+    .statistics__spanNumber {
+      background: transparent;
+      color: $white;
+    }
+  }
 }
