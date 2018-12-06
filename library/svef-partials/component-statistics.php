@@ -1,7 +1,7 @@
 <section class="section section--statistics section--margin-bottom grid-container">
     <div class="statistics grid-x grid-margin-x">
-        <div class="cell small-12">
-            <input class="statistics__spanNumber" type="number" value="0" id="humanSliderValue" readonly>
+        <div class="cell flex display-flex--justify-center small-12">
+            <span class="statistics__spanNumber "  id="humanSliderValue" >0</span>
         </div>
         <div class="slider__humans">
             <ul class="slider__humans--itemsAll">
