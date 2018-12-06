@@ -19,6 +19,8 @@
 	);
 	svef_partial("library/svef-partials/component-coockie-consent", $a_cookie_fileds); ?>
 
-<?php wp_footer(); ?>
+<?php wp_footer();
+
+?>
 </body>
 </html>
