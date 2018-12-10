@@ -40,29 +40,44 @@ const LoadMorePosts = {
     let eventTitle = ''
     let eventLocation = ''
     let eventExcerpt = ''
+    let eventHasPassed = ''
+    let eventHasPassedClass = ''
+    let renderLink = ''
     let linkArrowClass = 'link_arrow link-arrow--white'
+    let linkStart = ''
+    let linkEnd = ''
     const maxNumPages = posts.max_num_pages
     const currentPage = posts.new_page_number
+
     for (let i = 0; i < aPosts.length; i++) {
       post = aPosts[i]
+
       eventOffset = i % 2 ? 7 : 2
       directlinkIsSett = post.acf.direct_link_off_page
       linkHref = directlinkIsSett ? post.acf.direct_link.url : post.wp.permalink
       linkTarget = directlinkIsSett ? post.acf.direct_link.target : ''
-      eventDate = post.acf.event_start_date
+      eventDate = post.wp.local_date
       eventTitle = post.wp.post_title
       eventLocation = post.acf.event_location
       eventExcerpt = post.wp.custom_excerpt
+      eventHasPassed = post.wp.event_is_over
+      renderLink = eventHasPassed ? '' : linkHref
+      eventHasPassedClass = post.wp.event_is_over_class
+
+      linkStart = !eventHasPassed ? `<a href="${renderLink}" target="${linkTarget}">` : ''
+      linkEnd = !eventHasPassed ? `</a>` : ''
+
+
       rendered_event += `
-      <div class="section__event small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
-        <a href="${linkHref}" target="${linkTarget}">
+      <div class="section__event ${eventHasPassedClass} small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
+        ${linkStart}
           <span class="link-text--menu link-text--dull">${eventDate}</span>
           <h2 class="less-margin--top less-margin--bottom">${eventTitle}${Global.linkArrow(linkArrowClass)}</h2>
           <h3 class="less-margin--top less-margin--bottom">${eventLocation}</h3>
           <p class="section__event--border link-text--menu link-text--menu--normal-case">
             ${eventExcerpt}
           </p>
-        </a>
+        ${linkEnd}
       </div>`
     }
     LoadMorePosts.eventsContainer.insertAdjacentHTML('beforeend', rendered_event)

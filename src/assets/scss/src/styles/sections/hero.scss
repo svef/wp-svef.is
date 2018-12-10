@@ -24,7 +24,9 @@
 }
 
 #heroSlider {
-
+  .owl-stage-outer {
+    max-height: 90vh;
+  }
   .owl-dots {
     position: relative;
     display: flex;

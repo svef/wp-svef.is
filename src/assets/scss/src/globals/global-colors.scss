@@ -85,3 +85,31 @@
     }
   }
 }
+
+.body--contrast {
+  .bg-col-partial {
+    &--93 {
+      &--default {
+        &::before {
+          background-color: $blackBlue;
+          height: 93%;
+          @include breakpoint(medium down) {
+            height: 95%;
+          }
+          @include breakpoint(small down) {
+            background-color: transparent;
+          }
+        }
+      }
+
+    }
+    &--75 {
+      &--default {
+        &::before {
+          background-color: $blackBlue;
+          height: 75%;
+        }
+      }
+    }
+  }
+}

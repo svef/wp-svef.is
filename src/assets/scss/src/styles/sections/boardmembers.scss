@@ -66,7 +66,7 @@
                     height: 1px;
                     margin: 10px auto;
                 }
-            } 
+            }
             &:hover {
                 box-shadow: $cardShadowHover;
                 .member-image-jpg {
@@ -74,7 +74,7 @@
                 }
             }
         }
-    } 
+    }
     &--boardmembersMax {
         .introtext {
             margin: 160px 0;
@@ -170,13 +170,13 @@
                     background-position: center;
                     opacity: 1;
                 }
-                &:hover { 
+                &:hover {
                     .member-image-jpg {
                         opacity: 0;
-                    }   
-                } 
+                    }
+                }
             }
-            
+
             .member-info-section {
                 h3 {
                     margin-bottom: 12px;
@@ -196,6 +196,28 @@
             }
 
         }
-    }  
-    
+    }
+
 }
+.body--contrast {
+  .section--boardmembersMax .boardmembersMax-each {
+    &:nth-child(odd) {
+      .section__bg-fix--color {
+        background-color: $darkBlue;
+      }
+      .section__bg-color--default {
+          background-color: $darkBlue;
+      }
+    }
+    &:nth-child(even) {
+      .section__bg-fix--color {
+        background-color: $blackBlue;
+      }
+      .section__bg-color--default {
+          background-color: $blackBlue;
+      }
+    }
+  }
+
+}
+

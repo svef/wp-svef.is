@@ -63,14 +63,23 @@ const Header = {
     }
   },
   clickSiteContrast(e) {
+    let ajaxObj = {}
+    ajaxObj.action = "set_darkmode"
     if (!this.body.classList.contains('body--contrast')) {
       this.body.classList.add('body--contrast')
-      document.cookie = "darkMode=true"
+      ajaxObj.isDark = true
+      Global.postAjax(ajaxObj).done(function (jData) {
+        console.log(jData)
+      })
     } else {
       this.body.classList.remove('body--contrast')
-      window.history.replaceState(null, null, "/svef");
-      document.cookie = "darkMode=false"
+      ajaxObj.isDark = false
+      Global.postAjax(ajaxObj).done(function (jData) {
+        console.log(jData)
+      })
     }
+
+
   },
   navBarScrollBehaviour(header) {
     let statPos = 0
