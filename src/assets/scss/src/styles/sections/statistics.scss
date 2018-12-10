@@ -1,4 +1,7 @@
 .statistics {
+    @include breakpoint(small down) {
+       padding: 0 40px;
+    }
     .statistics__spanNumber {
         background: $white;
         font-family: $font-oswald;
@@ -14,6 +17,11 @@
         color: $darkBlue;
         outline: none;
         cursor: default;
+        @include breakpoint(small down) {
+            font-size: 80px;
+            height: 100px;
+            margin-bottom: 0;
+        }
         &:focus {
             outline: none;
             border: none; 

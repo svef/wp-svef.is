@@ -47,12 +47,14 @@
 					?>
 				</ul>
 				<button class="nav__suprise nav__suprise--mobile show-for-small-only"></button>
-
 			</div>
+			<button id="btnOpenSignup" class="btnMain btnSignup btnFixedOff show-for-small-only">
+				Skráning í svef
+			</button>
 		</menu>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 	</header>
-	<button id="btnOpenSignup" class="btnMain btnSignup">
+	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">
         Skráning í svef
     </button>

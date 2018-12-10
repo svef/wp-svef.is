@@ -39,12 +39,18 @@
   }
   &--margin-bottom {
     margin-bottom: 140px !important;
+    @include breakpoint(small down) {
+      margin-bottom: 80px !important;
+    }
   }
   &--margin-top {
     margin-top: 180px !important;
   }
   &--margin-bottom-inside {
     margin-bottom: 110px !important;
+    @include breakpoint(small down) {
+      margin-bottom: 40px !important;
+    }
   }
   &__bg-height {
     &--normal {
@@ -53,7 +59,6 @@
       height: 100%;
       @include breakpoint(medium down) {
         height: 700px;
-
       }
       @include breakpoint(small down) {
         min-height: auto;

@@ -41,6 +41,9 @@
     justify-content: space-between;
     max-width: 96%;
   }
+  @include breakpoint(376px down) {
+    max-width: 88%;
+  }
   &__items {
     width: 210px;
     height: 100%;
@@ -120,10 +123,12 @@
 }
 
 .nav__items--mobile {
-  width: 100%;
+  width: 50%;
   height: 50px;
-  justify-content: space-around; /* fall back if space-evenly is not suported */
-  justify-content: space-evenly;
+  justify-content: space-between;
+  float: right;
+  margin-right: 40px;
+  align-items: center;
 }
 .nav__lang--mobile {
   width: 80px;
