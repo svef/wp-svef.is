@@ -59,6 +59,8 @@ require_once('library/svef/custom_functions.php');
 require_once('library/svef/custom_functions-gmap.php');
 require_once('library/svef/custom-scraper.php');
 require_once('library/svef/custom_ajax.php');
+require_once('library/svef/custom_afc_blocks.php');
+
 
 /** SVEF custom post types */
 require_once('library/svef-custom-post-types/events-custom-post-types.php');

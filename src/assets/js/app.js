@@ -13,7 +13,7 @@ import Textticker from './partials/component-textticker'
 import Statisticslider from './partials/component-statistic'
 import CookieConsent from './partials/component-cookie-consent'
 import MemberPage from './partials/component-member-page'
-
+import OwleByClass from './partials/component-set-carousel-by-class'
 
 window.$ = $;
 
@@ -46,6 +46,7 @@ Textticker.init()
 Statisticslider.init()
 CookieConsent.init()
 MemberPage.init()
+OwleByClass.init()
 /** invoke foundation */
 $(document).foundation()
 

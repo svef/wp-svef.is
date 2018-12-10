@@ -8,7 +8,8 @@ get_header(); ?>
 
 	<div class="grid-container">
 		<div class="grid-x article__content">
-			<h2 class="large-5 large-offset-1"><?php the_content(); ?></h2>
+			<h2 class="large-5 large-offset-1"><?php the_title(); ?></h2>
+			<?php the_content(); ?>
 		</div>
 	</div>
 

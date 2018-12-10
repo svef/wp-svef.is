@@ -1,6 +1,7 @@
 .article {
+  min-height: 90vh;
   &__content {
-    p, ul, h1, h2, h3, h4 {
+    p, ul, .wp-block-media-text{
       @include xy-cell(10);
       @include xy-cell-offset(2);
       @include breakpoint(medium down) {
@@ -16,20 +17,14 @@
         margin: 0;
       }
     }
-    .wp-block-media-text {
-      @include xy-cell(10);
-      @include xy-cell-offset(2);
-      @include breakpoint(medium down) {
-        @include xy-cell(12);
-        @include xy-cell-offset(0);
-      }
-      .wp-block-media-text__content {
-        padding: 0;
-        p {
-          margin:0;
-        }
+
+    .wp-block-media-text__content {
+      padding: 0;
+      p {
+        margin:0;
       }
     }
   }
+
 
 }
