@@ -2,7 +2,7 @@
 <defs>
 	<clipPath id="mask">
 		<rect width="270" height="415" fill="black"/>
-		<rect x="310" width="477" height="500" fill="black"/>
+		<rect x="310" width="477" height="600" fill="black"/>
 </clipPath>
 </defs>
 </svg>
