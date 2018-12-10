@@ -1,6 +1,5 @@
 .side-signup {
     position: absolute;
-
     top:100%;
     left: -60vw;
     overflow-y:scroll;
@@ -12,15 +11,55 @@
     height: 100vh;
     background-color: $bgGray;
     transition: left 300ms ease;
-    @include breakpoint(small down) {
+    @include breakpoint(medium down) {
       width: 100vw;
       left:-101vw;
     }
     &--active {
       left: 0;
+      .closeSignupMobile {
+      position: fixed;
+      top: 110px;
+      right: 16px;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      z-index: 100;
+      transition: opacity .9s ease;
+        span {
+          background: $darkBlue-40;
+          border: none;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition:  all .35s ease;
+          cursor: pointer;
+            &:nth-of-type(2) {
+              top: 8px;
+            }
+          }
+        .top {
+          transform: translateY(0px) translateX(0) rotate(45deg);
+        }
+        .bottom {
+          transform: translateY(-8px) translateX(0) rotate(-45deg);
+        }
+      }
     }
     &__inner {
-        padding: 120px 100px;
+        padding: 60px 100px;
+        float: right;
+        @include breakpoint(large down) {
+          padding: 40px;
+      }
+        @include breakpoint(medium down) {
+          padding: 40px 100px;
+      }
+        @include breakpoint(small down) {
+          padding: 20px 40px;
+      }
     }
 
     &::-webkit-scrollbar{
@@ -35,11 +74,14 @@
 .btnSignup {
   position: fixed;
   z-index: 99;
-  left: -28px;
+  left: calc((-184px / 2) + 30px);
   top: 50vh;
   transform: rotate(-90deg);
   &--clicked {
       left: calc(50vw - (184/2)*1px);
+      @include breakpoint(medium down) {
+        left: calc(100vw - ((184px / 2) - -30px));
+      }
   }
   @include breakpoint(small down) {
     transform: rotate(0);
@@ -51,8 +93,16 @@
 
   }
 }
+.btnFixedOff {
+  position: initial;
+  transform: rotate(0deg);
+  float: right;
+  margin-right: 40px;
+  margin-top: 20px;
+}
 .side-signup__info {
     width: 100%;
+    max-width: 660px;
     overflow: scroll;
 }
 .side-signup__steps {
@@ -123,6 +173,34 @@
 }
 
 .frmsignup {
+  .formMarginLess {
+    margin: 0 !important;
+  }
+  .formMarginBottom {
+    margin-bottom: 30px !important;
+  }
+  .termsLink {
+      width: 50%;
+      float: right;
+      text-align: right !important;
+      position: relative !important;
+      top: -32px !important;
+      a {
+        font-weight: 500;
+        text-decoration: underline !important;
+        &:hover {
+          color: $orange;
+        }
+      }
+      @include breakpoint(small down) {
+        width: 100% !important;
+        float: unset !important;
+        text-align: unset !important;
+        position: unset !important;
+        top: unset !important;
+        margin-bottom: 10px !important;
+      }
+  }
 
   .gform_fields {
     .gsection {
@@ -135,6 +213,76 @@
 
     }
   }
+  .gform_footer {
+    display: flex;
+    justify-content: flex-end;
+    .gform_button {
+      @extend .btnMain;
+      @extend button;
+    }
+  }
+}
+/*Default styles for Gravity Forms frmsignup class*/
+.frmsignup ul.gfield_checkbox li input[type=checkbox]:checked+label,.frmsignup ul.gfield_checkbox li input[type=checkbox]:not(:checked)+label {
+  margin-left:19px;
+}
+/*Custom subscribe box for .frmsignup class*/
+.frmsignup [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: absolute!important;
+  left: -9999px;
+}
+ 
+.frmsignup [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+  position: relative!important;
+  padding-left: 1.0em!important;
+  cursor: pointer!important;
+}
+ 
+.frmsignup [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 2px;
+  width: 1.30em;
+  height: 1.30em;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+  padding: 2px;
+}
+ 
+.frmsignup [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 8px;
+  left: -11px;
+  font-size: 1.3em;
+  background-color: $orange;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+.frmsignup [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.frmsignup [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+.frmsignup [type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.frmsignup [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.frmsignup [type="checkbox"]:disabled + label {
+  color: #aaa;
 }
 
 .gfield {

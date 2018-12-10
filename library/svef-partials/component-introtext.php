@@ -52,7 +52,7 @@
 			<h2 class="<?php echo $h2TickerClass; ?>"><?php echo $set_title; ?></h2>
 			<?php echo $s_ticker; ?>
 		</div>
-			<p class="section__paragraph small-9 small-offset-2 medium-8 medium-offset-2 large-8 large-offset-2"><?php echo $set_paragraph; ?></p>
+			<p class="section__paragraph small-10 small-offset-1 medium-8 medium-offset-2 large-8 large-offset-2"><?php echo $set_paragraph; ?></p>
 	</div>
 </section>
 

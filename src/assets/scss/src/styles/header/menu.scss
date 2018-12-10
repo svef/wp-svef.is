@@ -1,11 +1,13 @@
 .side-menu {
-
   &__inner {
     position: relative;
     right: 0;
     padding: 80px 100px 0 0;
+    @include breakpoint(medium down) {
+      padding: 40px 80px 0 0;
+    }
     @include breakpoint(small down) {
-     padding: 20px 50px 0 0;
+    padding: 20px 40px 0 0;
     }
   }
 
@@ -13,14 +15,20 @@
 
 .side-menu__list {
   overflow: scroll;
+  @include breakpoint(small down) {
+    margin-bottom: 0;
+  }
   li {
     display: flex;
     position: relative;
     justify-content: flex-end;
     height: auto;
     flex-flow: column;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     transition: all 400ms ease;
+    @include breakpoint(medium down) {
+      margin-bottom: 5px;
+     }
     @include breakpoint(small down) {
       margin-bottom: 10px;
     }
@@ -61,11 +69,17 @@
 
     ul {
       padding-right: 30px;
+      @include breakpoint(small down) {
+        padding-right: 0;
+      }
       li {
         margin-bottom: 0;
         height: 30px;
         a {
           @extend .link-text--menu;
+          @include breakpoint(small down) {
+            font-weight: 500;
+          }
           height: 100%;
           margin-bottom: 1px;
           color: $white;

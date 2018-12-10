@@ -1,6 +1,9 @@
 
 <section class="side-signup">
-
+<button class="closeSignupMobile show-for-small-only">
+    <span class="top"></span>
+    <span class="bottom"></span>
+</button>
     <div class="side-signup__inner">
         <div class="side-signup__info">
             <h3>Skráning félaga í SVEF</h3>
@@ -27,10 +30,8 @@
                     </p>
                 </div>
             </div>
-						<div class="side-signup__form" style="padding: 20px 0;">
-						<?php echo do_shortcode('[gravityform id="1" title="true" description="true"]'); ?>
-
-
+                <div class="side-signup__form" style="padding: 20px 0;">
+                <?php echo do_shortcode('[gravityform id="1" title="true" description="true"]'); ?>
             </div>
         </div>
     </div>
