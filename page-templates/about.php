@@ -5,7 +5,7 @@ Template Name: About
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    
+
     <?php
 		$hero_is_slider = get_field('is_slide_show');
 
@@ -34,7 +34,7 @@ get_header(); ?>
 			svef_partial("library/svef-partials/component-introtext" , $a_about);
 		?>
 
-    <?php svef_partial("library/svef-partials/component-boardmembers"); ?>
+    <?php svef_partial("library/svef-partials/component-boardmembers-cards"); ?>
 
 
 	</article>

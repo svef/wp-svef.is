@@ -199,6 +199,9 @@ li {
     color: $black;
   }
 }
+strong {
+  font-weight: 700;
+}
 input[type="text"], input[type="checkbox"] {
   font-family: $font-overpass;
   font-weight: 300;

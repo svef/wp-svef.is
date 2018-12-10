@@ -12,6 +12,7 @@ import LoadMorePosts from './partials/component-loadmore'
 import Textticker from './partials/component-textticker'
 import Statisticslider from './partials/component-statistic'
 import CookieConsent from './partials/component-cookie-consent'
+import MemberPage from './partials/component-member-page'
 
 
 window.$ = $;
@@ -44,6 +45,7 @@ LoadMorePosts.init()
 Textticker.init()
 Statisticslider.init()
 CookieConsent.init()
+MemberPage.init()
 /** invoke foundation */
 $(document).foundation()
 
