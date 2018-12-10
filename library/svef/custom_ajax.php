@@ -61,7 +61,9 @@ function get_next_events_page(){
 	$args = array (
 		'post_type'       => 'events',
 		'posts_per_page'	=>    5,
-		'order'						=> 'ASC',
+		'order'						=> 'DESC',
+		'meta_key'		=> 'event_start_date',
+		'orderby'			=> 'meta_value',
 		'paged' 					=> $page_number + 1,
 
 	);
@@ -75,7 +77,12 @@ function get_next_events_page(){
 		$wp_post->permalink = get_post_permalink($wp_post->ID);
 		$wp_post->custom_excerpt = wp_trim_words( $wp_post->post_content, 55, '&hellip;' );
 		$acf_obj = get_fields($wp_post->ID);
-
+		$event_is_over = strtotime($acf_obj['event_start_date']) < time() ? true : false;
+		$event_is_over_class = $event_is_over ? ' section__event--passed ' : '';
+		$local_date = date_i18n("d M Y", strtotime($acf_obj['event_start_date']));
+		$wp_post->event_is_over = $event_is_over;
+		$wp_post->event_is_over_class = $event_is_over_class;
+		$wp_post->local_date = $local_date;
 		$a_combined_post_data['post_data'][] = array('wp'  => $wp_post, 'acf'=> $acf_obj);
 	}
 	$a_combined_post_data['new_page_number'] = $page_number + 1;
@@ -87,6 +94,21 @@ function get_next_events_page(){
 	// IMPORTANT: don't forget to "exit"
 	exit;
 }
+
+
+add_action('wp_ajax_nopriv_set_darkmode', 'set_darkmode'); // make shure you dont have to be logged in to the backend to access this.
+add_action('wp_ajax_set_darkmode', 'set_darkmode');
+
+function set_darkmode(){
+	try {
+		$_SESSION['isDark'] = $_POST['isDark'];
+		echo  $_POST['isDark'] == 'true' ? '{"success": "session is dark"}' : '{"success": "session is light"}' ;
+		exit;
+	} catch (Exception $err ) {
+		print json_encode($err, true);
+	}
+}
+
 
 
 

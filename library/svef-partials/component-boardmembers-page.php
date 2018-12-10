@@ -59,8 +59,8 @@
             ?>
 
             <div id="<?php echo $slug;?>" class="boardmembersMax-each cell large-12">
+							<div class="section__bg-fix section__bg-fix--default section__bg-fix--color grid-contianer fluid" aria-hidden="true"></div>
 
-                <div class="section__bg-fix section__bg-fix--default section__bg-fix--color" aria-hidden="true"></div>
 
                 <div class="member_inner grid-x grid-padding-x">
                     <div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-10 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >

@@ -17,13 +17,18 @@
 			array (
 				'post_type'       => 'events',
 				'posts_per_page'	=>    5,
-				'order'						=> 'ASC',
-				'paged' 					=> $paged
+				'order'						=> 'DESC',
+				'paged' 					=> $paged,
+				'meta_key'		=> 'event_start_date',
+				'orderby'			=> 'meta_value',
 			) :
 			array (
 					'post_type'       => 'events',
 					'posts_per_page'	=>    3,
-					'order'						=> 'ASC',
+					'order'						=> 'DESC',
+					'meta_key'		=> 'event_start_date',
+					'orderby'			=> 'meta_value',
+
 
 				);
 				$the_query = new WP_Query( $args );
@@ -39,20 +44,27 @@
 
 					$link_is_external = $direct_link_isset ? $direct_link['url'] : get_the_permalink();
 					$link_target = $direct_link_isset ? $direct_link['target'] : '' ;
+					$event_is_over = strtotime($event_date) < time() ? true : false;
+					$local_date = date_i18n("d M Y", strtotime($event_date));
 
+					$event_is_over_class = $event_is_over ? ' section__event--passed ' : '';
 					$event_count++;
 					$event_offset = $event_count % 2 ? 7 : 2;
-
+					$render_link = $event_is_over ? '' : $link_is_external;
 				?>
-						<div class="section__event  small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
+						<div class="section__event <?php echo $event_is_over_class; ?> small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
+							<?php if(!$event_is_over): ?>
 							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
-								<span class="link-text--menu link-text--dull"><?php echo $event_date; ?></span>
+						  <?php endif; ?>
+								<span class="link-text--menu link-text--dull"><?php echo $local_date; ?></span>
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
 								<h3 class="less-margin--top less-margin--bottom"><?php echo $location_name; ?></h3>
 								<p class="section__event--border link-text--menu link-text--menu--normal-case">
 									<?php echo get_the_excerpt(); ?>
 								</p>
+							<?php if(!$event_is_over): ?>
 							</a>
+							<?php endif; ?>
 						</div>
 
 				<?php endwhile; endif; wp_reset_query(); ?>
@@ -74,17 +86,7 @@
 					</div>
 				</div>
 			</div>
-				<!-- <div class="section__loader--events-page card--spinner loader-container small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
-					<ul role="progressbar", aria-busy="true", aria-label="Loading domino shop">
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-						<li role="presentation"></li>
-					</ul>
-				</div> -->
+
 			<?php endif; ?>
 
 </section>

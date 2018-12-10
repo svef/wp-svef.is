@@ -56,4 +56,13 @@
       }
     }
   }
+  &--passed {
+    h2, h3, .link-text--menu {
+      text-decoration: line-through;
+      color: #777;
+    }
+    .section__event--border{
+      border-left: 1px solid #777;
+    }
+  }
 }
