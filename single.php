@@ -7,18 +7,19 @@
  */
 
 get_header(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('article news'); ?>>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', '' ); ?>
-				<?php the_post_navigation(); ?>
-				<?php comments_template(); ?>
-			<?php endwhile; ?>
-		</main>
-		<?php get_sidebar(); ?>
+	<div class="grid-container">
+		<div class="grid-x article__content">
+			<h2 class="large-5 large-offset-1"><?php the_title(); ?></h2>
+			<?php the_content(); ?>
+		</div>
 	</div>
-</div>
+
+
+
+
+	</article>
+<?php endwhile; ?>
 <?php get_footer();
