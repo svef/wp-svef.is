@@ -9,10 +9,9 @@ const Statisticslider = {
 
   init() {
     this.cacheDom()
-    this.addEvents()
     $(this.humanSlider).exists(() => {
+      this.addEvents()
       this.scrollSchene()
-
     })
 
     document.documentElement.classList.add('js')
@@ -25,10 +24,7 @@ const Statisticslider = {
     // this._R = this.body.querySelector('[type=range]')
   },
   addEvents() {
-    $(this.humanSlider).exists(() => {
-      this.humanSlider.addEventListener('input', this.handleSliderChange.bind(this), false)
-
-    })
+    this.humanSlider.addEventListener('input', this.handleSliderChange.bind(this), false)
   },
   handleSliderChange(e) {
     this.humanSliderValue.innerHTML = e.target.value;
