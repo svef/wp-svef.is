@@ -6,14 +6,16 @@
     &--mask {
       float: right;
       width: calc(100% + 5vw);
+      top: 50%;
+      margin-top: -300px;
       right: 0px;
       clip-path: url('#mask');
-      height: 500px;
+      height: 600px;
     }
     &--no-mask {
       float: right;
       width: calc(100% + 12vw);
-      right: 30px;
+      // right: 30px;
     }
     @include breakpoint(medium down) {
       width: 100%;
