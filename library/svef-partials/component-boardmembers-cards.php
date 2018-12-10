@@ -21,23 +21,25 @@
                     )
 
                     );
-                    $the_query = new WP_Query( $args ); 
+                    $the_query = new WP_Query( $args );
             ?>
             <?php
                 $boardmember_count = 0;
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-
+										global $post;
+										$slug = $post->post_name;
                     $boardmember_fullname = get_field('boardmember_fullname');
                     $boardmember_role = get_field('boardmember_role');
                     $boardmember_job_title = get_field('boardmember_job_title');
                     $boardmember_image = get_field('boardmember_image');
                     $use_gif_image = get_field('use_gif_image');
                     $boardmember_gif_image = get_field('boardmember_gif_image');
-                    $boardmember_gif_image = $boardmember_gif_image ? $boardmember_gif_image : $boardmember_image;
+										$boardmember_gif_image = $boardmember_gif_image ? $boardmember_gif_image : $boardmember_image;
+
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card">
-                    <a href="/SVEF/um-svef/stjorn">
+                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
                                 <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
@@ -50,10 +52,10 @@
                             <p><?php echo $boardmember_role; ?></p>
                             <p class="text--small"><?php echo $boardmember_job_title; ?></p>
                         </div>
-                    </a>                   
+                    </a>
                 </div>
             </div>
-            
+
             <?php endwhile; endif; wp_reset_query(); ?>
 
             <div class="cell board-info medium-6 large-7">
@@ -77,7 +79,7 @@
                             'taxonomy' => 'boardmembers_year',
                             'field'    => 'slug',
                             'terms' => '2017'
-                        ), 
+                        ),
                         array(
                             'taxonomy' => 'boardmembers_cat',
                             'field'    => 'slug',
@@ -87,16 +89,17 @@
                     )
 
                     );
-                    $the_second_query = new WP_Query( $args2 ); 
+                    $the_second_query = new WP_Query( $args2 );
             ?>
             <?php
                 $boardmember_count = 0;
                 if ($the_second_query->have_posts()) : while ($the_second_query->have_posts()) : $the_second_query->the_post();
-
+										global $post;
+										$slug = $post->post_name;
                     $boardmember_fullname = get_field('boardmember_fullname');
                     $boardmember_role = get_field('boardmember_role');
                     $boardmember_job_title = get_field('boardmember_job_title');
-                   
+
                     $boardmember_image = get_field('boardmember_image');
                     $use_gif_image = get_field('use_gif_image');
                     $boardmember_gif_image = get_field('boardmember_gif_image');
@@ -104,7 +107,7 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card">
-                    <a href="/SVEF/um-svef/stjorn">
+                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
                                 <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
@@ -120,12 +123,12 @@
                     </a>
                 </div>
             </div>
-            
+
             <?php endwhile; endif;  wp_reset_query(); ?>
 
-            
+
         </div>
     </div>
 
-	
+
 </section>

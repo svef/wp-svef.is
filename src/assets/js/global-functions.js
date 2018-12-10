@@ -29,6 +29,15 @@ const GlobalFunctions = {
 
     return $.ajax(ajaxOptions)
   },
+  getAjax(url) {
+    return $.get(url)
+  },
+  getUrlParam(sParameterName) {
+    let urlString = window.location.href
+    let url = new URL(urlString)
+    let param = url.searchParams.getAll(sParameterName)
+    return param.length > 0 ? param : 'url has no parameter by that name'
+  },
 
   linkArrow(linkClass) {
     let linkArrow = linkClass ? linkClass : 'link-arrow'

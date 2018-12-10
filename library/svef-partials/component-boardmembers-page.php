@@ -10,6 +10,7 @@
     <div class="grid-container">
         <div class="boardmembersMax-all grid-x">
         <?php
+
                 $args = array (
                     'post_type'       => 'boardmembers',
                     'posts_per_page'	=>  7,
@@ -29,7 +30,8 @@
             <?php
                 $boardmember_count = 0;
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-
+										global $post;
+										$slug = $post->post_name;
                     $boardmember_fullname = get_field('boardmember_fullname');
                     $boardmember_role = get_field('boardmember_role');
                     $boardmember_job_title = get_field('boardmember_job_title');
@@ -56,7 +58,7 @@
 
             ?>
 
-            <div class="boardmembersMax-each cell large-12">
+            <div id="<?php echo $slug;?>" class="boardmembersMax-each cell large-12">
 
                 <div class="section__bg-fix section__bg-fix--default section__bg-fix--color" aria-hidden="true"></div>
 
