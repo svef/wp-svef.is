@@ -1,4 +1,4 @@
-<svg class="showLink hide-for-large" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="showLink" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:multiply">
 <circle cx="35.5" cy="35.5" r="35.5" fill="#2F7E98"/>
 </g>

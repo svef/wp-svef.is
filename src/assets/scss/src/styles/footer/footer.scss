@@ -53,7 +53,10 @@
           @extend .btnMain;
           @extend button;
           &:before {
-            content: 'hallo';
+            content: '';
+          }
+          @include breakpoint(small down) {
+            margin-top: 60px;
           }
         }
       }

@@ -2,8 +2,8 @@
     <div class="grid-container">
         <div class="introtext" >
             <div class="grid-x grid-padding-x">
-                <h2 class="section__title cell medium-8 medium-offset-1 large-10 large-offset-1">Stjórn SVEF árið 2018</h2>
-                <p class="section__paragraph cell medium-8 medium-offset-2 large-8 large-offset-2">Markmið morgunverðarfunda SVEF eru miðlun sérfræðiþekkingar innan vébanda vefiðnaðarins, fengnir eru aðilar sem starfa innan vefgeirans og haldin eru erindi um ýmis mál tengd vefjum og verkefnum tengd þeim. Eitthvað meira mögulega eða kannski á ekki að vera neinn intro texti fyrir fréttir...</p>
+                <h2 class="section__title cell small-10 small-offset-1 medium-8 medium-offset-1 large-10 large-offset-1">Stjórn SVEF árið 2018</h2>
+                <p class="section__paragraph cell small-10 small-offset-1 medium-8 medium-offset-2 large-8 large-offset-2">Markmið morgunverðarfunda SVEF eru miðlun sérfræðiþekkingar innan vébanda vefiðnaðarins, fengnir eru aðilar sem starfa innan vefgeirans og haldin eru erindi um ýmis mál tengd vefjum og verkefnum tengd þeim. Eitthvað meira mögulega eða kannski á ekki að vera neinn intro texti fyrir fréttir...</p>
             </div>
         </div>
     </div>
