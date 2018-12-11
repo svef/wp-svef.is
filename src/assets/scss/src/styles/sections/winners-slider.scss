@@ -41,15 +41,16 @@
   @include breakpoint(medium down) {
     .winners-slide__text {
       max-height: 200px;
+      opacity: 1;
     }
     .winners-slide__img {
       filter: grayscale(0);
     }
   }
   &__link {
-    &:hover {
-      cursor: url('../images/icons/cursor-hover.svg'), auto;
-    }
+    // &:hover {
+    //   cursor: url('../images/icons/cursor-hover.svg'), auto;
+    // }
   }
   &__img {
     height: 294px;
@@ -86,7 +87,7 @@
     padding-right: 20px;
     @include breakpoint(small down) {
       margin-left: 40px;
-     }
+    }
   }
   &__text {
     border-left: 1px white solid;
