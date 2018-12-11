@@ -5,6 +5,9 @@ body {
   background-color: $white;
   z-index: 1;
   // overflow-x: hidden;
+  @include breakpoint(small down) {
+    margin-top: 60px;
+  }
 }
 
 button {

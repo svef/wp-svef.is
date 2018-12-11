@@ -10,7 +10,7 @@
     content: '';
     right: 0;
     height: 100%;
-    width: 30%;
+    width: 100%;
     z-index: -1;
     @include breakpoint(medium down) {
       width: 100vw;
@@ -71,6 +71,19 @@
     }
   }
   &__bg-color {
+    &--text-red, &--text-blue, &--text-darkBlue, &--text-blackBlue  {
+      color: $white;
+      p {
+        color: inherit;
+      }
+      svg {
+        fill: $white;
+        path {
+          fill: $white;
+        }
+      }
+    }
+
     &--default {
       background: $bgGray;
 
@@ -167,6 +180,9 @@
       align-items: center;
       margin-bottom: 0;
     }
+    &--job-feed {
+      overflow: hidden;
+    }
     .hero-image {
       float:right;
       right: 0;
@@ -203,7 +219,8 @@
 
   &__image--c2a {
     @include breakpoint(small down) {
-      height: auto;
+      height: 500px;
+
     }
   }
 

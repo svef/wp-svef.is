@@ -1,32 +1,58 @@
 .section--c2a {
   position: relative;
+
+  @include breakpoint(medium down) {
+    margin-top: 160px;
+  }
   .c2a-image {
     position: relative;
     min-height: 500px;
-    &--mask {
-      // float: right;
-      width: calc(100% + 5vw);
-      top: 50%;
-      margin-top: -300px;
-      right: 0px;
-      clip-path: url('#mask');
-      height: 600px;
-    }
-    &--no-mask {
-      float: right;
-      width: calc(100% + 8.333%);
-      // right: 30px;
-    }
+    background-repeat: no-repeat;
     @include breakpoint(medium down) {
       width: 100%;
       min-height: 100px;
       height: 45vh;
       right: 0;
-      top: -80px;
+
+      // top: -80px;
     }
     @include breakpoint(small down) {
-      top: -70px;
+      // top: -70px;
     }
+    &--mask {
+      // width: calc(100% + 8.333%);
+
+
+      clip-path: url('#mask');
+      height: 600px;
+      left:0;
+      // right: 20px;
+      @include breakpoint(large down) {
+
+        // right: 20px;
+        margin-top: -250px;
+        height: 500px;
+      }
+      @include breakpoint(medium down) {
+        width: 100%;
+        top: -100px;
+        height: 500px;
+        margin-top: 0;
+        right: 0;
+      }
+    }
+    &--no-mask {
+      // width: calc(100% + 5.333%);
+      // right:20px;
+
+      @include breakpoint(medium down) {
+        width: 100%;
+        top: -100px;
+        height: 500px;
+        margin-top:0;
+      }
+    }
+
   }
   .section__c2a-inner{
     position: relative;
