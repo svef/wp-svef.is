@@ -34,26 +34,28 @@
 		<menu class="side-menu">
 			<div class="side-menu__inner">
 				<?php foundationpress_top_bar_r(); ?>
-			</div>
-			<div class="nav__items nav__items--mobile">
-				<ul class="nav__lang nav__lang--mobile show-for-small-only">
+				<div class="nav__items nav__items--mobile">
+					<ul class="nav__lang nav__lang--mobile show-for-small-only">
 
-					<?php
-						if(function_exists('pll_the_languages')){
-							pll_the_languages( array('display_names_as' => 'slug', 'hide_if_no_translation' => 1) );
-						} else {
-							echo '';
-						}
-					?>
-				</ul>
-				<button class="nav__suprise nav__suprise--mobile show-for-small-only"></button>
+						<?php
+							if(function_exists('pll_the_languages')){
+								pll_the_languages( array('display_names_as' => 'slug', 'hide_if_no_translation' => 1) );
+							} else {
+								echo '';
+							}
+						?>
+					</ul>
+					<button class="nav__suprise nav__suprise--mobile show-for-small-only"></button>
+				</div>
+				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only">
+					Skráning í svef
+				</button>
 			</div>
-			<button id="btnOpenSignup" class="btnMain btnSignup btnFixedOff show-for-small-only">
-				Skráning í svef
-			</button>
+			
 		</menu>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
+		<div class="menu-overlay"></div>
 	</header>
 	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">
         Skráning í svef
