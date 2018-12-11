@@ -10,7 +10,7 @@
     content: '';
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 80%;
     z-index: -1;
     @include breakpoint(medium down) {
       width: 100vw;

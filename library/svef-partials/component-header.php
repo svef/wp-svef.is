@@ -51,11 +51,22 @@
 					Skráning í svef
 				</button>
 			</div>
-			
+
 		</menu>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 		<div class="menu-overlay"></div>
+		<div class="window-loader">
+			<div role="progressbar", aria-busy="true", aria-label="Loading">
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+			</div>
+		</div>
 	</header>
 	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">
         Skráning í svef

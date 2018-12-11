@@ -234,13 +234,13 @@
   position: absolute!important;
   left: -9999px;
 }
- 
+
 .frmsignup [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
   position: relative!important;
   padding-left: 1.0em!important;
   cursor: pointer!important;
 }
- 
+
 .frmsignup [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
   content: '';
   position: absolute;
@@ -253,7 +253,7 @@
   box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
   padding: 2px;
 }
- 
+
 .frmsignup [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
@@ -289,6 +289,7 @@
 }
 
 .gfield {
+  width: calc(100% - 16px);
   .gfield_label {
     display: flex !important;
     justify-content: space-between;
@@ -360,5 +361,24 @@
   }
 }
 
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+  position: relative !important;
+  padding-right: 0 !important;
+  padding-right: 0px !important;
+}
 
+#gform_2 .gform_wrapper.gform_validation_error .gform_body ul li.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+  max-width: 100% !important;
+  width: 500px;
+  @include breakpoint(641px) {
+    max-width: 100% !important;
 
+  }
+}
+.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+  max-width: 100% !important;
+}
+
+.gform_wrapper ul.gform_fields {
+  position: relative;
+}

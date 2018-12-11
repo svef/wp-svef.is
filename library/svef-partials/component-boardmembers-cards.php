@@ -38,7 +38,7 @@
 
 			?>
             <div class="cell medium-6 large-4">
-                <div class="card">
+                <div class="card section--animate-flip">
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
@@ -106,7 +106,7 @@
                     $boardmember_gif_image = $boardmember_gif_image ? $boardmember_gif_image : $boardmember_image;
 			?>
             <div class="cell medium-6 large-4">
-                <div class="card">
+                <div class="card section--animate-flip">
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
