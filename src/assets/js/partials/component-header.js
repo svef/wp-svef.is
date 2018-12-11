@@ -16,6 +16,10 @@ const Header = {
     this.sideMenu = this.body.querySelector('.side-menu')
     this.btnContrast = this.body.querySelector('.nav__suprise')
     this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
+    this.menuOverlay = this.body.querySelector('.menu-overlay')
+    this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
+    this.btnOpenSignupMobile = this.body.querySelector('#btnOpenSignupMobile')
+    this.sideSignup = this.body.querySelector('.side-signup')
     this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
   },
   addEvents() {
@@ -30,13 +34,24 @@ const Header = {
     if(this.btnMenu.classList.contains('nav__menu-button--clicked')) {
       this.btnMenu.classList.remove('nav__menu-button--clicked')
       this.sideMenu.classList.remove('side-menu--active')
+      this.menuOverlay.classList.remove('menu-overlay--active')
+      this.body.style.overflow = 'auto'
+    } else if (this.sideSignup.classList.contains('side-signup--active')) {
+      btnOpenSignup.classList.remove('btnSignup--clicked')
+      btnOpenSignupMobile.classList.remove('btnSignup--clicked')
+      this.sideSignup.classList.remove('side-signup--active')
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
-      this.body.style.overflow = 'auto';
+      this.btnMenu.classList.add('nav__menu-button--clicked')
+      this.sideMenu.classList.add('side-menu--active')
+      this.menuOverlay.classList.add('menu-overlay--active')
+      this.body.style.overflow = 'hidden'
+      btnOpenSignup.blur()
+      btnOpenSignup.innerHTML = 'Skráning í SVEF'
     } else {
       this.btnMenu.classList.add('nav__menu-button--clicked')
       this.sideMenu.classList.add('side-menu--active')
-      this.sideSignupOverlay.classList.add('side-signup-overlay--active')
-      this.body.style.overflow = 'hidden';
+      this.menuOverlay.classList.add('menu-overlay--active')
+      this.body.style.overflow = 'hidden'
     }
   },
   windowScrollHandler(e) {
@@ -50,16 +65,16 @@ const Header = {
     if (e.target != this.btnMenu && this.sideMenu.classList.contains('side-menu--active') && !this.sideMenu.contains(e.target) && !Global.isDescendant(this.sideMenu, e.target)) {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
-      this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
-      this.body.style.overflow = 'auto';
+      this.menuOverlay.classList.remove('menu-overlay--active')
+      this.body.style.overflow = 'auto'
     }
   },
   escapeMenu(e) {
     if (this.sideMenu.classList.contains('side-menu--active') && e.code == 'Escape') {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
-      this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
-      this.body.style.overflow = 'auto';
+      this.menuOverlay.classList.remove('menu-overlay--active')
+      this.body.style.overflow = 'auto'
     }
   },
   clickSiteContrast(e) {

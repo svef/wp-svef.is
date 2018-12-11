@@ -26,6 +26,7 @@
       cursor: pointer;
       z-index: 100;
       transition: opacity .9s ease;
+      outline: none;
         span {
           background: $darkBlue-40;
           border: none;
@@ -97,8 +98,9 @@
   position: initial;
   transform: rotate(0deg);
   float: right;
-  margin-right: 40px;
+  margin-left: 40px;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 .side-signup__info {
     width: 100%;
@@ -140,7 +142,7 @@
         }
     }
 }
-.side-signup-overlay {
+.side-signup-overlay, .menu-overlay {
     width: 100vw;
     height: 100vh;
     background-color: $black;
@@ -219,6 +221,7 @@
     .gform_button {
       @extend .btnMain;
       @extend button;
+      font-size: 11px !important;
     }
   }
 }

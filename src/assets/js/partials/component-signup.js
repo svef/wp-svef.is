@@ -10,34 +10,88 @@ const Signup = {
     cacheDom() {
       this.body = Global.body
       this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
+      this.btnOpenSignupMobile = this.body.querySelector('#btnOpenSignupMobile')
+      this.btnMenu = this.body.querySelector('#btnMenu')
+      this.sideMenu = this.body.querySelector('.side-menu')
+      this.menuOverlay = this.body.querySelector('.menu-overlay')
       this.sideSignup = this.body.querySelector('.side-signup')
       this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
       this.gfieldRequired = this.body.querySelectorAll('.gfield_required')
+      this.btnCloseSignupMobile = this.body.querySelector('#closeSignupMobile')
     },
     addEvents() {
       this.btnOpenSignup.addEventListener('click', this.handleOpenSignup.bind(this))
+      this.btnOpenSignupMobile.addEventListener('click', this.handleMobileOpenSignup.bind(this))
+      this.btnCloseSignupMobile.addEventListener('click', this.handleMobileCloseSignup.bind(this))
+      this.body.addEventListener('click', this.clickedOutSignupForm.bind(this))
+      this.body.addEventListener('keyup', this.escapeSignupForm.bind(this))
     },
     handleOpenSignup(e) {
-      if(this.btnOpenSignup.classList.contains('btnSignup--clicked')) {
+      if(btnOpenSignup.classList.contains('btnSignup--clicked')) {
+        btnOpenSignup.classList.remove('btnSignup--clicked')
+        this.sideSignup.classList.remove('side-signup--active')
+        this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
+        this.body.style.overflow = 'auto'
+        btnOpenSignup.blur()
+        btnOpenSignup.innerHTML = 'Skráning í SVEF'
+      } else {
+        this.sideMenu.classList.remove('side-menu--active')
+        this.btnMenu.classList.remove('nav__menu-button--clicked')
+        this.menuOverlay.classList.remove('menu-overlay--active')
+        btnOpenSignup.classList.add('btnSignup--clicked')
+        this.sideSignup.classList.add('side-signup--active')
+        this.sideSignupOverlay.classList.add('side-signup-overlay--active')
+        btnOpenSignup.innerHTML = 'Loka'
+        this.body.style.overflow = 'hidden'
+      }
+    },
+    handleMobileOpenSignup(e) {
+      if(btnOpenSignupMobile.classList.contains('btnSignup--clicked')) {
+        btnOpenSignupMobile.classList.remove('btnSignup--clicked')
+        this.sideSignup.classList.remove('side-signup--active')
+      } else {
+        this.sideMenu.classList.remove('side-menu--active')
+        this.btnMenu.classList.remove('nav__menu-button--clicked')
+        this.menuOverlay.classList.remove('menu-overlay--active')
+        this.body.style.overflow = 'auto'
+        btnOpenSignupMobile.classList.add('btnSignup--clicked')
+        this.sideSignup.classList.add('side-signup--active')
+      }
+    },
+    handleMobileCloseSignup(e){
+        btnOpenSignupMobile.classList.remove('btnSignup--clicked')
+        this.sideSignup.classList.remove('side-signup--active')
+    },
+    clickedOutSignupForm(e) {      
+      if (e.target != this.btnOpenSignup && e.target != this.btnOpenSignupMobile && 
+        this.sideSignup.classList.contains('side-signup--active') && 
+        !this.sideSignup.contains(e.target) && 
+        !Global.isDescendant(this.sideSignup, e.target)
+        ) {
         this.btnOpenSignup.classList.remove('btnSignup--clicked')
         this.sideSignup.classList.remove('side-signup--active')
         this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
-        this.btnOpenSignup.blur()
+        this.body.style.overflow = 'auto'
+        // this.btnOpenSignup.blur()
         this.btnOpenSignup.innerHTML = 'Skráning í SVEF'
-      } else {
-        this.btnOpenSignup.classList.add('btnSignup--clicked')
-        this.sideSignup.classList.add('side-signup--active')
-        this.sideSignupOverlay.classList.add('side-signup-overlay--active')
-        this.btnOpenSignup.innerHTML = 'Loka'
+      }
+    },
+    escapeSignupForm(e) {    
+      if (this.sideSignup.classList.contains('side-signup--active') && e.code == 'Escape') {
+        this.btnOpenSignup.classList.remove('btnSignup--clicked')
+        this.sideSignup.classList.remove('side-signup--active')
+        this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
+        this.body.style.overflow = 'auto'
+        // this.btnOpenSignup.blur()
+        this.body.focus()
+        this.btnOpenSignup.innerHTML = 'Skráning í SVEF'
       }
     },
   fixFormRequired() {
       for (let i = 0; i < this.gfieldRequired.length; i++) {
         this.gfieldRequired[i].innerHTML = ""
         this.gfieldRequired[i].innerHTML = Translate.languageSwitch('required', Translate.currentLanguage())
-
       }
-
     }
 
 }

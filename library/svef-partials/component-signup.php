@@ -1,6 +1,6 @@
 
 <section class="side-signup">
-<button class="closeSignupMobile show-for-small-only">
+<button id="closeSignupMobile" class="closeSignupMobile show-for-small-only">
     <span class="top"></span>
     <span class="bottom"></span>
 </button>
