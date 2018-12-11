@@ -7,7 +7,7 @@
 
 <section class="section section--margin-bottom section--jobfeed grid-container">
     <div class="section__jobfeed-inner grid-x grid-margin-x">
-        <div class="section__image cell small-12 medium-5 large-5">
+        <div class="section__image section__image--job-feed cell small-12 medium-5 large-5">
             <div class="jobfeed-image">
                 <img src="<?php echo $jobfeed_image['sizes']['large']; ?>" alt="">
             </div>

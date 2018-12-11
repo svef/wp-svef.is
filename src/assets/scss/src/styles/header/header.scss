@@ -17,6 +17,7 @@
     }
   }
   @include breakpoint(small down) {
+    height: 60px;
     width: 100vw;
   }
 }
