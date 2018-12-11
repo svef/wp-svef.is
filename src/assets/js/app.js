@@ -14,7 +14,7 @@ import Statisticslider from './partials/component-statistic'
 import CookieConsent from './partials/component-cookie-consent'
 import MemberPage from './partials/component-member-page'
 import OwleByClass from './partials/component-set-carousel-by-class'
-
+import SectionsApear from './partials/component-appear'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -47,6 +47,7 @@ Statisticslider.init()
 CookieConsent.init()
 MemberPage.init()
 OwleByClass.init()
+// SectionsApear.init()
 /** invoke foundation */
 $(document).foundation()
 

@@ -5,8 +5,8 @@ const OwleByClass = {
   init(){
     this.cacheDom()
     $(this.slider).exists(() => {
+      this.setOwlCarousel(this.slider, this.sliderOptions)
     })
-    this.setOwlCarousel(this.slider, this.sliderOptions)
   },
   cacheDom(){
     this.body = document.querySelector('body')

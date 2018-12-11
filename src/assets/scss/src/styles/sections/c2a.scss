@@ -4,7 +4,7 @@
     position: relative;
     min-height: 500px;
     &--mask {
-      float: right;
+      // float: right;
       width: calc(100% + 5vw);
       top: 50%;
       margin-top: -300px;
@@ -14,7 +14,7 @@
     }
     &--no-mask {
       float: right;
-      width: calc(100% + 12vw);
+      width: calc(100% + 8.333%);
       // right: 30px;
     }
     @include breakpoint(medium down) {
