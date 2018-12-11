@@ -1,0 +1,27 @@
+.window-loader {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  background-color: $white;
+  @extend .loader-container;
+  div {
+    margin-top: -80px;
+    span {
+      background: $black;
+    }
+  }
+}
+
+.body--contrast {
+  .window-loader {
+    background-color: $darkBlue;
+    div span {
+      background: $orange;
+    }
+  }
+}

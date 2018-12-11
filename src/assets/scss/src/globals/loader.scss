@@ -6,7 +6,7 @@ $bar-animation-duration: 2s;
 // Generated settings
 $bar-animation-duration-single: ($bar-animation-duration / $bar-count);
 .loader-container{
-  ul {
+  div {
     position: relative;
     padding: 0;
     width: 100px;
@@ -14,7 +14,7 @@ $bar-animation-duration-single: ($bar-animation-duration / $bar-count);
     list-style: none;
     margin: 0 auto;
 
-    li {
+    span {
       display: block;
       position: absolute;
       right: 0;

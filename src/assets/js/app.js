@@ -15,6 +15,7 @@ import CookieConsent from './partials/component-cookie-consent'
 import MemberPage from './partials/component-member-page'
 import OwleByClass from './partials/component-set-carousel-by-class'
 import SectionsApear from './partials/component-appear'
+import Loader from './window-load'
 window.$ = $;
 
 // import Foundation from 'foundation-sites';
@@ -33,7 +34,7 @@ $.fn.exists = function (callback) {
 }
 
 /** invoke our scipts */
-
+Loader.init()
 Header.init()
 Signup.init()
 HeroSlider.init()
@@ -47,7 +48,7 @@ Statisticslider.init()
 CookieConsent.init()
 MemberPage.init()
 OwleByClass.init()
-// SectionsApear.init()
+SectionsApear.init()
 /** invoke foundation */
 $(document).foundation()
 

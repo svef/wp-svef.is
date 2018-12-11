@@ -12,7 +12,7 @@
                 <img src="<?php echo $jobfeed_image['sizes']['large']; ?>" alt="">
             </div>
         </div>
-        <div class="section__info section__info--center cell small-10 small-offset-1 medium-6 medium-offset-0 large-6 medium-offset-0" >
+        <div class="section__info section--animate section__info--center cell small-10 small-offset-1 medium-6 medium-offset-0 large-6 medium-offset-0" >
 
             <h2 class="section__title"><?php echo $jobfeed_title; ?></h2>
 						<p class="section__pragraphTall--off"><?php echo $jobfeed_text; ?></p>
@@ -30,15 +30,15 @@
 				?>
 						<div class="section--jobfeed__feed-card cell small-12 small-offset-0 medium-6 medium-offset-0 large-5 large-offset-<?php echo $offset; ?>">
 							<div class="card--spinner loader-container">
-								<ul role="progressbar", aria-busy="true", aria-label="Loading domino shop">
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-									<li role="presentation"></li>
-								</ul>
+								<div role="progressbar", aria-busy="true", aria-label="Loading">
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+									<span role="presentation"></span>
+								</div>
 							</div>
 						</div>
 
