@@ -28,11 +28,11 @@ get_header(); ?>
 
 
 		<?php
-		$a_intro = array('title' => get_field('intro_title'), 
-		'paragraph' => get_field('intro_text'), 
-		'is_ticker' => true, 
+		$a_intro = array('title' => get_field('intro_title'),
+		'paragraph' => get_field('intro_text'),
+		'is_ticker' => true,
 		'a_ticker_repeater' => get_field('text_ticker'),
-		'margin_bottom' => true, 
+		'margin_bottom' => true,
 		'margin_bottom_inner' => false);
 		svef_partial("library/svef-partials/component-introtext", $a_intro); ?>
 
@@ -72,9 +72,8 @@ get_header(); ?>
 				'show_slider' => get_field('show_slider'),
 				'image_gallery' => get_field('image_gallery')
 			);
-		?>
-
-		<?php svef_partial("library/svef-partials/component-imagegallery", $a_image_slider); ?>
+			svef_partial("library/svef-partials/component-imagegallery", $a_image_slider);
+			?>
 
 		<?php
 

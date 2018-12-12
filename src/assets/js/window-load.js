@@ -15,6 +15,10 @@ const Loader = {
   cacheDom(){
     this.body = Global.body
     this.loaderDiv = this.body.querySelector('.window-loader')
+    this.heroImg = this.body.querySelector('.section__image')
+    this.heroInfoText = this.body.querySelector('.section__info')
+    this.heroBanner = this.body.querySelector('.section--hero')
+
   },
   addEvents(){
     document.addEventListener("DOMContentLoaded", this.loadReadyHandler.bind(this))
@@ -28,14 +32,28 @@ const Loader = {
       // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
       window.requestAnimationFrame(() => {
          // GSAP custom code goes here
-        let loaderTween = TweenMax.to(this.loaderDiv, 2, { delay: 1, opacity: 0, ease: Sine.easeInOut, onComplete: tweenComplete })
-        function tweenComplete() {
-          Loader.loaderDiv.style.display = 'none'
-          Loader.body.style.overflow = 'auto'
-          loaderTween.kill()
-        }
+         $(this.heroBanner).exists( () => {
+          let loaderTween = TweenMax.to(this.loaderDiv, 2, { opacity: 0, ease: Sine.easeInOut, onComplete: this.tweenComplete.bind(this) })
+          this.heroBanerSetup()
+        })
       })
     }
+  },
+  tweenComplete () {
+    this.loaderDiv.style.display = 'none'
+    this.body.style.overflow = 'auto'
+    $(this.heroBanner).exists(() => {
+      this.heroBanerIntro()
+    })
+  },
+  heroBanerSetup() {
+    this.heroImg.style.opacity = 0
+    this.heroInfoText.style.opacity = 0
+  },
+  heroBanerIntro() {
+    let tl = new TimelineMax();
+        tl.fromTo(Loader.heroImg,1,{opacity: 0, x:-20}, {x: 0, opacity: 1, ease: Sine.easeInOut})
+        tl.fromTo(Loader.heroInfoText,1,{opacity: 0, x:20}, {x: 0, opacity: 1, ease: Sine.easeInOut})
   }
 
 }
