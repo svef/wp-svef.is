@@ -1,8 +1,8 @@
 <?php
 	$a_infotext = array(
 		'title' => get_field('logo_intro_title', 'option'),
-		'paragraph' => get_field('logo_intro_text', 'option'));
-
+		'paragraph' => get_field('logo_intro_text', 'option'),
+		'margin_bottom_inside' => true);
 ?>
 <section class="section section--margin-bottom section--logowall">
 	<div class="grid-container">
