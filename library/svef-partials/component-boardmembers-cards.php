@@ -58,7 +58,7 @@
 
             <?php endwhile; endif; wp_reset_query(); ?>
 
-            <div class="cell board-info small-10 small-offset-1 medium-6 large-7">
+            <div class="cell board-info small-10 small-offset-1 medium-6 medium-offset-0 large-6 large-offset-">
                 <h2>Stjórnarmeðlimir SVEF árið 2018</h2>
                 <p class="board-info-text">SVEF veit hve mikilvægt það fyrir fólkið í bransanum að vera vakandi fyrir nýjungum því í tækniheiminum eru breytingar örar og ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert. Ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert.</p>
                 <a href="#" >Skoða nánar</a>

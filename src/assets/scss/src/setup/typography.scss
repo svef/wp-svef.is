@@ -14,7 +14,12 @@ h2 {
   line-height: 48px;
   font-size: 34px;
   @include breakpoint(medium down) {
-    font-size: 24px;
+    line-height: 40px;
+    font-size: 28px;
+  }
+  @include breakpoint(small down) {
+    line-height: 32px;
+    font-size: 22px;
   }
 }
 
@@ -91,6 +96,9 @@ ul {
     font-weight: 400;
     line-height: normal;
     font-size: 16px;
+    @include breakpoint(small down) {
+      font-size: 15px;
+    }
   }
   &--date {
     font-family: $font-noto;
@@ -233,12 +241,17 @@ input[type="text"], input[type="checkbox"] {
   z-index: 100;
 }
 .scroller {
-  height: 50px;
-  line-height: 40px;
-  margin-left: 7px;
+  height: 48px;
+  margin-left: 10px;
   overflow: hidden;
+  @include breakpoint(medium down) {
+    margin-left: 6px;
+    height: 40px;
+  }
   @include breakpoint(small down) {
     margin-left: 0;
+    margin-top: 10px;
+    height: 32px;
   }
 }
 .scroller span {

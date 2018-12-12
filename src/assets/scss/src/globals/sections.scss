@@ -4,6 +4,12 @@
     min-height: 790px;
     display: flex;
     align-items: center;
+    @include breakpoint(medium down) {
+      min-height: 500px;
+    }
+    @include breakpoint(small down) {
+      min-height: 340px;
+    }
   }
   &__bg-fix {
     position: absolute;
@@ -39,17 +45,23 @@
   }
   &--margin-bottom {
     margin-bottom: 140px !important;
-    @include breakpoint(small down) {
+    @include breakpoint(medium down) {
       margin-bottom: 80px !important;
+    }
+    @include breakpoint(small down) {
+      margin-bottom: 100px !important;
     }
   }
   &--margin-top {
     margin-top: 180px !important;
   }
   &--margin-bottom-inside {
-    margin-bottom: 110px !important;
-    @include breakpoint(small down) {
+    margin-bottom: 80px !important;
+    @include breakpoint(medium down) {
       margin-bottom: 40px !important;
+    }
+    @include breakpoint(small down) {
+      margin-bottom: 20px !important;
     }
   }
   &__bg-height {
@@ -182,6 +194,10 @@
     }
     &--job-feed {
       overflow: hidden;
+      @include breakpoint(medium down) {
+        height: 40vh;
+        margin-bottom: 0;
+      }
     }
     .hero-image {
       float:right;
@@ -219,8 +235,7 @@
 
   &__image--c2a {
     @include breakpoint(small down) {
-      height: 500px;
-
+      height: 460px;
     }
   }
 
@@ -263,7 +278,7 @@
   &__link {
     display: flex;
     align-items: center;
-    // margin-top: 50px;
+    margin-top: 20px;
 
     svg {
       margin-left: 16px;

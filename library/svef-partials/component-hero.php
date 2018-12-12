@@ -24,7 +24,7 @@
 						<div class="hero-image" style="background-image: url(<?php echo $hero_slider_img['sizes']['large'];  ?>)"></div>
 					</div>
 					<div class="cell small-12 medium-12 large-5 grid-x ">
-						<div class="section__info section__info--center cell small-9 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 ">
+						<div class="section__info section__info--center cell small-10 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 ">
 							<div aria-hidden="true"></div>
 							<div class="section__info--text">
 								<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_slider_title; ?></h2>

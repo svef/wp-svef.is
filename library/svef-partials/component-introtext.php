@@ -46,7 +46,7 @@
 ?>
 
 
-<section class="section<?php echo $margin_bottom_class ?>section--introtext grid-container">
+<section class="section section--margin-bottom-inside section--introtext grid-container">
     <div class="introtext grid-x" >
 		<div class="<?php echo $divTickerClass; ?> section__title cell small-10 small-offset-1 medium-8 medium-offset-1 large-10 large-offset-1">
 			<h2 class="<?php echo $h2TickerClass; ?>"><?php echo $set_title; ?></h2>

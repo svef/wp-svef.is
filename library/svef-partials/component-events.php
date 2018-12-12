@@ -52,7 +52,7 @@
 					$event_offset = $event_count % 2 ? 7 : 2;
 					$render_link = $event_is_over ? '' : $link_is_external;
 				?>
-						<div class="section__event <?php echo $event_is_over_class; ?> small-8 small-offset-2 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
+						<div class="section__event <?php echo $event_is_over_class; ?> small-10 small-offset-1 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
 							<?php if(!$event_is_over): ?>
 							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
 						  <?php endif; ?>
@@ -73,7 +73,7 @@
 			<?php if(!$events_page) : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
-					<div class="section__link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-7">
+					<div class="section__link events_link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-7">
 						<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php echo pll__('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 			<?php else : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
-					<div class="section__link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
+					<div class="section__link events_link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-5">
 						<button id="btnGetMoreEvents" data-current-page="<?php echo $paged; ?>" class="section--events__page btnShowMore text-color--blue"><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
 					</div>
 				</div>
