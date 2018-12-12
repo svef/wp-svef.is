@@ -1,6 +1,6 @@
 <section class="section section__news section--margin-bottom ">
 	<div class="grid-container">
-		<div class="grid-x">
+
 			<?php
 				$news_args = array(
 					'post_type'       => 'post',
@@ -15,9 +15,10 @@
 				$news_image = $news_image_gallery[0]['sizes']['medium'];
 				$pub_date = date_i18n( 'j M Y', strtotime( get_the_date() ) );
 				$content = get_the_content();
-				$excerpt = wp_trim_words($content, 20, ' ...');
+				$excerpt = wp_trim_words($content, 20, '...');
 
 			?>
+				<div class="grid-x">
 				<a href="<?php echo get_the_permalink(); ?>" class="section__news--item small-10 small-offset-2 grid-x">
 				<?php if($news_image): ?>
 					<div class="img small-11 medium-4">
@@ -32,13 +33,14 @@
 						<p class="text--padding-left section__news--p"><?php echo $excerpt; ?></p>
 					</div>
 			</a>
+			</div>
 			<?php endwhile; endif; ?>
 
 
 
 
 
-		</div>
+
 	</div>
 
 

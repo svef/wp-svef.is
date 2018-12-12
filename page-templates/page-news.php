@@ -16,10 +16,9 @@ get_header(); ?>
 			);
 			svef_partial('library/svef-partials/component-introtext', $a_intro_text);
 
-
 			svef_partial('library/svef-partials/component-news-items');
 
-			svef_partial('library/svef-partials/component-logowall')
+			svef_partial('library/svef-partials/component-logowall');
 		?>
 
 

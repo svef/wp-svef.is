@@ -26,15 +26,17 @@
       background-attachment: scroll;
       background-attachment: fixed;
       @include breakpoint(large down) {
-        height: 460px;
       }
       @include breakpoint(medium down) {
+        background-attachment: scroll;
         width: 100%;
         top: -100px;
-        height: 460px;
         margin-top: 0;
         right: 0;
         margin: 0 auto;
+      }
+      @include breakpoint(small down) {
+        height: 300px;
       }
     }
     &--no-mask {

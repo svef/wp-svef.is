@@ -1,11 +1,14 @@
 .article {
   min-height: 90vh;
+  &__header {
+    margin-top: 130px;
+  }
   &__content {
     h2, h3 {
       @include xy-cell(10, true, $grid-margin-gutters, margin);
       @include xy-cell-offset(1);
     }
-    p, ul, .wp-block-media-text{
+    p, ul, .wp-block-media-text, .wp-block-image{
       @include xy-cell(8);
       @include xy-cell-offset(2);
       @include breakpoint(medium down) {
@@ -23,7 +26,7 @@
     }
 
     .wp-block-media-text__content {
-      padding: 0;
+      padding: 3%;
       p {
         margin:0;
       }
