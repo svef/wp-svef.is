@@ -23,6 +23,7 @@
       clip-path: url('#mask');
       height: 460px;
       left:0;
+      background-attachment: scroll;
       background-attachment: fixed;
       @include breakpoint(large down) {
         height: 460px;

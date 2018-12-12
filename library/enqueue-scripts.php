@@ -56,7 +56,6 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
-
 		wp_localize_script( 'foundation', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'currentLang' => pll_current_language()));
 
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.

@@ -17,10 +17,12 @@
 		'cookie_message' => get_field('cookie_message', 'option'),
 		'cookie_link' => $lang_link,
 	);
-	svef_partial("library/svef-partials/component-coockie-consent", $a_cookie_fileds); ?>
+	svef_partial("library/svef-partials/component-coockie-consent", $a_cookie_fileds);
+
+	?>
 
 <?php wp_footer();
-
+svef_partial("library/sver-partials/component-map-footer-setup");
 ?>
 </body>
 </html>
