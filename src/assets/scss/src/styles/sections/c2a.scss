@@ -8,29 +8,23 @@
     position: relative;
     min-height: 500px;
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     @include breakpoint(medium down) {
       width: 100%;
       min-height: 100px;
       height: 45vh;
       right: 0;
 
-      // top: -80px;
     }
-    @include breakpoint(small down) {
-      // top: -70px;
-    }
+
     &--mask {
-      // width: calc(100% + 8.333%);
-
-
       clip-path: url('#mask');
       height: 600px;
       left:0;
-      // right: 20px;
+      background-attachment: fixed;
       @include breakpoint(large down) {
 
-        // right: 20px;
-        margin-top: -250px;
         height: 500px;
       }
       @include breakpoint(medium down) {
@@ -42,8 +36,6 @@
       }
     }
     &--no-mask {
-      // width: calc(100% + 5.333%);
-      // right:20px;
 
       @include breakpoint(medium down) {
         width: 100%;

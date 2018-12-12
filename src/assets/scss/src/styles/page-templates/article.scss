@@ -1,8 +1,12 @@
 .article {
   min-height: 90vh;
   &__content {
+    h2, h3 {
+      @include xy-cell(10, true, $grid-margin-gutters, margin);
+      @include xy-cell-offset(1);
+    }
     p, ul, .wp-block-media-text{
-      @include xy-cell(10);
+      @include xy-cell(8);
       @include xy-cell-offset(2);
       @include breakpoint(medium down) {
         @include xy-cell(12);

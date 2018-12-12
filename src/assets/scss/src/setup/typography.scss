@@ -16,7 +16,6 @@ h2 {
   @include breakpoint(medium down) {
     font-size: 24px;
   }
-
 }
 
 h3 {
@@ -162,8 +161,6 @@ a {
   }
 }
 
-
-
 .link-text {
   &--menu {
     @extend a;
@@ -249,8 +246,6 @@ input[type="text"], input[type="checkbox"] {
   @extend h2;
   color: $orange;
 }
-
-
 
 select {
   @extend .link-text--menu;

@@ -29,6 +29,7 @@
     }
     .footer__newsletter {
       margin-top: 96px;
+      overflow: hidden;
       @include breakpoint(medium down) {
         margin-top: 40px;
       }
@@ -38,6 +39,7 @@
       }
       .gform_wrapper li.gfield.field_description_below+li.gsection {
         margin-top: 32px!important;
+        max-width: 200px;
     }
       .gsection h2 {
         font-family: $font-overpass;
@@ -60,7 +62,7 @@
           }
         }
       }
-      .gfield .ginput_container input { 
+      .gfield .ginput_container input {
         border-bottom: 1px solid $white;
         &::placeholder {
           color: $white40;
