@@ -14,13 +14,33 @@
   }
 
 }
-
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      left: 20%;
+  }
+  100% {
+      opacity: 1;
+      left: 0;
+  }
+}    
 .side-menu__list {
   overflow: scroll;
   @include breakpoint(small down) {
     margin-bottom: 0;
   }
   li {
+    animation: fadeInRight 1.5s ease forwards;
+    animation-delay: .35s; 
+    &:nth-of-type(2) {
+      animation-delay: .4s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: .45s;
+    }
+    &:nth-of-type(4) {
+      animation-delay: .50s;
+    }
     display: flex;
     position: relative;
     justify-content: flex-end;
@@ -30,7 +50,7 @@
     transition: all 400ms ease;
     @include breakpoint(medium down) {
       margin-bottom: 5px;
-     }
+    }
     @include breakpoint(small down) {
       margin-bottom: 10px;
     }
@@ -68,7 +88,6 @@
         margin-bottom: 5px;
       }
     }
-
     ul {
       padding-right: 30px;
       @include breakpoint(small down) {
@@ -97,8 +116,9 @@
       }
     }
   }
+  
   .is-active {
-  > a {
+    > a {
       padding-right: 50px;
       &::after{
         visibility: visible;
