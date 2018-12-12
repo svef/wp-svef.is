@@ -47,9 +47,16 @@ const Statisticslider = {
     let controller = new ScrollMagic.Controller()
     new ScrollMagic.Scene({
       triggerElement: '#humanSlider',
-      duration: '50%',
-      offset: 0,
+      duration: '30%',
+      offset: -100,
       triggerHook: "onEnter",
+      reverse: false
+    }).addIndicators({
+      name: 'slider',
+      colorTrigger: 'black',
+      colorStart: 'pink',
+      colorEnd: 'green'
+    }).addTo(controller).on('progress', this.scrollProgress.bind(this))
       // reverse: false
     })
       // .addIndicators({
