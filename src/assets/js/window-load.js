@@ -28,7 +28,7 @@ const Loader = {
       // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
       window.requestAnimationFrame(() => {
          // GSAP custom code goes here
-        let loaderTween = TweenMax.to(this.loaderDiv, 2, { delay: 3, opacity: 0, ease: Sine.easeInOut, onComplete: tweenComplete })
+        let loaderTween = TweenMax.to(this.loaderDiv, 2, { delay: 1, opacity: 0, ease: Sine.easeInOut, onComplete: tweenComplete })
         function tweenComplete() {
           Loader.loaderDiv.style.display = 'none'
           Loader.body.style.overflow = 'auto'
