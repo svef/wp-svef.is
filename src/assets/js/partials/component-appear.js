@@ -9,14 +9,15 @@ import TimelineMax from 'gsap/src/minified/TimelineMax.min';
 const SectionsApear = {
   init(){
     this.cacheDom()
-    this.fadeIn(this.sectionEvent, 10)
-    this.fadeIn(this.section, 30)
-    this.flipIn(this.section)
+    this.fadeIn(this.sectionEvent, 40)
+    this.fadeIn(this.section, 0)
+    this.flipIn(this.sectionFlip)
   },
   cacheDom(){
     this.body = Global.body
     this.sectionEvent = this.body.querySelectorAll('.section__event')
-    this.section = this.body.querySelectorAll('.section--animate-flip')
+    this.section = this.body.querySelectorAll('.section--animate')
+    this.sectionFlip = this.body.querySelectorAll('.section--animate-flip')
 
   },
   fadeIn(el, offset) {

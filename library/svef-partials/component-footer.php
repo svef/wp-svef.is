@@ -4,12 +4,10 @@
         <?php
             $footer_svef_introtext = get_field('footer_svef_introtext', 'option');
             $footer_svef_email = get_field('footer_svef_email', 'option');
-            $footer_svef_phonenumber = get_field('footer_svef_phonenumber', 'option'); 
-            $footer_social_facebook = get_field('footer_social_facebook', 'option'); 
-            $footer_social_instagram = get_field('footer_social_instagram', 'option'); 
+            $footer_svef_phonenumber = get_field('footer_svef_phonenumber', 'option');
+            $footer_social_facebook = get_field('footer_social_facebook', 'option');
+            $footer_social_instagram = get_field('footer_social_instagram', 'option');
             $footer_social_twitter = get_field('footer_social_twitter', 'option');
-    
-            
         ?>
             <div class="footer__intro">
                 <?php svef_partial("library/svef/icons/sveflogo.svg"); ?>
@@ -17,7 +15,7 @@
             </div>
             <div class="grid-x footer__links" >
                 <div class="cell small-10 small-offset-0 medium-4 medium-offset-1 large-6 large-offset-0">
-					<?php foundationpress_footer(); ?>
+								<?php foundationpress_footer(); ?>
                 </div>
                 <div class="cell small-10 small-offset-0 medium-4 medium-offset-0 large-6 large-offset-0">
                     <div>

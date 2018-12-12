@@ -8,6 +8,8 @@
     position: relative;
     min-height: 500px;
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     @include breakpoint(medium down) {
       width: 100%;
       min-height: 100px;
@@ -20,8 +22,9 @@
       clip-path: url('#mask');
       height: 600px;
       left:0;
+      background-attachment: fixed;
       @include breakpoint(large down) {
-        margin-top: -250px;
+
         height: 500px;
       }
       @include breakpoint(medium down) {
