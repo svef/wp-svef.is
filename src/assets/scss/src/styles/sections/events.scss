@@ -1,6 +1,8 @@
-
 .section--events {
   padding: 200px 0px;
+  @include breakpoint(medium down) {
+    padding: 60px 0px;
+  }
   &__page {
     position: relative;
     svg {
@@ -9,15 +11,26 @@
       right: -50px;
     }
   }
-
 }
 .section__event {
   padding: 60px 0;
   &:first-child {
     padding: 100px 0  60px;
+    @include breakpoint(medium down) {
+      padding: 20px 0  10px;
+    }
+    @include breakpoint(small down) {
+      padding: 60px 0;
+    }
   }
   &--last {
-    padding:60px 0 100px;
+    padding: 60px 0 100px;
+    @include breakpoint(medium down) {
+      padding: 20px 0  40px;
+    }
+    @include breakpoint(small down) {
+      padding: 60px 0;
+    }
   }
 
   span {
@@ -56,10 +69,27 @@
       }
     }
   }
+  @include breakpoint(small down) {
+    .section__event--border {
+      border-left: 1px solid $orange;
+    }
+    h2 {
+      min-width: 100%;
+      svg {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+      }
+    }
+  }
   &--passed {
     h2, h3, .link-text--menu {
       text-decoration: line-through;
       color: #777;
+      svg {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
     .section__event--border{
       border-left: 1px solid #777;

@@ -27,7 +27,7 @@
 
 				<?php svef_partial('library/svef/icons/maskTwoSqrs.svg'); ?>
 				</div>
-				<div class="cell section__info section__info--center section__bg-color--text-<?php echo $c2a_bg_color['label']; ?> small-9 small-offset-1 medium-9 medium-offset-1 large-5 large-offset-0 ">
+				<div class="cell section__info section__info--center section__bg-color--text-<?php echo $c2a_bg_color['label']; ?> small-10 small-offset-1 medium-9 medium-offset-1 large-5 large-offset-0 ">
 					<h2 class="section__title less-margin--top"><?php echo $c2a_title; ?></h2>
 					<div class="section__bg-color--text-<?php echo $c2a_bg_color['label']; ?> cell small-11 small-offset-0 medium-8 medium-offset-1 large-12 large-offset-0 "><?php echo $c2a_text; ?></div>
 					<div class="section__link cell small-4 small-offset-0 medium-4 medium-offset-1 large-5 large-offset-0 ">
