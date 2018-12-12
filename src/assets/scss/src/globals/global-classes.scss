@@ -90,6 +90,7 @@
   }
 }
 .events_link {
+  margin-top: 100px;
   @include breakpoint(medium down) {
     justify-content: center;
   }

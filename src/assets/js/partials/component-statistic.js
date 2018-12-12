@@ -51,19 +51,14 @@ const Statisticslider = {
       offset: -100,
       triggerHook: "onEnter",
       reverse: false
-    }).addIndicators({
-      name: 'slider',
-      colorTrigger: 'black',
-      colorStart: 'pink',
-      colorEnd: 'green'
-    }).addTo(controller).on('progress', this.scrollProgress.bind(this))
-      // .addIndicators({
-      // name: 'slider',
-      // colorTrigger: 'black',
-      // colorStart: 'pink',
-      // colorEnd: 'green'
-      // })
-      .addTo(controller).on('progress', this.scrollProgress.bind(this))
+    })
+    .addTo(controller).on('progress', this.scrollProgress.bind(this))
+    // .addIndicators({
+    //   name: 'slider',
+    //   colorTrigger: 'black',
+    //   colorStart: 'pink',
+    //   colorEnd: 'green'
+    //   })
   },
   scrollProgress(e) {
     this.humanSlider.style.setProperty('--val', +this.humanSlider.value)

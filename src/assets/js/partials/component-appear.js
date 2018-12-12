@@ -32,7 +32,7 @@ const SectionsApear = {
         duration: '60%',
         offset: offset,
         triggerHook: "onEnter",
-        // reverse: false
+        reverse: false
       }).setTween(movethebox)
         // .addIndicators({
         // name: 'section',
@@ -57,7 +57,7 @@ const SectionsApear = {
         duration: '60%',
         offset: 0,
         triggerHook: "onEnter",
-        // reverse: false
+        reverse: false
       }).setTween(movethebox)
         // .addIndicators({
         // name: 'section',
