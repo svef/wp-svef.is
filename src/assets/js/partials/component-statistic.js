@@ -57,8 +57,6 @@ const Statisticslider = {
       colorStart: 'pink',
       colorEnd: 'green'
     }).addTo(controller).on('progress', this.scrollProgress.bind(this))
-      // reverse: false
-    // })
       // .addIndicators({
       // name: 'slider',
       // colorTrigger: 'black',

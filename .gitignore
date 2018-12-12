@@ -9,4 +9,4 @@ config.yml
 *.swp
 packaged/
 wpcs/
-library/svef/custom_functions-gmap.php
+library/svef-custom-functions/custom_functions-gmap.php
