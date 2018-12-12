@@ -1,6 +1,6 @@
 <?php
 	$a_infotext = array(
-		'title' => get_field('logo_intro_titile', 'option'),
+		'title' => get_field('logo_intro_title', 'option'),
 		'paragraph' => get_field('logo_intro_text', 'option'));
 
 ?>
@@ -16,7 +16,7 @@
 	<div class="grid-container">
 	<div class="supportors-logos grid-x" >
 			<div class="section__bg-fix section__bg-fix--right section__bg-fix--default" aria-hidden="true"></div>
-			<div class="logos-all grid-x grid-padding-x medium-8 medium-offset-2 cell large-10 large-offset-2">
+			<div class="logos-all grid-x grid-padding-x cell small-12 small-offset-0 medium-12 medium-offset-0 large-10 large-offset-2">
 			<?php
 				$a_supporter_logos = get_field('supporter_logo', 'option');
 				shuffle($a_supporter_logos);

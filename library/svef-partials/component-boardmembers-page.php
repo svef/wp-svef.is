@@ -58,7 +58,7 @@
 
             ?>
 
-            <div id="<?php echo $slug;?>" class="boardmembersMax-each cell large-12">
+            <div id="<?php echo $slug;?>" class="boardmembersMax-each cell small-12 small-offset-0 medium-11 medium-offset-1 large-12 large-offset-0">
 							<div class="section__bg-fix section__bg-fix--default section__bg-fix--color grid-contianer fluid" aria-hidden="true"></div>
 
 

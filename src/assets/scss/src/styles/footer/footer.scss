@@ -57,8 +57,12 @@
           &:before {
             content: '';
           }
+          @include breakpoint(medium down) {
+            margin-right: 32px;
+          }
           @include breakpoint(small down) {
             margin-top: 60px;
+            margin-right: 16px;
           }
         }
       }

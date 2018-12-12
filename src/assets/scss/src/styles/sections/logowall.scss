@@ -13,9 +13,11 @@
         position: relative;
         @include breakpoint(medium down) {
             height: 700px;
+            padding-left: 0;
         }
         @include breakpoint(small down) {
             height: 500px;
+            padding-left: 0;
         }
         .logos-all {
             height: 100%;
