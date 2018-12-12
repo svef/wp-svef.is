@@ -69,8 +69,8 @@
             font-weight: 600;
             line-height: normal;
             font-size: 12px;
-            color: $darkBlue;
-            opacity: 0.4;
+            color: $darkBlue-40;
+            opacity: 1;
             margin: 0;
         }
     }
@@ -89,7 +89,7 @@ $thumb-d: 26px;
     margin: 18px 0;
 	@if $fill == 1 {
 		.js & {
-			background: linear-gradient($darkBlue, $darkBlue)
+			background: linear-gradient(#8692a0, #8692a0)
 				0/ var(--sx) 100% no-repeat $bgGray
 		}
 	}
@@ -97,7 +97,7 @@ $thumb-d: 26px;
 
 @mixin fill() {
 	height: $track-h;
-	background: $darkBlue
+	background: #8692a0
 }
 
 @mixin thumb() {

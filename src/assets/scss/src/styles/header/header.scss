@@ -69,8 +69,17 @@
     justify-content: space-between;
     min-width: 40px;
     text-transform: uppercase;
+    a {
+      opacity: 0.4;
+      font-weight: 500;
+    }
     & .current-lang {
       text-decoration: underline;
+      a {
+        color: $darkBlue;
+        font-weight: 600;
+        opacity: 1;
+      }
     }
   }
   &__suprise {
@@ -182,6 +191,11 @@
     &__menu-button {
       color: $white !important;
     }
+    &__lang {
+      & .current-lang a { 
+        color: $white !important;
+      }
+    }
 
   }
   .side-menu.side-menu__inner.side-menu__list li a {
@@ -192,7 +206,6 @@
 .scrolledTop {
   transform: translateY(-100%) !important;
 }
-
 
 
 

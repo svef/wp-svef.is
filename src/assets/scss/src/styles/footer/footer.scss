@@ -54,6 +54,7 @@
         .gform_button {
           @extend .btnMain;
           @extend button;
+          margin-right: 32px;
           &:before {
             content: '';
           }
