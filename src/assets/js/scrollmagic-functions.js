@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import Global from '../global-functions'
+import Global from './global-functions'
 import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min';
 import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';
 import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';
@@ -10,6 +10,7 @@ const SectionsApear = {
   init(){
     this.cacheDom()
     this.fadeIn(this.sectionEvent, 40)
+    this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
     this.flipIn(this.sectionFlip)
     this.backgroundParalax(this.imgMask)
@@ -17,6 +18,7 @@ const SectionsApear = {
   cacheDom(){
     this.body = Global.body
     this.sectionEvent = this.body.querySelectorAll('.section__event')
+    this.sectionEventLink = this.body.querySelectorAll('.section__link--event')
     this.section = this.body.querySelectorAll('.section--animate')
     this.sectionFlip = this.body.querySelectorAll('.section--animate-flip')
     this.imgMask = this.body.querySelectorAll('.c2a-image--mask')

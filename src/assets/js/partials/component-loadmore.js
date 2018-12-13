@@ -43,7 +43,7 @@ const LoadMorePosts = {
     let eventHasPassed = ''
     let eventHasPassedClass = ''
     let renderLink = ''
-    let linkArrowClass = 'link_arrow link-arrow--white'
+    let linkArrowClass = 'link-arrow--white'
     let linkStart = ''
     let linkEnd = ''
     const maxNumPages = posts.max_num_pages
@@ -72,7 +72,7 @@ const LoadMorePosts = {
       <div class="section__event ${eventHasPassedClass} small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
         ${linkStart}
           <span class="link-text--menu link-text--dull">${eventDate}</span>
-          <h2 class="less-margin--top less-margin--bottom">${eventTitle}${Global.linkArrow(linkArrowClass)}</h2>
+          <h2 class="less-margin--top less-margin--bottom">${eventTitle}${Global.svgLibrary('linkArrow', linkArrowClass)}</h2>
           <h3 class="less-margin--top less-margin--bottom">${eventLocation}</h3>
           <p class="section__event--border link-text--menu link-text--menu--normal-case">
             ${eventExcerpt}

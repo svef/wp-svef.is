@@ -20,13 +20,6 @@ const WinnersSlider = {
     $(this.select).exists( () => {
       this.select.addEventListener('change', this.getSelectValue.bind(this))
     })
-
-    /** for demonstration purposes we could use a try/catch to get an soft error instead of calling our exsits function (defined above) in the component-*.js files */
-    // try {
-    //   this.select.addEventListener('change', this.getSelectValue.bind(this))
-    // } catch (error) {
-    //   console.log(error.message)
-    // }
   },
   setCarousel(slider, sliderOptions) {
     $(slider).owlCarousel(sliderOptions)
@@ -52,22 +45,25 @@ const WinnersSlider = {
     let winnerHasUrl
     let winnerHasUrlBegin
     let winnerHasUrlEnd
-    console.dir(acf);
+    let winnerHasUrlSvg
+    console.dir(res);
     for (let i = 0; i < aWinners.length; i++) {
       winner = aWinners[i]
+
       winnerHasUrlBegin = winner.winner_url ? `<a class="winners-slide__link" href="${winner.winner_url.url}" target="_blank">` : '';
       winnerHasUrlEnd = winner.winner_url ? `</a>` : '';
-      newSlider += `
+      winnerHasUrlSvg = winner.winner_url ? Global.svgLibrary('winnersCursor') : '';
+      newSlider += winner.winner_screenshot.sizes ? `
         <div class="winners-slide">
           ${winnerHasUrlBegin}
-          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.medium});"></div>
+          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.medium});">${winnerHasUrlSvg}</div>
           <div class="section__text-color--white winners-slide__category">${winner.winner_category}</div>
           <h3 class="section__text-color--white winners-slide__heading">${winner.winner_name}</h3>
           <div class="section__text-color--white text--small winners-slide__text">
             ${winner.winner_notes}
           </div>
           ${winnerHasUrlEnd}
-        </div>`
+        </div>` : ''
     }
     // WinnersSlider.sliderHeader.innerHTML = res.post.post_title
     WinnersSlider.slider.innerHTML = ''

@@ -73,7 +73,7 @@
 			<?php if(!$events_page) : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
-					<div class="section__link section__link--event events_link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
+					<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
 						<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php echo pll__('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 			<?php else : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
-					<div class="section__link section__link--event events_link section--animate small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
+					<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
 						<button id="btnGetMoreEvents" data-current-page="<?php echo $paged; ?>" class="section--events__page btnShowMore text-color--blue"><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
 					</div>
 				</div>
