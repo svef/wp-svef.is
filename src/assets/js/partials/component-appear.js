@@ -12,12 +12,14 @@ const SectionsApear = {
     this.fadeIn(this.sectionEvent, 40)
     this.fadeIn(this.section, 0)
     this.flipIn(this.sectionFlip)
+    this.backgroundParalax(this.imgMask)
   },
   cacheDom(){
     this.body = Global.body
     this.sectionEvent = this.body.querySelectorAll('.section__event')
     this.section = this.body.querySelectorAll('.section--animate')
     this.sectionFlip = this.body.querySelectorAll('.section--animate-flip')
+    this.imgMask = this.body.querySelectorAll('.c2a-image--mask')
 
   },
   fadeIn(el, offset) {
@@ -34,14 +36,14 @@ const SectionsApear = {
         triggerHook: "onEnter",
         reverse: false
       }).setTween(movethebox)
-        // .addIndicators({
-        // name: 'section',
-        // colorTrigger: 'black',
-        // colorStart: 'pink',
-        // colorEnd: 'green',
-        // indent: 100
-        // })
-        .addTo(controller)
+      .addTo(controller)
+      // .addIndicators({
+      // name: 'section',
+      // colorTrigger: 'black',
+      // colorStart: 'pink',
+      // colorEnd: 'green',
+      // indent: 100
+      // })
 
     })
   },
@@ -59,18 +61,44 @@ const SectionsApear = {
         triggerHook: "onEnter",
         reverse: false
       }).setTween(movethebox)
-        // .addIndicators({
-        // name: 'section',
-        // colorTrigger: 'black',
-        // colorStart: 'pink',
-        // colorEnd: 'green',
-        // indent: 100
-        // })
-        .addTo(controller)
-
+      .addTo(controller)
+      // .addIndicators({
+      // name: 'section',
+      // colorTrigger: 'black',
+      // colorStart: 'pink',
+      // colorEnd: 'green',
+      // indent: 100
+      // })
     })
+
+
   },
 
+  backgroundParalax(el){
+    let controller = new ScrollMagic.Controller()
+
+  $(el).each(function () {
+    let self = this
+    let movethebox = new TimelineMax()
+    .fromTo(self, 1, {backgroundPosition:"50% 500px"}, {backgroundPosition:"50% 0px", ease: Sine.easeInOut})
+    new ScrollMagic.Scene({
+      triggerElement: self,
+      duration: '100%',
+      offset: 0,
+      triggerHook: 1,
+      reverse: true
+    }).setTween(movethebox)
+    .addTo(controller)
+    // .addIndicators({
+    // name: 'section',
+    // colorTrigger: 'black',
+    // colorStart: 'pink',
+    // colorEnd: 'green',
+    // indent: 100
+    // })
+
+  })
+  }
 
 }
 module.exports = SectionsApear

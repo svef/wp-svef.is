@@ -1,7 +1,7 @@
 
 $bar-width: 1px;
 $bar-height: 25px;
-$bar-count: 7;
+$bar-count: 5;
 $bar-animation-duration: 2s;
 // Generated settings
 $bar-animation-duration-single: ($bar-animation-duration / $bar-count);
@@ -9,7 +9,7 @@ $bar-animation-duration-single: ($bar-animation-duration / $bar-count);
   div {
     position: relative;
     padding: 0;
-    width: 100px;
+    width: 70px;
     height: $bar-height;
     list-style: none;
     margin: 0 auto;
@@ -20,7 +20,7 @@ $bar-animation-duration-single: ($bar-animation-duration / $bar-count);
       right: 0;
       width: $bar-width;
       height: $bar-height;
-      border-radius: 1px;
+      border-radius: none;
       // Rotate from the middle of the bottom
       transform-origin: 50% 100%;
       background-color: $white;

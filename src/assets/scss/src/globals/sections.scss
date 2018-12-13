@@ -81,6 +81,17 @@
       min-height: 84vh;
       height: 100%;
       max-height: 815px;
+      @include breakpoint(small down) {
+        min-height: none;
+      }
+    }
+    &--c2a {
+      min-height: 640px;
+      height: 100%;
+      max-height: 815px;
+      @include breakpoint(small down) {
+        min-height: 700px;
+      }
     }
   }
   &__bg-color {
