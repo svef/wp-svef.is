@@ -371,7 +371,7 @@
   .section__bg-color{
     &--default, &--red, &--blue {
       transition: all 800ms $transition;
-      background: $blackBlue;
+      background: $darkBlue;
       svg {
         fill: $white;
         path {
@@ -389,7 +389,7 @@
   .section__bg-fix {
     &--default, &--red, &--blue {
       transition: all 800ms $transition;
-      background-color: $blackBlue;
+      background-color: $darkBlue;
     }
   }
   .section {
@@ -401,5 +401,10 @@
   .btnSignup--clicked {
     color: $white;
   }
+  .section--imagegallery.section__bg-color--dark {
+      background: $blackBlue;
+  }
+  
+
 
 }

@@ -176,7 +176,10 @@
 
 .body--contrast {
   .site-header {
-    background-color: $darkBlue;
+    background-color: $blackBlue;
+    &--shadow {
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.03), 0 4px 8px rgba(255, 255, 255, 0.03);
+    }
   }
   .nav {
     &__suprise {

@@ -11,8 +11,8 @@ get_header(); ?>
 
 
 	$a_events = array(
-		'title' => get_field('intro_title_event_inner'),
-		'paragraph' => get_field('intro_text_event_inner'),
+		'title' => get_field('intro_title'),
+		'paragraph' => get_field('intro_text'),
 		'margin_bottom' => false,
 		'margin_bottom_inner' => true,
 		'events_page' => true,

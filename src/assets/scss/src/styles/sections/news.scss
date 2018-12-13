@@ -1,5 +1,5 @@
 .news-page {
-  margin-top: 180px;
+  margin-top: 160px;
 }
 .section__news {
   &--item {
@@ -13,22 +13,22 @@
     overflow: hidden;
     img {
       width: 90%;
+      @include breakpoint(small down) {
+        width: 100%;
+      }
     }
   }
 
     &:hover {
       .section__news--p {
-        &::before {
-          background-color: $orange;
-
-        }
+        border-left: 1px solid $orange;
       }
       h2 {
         color: $orange;
         svg {
           opacity: 1;
           visibility: visible;
-          right: -52px;
+          right: -62px;
         }
       }
     }
@@ -38,30 +38,22 @@
   }
   h2 {
     position: relative;
-    display: inline;
+    display:  inline-block;
     transition: all 400ms 200ms $transition;
     svg {
       transition: all 400ms 300ms $transition;
       position: absolute;
-      top: 50%;
-      margin-top: -6px;
-      right: 0;
+      top: 13px;
+      right: -20px;
       margin-left: 20px;
       visibility: hidden;
       opacity: 0;
     }
   }
   &--p {
-    position: relative;
-    &::before {
-      transition: all 1000ms 400ms $transition;
-      position: absolute;
-      content: '';
-      width: 1px;
-      height: 60px;
-      left: 0;
-      top: 0;
-      background-color: $darkBlue;
+    border-left: 1px solid $darkBlue;
+    @include breakpoint(small down) {
+      border-left: 1px solid $orange;
     }
   }
 }
