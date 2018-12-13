@@ -20,8 +20,8 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.14);
       .closeSignupMobile {
       position: fixed;
-      top: 110px;
-      right: 16px;
+      top: 86px;
+      right: 14px;
       height: 20px;
       width: 20px;
       cursor: pointer;
@@ -29,7 +29,7 @@
       transition: opacity .9s ease;
       outline: none;
         span {
-          background: $darkBlue-40;
+          background: #999;
           border: none;
           height: 2px;
           width: 100%;
