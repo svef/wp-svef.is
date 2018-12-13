@@ -47,7 +47,6 @@
     fill: $darkBlue-40;
   }
 }
-
 .less-margin {
   &--top {
     margin-top: 0 !important;
@@ -156,4 +155,18 @@
   padding-bottom: 0 !important;
   padding-top: 0 !important;
   box-sizing: unset !important;
+}
+
+
+.body--contrast {
+  .icon--dark40 {
+    path {
+      fill: #F1F1F9;
+    }
+    &:hover {
+      path {
+        fill: $white;
+      }
+    }
+  }
 }

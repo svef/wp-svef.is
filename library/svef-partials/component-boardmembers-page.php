@@ -77,56 +77,56 @@
                         <div class="member-social">
 
                             <?php if($email) : ?>
-                                <a href="mailto:<?php echo $email; ?>" target="_blank">
+                                <a href="mailto:<?php echo $email; ?>" target="_blank" aria-label="Send email to boardmember">
                                     <?php
                                     $classArray = array("emailIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/email.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($website) : ?>
-                                <a href="<?php echo $website; ?>" target="_blank">
+                                <a href="<?php echo $website; ?>" target="_blank" aria-label="Boardmembers website">
                                     <?php
                                     $classArray = array("websiteIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/website.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($facebook) : ?>
-                                <a href="<?php echo $facebook; ?>" target="_blank">
+                                <a href="<?php echo $facebook; ?>" target="_blank" aria-label="Boardmembers facebook">
                                     <?php
                                     $classArray = array("facebookIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/facebook.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($instagram) : ?>
-                                <a href="<?php echo $instagram; ?>" target="_blank">
+                                <a href="<?php echo $instagram; ?>" target="_blank" aria-label="Boardmembers instagram">
                                     <?php
                                     $classArray = array("instagramIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($twitter) : ?>
-                                <a href="<?php echo $twitter; ?>" target="_blank">
+                                <a href="<?php echo $twitter; ?>" target="_blank" aria-label="Boardmembers twitter">
                                     <?php
                                     $classArray = array("twitterIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/twitter.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($linkedin) : ?>
-                                <a href="<?php echo $linkedin; ?>" target="_blank">
+                                <a href="<?php echo $linkedin; ?>" target="_blank" aria-label="Boardmembers linkedin">
                                     <?php
                                     $classArray = array("linkedinIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/linkedin.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($behance) : ?>
-                                <a href="<?php echo $behance; ?>" target="_blank">
+                                <a href="<?php echo $behance; ?>" target="_blank" aria-label="Boardmembers behance">
                                     <?php
                                     $classArray = array("behanceIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/behance.svg", $classArray ); ?>
                                 </a>
                             <?php endif; ?>
                             <?php if($dribble) : ?>
-                                <a href="<?php echo $dribble; ?>" target="_blank">
+                                <a href="<?php echo $dribble; ?>" target="_blank" aria-label="Boardmembers dribble">
                                     <?php
                                     $classArray = array("dribbleIcon" => "icon--dark40");
                                     svef_partial("library/svef/icons/dribble.svg", $classArray ); ?>

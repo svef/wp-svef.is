@@ -19,17 +19,19 @@
 
 			?>
 				<div class="grid-x">
-				<a href="<?php echo get_the_permalink(); ?>" class="section__news--item small-10 small-offset-2 grid-x">
+				<a href="<?php echo get_the_permalink(); ?>" class="section__news--item grid-x small-10 small-offset-1  medium-10 medium-offset-2">
 				<?php if($news_image): ?>
+
 					<div class="img small-11 medium-4">
 						<img data-interchange="[<?php echo $news_image['sizes']['medium'];  ?>, small], [<?php echo $news_image['sizes']['medium'];  ?>, medium], [<?php echo $news_image['sizes']['medium'];  ?>, large]" alt="">
+
 					</div>
 			<?php endif;
-				$info_container = $news_image ? 'small-11 medium-5' : 'small-11 medium-9';
+				$info_container = $news_image ? 'small-12 medium-6' : 'small-12 medium-10';
 			?>
 					<div class="<?php echo $info_container ?>">
 						<span class="text--date text-color--black-40"><?php echo $pub_date; ?></span>
-						<h2 class="text--under-title text--collapse-top"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg'); ?></h2>
+						<h2 class="text--under-title text--collapse-top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg'); ?></h2>
 						<p class="text--padding-left section__news--p"><?php echo $excerpt; ?></p>
 					</div>
 			</a>
