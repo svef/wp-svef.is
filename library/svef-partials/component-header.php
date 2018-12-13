@@ -63,11 +63,9 @@
 				<span role="presentation"></span>
 				<span role="presentation"></span>
 				<span role="presentation"></span>
-				<span role="presentation"></span>
-				<span role="presentation"></span>
+				<!-- <span role="presentation"></span>
+				<span role="presentation"></span> -->
 			</div>
 		</div>
 	</header>
-	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">
-        Skráning í svef
-    </button>
+	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">Skráning í svef</button>

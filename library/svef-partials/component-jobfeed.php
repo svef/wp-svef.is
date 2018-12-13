@@ -36,8 +36,8 @@
 									<span role="presentation"></span>
 									<span role="presentation"></span>
 									<span role="presentation"></span>
-									<span role="presentation"></span>
-									<span role="presentation"></span>
+									<!-- <span role="presentation"></span>
+									<span role="presentation"></span> -->
 								</div>
 							</div>
 						</div>

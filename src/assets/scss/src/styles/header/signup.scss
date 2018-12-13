@@ -79,6 +79,7 @@
   left: calc((-184px / 2) + 30px);
   top: 50vh;
   transform: rotate(-90deg);
+  opacity: 0;
   &--clicked {
       left: calc(50vw - (184/2)*1px);
       @include breakpoint(medium down) {
