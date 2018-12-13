@@ -1,7 +1,7 @@
 .article {
   min-height: 90vh;
   &__header {
-    margin-top: 130px;
+    margin-top: 186px;
   }
   &__content {
     h2, h3 {
@@ -12,8 +12,8 @@
       @include xy-cell(8);
       @include xy-cell-offset(2);
       @include breakpoint(medium down) {
-        @include xy-cell(12);
-        @include xy-cell-offset(0);
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
       }
     }
     ul {

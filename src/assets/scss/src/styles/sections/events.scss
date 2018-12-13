@@ -73,14 +73,6 @@
     .section__event--border {
       border-left: 1px solid $orange;
     }
-    h2 {
-      min-width: 100%;
-      svg {
-        opacity: 1;
-        visibility: visible;
-        right: 0;
-      }
-    }
   }
   &--passed {
     h2, h3, .link-text--menu {

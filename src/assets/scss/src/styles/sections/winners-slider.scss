@@ -1,7 +1,13 @@
 .section--award-slider {
   .section__label {
     border-bottom: solid 2px $bgGray;
+    .down-caret {
+      path {
+        fill: $darkBlue;
+      }
+    }
   }
+  
 }
 
 .section__winners-slider {
@@ -46,11 +52,6 @@
     .winners-slide__img {
       filter: grayscale(0);
     }
-  }
-  &__link {
-    // &:hover {
-    //   cursor: url('../images/icons/cursor-hover.svg'), auto;
-    // }
   }
   &__img {
     height: 294px;
@@ -105,4 +106,15 @@
     width:
     100%;
   }
+}
+.body--contrast {
+  .section__label {
+    border-bottom: solid 2px  rgba(255, 255, 255, .2);
+    .down-caret {
+      path {
+        fill: $white;
+      }
+    }
+  }
+  
 }
