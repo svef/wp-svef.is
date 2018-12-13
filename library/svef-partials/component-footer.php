@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="footer__newsletter cell small-10 small-offset-1 medium-10 medium-offset-1 large-5 large-offset-1">
-            <?php echo do_shortcode('[gravityform id="2" title="true" description="true"]'); ?>
+            <?php echo do_shortcode('[gravityform id="2" title="true" description="true" ajax="true"]'); ?>
         </div>
     </div>
 </footer>
