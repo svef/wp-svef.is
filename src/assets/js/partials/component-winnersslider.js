@@ -52,6 +52,7 @@ const WinnersSlider = {
     let winnerHasUrl
     let winnerHasUrlBegin
     let winnerHasUrlEnd
+    console.dir(acf);
     for (let i = 0; i < aWinners.length; i++) {
       winner = aWinners[i]
       winnerHasUrlBegin = winner.winner_url ? `<a class="winners-slide__link" href="${winner.winner_url.url}" target="_blank">` : '';

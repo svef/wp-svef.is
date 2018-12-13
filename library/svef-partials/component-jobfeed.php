@@ -9,7 +9,7 @@
     <div class="section__jobfeed-inner grid-x grid-margin-x">
         <div class="section__image section__image--job-feed cell small-12 medium-5 large-5">
             <div class="jobfeed-image">
-                <img src="<?php echo $jobfeed_image['sizes']['large']; ?>" alt="">
+                <img data-interchange="[<?php echo $jobfeed_image['sizes']['medium'];  ?>, small], [<?php echo $jobfeed_image['sizes']['medium_large'];  ?>, medium], [<?php echo $jobfeed_image['sizes']['large'];  ?>, large]" alt="">
             </div>
         </div>
         <div class="section__info section--animate section__info--center cell small-10 small-offset-1 medium-6 medium-offset-0 large-6 medium-offset-0" >

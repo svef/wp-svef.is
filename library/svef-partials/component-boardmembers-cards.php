@@ -42,8 +42,8 @@
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
-                                <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
-                                <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
+                                <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large]"></div>
                             </div>
                         </div>
                         <div class="card-section">
@@ -110,8 +110,8 @@
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
                         <div class="member-image">
                             <div class="member-image">
-                                <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
-                                <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
+                                <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large]"  ></div>
                             </div>
                         </div>
                         <div class="card-section">

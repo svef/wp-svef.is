@@ -17,11 +17,12 @@
 				$hero_slider_title = get_sub_field('hero_slider_title');
 				$hero_slider_text = get_sub_field('hero_slider_text');
 				$hero_slider_link = get_sub_field('hero_slider_link');
+
 		?>
 	<div class="hero grid-container-fluid" >
 				<div class="grid-x" >
 					<div class="section__image cell small-12 small-offset-0 medium-12 medium-offset-0 large-7 large-offset-0">
-						<div class="hero-image" style="background-image: url(<?php echo $hero_slider_img['sizes']['large'];  ?>)"></div>
+						<div class="hero-image" data-interchange="[<?php echo $hero_slider_img['sizes']['medium'];  ?>, small], [<?php echo $hero_slider_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_slider_img['sizes']['large'];  ?>, large]"></div>
 					</div>
 					<div class="cell small-12 medium-12 large-5 grid-x ">
 						<div class="section__info section__info--center cell small-10 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 ">
@@ -48,7 +49,7 @@
 		<?php else : ?>
 		<div class="grid-x">
 			<div class="section__image cell small-12 small-offset-0 medium-12 medium-offset-0 large-7 large-offset-0">
-				<div class="hero-image" style="background-image: url(<?php echo $hero_img['sizes']['large']; ?>)">
+				<div class="hero-image" data-interchange="[<?php echo $hero_img['sizes']['medium'];  ?>, small], [<?php echo $hero_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_img['sizes']['large'];  ?>, large]">
 				</div>
 			</div>
 			<div class="cell small-12 medium-12 large-5 grid-x ">
