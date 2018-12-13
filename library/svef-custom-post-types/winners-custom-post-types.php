@@ -66,48 +66,48 @@
 	add_action( 'init', 'winners_func');
 
 	// now let's add custom categories (these act like categories)
-	register_taxonomy( 'winners_cat',
-		array('winners'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-		array('hierarchical' => true,     /* if this is true, it acts like categories */
-			'labels' => array(
-				'name' => __( 'Winers categories', 'foundationpress' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Winner category', 'foundationpress' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Categories', 'foundationpress' ), /* search title for taxomony */
-				'all_items' => __( 'All Categories', 'foundationpress' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Category', 'foundationpress' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Category:', 'foundationpress' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Category', 'foundationpress' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Category', 'foundationpress' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Category', 'foundationpress' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Category Name', 'foundationpress' ) /* name title for taxonomy */
-			),
-			'show_admin_column' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => array( 'slug' => 'type' ),
-		)
-	);
+	// register_taxonomy( 'winners_cat',
+	// 	array('winners'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
+	// 		'labels' => array(
+	// 			'name' => __( 'Winers categories', 'foundationpress' ), /* name of the custom taxonomy */
+	// 			'singular_name' => __( 'Winner category', 'foundationpress' ), /* single taxonomy name */
+	// 			'search_items' =>  __( 'Search Categories', 'foundationpress' ), /* search title for taxomony */
+	// 			'all_items' => __( 'All Categories', 'foundationpress' ), /* all title for taxonomies */
+	// 			'parent_item' => __( 'Parent Category', 'foundationpress' ), /* parent title for taxonomy */
+	// 			'parent_item_colon' => __( 'Parent Category:', 'foundationpress' ), /* parent taxonomy title */
+	// 			'edit_item' => __( 'Edit Category', 'foundationpress' ), /* edit custom taxonomy title */
+	// 			'update_item' => __( 'Update Category', 'foundationpress' ), /* update title for taxonomy */
+	// 			'add_new_item' => __( 'Add New Category', 'foundationpress' ), /* add new title for taxonomy */
+	// 			'new_item_name' => __( 'New Category Name', 'foundationpress' ) /* name title for taxonomy */
+	// 		),
+	// 		'show_admin_column' => true,
+	// 		'show_ui' => true,
+	// 		'query_var' => true,
+	// 		'rewrite' => array( 'slug' => 'type' ),
+	// 	)
+	// );
 
-	register_taxonomy( 'winners_tag',
-		array('winners'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-		array('hierarchical' => true,     /* if this is true, it acts like categories */
-			'labels' => array(
-				'name' => __( 'Winers tags', 'foundationpress' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Winner tag', 'foundationpress' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search tags', 'foundationpress' ), /* search title for taxomony */
-				'all_items' => __( 'All tags', 'foundationpress' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent tag', 'foundationpress' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent tag:', 'foundationpress' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit tag', 'foundationpress' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update tag', 'foundationpress' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New tag', 'foundationpress' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Category Name', 'foundationpress' ) /* name title for taxonomy */
-			),
-			'show_admin_column' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => array( 'slug' => 'type' ),
-		)
-	);
+	// register_taxonomy( 'winners_tag',
+	// 	array('winners'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
+	// 		'labels' => array(
+	// 			'name' => __( 'Winers tags', 'foundationpress' ), /* name of the custom taxonomy */
+	// 			'singular_name' => __( 'Winner tag', 'foundationpress' ), /* single taxonomy name */
+	// 			'search_items' =>  __( 'Search tags', 'foundationpress' ), /* search title for taxomony */
+	// 			'all_items' => __( 'All tags', 'foundationpress' ), /* all title for taxonomies */
+	// 			'parent_item' => __( 'Parent tag', 'foundationpress' ), /* parent title for taxonomy */
+	// 			'parent_item_colon' => __( 'Parent tag:', 'foundationpress' ), /* parent taxonomy title */
+	// 			'edit_item' => __( 'Edit tag', 'foundationpress' ), /* edit custom taxonomy title */
+	// 			'update_item' => __( 'Update tag', 'foundationpress' ), /* update title for taxonomy */
+	// 			'add_new_item' => __( 'Add New tag', 'foundationpress' ), /* add new title for taxonomy */
+	// 			'new_item_name' => __( 'New Category Name', 'foundationpress' ) /* name title for taxonomy */
+	// 		),
+	// 		'show_admin_column' => true,
+	// 		'show_ui' => true,
+	// 		'query_var' => true,
+	// 		'rewrite' => array( 'slug' => 'type' ),
+	// 	)
+	// );
 
 ?>
