@@ -67,8 +67,8 @@
                     </div>
                     <div class="cell medium-6 medium-offset-0 large-4 large-offset-<?php echo $grid_offset1; ?> medium-order-<?php echo $boardmember_order1; ?> large-order-<?php echo $boardmember_order1; ?>">
                         <div class="member-image">
-                            <div class="member-image-jpg" style="background-image: url(<?php echo $boardmember_image['sizes']['large'] ?>)"></div>
-                            <div class="member-image-gif" style="background-image: url(<?php echo $boardmember_gif_image['sizes']['large'] ?>)"></div>
+                            <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]"></div>
+                            <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large]"></div>
                         </div>
                     </div>
                     <div class="member-info-section cell medium-6 medium-offset-0 large-6 large-offset-<?php echo $grid_offset2; ?> medium-order-<?php echo $boardmember_order2; ?> large-order-<?php echo $boardmember_order2; ?>">
