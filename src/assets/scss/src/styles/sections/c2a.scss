@@ -31,8 +31,8 @@
       clip-path: url('#mask');
       height: 460px;
       left:0;
-      // background-attachment: scroll;
-      // background-attachment: fixed;
+      background-attachment: scroll;
+      background-attachment: fixed;
       &-landscape{
         background-size: contain;
       }
