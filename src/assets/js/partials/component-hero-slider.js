@@ -24,7 +24,7 @@ const HeroSlider = {
     autoplaySpeed: 1500,
     autoplayTimeout: 20000,
     navigation : false,
-    slideSpeed : 1200,
+    slideSpeed: 1200,
     paginationSpeed : 1200,
     rewindSpeed : 1200,
     singleItem: true,

@@ -34,7 +34,11 @@
       background: $darkBlue;
     }
     &--right {
+      @include breakpoint(1800px) {
+        right: calc( ((90rem - 75rem) / -2) - 0.9357rem );
+      }
       right: calc( ((100vw - 75rem) / -2) - 0.9357rem );
+
       @include breakpoint(large down) {
         right: -0.9357rem;
       }
@@ -78,17 +82,23 @@
       }
     }
     &--slide-show {
-      min-height: 84vh;
+      min-height: 740px;
       height: 100%;
       max-height: 815px;
+      @include breakpoint(medium down) {
+        min-height: 840px;
+      }
       @include breakpoint(small down) {
-        min-height: none;
+        min-height: 740px;
       }
     }
     &--c2a {
       min-height: 640px;
       height: 100%;
       max-height: 815px;
+      @include breakpoint(medium down) {
+        min-height: 740px;
+      }
       @include breakpoint(small down) {
         min-height: 700px;
       }
@@ -192,6 +202,7 @@
     position: relative;
     height: 74vh;
     max-height: 600px;
+    max-width: 60rem;
     @include breakpoint(medium down) {
       height: 45vh;
       margin-bottom: 30px;
@@ -266,7 +277,7 @@
   &__info {
     position: relative;
     height: auto;
-    // min-height: 60vh;
+    min-height: 600px ;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -404,7 +415,7 @@
   .section--imagegallery.section__bg-color--dark {
       background: $blackBlue;
   }
-  
+
 
 
 }
