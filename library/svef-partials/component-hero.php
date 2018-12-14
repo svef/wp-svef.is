@@ -24,8 +24,8 @@
 					<div class="section__image cell small-12 small-offset-0 medium-12 medium-offset-0 large-7 large-offset-0">
 						<div class="hero-image" data-interchange="[<?php echo $hero_slider_img['sizes']['medium'];  ?>, small], [<?php echo $hero_slider_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_slider_img['sizes']['large'];  ?>, large]"></div>
 					</div>
-					<div class="cell small-12 medium-12 large-5 grid-x ">
-						<div class="section__info section__info--center cell small-10 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 ">
+					<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">
+						<div class="section__info section__info--center cell small-10 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
 							<div aria-hidden="true"></div>
 							<div class="section__info--text">
 								<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_slider_title; ?></h2>
@@ -52,8 +52,8 @@
 				<div class="hero-image" data-interchange="[<?php echo $hero_img['sizes']['medium'];  ?>, small], [<?php echo $hero_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_img['sizes']['large'];  ?>, large]">
 				</div>
 			</div>
-			<div class="cell small-12 medium-12 large-5 grid-x ">
-				<div class="section__info section__info--center cell small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1">
+			<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">
+				<div class="section__info section__info--center cell small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
 					<div aria-hidden="true"></div>
 					<div>
 						<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_title; ?></h2>
