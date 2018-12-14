@@ -39,7 +39,7 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card section--animate-flip">
-                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
+                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>" aria-lable="read more about boardmember">
                         <div class="member-image">
                             <div class="member-image">
                                 <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
@@ -107,7 +107,7 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card section--animate-flip">
-                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>">
+                    <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>" aria-lable="read more about boardmember">
                         <div class="member-image">
                             <div class="member-image">
                                 <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
