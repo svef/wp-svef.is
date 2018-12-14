@@ -91,11 +91,11 @@ const SectionsApear = {
       new ScrollMagic.Scene({
         triggerElement: self,
         duration: '100%',
-        offset: 0,
-        triggerHook: 1,
+        offset: '-70%',
+        triggerHook: .7,
         reverse: true
       }).setTween(movethebox)
-      .addTo(controller)
+      // .addTo(controller)
       // .addIndicators({
       // name: 'section',
       // colorTrigger: 'black',
