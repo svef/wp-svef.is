@@ -99,7 +99,7 @@
         </div>
         <div class="cell small-12">
             <div class="slider">
-                <input type="range" id="humanSlider" min="0" max="304" value="0" style="--min: 0; --max: 304;--val: 0; outline: none;"/>
+                <input tabindex="-1" type="range" id="humanSlider" min="0" max="304" value="0" style="--min: 0; --max: 304;--val: 0; outline: none;"/>
                 <ul class="slider__year">
                     <li>2004</li>
                     <li>2018</li>

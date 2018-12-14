@@ -27,17 +27,17 @@
                                 <a href="mailto:svef@svef.is" target="_blank"><?php echo $footer_svef_email; ?></a>
                             </li>
                             <li class="socialmedia">
-                                <a href="<?php echo $footer_social_facebook; ?>" target="_blank">
+                                <a href="<?php echo $footer_social_facebook; ?>" aria-lable="svef on facebook" target="_blank">
                                     <?php
                                     $classArray = array("facebookIcon" => "icon--white");
                                     svef_partial("library/svef/icons/facebook.svg", $classArray ); ?>
                                 </a>
-                                <a href="<?php echo $footer_social_instagram; ?>" target="_blank">
+                                <a href="<?php echo $footer_social_instagram; ?>" aria-lable="svef on instagram" target="_blank">
                                     <?php
                                     $classArray = array("instagramIcon" => "icon--white");
                                     svef_partial("library/svef/icons/instagram.svg", $classArray ); ?>
                                 </a>
-                                <a href="<?php echo $footer_social_twitter; ?>" target="_blank">
+                                <a href="<?php echo $footer_social_twitter; ?>" aria-lable="svef on twitter" target="_blank">
                                 <?php
                                     $classArray = array("twitterIcon" => "icon--white");
                                     svef_partial("library/svef/icons/twitter.svg", $classArray ); ?>

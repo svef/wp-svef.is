@@ -5,11 +5,14 @@ import Global from '../global-functions'
 const HeroSlider = {
   init(){
     this.cacheDom()
+    this.sliderOptions.dotsEach = this.imageSliderCount
     this.setOwlCarousel(this.heroSlider, this.sliderOptions)
   },
   cacheDom(){
     this.body = Global.body
     this.heroSlider = this.body.querySelector('#heroSlider')
+    this.slides = this.body.querySelectorAll('.hero-image')
+    this.imageSliderCount = Global.calculateDots(this.slides.length)
   },
 
   setOwlCarousel(slider, options) {
@@ -28,6 +31,7 @@ const HeroSlider = {
     paginationSpeed : 1200,
     rewindSpeed : 1200,
     singleItem: true,
+    dotsEach: 1,
     stopOnHover : true,
     lazyLoad: true,
     responsive: {

@@ -2,6 +2,10 @@
 .imagesliderContainer {
     padding: 180px 0;
     overflow: hidden;
+    @include breakpoint(1660px up) {
+        margin: 0 auto;
+        max-width: 90rem;
+    }
     @include breakpoint(small down) {
         padding: 100px 0 60px 0;
     }

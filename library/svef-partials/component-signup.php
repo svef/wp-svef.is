@@ -30,7 +30,7 @@
                     </p>
                 </div>
             </div>
-                <div class="side-signup__form" style="padding: 20px 0;">
+            <div class="side-signup__form" style="padding: 20px 0;" tabindex="0">
                 <?php echo do_shortcode('[gravityform id="1" title="true" description="true"]'); ?>
             </div>
         </div>

@@ -4,13 +4,15 @@ import Global from '../global-functions'
 const Imagegallery = {
     init() {
       this.cacheDom()
+      this.carouselOptions.dotsEach = this.imageSliderCount
       $(this.slider).owlCarousel(this.carouselOptions)
-
     },
     cacheDom: function () {
       this.body = Global.body
       // this.body = document.querySelector('body')
       this.slider = this.body.querySelector('#myImageSlider')
+      this.slides = this.body.querySelectorAll('.imagesliderContainer__allItems__oneItem')
+      this.imageSliderCount = Global.calculateDots(this.slides.length)
     },
 
   carouselOptions: {
@@ -27,41 +29,31 @@ const Imagegallery = {
     rewindSpeed : 1000,
     singleItem: true,
     stopOnHover : true,
+    dotsEach: 1,
     lazyLoad: true,
     responsive: {
       0: {
-        items: 1,
         margin: 0,
         stagePadding: 0
       },
       641: {
-        items: 1,
         margin: 20,
         stagePadding: 60
       },
       911: {
-        items: 1,
         margin: 20,
         stagePadding: 180
       },
       1201: {
-        items: 1,
         margin: 35,
         stagePadding: 320
       },
       1441: {
-        items: 1,
         margin: 35,
         stagePadding: 360
-      },
-      2000: {
-        items: 2,
-        margin: 35,
-        stagePadding: 400
       }
     }
   }
 }
-
 
 module.exports = Imagegallery;
