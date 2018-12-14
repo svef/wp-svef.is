@@ -31,7 +31,7 @@ const GlobalFunctions = {
   },
   calculateDots(itemsCount) {
     return itemsCount >= 6 ? 2 : 1
-    // return 2 % itemsCount 
+    // return 2 % itemsCount
   },
   getAjax(url) {
     return $.get(url)
@@ -95,14 +95,10 @@ const GlobalFunctions = {
     return "";
   },
   addNegativeTabIndex(ElementClass) {
-    console.log(ElementClass)
     for (let i = 0; i < ElementClass.length; i++) {
-      const owlDot = ElementClass[i];
-      owlDot.setAttribute('tabIndex', '-1');
-
+      ElementClass[i].setAttribute('tabIndex', '-1');
     }
   }
-
 }
 
 module.exports = GlobalFunctions

@@ -13,7 +13,10 @@ const SectionsApear = {
     this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
     this.flipIn(this.sectionFlip)
-    // this.backgroundParalax(this.imgMask)
+    if (window.innerWidth > 640) {
+      this.backgroundParalax(this.imgMask)
+
+    }
   },
   cacheDom(){
     this.body = Global.body
@@ -79,28 +82,39 @@ const SectionsApear = {
   backgroundParalax(el){
     let controller = new ScrollMagic.Controller()
 
-  $(el).each(function () {
-    let self = this
-    let movethebox = new TimelineMax()
-    .fromTo(self, 1, {backgroundPosition:"50% 500px"}, {backgroundPosition:"50% 0px", ease: Sine.easeInOut})
-    new ScrollMagic.Scene({
-      triggerElement: self,
-      duration: '100%',
-      offset: 0,
-      triggerHook: 1,
-      reverse: true
-    }).setTween(movethebox)
-    .addTo(controller)
-    // .addIndicators({
-    // name: 'section',
-    // colorTrigger: 'black',
-    // colorStart: 'pink',
-    // colorEnd: 'green',
-    // indent: 100
-    // })
+    $(el).each(function () {
+      let self = this
+      let movethebox = new TimelineMax()
+      .fromTo(self, 1, {backgroundPosition:"50% 500px"}, {backgroundPosition:"50% 0px", ease: Sine.easeInOut})
+      new ScrollMagic.Scene({
+        triggerElement: self,
+        duration: '100%',
+        offset: 0,
+        triggerHook: 1,
+        reverse: true
+      }).setTween(movethebox)
+      .addTo(controller)
+      // .addIndicators({
+      // name: 'section',
+      // colorTrigger: 'black',
+      // colorStart: 'pink',
+      // colorEnd: 'green',
+      // indent: 100
+      // })
 
-  })
+    })
+  },
+  fadeInOnLoadmore(el) {
+
+    let delayTime = 0.3
+    $(el).each(function () {
+      let self = this
+      delayTime += 0.3
+      TweenMax.to(self, 0.5, {delay: delayTime, opacity: 1, ease: Sine.easeInOut })
+
+    })
   }
+
 
 }
 module.exports = SectionsApear

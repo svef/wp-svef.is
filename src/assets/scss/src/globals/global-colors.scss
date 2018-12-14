@@ -87,6 +87,12 @@
 }
 
 .body--contrast {
+  .text-color {
+    &--black-40 {
+      color: $white-40;
+    }
+
+  }
   .bg-col-partial {
     &--93 {
       &--default {
