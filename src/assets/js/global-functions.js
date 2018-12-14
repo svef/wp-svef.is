@@ -93,6 +93,14 @@ const GlobalFunctions = {
         }
     }
     return "";
+  },
+  addNegativeTabIndex(ElementClass) {
+    console.log(ElementClass)
+    for (let i = 0; i < ElementClass.length; i++) {
+      const owlDot = ElementClass[i];
+      owlDot.setAttribute('tabIndex', '-1');
+
+    }
   }
 
 }

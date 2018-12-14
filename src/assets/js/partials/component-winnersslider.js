@@ -7,6 +7,11 @@ const WinnersSlider = {
     this.cacheDOM()
     this.addEvent()
     this.setCarousel(this.slider, this.sliderOptions)
+    this.cacheAfterSliderSet()
+    Global.addNegativeTabIndex(this.owlDots)
+  },
+  cacheAfterSliderSet() {
+    this.owlDots = this.body.querySelectorAll('.owl-dot')
   },
   cacheDOM() {
     this.body = Global.body

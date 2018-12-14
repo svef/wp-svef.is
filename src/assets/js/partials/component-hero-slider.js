@@ -7,6 +7,11 @@ const HeroSlider = {
     this.cacheDom()
     this.sliderOptions.dotsEach = this.imageSliderCount
     this.setOwlCarousel(this.heroSlider, this.sliderOptions)
+    this.cacheAfterSliderSet()
+    Global.addNegativeTabIndex(this.owlDots)
+  },
+  cacheAfterSliderSet() {
+    this.owlDots = this.body.querySelectorAll('.owl-dot')
   },
   cacheDom(){
     this.body = Global.body
@@ -27,7 +32,7 @@ const HeroSlider = {
     autoplaySpeed: 1500,
     autoplayTimeout: 20000,
     navigation : false,
-    slideSpeed : 1200,
+    slideSpeed: 1200,
     paginationSpeed : 1200,
     rewindSpeed : 1200,
     singleItem: true,

@@ -54,6 +54,9 @@ ul {
 
 .text {
   @extend p;
+  &--bold {
+    font-weight: 700;
+  }
   &--large {
     line-height: 28px;
     font-size: 18px;
