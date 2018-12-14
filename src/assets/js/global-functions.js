@@ -29,6 +29,10 @@ const GlobalFunctions = {
 
     return $.ajax(ajaxOptions)
   },
+  calculateDots(itemsCount) {
+    return itemsCount >= 6 ? 2 : 1
+    // return 2 % itemsCount 
+  },
   getAjax(url) {
     return $.get(url)
   },

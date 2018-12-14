@@ -33,7 +33,7 @@
 							</div>
 							<?php if($hero_slider_link) : ?>
 								<div class="section__link section__link--hero cell small-5 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
-									<a href="<?php echo $hero_slider_link['url'] ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
+									<a href="<?php echo $hero_slider_link['url'] ?>" aria-lable="<?php echo $hero_slider_title; ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
 									<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
 								</div>
 							<?php else: ?>
@@ -61,7 +61,7 @@
 				</div>
 				<?php  if($hero_link) : ?>
 					<div class="section__link section__link--hero cell small-5 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
-						<a href="<?php echo $hero_link['url'] ?>" target="<?php echo $hero_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
+						<a href="<?php echo $hero_link['url'] ?>" aria-lable="<?php echo $hero_title; ?>" target="<?php echo $hero_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
 						<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
 					</div>
 				<?php  else: ?>

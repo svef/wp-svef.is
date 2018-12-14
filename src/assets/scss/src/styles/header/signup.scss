@@ -74,7 +74,7 @@
     }
 }
 .btnSignup {
-  position: fixed;
+  position: absolute;
   z-index: 99;
   left: calc((-184px / 2) + 30px);
   top: 50vh;

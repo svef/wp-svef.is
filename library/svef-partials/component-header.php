@@ -21,8 +21,8 @@
 						}
 					?>
 				</ul>
-				<button class="nav__suprise show-for-medium"></button>
-				<button id="btnMenu" class="nav__menu-button link-text--menu" >
+				<button class="nav__suprise show-for-medium" arial-lable="Change backround contrast"></button>
+				<button id="btnMenu" class="nav__menu-button link-text--menu" aria-lable="menu">
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
 						<span class="nav__icon__line"></span>
@@ -45,7 +45,7 @@
 							}
 						?>
 					</ul>
-					<button class="nav__suprise nav__suprise--mobile show-for-small-only"></button>
+					<button class="nav__suprise nav__suprise--mobile show-for-small-only" arial-lable="Change backround contrast"></button>
 				</div>
 				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only">
 					Skráning í svef
@@ -53,6 +53,7 @@
 			</div>
 
 		</menu>
+		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0">Skráning í svef</button>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 		<div class="menu-overlay"></div>
@@ -68,4 +69,3 @@
 			</div>
 		</div>
 	</header>
-	<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium">Skráning í svef</button>
