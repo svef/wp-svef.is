@@ -6,10 +6,16 @@ const HeroSlider = {
   init(){
     this.cacheDom()
     this.setOwlCarousel(this.heroSlider, this.sliderOptions)
+    this.cacheAfterSliderSet()
+    Global.addNegativeTabIndex(this.owlDots)
+  },
+  cacheAfterSliderSet() {
+    this.owlDots = this.body.querySelectorAll('.owl-dot')
   },
   cacheDom(){
     this.body = Global.body
     this.heroSlider = this.body.querySelector('#heroSlider')
+
   },
 
   setOwlCarousel(slider, options) {
