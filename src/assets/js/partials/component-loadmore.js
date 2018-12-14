@@ -132,7 +132,6 @@ const LoadMorePosts = {
       </div>`
     }
     this.eventsContainer.insertAdjacentHTML('beforeend', rendered_event)
-    console.log(currentPage)
     this.btnLoad.setAttribute('data-current-page', currentPage)
     if (maxNumPages == currentPage) {
       this.btnLoad.classList.add('hide')

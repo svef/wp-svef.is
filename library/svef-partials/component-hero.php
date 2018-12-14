@@ -25,19 +25,19 @@
 						<div class="hero-image" data-interchange="[<?php echo $hero_slider_img['sizes']['medium'];  ?>, small], [<?php echo $hero_slider_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_slider_img['sizes']['large'];  ?>, large]"></div>
 					</div>
 					<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">
-						<div class="section__info section__info--center cell small-10 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
-							<div aria-hidden="true"></div>
+						<div class="section__info section__info--center section__info--small-flex-start cell small-9 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
+							<div class="hide" aria-hidden="true"></div>
 							<div class="section__info--text">
 								<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_slider_title; ?></h2>
-								<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-10 small-offset-0 medium-offset-1 large-offset-0"><?php echo $hero_slider_text; ?></p>
+								<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_slider_text; ?></p>
 							</div>
 							<?php if($hero_slider_link) : ?>
-								<div class="section__link section__link--hero cell small-5 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
+								<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
 									<a href="<?php echo $hero_slider_link['url'] ?>" aria-lable="<?php echo $hero_slider_title; ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
 									<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
 								</div>
 							<?php else: ?>
-								<div aria-hidden="true"></div>
+								<div class="hide" aria-hidden="true"></div>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -53,19 +53,19 @@
 				</div>
 			</div>
 			<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">
-				<div class="section__info section__info--center cell small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
-					<div aria-hidden="true"></div>
+				<div class="section__info section__info--center cell small-9 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
+					<div class="hide" aria-hidden="true"></div>
 					<div>
 						<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_title; ?></h2>
-						<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-10 small-offset-0 medium-offset-1 large-offset-0"><?php echo $hero_text; ?></p>
+						<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_text; ?></p>
 				</div>
 				<?php  if($hero_link) : ?>
-					<div class="section__link section__link--hero cell small-5 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
+					<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
 						<a href="<?php echo $hero_link['url'] ?>" aria-lable="<?php echo $hero_title; ?>" target="<?php echo $hero_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo pll__('Lesa grein'); ?></a>
 						<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
 					</div>
 				<?php  else: ?>
-					<div aria-hidden="true"></div>
+					<div class="hide" aria-hidden="true"></div>
 				<?php endif; ?>
 			</div>
 		</div>
