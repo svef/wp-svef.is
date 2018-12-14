@@ -53,6 +53,7 @@
     &__inner {
         padding: 60px 100px;
         float: right;
+        width: 100%;
         @include breakpoint(large down) {
           padding: 40px;
       }
@@ -93,7 +94,7 @@
     top: auto;
     bottom: 15px;
     transition: all 400ms $transition;
-
+    opacity: 1;
   }
 }
 .btnFixedOff {

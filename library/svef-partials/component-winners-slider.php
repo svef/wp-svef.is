@@ -31,13 +31,11 @@
 		<div id="winnersSlider" class="section__winners-slider--inner owl-carousel">
 
 			<?php
+				if ($the_winners_query->have_posts()) : while ($the_winners_query->have_posts()) : $the_winners_query->the_post();
+				$loop_of_winners = get_field('winners_slider');
+				$year_of_winners = date('Y', strtotime(get_field('winning_year')));
 
-
-					if ($the_winners_query->have_posts()) : while ($the_winners_query->have_posts()) : $the_winners_query->the_post();
-					$loop_of_winners = get_field('winners_slider');
-					$year_of_winners = date('Y', strtotime(get_field('winning_year')));
-
-					foreach ($loop_of_winners as $winner):
+				foreach ($loop_of_winners as $winner):
 			?>
 
 				<div class="winners-slide">
