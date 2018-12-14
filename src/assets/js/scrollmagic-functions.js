@@ -13,10 +13,12 @@ const SectionsApear = {
     this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
     this.flipIn(this.sectionFlip)
+
     if (window.innerWidth > 640) {
       this.backgroundParalax(this.imgMask)
 
     }
+
   },
   cacheDom(){
     this.body = Global.body
