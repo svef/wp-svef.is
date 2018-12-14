@@ -112,7 +112,8 @@ const SectionsApear = {
     $(el).each(function () {
       let self = this
       delayTime += 0.3
-      TweenMax.to(self, 0.5, {delay: delayTime, opacity: 1, ease: Sine.easeInOut })
+      TweenMax.set(self, {y:10, ease: Sine.easeInOut })
+      TweenMax.to(self, 0.5, {delay: delayTime, opacity: 1,y:0, ease: Sine.easeInOut })
 
     })
   }
