@@ -2,11 +2,10 @@
     position: absolute;
     top:100%;
     left: -60vw;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    scroll-behavior: smooth;
+
+
     margin: 0;
-    z-index: 2;
+    z-index: 9999999999999;
     width: 50vw;
     height: 100vh;
     background-color: $bgGray;
@@ -14,6 +13,9 @@
     @include breakpoint(medium down) {
       width: 100vw;
       left:-101vw;
+    }
+    @include breakpoint(small down) {
+      padding-button: 20px;
     }
     &--active {
       left: 0;
@@ -54,6 +56,11 @@
         padding: 60px 100px;
         float: right;
         width: 100%;
+        height: 100%;
+        overflow:scroll;
+        // overflow-x:hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
         @include breakpoint(large down) {
           padding: 40px;
       }
