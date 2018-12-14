@@ -82,7 +82,6 @@ ul {
   text-align: center;
   }
   &--under-title {
-
     font-family: $font-noto;
     font-style: Regular;
     font-size: 24px;
@@ -90,9 +89,7 @@ ul {
     @include breakpoint(medium down) {
       font-size: 24px;
       line-height: 30px;
-
     }
-
   }
   &--cardsmall {
     font-weight: bold;

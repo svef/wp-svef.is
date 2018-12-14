@@ -116,6 +116,10 @@
   }
 }
 
+.loadmore {
+  opacity: 0;
+}
+
 //form error messeges/* Make the error stand out */
 
 .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
