@@ -13,7 +13,7 @@ const SectionsApear = {
     this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
     this.flipIn(this.sectionFlip)
-    this.backgroundParalax(this.imgMask)
+    // this.backgroundParalax(this.imgMask)
   },
   cacheDom(){
     this.body = Global.body
@@ -53,9 +53,9 @@ const SectionsApear = {
     let controller = new ScrollMagic.Controller()
     $(el).each(function (i) {
       let self = this
-      let direction = i % 3 ? '90_cw' : '90_ccw';
+      let delay = i % 2 ? '0.2' : '0.1';
       let movethebox = new TimelineMax()
-      .fromTo(self, 1, {y: 90, rotationY: direction }, {y: 0, rotationY: 0, ease: Sine.easeInOut,  yoyoEase:true})
+      .fromTo(self, 0.1, {y: 10, scale: '0.8', opacity: 0 }, {delay: delay, y: 0, scale: '1', opacity: 1, ease: Expo.easeOut,  yoyoEase:true})
       new ScrollMagic.Scene({
         triggerElement: self,
         duration: '60%',

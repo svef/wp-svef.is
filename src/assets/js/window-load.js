@@ -35,7 +35,7 @@ const Loader = {
       // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
       window.requestAnimationFrame(() => {
         // GSAP custom code goes here
-        let loaderTween = TweenMax.to(this.loaderDiv, 1, { opacity: 0, ease: Sine.easeInOut, onComplete: this.tweenComplete.bind(this) })
+        let loaderTween = TweenMax.to(this.loaderDiv, 0.5, { opacity: 0, ease: Sine.easeInOut, onComplete: this.tweenComplete.bind(this) })
         $(this.heroBanner).exists( () => {
             this.heroBanerSetup()
         })
