@@ -15,7 +15,6 @@ const WinnersSlider = {
   },
   cacheDOM() {
     this.body = Global.body
-    // this.body = document.querySelector('body')
     this.slider = this.body.querySelector('#winnersSlider')
     this.select = this.body.querySelector('#selectWinnerYear')
     this.sliderHeader = this.body.querySelector('#sliderHeading')

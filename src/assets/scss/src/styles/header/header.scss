@@ -15,6 +15,7 @@
     .side-menu {
       height: calc(100vh - 60px);
     }
+
   }
   @include breakpoint(small down) {
     height: 60px;
@@ -200,7 +201,7 @@
         opacity: 0.6;
       }
       & .current-lang a {
-        opacity: 1; 
+        opacity: 1;
         color: $white !important;
       }
     }

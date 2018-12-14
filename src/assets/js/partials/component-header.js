@@ -1,12 +1,11 @@
 import Global from '../global-functions'
 
 const Header = {
-
   init() {
     this.cacheDom()
     this.addEvents()
     this.navBarScrollBehaviour(this.header)
-
+    this.checkForBrowserType()
   },
   cacheDom: function () {
     this.body = Global.body;
@@ -93,8 +92,6 @@ const Header = {
         console.log(jData)
       })
     }
-
-
   },
   navBarScrollBehaviour(header) {
     let statPos = 0
@@ -108,12 +105,37 @@ const Header = {
         if (st < statPos){
           scrollUp = true;
           $(header).removeClass('scrolledTop');
+          $(this.btnOpenSignup).css('margin-top', '-60px')
         } else {
           scrollUp = false;
+          $(this.btnOpenSignup).css('margin-top', '0px')
         }
         statPos = st;
       }
     });
+  },
+  checkForBrowserType() {
+    const browsers = {
+      // Opera 8.0+
+      isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0 ? 'opera' : false,
+      // Firefox 1.0+
+      isFirefox: typeof InstallTrigger !== 'undefined' ? 'fireFox' : false,
+      // Safari 3.0+ "[object HTMLElementConstructor]"
+      isSafari:  /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)) ? 'safari' : false,
+      // Internet Explorer 6-11
+      isIE: !!document.documentMode ? 'ie' : false,
+      // Edge 20+
+      isEdge: !this.isIE && !!window.StyleMedia ? 'edge' : false,
+      // Chrome 1 - 68
+      isChrome: !!window.chrome && !!window.chrome.webstore ? 'chrome' : false,
+      // Blink engine detection
+      isBlink: (this.isChrome || this.isOpera) && !!window.CSS ? 'blink' : false
+    }
+    Object.keys(browsers).forEach( (item) => {
+      if (browsers[item]) {
+        this.body.classList.add(browsers[item])
+      }
+    })
   }
 }
 

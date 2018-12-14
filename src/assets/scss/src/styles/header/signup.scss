@@ -10,7 +10,7 @@
     width: 50vw;
     height: 100vh;
     background-color: $bgGray;
-    transition: left 300ms ease;
+    transition: left 300ms $transition;
     @include breakpoint(medium down) {
       width: 100vw;
       left:-101vw;
@@ -80,6 +80,7 @@
   top: 50vh;
   transform: rotate(-90deg);
   opacity: 0;
+  transition: all 400ms $transition;
   &--clicked {
       left: calc(50vw - (184/2)*1px);
       @include breakpoint(medium down) {
@@ -93,7 +94,7 @@
     top: auto;
     bottom: 15px;
     transition: all 400ms $transition;
-
+    opacity: 1;
   }
 }
 .btnFixedOff {
