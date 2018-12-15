@@ -218,8 +218,11 @@
     &--job-feed {
       overflow: hidden;
       @include breakpoint(medium down) {
-        height: 40vh;
-        margin-bottom: 0;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      @include breakpoint(small down) {
+        height: auto;
       }
     }
     .hero-image {

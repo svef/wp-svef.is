@@ -322,6 +322,14 @@
         background: none;
         box-shadow: none;
         height: 40px;
+        padding: 0 0 0 0px !important;
+        span {
+          font-size: 16px !important;
+          font-family: inherit !important;
+          font-weight: 300 !important;
+          line-height: 24px !important;
+          padding: 8px 0 !important;
+        }
       }
     }
     .chosen-container-active.chosen-with-drop{
