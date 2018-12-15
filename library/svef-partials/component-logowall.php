@@ -4,8 +4,9 @@
 		'paragraph' => get_field('logo_intro_text', 'option'),
 		'margin_bottom_inside' => true);
 ?>
+<?php svef_partial('library/svef-partials/component-introtext', $a_infotext); ?>
+
 <section class="section section--margin-bottom section--logowall">
-	<?php svef_partial('library/svef-partials/component-introtext', $a_infotext); ?>
 
 	<div class="grid-container">
 	<div class="supportors-logos grid-x grid-padding-x" >

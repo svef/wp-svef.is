@@ -88,13 +88,15 @@ const Header = {
       this.body.classList.add('body--contrast')
       ajaxObj.isDark = true
       Global.postAjax(ajaxObj).done(function (jData) {
-        console.log(jData)
+        // we could add some kind of easter egg when darkmode is turned on here
+        return true
       })
     } else {
       this.body.classList.remove('body--contrast')
       ajaxObj.isDark = false
       Global.postAjax(ajaxObj).done(function (jData) {
-        console.log(jData)
+        // same with easter egg when darkmod is turned off
+        return false
       })
     }
   },
