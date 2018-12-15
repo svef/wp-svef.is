@@ -61,8 +61,8 @@ const Statisticslider = {
     //   })
   },
   scrollProgress(e) {
-    this.humanSlider.style.setProperty('--val', +this.humanSlider.value)
-    this.humanSlider.value = Math.round((e.progress * 100) * 3.3333);
+    this.humanSlider.style.setProperty('--val', this.humanSlider.value)
+    this.humanSlider.value = Math.round(e.progress * this.humanSlider.max);
     this.humanSliderValue.innerHTML = this.humanSlider.value
     let iHumanItems = this.humanSliderItems.length
     let iHumanToPercentRatio = 100/iHumanItems

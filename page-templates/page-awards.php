@@ -28,14 +28,14 @@ get_header(); ?>
 		svef_partial("library/svef-partials/component-quotetext");
 
 		$a_c2a = array(
-			'intro_title' 	=> get_field('intro_title_inner'),
-			'intro_text' 		=> get_field('intro_text_inner'),
-			'c2a_title' 		=> get_field('c2a_title'),
-			'c2a_text' 			=> get_field('c2a_text'),
+			'intro_title'	=> get_field('intro_title_inner'),
+			'intro_text' => get_field('intro_text_inner'),
+			'c2a_title' => get_field('c2a_title'),
+			'c2a_text' => get_field('c2a_text'),
 			'c2a_cool_mask' => get_field('c2a_cool_mask'),
-			'c2a_image' 		=> get_field('c2a_image'),
-			'c2a_action' 		=> get_field('c2a_action'),
-			'c2a_bg_color'  => get_field('c2a_bg_color')
+			'c2a_image'	=> get_field('c2a_image'),
+			'c2a_action' => get_field('c2a_action'),
+			'c2a_bg_color' => get_field('c2a_bg_color')
 		);
 
 

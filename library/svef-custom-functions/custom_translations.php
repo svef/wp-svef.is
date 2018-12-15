@@ -14,9 +14,9 @@
 		pll_register_string('Header', 'valm', 'SVEF');
 
 		// Show more button
-		pll_register_string('Elements', 'Sjá fleiri'. 'SVEF');
+		pll_register_string('Elements', 'Sjá fleiri', 'SVEF');
 		// links
-		pll_register_string('Elements', 'Skoða nánar'. 'SVEF');
+		pll_register_string('Elements', 'Skoða nánar', 'SVEF');
 		// cookie message
 		pll_register_string('Cookie', get_field('cookie_message', 'option'), 'SVEF');
 		pll_register_string('Cookie', 'Vefstefna SVEF', 'SVEF');
