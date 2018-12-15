@@ -1,3 +1,4 @@
+<?php $member_count = get_field('svef_members_number', 'option'); ?>
 <section class="section section--statistics section--margin-bottom grid-container">
     <div class="statistics grid-x grid-margin-x">
         <div class="cell display-flex--justify-center small-12">
@@ -99,10 +100,10 @@
         </div>
         <div class="cell small-12">
             <div class="slider">
-                <input tabindex="-1" type="range" id="humanSlider" min="0" max="304" value="0" style="--min: 0; --max: 304;--val: 0; outline: none;"/>
+                <input tabindex="-1" type="range" id="humanSlider" min="0" max="<?php echo $member_count; ?>" value="0" style="--min: 0; --max: <?php echo $member_count; ?>;--val: 0; outline: none;"/>
                 <ul class="slider__year">
                     <li>2004</li>
-                    <li>2018</li>
+                    <li><?php date('Y'); ?></li>
                 </ul>
             </div>
         </div>

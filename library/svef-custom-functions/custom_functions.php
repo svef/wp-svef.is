@@ -22,17 +22,20 @@ if(!function_exists('get_menu_to_select')){
     $array_menu = wp_get_nav_menu_items($current_menu);
 		$menu = array();
 		$options = '';
-    foreach ($array_menu as $m) {
-			if (empty($m->menu_item_parent)) {
-				$menu_id  = get_page_by_title( $m->title, OBJECT, 'winners' )->ID;
-				$menu_title = $m->title;
-				$options .= "<option value=\"$menu_id\">$menu_title</option>";
+		if($array_menu){
+			foreach ($array_menu as $m) {
+				if (empty($m->menu_item_parent)) {
+					$menu_id  = get_page_by_title( $m->title, OBJECT, 'winners' )->ID;
+					$menu_title = $m->title;
+					$options .= "<option value=\"$menu_id\">$menu_title</option>";
+				}
 			}
+			$select = '<select id="selectWinnerYear" name="selectYear" class="section__select section__select--winners" tabindex="0">';
+			$select .= $options;
+			$select .= '</select>';
+			return $select;
+
 		}
-		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select section__select--winners" tabindex="0">';
-		$select .= $options;
-		$select .= '</select>';
-    return $select;
 	}
 }
 

@@ -14,7 +14,7 @@
 				<ul class="nav__lang show-for-medium">
 
 					<?php
-						if(function_exists('pll_the_languages')){
+						if(function_exists('pll_the_languages') &&  (get_field('launch_english_version', 'option') || is_super_admin())){
 							pll_the_languages( array('display_names_as' => 'slug', 'hide_if_no_translation' => 1) );
 						} else {
 							echo '';
@@ -38,7 +38,7 @@
 					<ul class="nav__lang nav__lang--mobile show-for-small-only">
 
 						<?php
-							if(function_exists('pll_the_languages')){
+							if(function_exists('pll_the_languages') && (get_field('launch_english_version', 'option') || is_super_admin())){
 								pll_the_languages( array('display_names_as' => 'slug', 'hide_if_no_translation' => 1) );
 							} else {
 								echo '';
