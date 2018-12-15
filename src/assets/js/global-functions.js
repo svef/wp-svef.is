@@ -94,9 +94,15 @@ const GlobalFunctions = {
     }
     return "";
   },
-  addNegativeTabIndex(ElementClass) {
-    for (let i = 0; i < ElementClass.length; i++) {
-      ElementClass[i].setAttribute('tabIndex', '-1');
+  addNegativeTabIndex(elementClass) {
+    for (let i = 0; i < elementClass.length; i++) {
+      elementClass[i].setAttribute('tabindex', '-1');
+    }
+  },
+  addAriaLabel(elementClass, labelMessage) {
+    for (let i = 0; i < elementClass.length; i++) {
+      elementClass[i].setAttribute('aria-label', labelMessage)
+
     }
   }
 }

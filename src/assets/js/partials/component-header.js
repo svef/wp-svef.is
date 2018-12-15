@@ -6,6 +6,8 @@ const Header = {
     this.addEvents()
     this.navBarScrollBehaviour(this.header)
     this.checkForBrowserType()
+    Global.addAriaLabel(this.languageLinkIs, 'language selector for Iceladic')
+    Global.addAriaLabel(this.languageLinkEn, 'language selector for English')
   },
   cacheDom: function () {
     this.body = Global.body;
@@ -20,7 +22,10 @@ const Header = {
     this.btnOpenSignupMobile = this.body.querySelector('#btnOpenSignupMobile')
     this.sideSignup = this.body.querySelector('.side-signup')
     this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
+    this.languageLinkIs = this.body.querySelectorAll('.lang-item-is a')
+    this.languageLinkEn = this.body.querySelectorAll('.lang-item-en a')
   },
+
   addEvents() {
     this.btnMenu.addEventListener('click', this.handleMenuClick.bind(this))
     this.body.addEventListener('click', this.clickedOutSideMenu.bind(this))
