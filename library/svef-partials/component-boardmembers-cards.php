@@ -59,16 +59,15 @@
             <?php endwhile; endif; wp_reset_query(); ?>
 
             <div class="cell board-info small-10 small-offset-1 medium-6 medium-offset-0 large-6 large-offset-">
-                <h2>Stjórnarmeðlimir SVEF árið 2018</h2>
-                <p class="board-info-text">SVEF veit hve mikilvægt það fyrir fólkið í bransanum að vera vakandi fyrir nýjungum því í tækniheiminum eru breytingar örar og ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert. Ný tækni...blablablabal eitthvað meir um það og því höfum við sett inn lestur vikunnar, getur verið bók, grein, video eða annað áhugavert.</p>
-                <a href="#" >Skoða nánar</a>
-                <?php svef_partial('library/svef/icons/linkarrow.svg'); ?>
+                <h2><?php echo $board_title; ?></h2>
+								<p><?php echo $board_text; ?></p>
+
+                <a href="<?php echo $board_link; ?>" class="section__link" ><?php pll_e('Skoða nánar', 'SVEF'); ?><?php svef_partial('library/svef/icons/linkarrow.svg'); ?> </a>
+
             </div>
 
                 <?php
-                // var_dump(get_term_by( 'slug', 'board-director', 'boardmembers_cat'));
-                // $termObject = get_term_by( 'slug', 'board-director', 'boardmembers_cat');
-                // $board_cat_id = $termObject->term_id;
+
                 $args2 = array (
                     'post_type'       => 'boardmembers',
                     'posts_per_page'	=>  6,

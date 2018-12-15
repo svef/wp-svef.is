@@ -1,6 +1,6 @@
 <section class="section section--statistics section--margin-bottom grid-container">
     <div class="statistics grid-x grid-margin-x">
-        <div class="cell flex display-flex--justify-center small-12">
+        <div class="cell display-flex--justify-center small-12">
             <span class="statistics__spanNumber "  id="humanSliderValue" >0</span>
         </div>
         <div class="slider__humans">

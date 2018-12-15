@@ -63,9 +63,9 @@
         }
         @include breakpoint(medium down) {
           padding: 40px 100px;
-          // -webkit-overflow-scrolling: touch;
-      }
+        }
         @include breakpoint(small down) {
+          -webkit-overflow-scrolling: touch;
           padding: 20px 40px;
       }
     }

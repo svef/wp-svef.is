@@ -28,13 +28,20 @@ get_header(); ?>
 			$a_about = array(
 				'title' => get_field('intro_title'),
 				'paragraph' => get_field('intro_text'),
-				'margin_bottom' => true,
 				'margin_bottom_inner' => false
 			);
 			svef_partial("library/svef-partials/component-introtext" , $a_about);
 		?>
 
-    <?php svef_partial("library/svef-partials/component-boardmembers-cards"); ?>
+
+		<?php
+			$a_board_section_text = array(
+				'board_title' => get_field('board_title'),
+				'board_text' => get_field('board_text'),
+				'board_link' => get_field('board_link')
+			);
+			svef_partial("library/svef-partials/component-boardmembers-cards", $a_board_section_text);
+		?>
 
 
 	</article>

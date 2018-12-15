@@ -1,31 +1,31 @@
+<?php $a_board_intro = array(
+				'title' => $board_title,
+				'paragraph' => $board_text,
+				'margin_bottom_inner' => false
+			);
+			svef_partial("library/svef-partials/component-introtext" , $a_board_intro); ?>
+
 <section class="section section--margin-bottom section--boardmembersMax">
-    <div class="grid-container">
-        <div class="introtext" >
-            <div class="grid-x grid-padding-x">
-                <h2 class="section__title cell small-10 small-offset-1 medium-8 medium-offset-1 large-10 large-offset-1">Stjórn SVEF árið 2018</h2>
-                <p class="section__paragraph cell small-10 small-offset-1 medium-8 medium-offset-2 large-8 large-offset-2">Markmið morgunverðarfunda SVEF eru miðlun sérfræðiþekkingar innan vébanda vefiðnaðarins, fengnir eru aðilar sem starfa innan vefgeirans og haldin eru erindi um ýmis mál tengd vefjum og verkefnum tengd þeim. Eitthvað meira mögulega eða kannski á ekki að vera neinn intro texti fyrir fréttir...</p>
-            </div>
-        </div>
-    </div>
+
     <div class="grid-container">
         <div class="boardmembersMax-all grid-x">
         <?php
 
-                $args = array (
-                    'post_type'       => 'boardmembers',
-                    'posts_per_page'	=>  7,
-                    'order'						=> 'ASC',
-                    'tax_query' => array(
-                        'relation' => 'AND',
-                        array(
-                            'taxonomy' => 'boardmembers_year',
-                            'field'    => 'slug',
-                            'terms' => '2017'
-                        )
-                    )
+						$args = array (
+								'post_type'       => 'boardmembers',
+								'posts_per_page'	=>  7,
+								'order'						=> 'ASC',
+								'tax_query' => array(
+										'relation' => 'AND',
+										array(
+												'taxonomy' => 'boardmembers_year',
+												'field'    => 'slug',
+												'terms' => '2017'
+										)
+								)
 
-                    );
-                    $the_query = new WP_Query( $args );
+								);
+								$the_query = new WP_Query( $args );
             ?>
             <?php
                 $boardmember_count = 0;
@@ -55,15 +55,14 @@
                     $boardmember_order2 = $boardmember_count % 2 ? 2 : 1;
                     $grid_offset1 = $boardmember_count % 2 ? 1 : 0;
                     $grid_offset2 = $boardmember_count % 2 ? 0 : 2;
-
             ?>
 
             <div id="<?php echo $slug;?>" class="boardmembersMax-each cell small-12 small-offset-0 medium-11 medium-offset-1 large-12 large-offset-0">
-							<div class="section__bg-fix section__bg-fix--default section__bg-fix--color grid-contianer fluid" aria-hidden="true"></div>
-
-
                 <div class="member_inner grid-x grid-padding-x">
-                    <div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-10 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >
+									<div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-11 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >
+											<div class="section__bg-fix section__bg-fix--default section__bg-fix--color section__bg-fix--right" aria-hidden="true"></div>
+
+
                     </div>
                     <div class="cell medium-6 medium-offset-0 large-4 large-offset-<?php echo $grid_offset1; ?> medium-order-<?php echo $boardmember_order1; ?> large-order-<?php echo $boardmember_order1; ?>">
                         <div class="member-image">
