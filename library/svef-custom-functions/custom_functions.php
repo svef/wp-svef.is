@@ -29,7 +29,7 @@ if(!function_exists('get_menu_to_select')){
 				$options .= "<option value=\"$menu_id\">$menu_title</option>";
 			}
 		}
-		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select section__select--winners">';
+		$select = '<select id="selectWinnerYear" name="selectYear" class="section__select section__select--winners" tabindex="0">';
 		$select .= $options;
 		$select .= '</select>';
     return $select;

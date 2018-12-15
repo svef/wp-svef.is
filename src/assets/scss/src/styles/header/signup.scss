@@ -2,13 +2,11 @@
     position: absolute;
     top:100%;
     left: -60vw;
-
-
     margin: 0;
-    z-index: 9999999999999;
     width: 50vw;
     height: 100vh;
     background-color: $bgGray;
+    z-index: 2;
     transition: left 300ms $transition;
     @include breakpoint(medium down) {
       width: 100vw;
