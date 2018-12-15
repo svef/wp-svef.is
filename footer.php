@@ -22,7 +22,7 @@
 	?>
 
 <?php wp_footer();
-svef_partial("library/sver-partials/component-map-footer-setup");
+# svef_partial("library/sver-partials/component-map-footer-setup");
 ?>
 </body>
 </html>

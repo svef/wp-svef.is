@@ -9,7 +9,7 @@ get_header(); ?>
 	<?php
 		$hero_is_slider = get_field('is_slide_show');
 
-		$a_hero_options = $her_is_slider ? array(
+		$a_hero_options = $hero_is_slider ? array(
 			'hero_slider' => get_field('hero_slider'),
 			'hero_background_color' => get_field('hero_background_color'),
 			'is_slide_show' => get_field('is_slide_show')
