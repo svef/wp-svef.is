@@ -48,8 +48,16 @@ get_header(); ?>
 			'margin_bottom_inside' => true
 		);
 		svef_partial('library/svef-partials/component-introtext', $a_intro_text);
- 
+
 		svef_partial('library/svef-partials/component-winners-slider', ['winners_title' => get_field('winners_title')]);
+
+		$a_video = array(
+			'title' => get_field('video_title'),
+			'paragraph' => get_field('video_text'),
+			'video' => get_field('video')
+		);
+
+		svef_partial('library/svef-partials/component-video', $a_video );
 
 		svef_partial('library/svef-partials/component-logowall');
 
