@@ -86,5 +86,10 @@
     }
 }
 .jobfeed-image {
-
+    @include breakpoint(small down) {
+        width: 100%;
+        img {
+        width: 100%;
+        }
+    }
 }

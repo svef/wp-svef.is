@@ -226,9 +226,15 @@
     &:nth-child(odd) {
       .section__bg-fix--color {
         background-color: $darkBlue;
+        @include breakpoint(small down) {
+            background-color: $blackBlue;
+        }
       }
       .section__bg-color--default {
-          background-color: $darkBlue;
+        background-color: $darkBlue;
+        @include breakpoint(small down) {
+            background-color: $blackBlue;
+        }
       }
     }
     &:nth-child(even) {
