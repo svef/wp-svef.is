@@ -58,12 +58,12 @@
         overflow:scroll;
         // overflow-x:hidden;
         scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
         @include breakpoint(large down) {
           padding: 40px;
-      }
+        }
         @include breakpoint(medium down) {
           padding: 40px 100px;
+          // -webkit-overflow-scrolling: touch;
       }
         @include breakpoint(small down) {
           padding: 20px 40px;

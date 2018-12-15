@@ -70,7 +70,7 @@
   }
   &__bg-height {
     &--normal {
-      min-height: 800px;
+      min-height: 640px;
       max-height: 800px;
       height: 100%;
       @include breakpoint(medium down) {

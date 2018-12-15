@@ -12,7 +12,6 @@
 				$first_post_title = $the_winners_query->posts[0];
 			?>
 
-			<!-- <h2 id="sliderHeading" class="small-6 small-offset-1"><?php # echo $first_post_title->post_title; ?></h2> -->
 		</div>
 		<div class="grid-x ">
 			<div class="small-10 small-offset-1 medium-6 large-6">
@@ -34,12 +33,9 @@
 				if ($the_winners_query->have_posts()) : while ($the_winners_query->have_posts()) : $the_winners_query->the_post();
 				$loop_of_winners = get_field('winners_slider');
 				$year_of_winners = date('Y', strtotime(get_field('winning_year')));
-
 				foreach ($loop_of_winners as $winner):
 			?>
-
 				<div class="winners-slide">
-
 				<?php $site_url = $winner['winner_url'] ? $winner['winner_url'] : ''; echo $winner['winner_url'] ? '<a class="winners-slide__link" href="'.$site_url['url'].'" target="_blank" alt="open link in new tab">' : ''; ?>
 					<div class="winners-slide__img" style="background-image: url(<?php echo $winner['winner_screenshot']['sizes']['medium_large']; ?>);"><?php if($winner['winner_url']) svef_partial('library/svef/icons/cursor-winnner.svg'); ?></div>
 					<div class="section__text-color--white winners-slide__category"><?php echo $winner['winner_category']; ?></div>
@@ -48,15 +44,8 @@
 						<?php echo $winner['winner_notes']; ?>
 					</div>
 					<?php echo $winner['winner_url'] ? '</a>' : ''; ?>
-
-
 				</div>
-
-
 			<?php endforeach; endwhile; endif; wp_reset_postdata(); ?>
-
-
 		</div>
 	</div>
-
 </section>
