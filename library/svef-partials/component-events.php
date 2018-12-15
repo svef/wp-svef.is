@@ -13,7 +13,7 @@
 		<div class="grid-x events-container">
 		<?php
 			// var_dump($paged);
-			$args = $events_page ?
+			$args = isset($events_page) ?
 			array (
 				'post_type'       => 'events',
 				'posts_per_page'	=>    5,
@@ -70,7 +70,7 @@
 				<?php endwhile; endif; wp_reset_query(); ?>
 					</div> <!-- grid-x -->
 				</div> <!-- enter section inner -->
-			<?php if(!$events_page) : ?>
+			<?php if(!isset($events_page)) : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
 					<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">

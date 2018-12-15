@@ -43,7 +43,7 @@
 	<div class="section__inner grid-container">
 		<div class="grid-x">
 			<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-2">
-				<button id="btnGetMoreNews" data-current-page="<?php echo $paged; ?>" class="section--events__page "><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></button>
+				<button id="btnGetMoreNews" data-current-page="<?php echo $paged; ?>" class="section--events__page "><?php pll_e('Sjá fleiri');  svef_partial('library/svef/icons/linkarrow.svg'); ?></button>
 			</div>
 		</div>
 	</div>
