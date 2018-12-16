@@ -40,6 +40,7 @@
 			<?php endwhile; endif; ?>
 
 	</div>
+	<?php if($news_query->max_num_pages > 1): ?>
 	<div class="section__inner grid-container">
 		<div class="grid-x">
 			<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-2">
@@ -47,4 +48,5 @@
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 </section>

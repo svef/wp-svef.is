@@ -32,6 +32,7 @@
 
 				);
 				$the_query = new WP_Query( $args );
+
 				$event_count = 0;
 				$a_link_arrow = array('link_arrow' => 'link_arrow link-arrow--white');
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
@@ -42,8 +43,8 @@
 					$location_name = get_field('event_location_name');
 					$location = get_field('event_location');
 
-					$link_is_external = $direct_link_isset ? $direct_link['url'] : get_the_permalink();
-					$link_target = $direct_link_isset ? $direct_link['target'] : '' ;
+					$link_is_external = $direct_link_isset ?  : get_permalink();
+					$link_target = $direct_link_isset ? '_blank' : '' ;
 					$event_is_over = strtotime($event_date) < time() ? true : false;
 					$local_date = date_i18n("d M Y", strtotime($event_date));
 
@@ -78,7 +79,7 @@
 					</div>
 				</div>
 			</div>
-			<?php else : ?>
+			<?php elseif($the_query->max_num_pages > 1) : ?>
 			<div class="section__inner grid-container">
 				<div class="grid-x">
 					<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
