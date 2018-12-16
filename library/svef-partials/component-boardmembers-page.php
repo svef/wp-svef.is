@@ -33,7 +33,7 @@
 										global $post;
 										$slug = $post->post_name;
                     $boardmember_fullname = get_field('boardmember_fullname');
-                    $boardmember_role = get_field('boardmember_role');
+										$boardmember_role = get_field('boardmember_role');
                     $boardmember_job_title = get_field('boardmember_job_title');
                     $boardmember_text = get_field('boardmember_text');
                     $email = get_field('email');
