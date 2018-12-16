@@ -46,9 +46,9 @@ const LoadMorePosts = {
     for (let i = 0; i < posts.length; i++) {
       const post = posts[i];
       postLink = post.wp.permalink
-      newsImgGallery = post.acf.news_image_gallery ? `<div class="img small-11 medium-4">
+      newsImgGallery = post.acf.news_image_gallery.length > 0 ? `<div class="img small-11 medium-4">
       <img src="${post.acf.news_image_gallery[0].sizes.medium}" alt=""></div>` : ''
-      infoContainerClasses = post.acf.news_image_gallery ? 'small-12 medium-6' : 'small-12 medium-10'
+      infoContainerClasses = post.acf.news_image_gallery.length > 0 ? 'small-12 medium-6' : 'small-12 medium-10'
       date = post.wp.localised_date
       postTitle = post.wp.post_title
       excerpt = post.wp.custom_excerpt
@@ -120,7 +120,7 @@ const LoadMorePosts = {
       linkStart = !eventHasPassed ? `<a href="${renderLink}" target="${linkTarget}">` : ''
       linkEnd = !eventHasPassed ? `</a>` : ''
       rendered_event += `
-      <div class="section__event ${eventHasPassedClass} loadmore small-8 small-offset-2 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
+      <div class="section__event ${eventHasPassedClass} loadmore small-10 small-offset-1 medium-5 medium-offset-${eventOffset} large-5 large-offset-${eventOffset}">
         ${linkStart}
           <span class="link-text--menu link-text--dull">${eventDate}</span>
           <h2 class="less-margin--top less-margin--bottom">${eventTitle}${Global.svgLibrary('linkArrow', linkArrowClass)}</h2>

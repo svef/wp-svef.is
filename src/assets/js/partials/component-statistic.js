@@ -21,7 +21,6 @@ const Statisticslider = {
     this.humanSlider = this.body.querySelector('#humanSlider')
     this.humanSliderValue = this.body.querySelector('#humanSliderValue')
     this.humanSliderItems = this.body.querySelectorAll('.slider__humans--itemEach')
-    // this._R = this.body.querySelector('[type=range]')
   },
   addEvents() {
     this.humanSlider.addEventListener('input', this.handleSliderChange.bind(this), false)
@@ -48,7 +47,7 @@ const Statisticslider = {
     new ScrollMagic.Scene({
       triggerElement: '#humanSlider',
       duration: '30%',
-      offset: -100,
+      offset: -0.7,
       triggerHook: "onEnter",
       reverse: false
     })
@@ -61,8 +60,9 @@ const Statisticslider = {
     //   })
   },
   scrollProgress(e) {
-    this.humanSlider.style.setProperty('--val', this.humanSlider.value)
-    this.humanSlider.value = Math.round(e.progress * this.humanSlider.max);
+    let scrollValue = Math.round(e.progress * this.humanSlider.max);
+    this.humanSlider.style.setProperty('--val', scrollValue)
+    this.humanSlider.value = scrollValue
     this.humanSliderValue.innerHTML = this.humanSlider.value
     let iHumanItems = this.humanSliderItems.length
     let iHumanToPercentRatio = 100/iHumanItems
@@ -74,7 +74,7 @@ const Statisticslider = {
         this.humanSliderItems[i].classList.remove('slider__humans--itemEach--show')
       }
     }
-}
+  }
 }
 
 
