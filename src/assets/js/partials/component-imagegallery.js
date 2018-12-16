@@ -2,18 +2,18 @@ import $ from 'jquery';
 import 'owl.carousel';
 import Global from '../global-functions'
 const Imagegallery = {
-    init() {
-      this.cacheDom()
-      this.carouselOptions.dotsEach = this.imageSliderCount
-      $(this.slider).owlCarousel(this.carouselOptions)
-    },
-    cacheDom: function () {
-      this.body = Global.body
-      // this.body = document.querySelector('body')
-      this.slider = this.body.querySelector('#myImageSlider')
-      this.slides = this.body.querySelectorAll('.imagesliderContainer__allItems__oneItem')
-      this.imageSliderCount = Global.calculateDots(this.slides.length)
-    },
+  init() {
+    this.cacheDom()
+    this.carouselOptions.dotsEach = this.imageSliderCount
+    $(this.slider).owlCarousel(this.carouselOptions)
+  },
+  cacheDom: function () {
+    this.body = Global.body
+    // this.body = document.querySelector('body')
+    this.slider = this.body.querySelector('#myImageSlider')
+    this.slides = this.body.querySelectorAll('.imagesliderContainer__allItems__oneItem')
+    this.imageSliderCount = Global.calculateDots(this.slides.length)
+  },
 
   carouselOptions: {
     stagePadding: 340,
@@ -31,6 +31,16 @@ const Imagegallery = {
     stopOnHover : true,
     dotsEach: 1,
     lazyLoad: true,
+    onDrag(e) {
+      let owl = $(e.target)
+      owl.trigger('stop.owl.autoplay')
+    },
+    onDragged(e) {
+      let owl = $(e.target)
+      setTimeout(() => {
+        owl.trigger('play.owl.autoplay', [10000])
+      }, 10000);
+    },
     responsive: {
       0: {
         margin: 0,

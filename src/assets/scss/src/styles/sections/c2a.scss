@@ -39,7 +39,7 @@
       &-portrait {
         background-size: cover;
       }
-      @include breakpoint(960px down) {
+      @include breakpoint(960pxc2a down) {
         clip-path: none;
 
       }

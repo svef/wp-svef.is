@@ -23,7 +23,7 @@
 	<div class="hero grid-container-fluid" >
 				<div class="grid-x" >
 					<div class="section__image cell small-12 small-offset-0 medium-12 medium-offset-0 large-7 large-offset-0">
-						<div class="hero-image" data-interchange="[<?php echo $hero_slider_img['sizes']['medium'];  ?>, small], [<?php echo $hero_slider_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_slider_img['sizes']['large'];  ?>, large]"></div>
+						<div class="hero-image" data-interchange="[<?php echo $hero_slider_img['sizes']['medium'];  ?>, small], [<?php echo $hero_slider_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_slider_img['sizes']['large'];  ?>, large], [<?php echo $hero_slider_img['sizes']['large'];  ?>, retina]"></div>
 					</div>
 					<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">
 						<div class="section__info section__info--center section__info--small-flex-start cell small-9 small-offset-1 medium-9 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
@@ -50,7 +50,7 @@
 		<?php else : ?>
 		<div class="grid-x">
 			<div class="section__image cell small-12 small-offset-0 medium-12 medium-offset-0 large-7 large-offset-0">
-				<div class="hero-image" data-interchange="[<?php echo $hero_img['sizes']['medium'];  ?>, small], [<?php echo $hero_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_img['sizes']['large'];  ?>, large]">
+				<div class="hero-image" data-interchange="[<?php echo $hero_img['sizes']['medium'];  ?>, small], [<?php echo $hero_img['sizes']['medium_large'];  ?>, medium], [<?php echo $hero_img['sizes']['large'];  ?>, large], [<?php echo $hero_img['sizes']['large'];  ?>, retina]">
 				</div>
 			</div>
 			<div class="cell small-12 medium-12 large-5 xxxlarge-2 grid-x ">

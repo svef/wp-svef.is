@@ -24,7 +24,7 @@
 					<?php if($news_image): ?>
 
 						<div class="img small-11 medium-4">
-							<img data-interchange="[<?php echo $news_image['sizes']['medium'];  ?>, small], [<?php echo $news_image['sizes']['medium'];  ?>, medium], [<?php echo $news_image['sizes']['medium'];  ?>, large]" alt="">
+							<img data-interchange="[<?php echo $news_image['sizes']['medium'];  ?>, small], [<?php echo $news_image['sizes']['medium'];  ?>, medium], [<?php echo $news_image['sizes']['medium'];  ?>, large], [<?php echo $news_image['sizes']['large'];  ?>, retina]" alt="">
 
 						</div>
 				<?php endif;
