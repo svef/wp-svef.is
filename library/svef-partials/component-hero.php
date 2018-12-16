@@ -1,7 +1,7 @@
 <?php
-	$sectionHeight = $is_slide_show ? 'style="min-height:70vh"' : '';
 	$arrow_class = $hero_background_color['value'] == 'default' ? 'link-arrow' : 'link-arrow link-arrow--white';
 	$hero_link_has_title = isset($hero_link['title']) ? $hero_link['title'] : pll__('Lesa grein');
+
 ?>
 <section class="section section--margin-bottom section--hero" >
 	<div class="section__hero--relative grid-container" >

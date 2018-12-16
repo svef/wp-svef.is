@@ -25,6 +25,7 @@
 		pll_register_string('Cookie', 'OK takk', 'SVEF');
 
 		// form acf info repeater we can regiseter the strings like so
+		pll_register_string('Gform info header title', get_field('signup_title', 'option'), 'SVEF');
 		$gForm_info_options = get_field('signup_options', 'option');
 		foreach ($gForm_info_options as $key => $value) {
 			pll_register_string('Gform info title-'.$key, $value['step_title'], 'SVEF');
