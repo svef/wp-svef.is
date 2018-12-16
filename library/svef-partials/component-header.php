@@ -47,13 +47,11 @@
 					</ul>
 					<button class="nav__suprise nav__suprise--mobile show-for-small-only" arial-lable="Change backround contrast"></button>
 				</div>
-				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only">
-					Skráning í svef
-				</button>
+				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
 			</div>
 
 		</menu>
-		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0">Skráning í svef</button>
+		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0"><?php pll_e('Skráning í svef') ?></button>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 		<div class="menu-overlay"></div>
