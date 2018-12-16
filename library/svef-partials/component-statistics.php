@@ -103,7 +103,7 @@
                 <input tabindex="-1" type="range" id="humanSlider" min="0" max="<?php echo $member_count; ?>" value="0" style="--min: 0; --max: <?php echo $member_count; ?>;--val: 0; outline: none;"/>
                 <ul class="slider__year">
                     <li>2004</li>
-                    <li><?php date('Y'); ?></li>
+                    <li><?php echo date('Y'); ?></li>
                 </ul>
             </div>
         </div>

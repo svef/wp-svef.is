@@ -14,7 +14,8 @@
 
 				$news_image_gallery = get_field('news_image_gallery');
 				$news_image = $news_image_gallery[0];
-				$pub_date = date_i18n( 'j M Y', strtotime( get_the_date() ) );
+				$pub_date = get_the_date(__('j M Y'));
+
 				$content = get_the_content();
 				$excerpt = wp_trim_words($content, 20, '...');
 
