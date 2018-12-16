@@ -42,7 +42,7 @@
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>" aria-lable="read more about boardmember">
                         <div class="member-image">
                             <div class="member-image">
-                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
+                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large], [<?php echo $boardmember_image['sizes']['large'];  ?>, retina]" ></div>
                                 <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large]"></div>
                             </div>
                         </div>
@@ -109,8 +109,8 @@
                     <a href="/SVEF/um-svef/stjorn/?member=<?php echo $slug; ?>" aria-lable="read more about boardmember">
                         <div class="member-image">
                             <div class="member-image">
-                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large]" ></div>
-                                <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large]"  ></div>
+                                <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large], [<?php echo $boardmember_image['sizes']['large'];  ?>, retina]" ></div>
+                                <div class="member-image-gif" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_gif_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, large], [<?php echo $boardmember_gif_image['sizes']['large'];  ?>, retina]"  ></div>
                             </div>
                         </div>
                         <div class="card-section">

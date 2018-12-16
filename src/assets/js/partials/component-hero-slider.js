@@ -28,7 +28,7 @@ const HeroSlider = {
     loop: true,
     margin: 0,
     items: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1500,
     autoplayTimeout: 20000,
     navigation : false,
@@ -39,6 +39,16 @@ const HeroSlider = {
     dotsEach: 1,
     stopOnHover : true,
     lazyLoad: true,
+    onDrag(e) {
+      let owl = $(e.target)
+      owl.trigger('stop.owl.autoplay')
+    },
+    onDragged(e) {
+      let owl = $(e.target)
+      setTimeout(() => {
+        owl.trigger('play.owl.autoplay', [10000])
+      }, 10000);
+    },
     responsive: {
       0: {
           items: 1,
