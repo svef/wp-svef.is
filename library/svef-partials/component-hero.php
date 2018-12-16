@@ -1,7 +1,7 @@
 <?php
 	$sectionHeight = $is_slide_show ? 'style="min-height:70vh"' : '';
 	$arrow_class = $hero_background_color['value'] == 'default' ? 'link-arrow' : 'link-arrow link-arrow--white';
-	$hero_link_has_title = $hero_link['title'] ? $hero_link['title'] : pll__('Lesa grein');
+	$hero_link_has_title = isset($hero_link['title']) ? $hero_link['title'] : pll__('Lesa grein');
 ?>
 <section class="section section--margin-bottom section--hero" >
 	<div class="section__hero--relative grid-container" >
@@ -18,7 +18,7 @@
 				$hero_slider_title = get_sub_field('hero_slider_title');
 				$hero_slider_text = get_sub_field('hero_slider_text');
 				$hero_slider_link = get_sub_field('hero_slider_link');
-				$hero_slider_links_has_title = $hero_slider_link['title'] ? $hero_slider_link['title'] : pll__('Lesa grein');
+				$hero_slider_links_has_title = isset($hero_slider_link['title']) ? $hero_slider_link['title'] : pll__('Lesa grein');
 		?>
 	<div class="hero grid-container-fluid" >
 				<div class="grid-x" >

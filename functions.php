@@ -56,8 +56,8 @@ require_once( 'library/responsive-images.php' );
 require_once('library/svef/lib/simple_html_dom.php');
 
 /** SVEF custom functions */
-require_once('library/svef-custom-functions/custom_translations.php');
 require_once('library/svef-custom-functions/custom_functions.php');
+require_once('library/svef-custom-functions/custom_translations.php');
 require_once('library/svef-custom-functions/custom_functions-gmap.php');
 require_once('library/svef-custom-functions/custom-scraper.php');
 require_once('library/svef-custom-functions/custom_ajax.php');
