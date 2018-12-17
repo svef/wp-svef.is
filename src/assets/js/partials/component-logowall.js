@@ -3,20 +3,15 @@ import Global from '../global-functions'
 const Logowall = {
   init() {
     this.cacheDom()
-
     $(this.visibleLogo).exists(() => {
       this.randomLogoSwap()
-      this.addEvent()
     })
   },
   cacheDom() {
-    this.body = document.querySelector('body');
+    this.body = Global.body;
     this.allLogos = this.body.querySelectorAll('.client-logo')
     this.visibleLogo = this.body.querySelectorAll('.visible_logo')
     this.hiddenLogo = this.body.querySelectorAll('.hidden_logo')
-  },
-  addEvent() {
-
   },
   getRandomFromRange(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
