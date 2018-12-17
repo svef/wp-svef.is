@@ -1,9 +1,16 @@
-<?php $a_board_intro = array(
-				'title' => $board_title,
-				'paragraph' => $board_text,
-				'margin_bottom_inner' => false
-			);
-			svef_partial("library/svef-partials/component-introtext" , $a_board_intro); ?>
+
+<div class="grid-container">
+	<div class="article__header">
+		<div class="grid-x">
+			<h2 class="small-10 small-offset-1 large-5 large-offset-1"><?php the_title(); ?></h2>
+		</div>
+</div>
+<div class="grid-container section--margin-bottom">
+	<div class="grid-x grid-margin-x article__content">
+		<?php the_content(); ?>
+	</div>
+</div>
+
 
 <section class="section section--margin-bottom section--boardmembersMax">
 
