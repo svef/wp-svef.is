@@ -9,11 +9,9 @@ const CookieConsent = {
     this.body = Global.body
     this.btnOk = this.body.querySelector('#btnCookieConsent')
     this.sectionCookie = this.body.querySelector('.section__cookie')
-
   },
   addEvents(){
     this.btnOk.addEventListener('click', this.handleBtnOkClick.bind(this))
-
   },
   handleBtnOkClick(e) {
     this.sectionCookie.classList.remove('section__cookie--active')
@@ -25,7 +23,5 @@ const CookieConsent = {
       this.sectionCookie.classList.add('section__cookie--active')
     }
   }
-
-
 }
 module.exports = CookieConsent

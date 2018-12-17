@@ -7,6 +7,7 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php
+
 			svef_partial("library/svef-partials/component-boardmembers-page");
 		?>
 
