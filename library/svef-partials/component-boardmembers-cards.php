@@ -106,7 +106,7 @@
 			?>
             <div class="cell medium-6 large-4">
                 <div class="card section--animate-flip">
-                    <a href="<?php echo get_permalink( get_page_by_title( 'stjorn' ) ) . '?member=' . $slug; ?>" aria-lable="read more about boardmember">
+                    <a href="<?php echo get_permalink( get_page_by_title( 'stjorn' ) ) . 'git ?member=' . $slug; ?>" aria-lable="read more about boardmember">
                         <div class="member-image">
                             <div class="member-image">
                                 <div class="member-image-jpg" data-interchange="[<?php echo $boardmember_image['sizes']['medium_large'];  ?>, small], [<?php echo $boardmember_image['sizes']['medium_large'];  ?>, medium], [<?php echo $boardmember_image['sizes']['large'];  ?>, large], [<?php echo $boardmember_image['sizes']['large'];  ?>, retina]" ></div>
