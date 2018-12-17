@@ -26,7 +26,7 @@
 		<!-- <div class="cell small-12 large-2"></div> -->
 		<div class="section__bg-height--normal align-center cell small-12 medium-12 large-12">
 			<div class="section__c2a-inner grid-x grid-margin-x">
-				<div class="section__image section__image--c2a c2a-image<?php echo $mask; echo $img_is_landscape; ?> cell small-12 medium-12 large-7" data-interchange="[<?php echo $c2a_image['sizes']['medium'];  ?>, small], [<?php echo $c2a_image['sizes']['medium_large'];  ?>, medium], [<?php echo $c2a_image['sizes']['large'];  ?>, large]" >
+				<div class="section__image section__image--c2a c2a-image<?php echo $mask; echo $img_is_landscape; ?> cell small-12 medium-12 large-7" data-interchange="[<?php echo $c2a_image['sizes']['medium'];  ?>, small], [<?php echo $c2a_image['sizes']['medium_large'];  ?>, medium], [<?php echo $c2a_image['sizes']['large'];  ?>, large], [<?php echo $c2a_image['sizes']['large'];  ?>, retina]" >
 
 				<?php svef_partial('library/svef/icons/maskTwoSqrs.svg'); ?>
 				</div>
