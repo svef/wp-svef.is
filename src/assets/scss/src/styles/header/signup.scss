@@ -68,6 +68,14 @@
           -webkit-overflow-scrolling: touch;
           padding: 20px 40px;
       }
+      &::-webkit-scrollbar{
+        width: 0px;
+      }
+
+      &::-webkit-scrollbar-track-piece{
+          background-color: transparent;
+          -webkit-border-radius: 6px;
+      }
     }
 
     &::-webkit-scrollbar{
