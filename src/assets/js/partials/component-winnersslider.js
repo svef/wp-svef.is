@@ -60,7 +60,7 @@ const WinnersSlider = {
       newSlider += winner.winner_screenshot.sizes ? `
         <div class="winners-slide">
           ${winnerHasUrlBegin}
-          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.medium});">${winnerHasUrlSvg}</div>
+          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.large});">${winnerHasUrlSvg}</div>
           <div class="section__text-color--white winners-slide__category">${winner.winner_category}</div>
           <h3 class="section__text-color--white winners-slide__heading">${winner.winner_name}</h3>
           <div class="section__text-color--white text--small winners-slide__text">

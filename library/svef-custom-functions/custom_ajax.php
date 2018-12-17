@@ -87,17 +87,18 @@ function get_next_page(){
 	for ($i=0; $i < count($a_wp_posts); $i++) {
 		$wp_post = $a_wp_posts[$i];
 		$wp_post->permalink = get_permalink($wp_post->ID);
-		$wp_post->custom_excerpt = wp_trim_words( $wp_post->post_content, 55, '&hellip;' );
 		$acf_obj = get_fields($wp_post->ID);
 		if($s_post_type == 'events') {
 			$event_is_over = strtotime($acf_obj['event_start_date']) < time() ? true : false;
 			$event_is_over_class = $event_is_over ? ' section__event--passed ' : '';
 			$local_date = date_i18n("d M Y", strtotime($acf_obj['event_start_date']));
+			$wp_post->custom_excerpt = wp_trim_words( $wp_post->post_content, 55, '...' );
 			$wp_post->event_is_over = $event_is_over;
 			$wp_post->event_is_over_class = $event_is_over_class;
 			$wp_post->local_date = $local_date;
 		}
 		if($s_post_type == 'post') {
+			$wp_post->custom_excerpt = wp_trim_words( $wp_post->post_content, 20, '...' );
 			$pub_date = date_i18n( 'j M Y', strtotime( $wp_post->post_date ) );
 			$wp_post->localised_date = $pub_date;
 		}
