@@ -34,12 +34,12 @@
       background-attachment: scroll;
       background-attachment: fixed;
       &-landscape{
-        background-size: contain;
+        background-size: 100%;
       }
       &-portrait {
         background-size: cover;
       }
-      @include breakpoint(960pxc2a down) {
+      @include breakpoint(960px down) {
         clip-path: none;
 
       }

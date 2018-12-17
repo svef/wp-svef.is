@@ -399,3 +399,12 @@
 .gform_wrapper ul.gform_fields {
   position: relative;
 }
+
+
+.body--contrast {
+  .side-signup {
+    .link-arrow {
+      fill: $black;
+    }
+  }
+}
