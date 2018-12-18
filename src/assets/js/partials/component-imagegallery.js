@@ -6,6 +6,12 @@ const Imagegallery = {
     this.cacheDom()
     this.carouselOptions.dotsEach = this.imageSliderCount
     $(this.slider).owlCarousel(this.carouselOptions)
+    this.cacheAfterSliderSet()
+    Global.addNegativeTabIndex(this.owlDots)
+    Global.addAriaLabel(this.owlDots, 'aria-hidden', 'true')
+  },
+  cacheAfterSliderSet() {
+    this.owlDots = this.body.querySelectorAll('.owl-dot')
   },
   cacheDom: function () {
     this.body = Global.body

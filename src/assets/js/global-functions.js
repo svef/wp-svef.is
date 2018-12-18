@@ -84,9 +84,9 @@ const GlobalFunctions = {
       elementClass[i].setAttribute('tabindex', '-1');
     }
   },
-  addAriaLabel(elementClass, labelMessage) {
+  addAriaLabel(elementClass, labelType, labelMessage) {
     for (let i = 0; i < elementClass.length; i++) {
-      elementClass[i].setAttribute('aria-label', labelMessage)
+      elementClass[i].setAttribute(labelType, labelMessage)
     }
   }
 }

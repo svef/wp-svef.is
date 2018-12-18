@@ -9,6 +9,7 @@ const HeroSlider = {
     this.setOwlCarousel(this.heroSlider, this.sliderOptions)
     this.cacheAfterSliderSet()
     Global.addNegativeTabIndex(this.owlDots)
+    Global.addAriaLabel(this.owlDots, 'aria-hidden', 'true')
   },
   cacheAfterSliderSet() {
     this.owlDots = this.body.querySelectorAll('.owl-dot')
