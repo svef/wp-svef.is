@@ -144,12 +144,7 @@
                     </div>
                 </div>
             </div>
-
             <?php endwhile; endif;  wp_reset_query(); ?>
-
-
         </div>
     </div>
-
-
 </section>
