@@ -44,7 +44,7 @@ p {
   font-family: $font-overpass;
   font-weight: 300;
   line-height: 24px;
-  font-size: 15px;
+  font-size: 16px;
   color: $black;
 }
 
@@ -178,7 +178,7 @@ a {
   &--menu {
     @extend a;
     line-height: 23px;
-    font-size: 12px;
+    font-size: 14px;
   }
   &--dull {
     opacity: 0.8;
