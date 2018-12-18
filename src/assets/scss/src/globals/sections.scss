@@ -34,9 +34,10 @@
       background: $darkBlue;
     }
     &--right {
-      @include breakpoint(1800px) {
+      @include breakpoint(1800px) { /* 1800px up */
         right: calc( ((90rem - 75rem) / -2) - 0.9357rem );
       }
+
       right: calc( ((100vw - 75rem) / -2) - 0.9357rem );
 
       @include breakpoint(large down) {
@@ -232,7 +233,7 @@
       float:right;
       right: 0;
       position: absolute;
-      width: 60vw;
+      width: 60rem;
       height: 100%;
       max-height: 74vh;
       background-size: cover;

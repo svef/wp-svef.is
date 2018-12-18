@@ -6,8 +6,8 @@ const Header = {
     this.addEvents()
     this.navBarScrollBehaviour(this.header)
     this.checkForBrowserType()
-    Global.addAriaLabel(this.languageLinkIs, 'language selector for Iceladic')
-    Global.addAriaLabel(this.languageLinkEn, 'language selector for English')
+    Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'language selector for Iceladic')
+    Global.addAriaLabel(this.languageLinkEn, 'aria-label', 'language selector for English')
   },
   cacheDom: function () {
     this.body = Global.body;
