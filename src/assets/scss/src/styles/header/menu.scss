@@ -29,8 +29,16 @@
 }    
 .side-menu__list {
   overflow: scroll;
+  scroll-behavior: smooth;
   @include breakpoint(small down) {
     margin-bottom: 0;
+  }
+  &::-webkit-scrollbar{
+    width: 0px;
+  }
+  &::-webkit-scrollbar-track-piece{
+      background-color: transparent;
+      -webkit-border-radius: 6px;
   }
   li {
     animation: fadeInRight 1.5s ease forwards;

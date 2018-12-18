@@ -4,13 +4,14 @@
 .section--hero {
   position: relative;
   min-height: 740px;
-  // max-width: 90rem;
-  // margin: 0 auto;
-  // min-height: 80vh;
-  // max-height: 80vh;
   @include breakpoint(small down) {
     min-height: 540px;
     max-height: 640px;
+  }
+  @include breakpoint(1800px) {
+    max-width: 90rem;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 
