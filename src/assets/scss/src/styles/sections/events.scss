@@ -1,5 +1,11 @@
 .section--events {
   padding: 200px 0px;
+  .section__title {
+    h2 {
+      color: $orange !important;
+    }
+  }
+  
   @include breakpoint(medium down) {
     padding: 60px 0px;
   }
