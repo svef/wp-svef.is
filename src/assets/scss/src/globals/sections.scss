@@ -236,7 +236,9 @@
       background-repeat: no-repeat;
       background-position: center;
       z-index: 0;
-
+      @include breakpoint(1800px) {
+        width: 100%;
+      }
       @include breakpoint(medium down) {
         width: 100vw;
         float: left;
