@@ -10,7 +10,7 @@
 
 	<div class="grid-container">
 	<div class="supportors-logos grid-x grid-padding-x" >
-		<div class="section__bg-fix section__bg-fix--right section__bg-fix--default" aria-hidden="true"></div>
+		<div class="section__bg-fix section__bg-fix--right-logowall section__bg-fix--default" aria-hidden="true"></div>
 		<div class="logos-all grid-x cell small-12 small-offset-0 medium-12 medium-offset-0 large-10 large-offset-2 ">
 			<?php
 				$a_supporter_logos = get_field('supporter_logo', 'option');

@@ -22,6 +22,8 @@ window.$ = $;
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 import './lib/foundation-explicit-pieces'
+
+// We chache the body elemnt here to make that object awailable to our system
 Global.cacheBody()
 
 // A function that checks if a element exists, Comes in handy when we dont want to load scripts that run on other pages than are currently loaded

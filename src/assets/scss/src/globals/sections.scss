@@ -46,6 +46,9 @@
         right: -0.625rem;
       }
     }
+    &--right-logowall {
+      right: calc( ((100vw - 75rem) / -2));
+    }
   }
   &--margin-bottom {
     margin-bottom: 140px !important;

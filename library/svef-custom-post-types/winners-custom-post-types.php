@@ -7,7 +7,7 @@
 				'labels' => array(
 					'name' => _x('winners', 'Post Type General Name', 'foundationpress'),
 					'singular_name' => _x('Winners', 'Post Type Singular Name', 'foundationpress'),
-					'menu_name' => __('Winners', 'foundationpress'),
+					'menu_name' => __('Winners slider', 'foundationpress'),
 					'name_admin_bar' => __('Winners posts', 'foundationpress'),
 					'archives' => __('Winners Archives', 'foundationpress'),
 					'attributes' => __('winners Attributes', 'foundationpress'),

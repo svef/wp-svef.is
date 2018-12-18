@@ -1,31 +1,24 @@
 <?php
 add_action('wp_ajax_nopriv_ajax_request', 'ajax_handle_request');
 add_action('wp_ajax_ajax_request', 'ajax_handle_request');
-
 function ajax_handle_request(){
-
     $postID = $_POST['id'];
     if (isset($_POST['id'])){
         $post_id = $_POST['id'];
     }else{
         $post_id = "";
     }
-
     global $post;
     $post = get_post($postID);
 		$acf = get_fields($postID);
-
     $response = array(
         'sucess' => true,
         'post' => $post,
 				'id' => $postID ,
 				'acf' => $acf
     );
-
     // generate the response
     print json_encode($response);
-
-    // IMPORTANT: don't forget to "exit"
     exit;
 }
 
@@ -35,31 +28,22 @@ add_action('wp_ajax_ajax_scrape_rss', 'ajax_scrape_rss');
 
 function ajax_scrape_rss(){
 	try {
-		// we call our function defined in library/svef/custom-scraper.php
+		// we call our function defined in library/svef-custom-functions/custom-scraper.php
 		$tvinna = parseRssToJson ('https://tvinna.is/feed');
 		print $tvinna;
-		// IMPORTANT: don't forget to "exit"
 		exit;
 	} catch (Exception $err ) {
 		print json_encode($err, true);
 	}
 }
 
-
-
-
-
-
 // We register this function to be accessible to the wp-ajax handler that lives inside the bowels of wordpress
 add_action('wp_ajax_nopriv_get_next_page', 'get_next_page'); // make shure you dont have to be logged in to the backend to access this.
 add_action('wp_ajax_get_next_page', 'get_next_page');
-
 function get_next_page(){
 	$page_number = $_POST['curr_page'];
 	$s_post_type = $_POST['post_type'];
 	global $post;
-
-
 	$args = array(
 		'events' => array (
 			'post_type'       => $s_post_type,
@@ -68,7 +52,6 @@ function get_next_page(){
 			'meta_key'		=> 'event_start_date',
 			'orderby'			=> 'meta_value',
 			'paged' 					=> $page_number + 1,
-
 		),
 		'post' =>	array(
 				'post_type'       => $s_post_type,
@@ -83,7 +66,6 @@ function get_next_page(){
 	$a_wp_posts = $the_query->posts;
 	$wp_post = '';
 	$acf_obj = '';
-
 	for ($i=0; $i < count($a_wp_posts); $i++) {
 		$wp_post = $a_wp_posts[$i];
 		$wp_post->permalink = get_permalink($wp_post->ID);
@@ -108,27 +90,21 @@ function get_next_page(){
 	$a_combined_post_data['new_page_number'] = $page_number + 1;
 	$a_combined_post_data['max_num_pages'] = $the_query->max_num_pages;
 	$j_posts = json_encode($a_combined_post_data, true);
-
 	echo $j_posts;
-	// IMPORTANT: don't forget to "exit"
 	exit;
 }
 
 
 add_action('wp_ajax_nopriv_set_darkmode', 'set_darkmode'); // make shure you dont have to be logged in to the backend to access this.
 add_action('wp_ajax_set_darkmode', 'set_darkmode');
-
 function set_darkmode(){
 	try {
 		$_SESSION['isDark'] = $_POST['isDark'];
 		echo  $_POST['isDark'] == 'true' ? '{"success": "session is dark"}' : '{"success": "session is light"}' ;
 		exit;
 	} catch (Exception $err ) {
-		print json_encode($err, true);
+		echo json_encode($err, true);
 	}
 }
-
-
-
 
 ?>
