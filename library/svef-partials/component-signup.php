@@ -1,6 +1,6 @@
 <?php $signup_title = get_field('signup_title', 'option'); ?>
 <section class="side-signup">
-<button id="closeSignupMobile" class="closeSignupMobile show-for-small-only">
+<button id="closeSignupMobile" aria-lable="close signup" class="closeSignupMobile show-for-small-only">
     <span class="top"></span>
     <span class="bottom"></span>
 </button>

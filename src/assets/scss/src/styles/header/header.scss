@@ -72,7 +72,7 @@
     min-width: 40px;
     text-transform: uppercase;
     a {
-      opacity: 0.4;
+      opacity: 0.6;
       font-weight: 500;
     }
     & .current-lang {
@@ -198,7 +198,7 @@
     }
     &__lang {
       a {
-        opacity: 0.6;
+        opacity: 0.8;
       }
       & .current-lang a {
         opacity: 1;
