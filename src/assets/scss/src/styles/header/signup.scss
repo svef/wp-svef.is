@@ -170,7 +170,7 @@
     z-index: 1;
     transition: opacity 300ms ease;
     &--active {
-        opacity: 0.4;
+        opacity: 0.6;
         display: block;
       }
 }
@@ -314,7 +314,7 @@
     font-size: 13px !important;
     font-weight: 400 !important;
     .gfield_required {
-      color: $black-40;
+      color: rgba(0, 0, 0, 0.5);
       @extend .text--small;
       text-transform: capitalize;
       font-weight: 400;
