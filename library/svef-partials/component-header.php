@@ -22,7 +22,7 @@
 					?>
 				</ul>
 				<button class="nav__suprise show-for-medium" arial-lable="Change backround contrast"></button>
-				<button id="btnMenu" class="nav__menu-button link-text--menu" aria-lable="menu">
+				<button id="btnMenu" class="nav__menu-button link-text--menu"  aria-label="menu">
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
 						<span class="nav__icon__line"></span>
