@@ -55,10 +55,7 @@
     margin: 1% 0 0 0;
     @include breakpoint(1800px) {
       width: calc( (90rem / 6) / 2);
-      // width: 8.33%;
-      // margin-left: calc((100vw / 12) * 3);
       margin: 3% 0 0 calc((90rem / 12) * 0.5);
-
     }
     @include breakpoint(retina and large) {
       margin: 4% 0 0 calc((90rem / 12) * 0.5);
@@ -97,10 +94,8 @@
         top: 0;
         @include breakpoint(medium down) {
           background: $white;
-
         }
       }
-
     }
     .owl-dot.active {
       &:before {
