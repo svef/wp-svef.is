@@ -21,7 +21,7 @@
 						}
 					?>
 				</ul>
-				<button class="nav__suprise show-for-medium" arial-lable="Change backround contrast"></button>
+				<button class="nav__suprise show-for-medium" aria-lable="Change backround contrast"></button>
 				<button id="btnMenu" class="nav__menu-button link-text--menu"  aria-label="menu">
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
@@ -49,14 +49,13 @@
 				</div>
 				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
 			</div>
-
 		</menu>
 		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0"><?php pll_e('Skráning í svef') ?></button>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 		<div class="menu-overlay"></div>
 		<div class="window-loader">
-			<div role="progressbar", aria-busy="true", aria-label="Loading">
+			<div role="progressbar" aria-busy="true" aria-label="Loading">
 				<span role="presentation"></span>
 				<span role="presentation"></span>
 				<span role="presentation"></span>

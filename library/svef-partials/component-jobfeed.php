@@ -30,7 +30,7 @@
 				?>
 						<div class="section--jobfeed__feed-card cell small-12 small-offset-0 medium-6 medium-offset-0 large-5 large-offset-<?php echo $offset; ?>">
 							<div class="card--spinner loader-container">
-								<div role="progressbar", aria-busy="true", aria-label="Loading">
+								<div role="progressbar" aria-busy="true" aria-label="Loading">
 									<span role="presentation"></span>
 									<span role="presentation"></span>
 									<span role="presentation"></span>
