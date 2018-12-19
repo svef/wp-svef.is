@@ -3,7 +3,8 @@
 	<div class="article__header">
 		<div class="grid-x">
 			<h2 class="small-10 small-offset-1 large-5 large-offset-1"><?php the_title(); ?></h2>
-		</div>
+        </div>
+    </div>
 </div>
 <div class="grid-container section--margin-bottom">
 	<div class="grid-x grid-margin-x article__content">
@@ -66,10 +67,9 @@
 
             <div id="<?php echo $slug;?>" class="boardmembersMax-each cell small-12 small-offset-0 medium-11 medium-offset-1 large-12 large-offset-0">
                 <div class="member_inner grid-x grid-padding-x">
-									<div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-11 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >
-											<div class="section__bg-fix section__bg-fix--default section__bg-fix--color section__bg-fix--right" aria-hidden="true"></div>
-
-
+                    <div class="section__bg-color--default section__bg-color--absolute section__bg-height--normal small-12 small-offset-0 medium-11 medium-offset-1 large-10 large-offset-2 xlarge-10 xlarge-offset-2" >
+                        <div class="section__bg-fix section__bg-fix--default section__bg-fix--color section__bg-fix--right" aria-hidden="true">
+                        </div>
                     </div>
                     <div class="cell medium-6 medium-offset-0 large-4 large-offset-<?php echo $grid_offset1; ?> medium-order-<?php echo $boardmember_order1; ?> large-order-<?php echo $boardmember_order1; ?>">
                         <div class="member-image">
