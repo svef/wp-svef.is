@@ -31,7 +31,7 @@
 				</button>
 			</div>
 		</nav>
-		<menu class="side-menu">
+		<div class="side-menu">
 			<div class="side-menu__inner">
 				<?php foundationpress_top_bar_r(); ?>
 				<div class="nav__items nav__items--mobile">
@@ -45,11 +45,11 @@
 							}
 						?>
 					</ul>
-					<button class="nav__suprise nav__suprise--mobile show-for-small-only" arial-label="Change backround contrast"></button>
+					<button class="nav__suprise nav__suprise--mobile show-for-small-only" aria-label="Change backround contrast"></button>
 				</div>
 				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
 			</div>
-		</menu>
+		</div>
 		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0"><?php pll_e('Skráning í svef') ?></button>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
