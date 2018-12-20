@@ -6,7 +6,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class('news-page article'); ?>>
-		<div class="grid-container">
+		<div>
 			<div class="article__header">
 				<div class="grid-x section--margin-bottom-inside">
 

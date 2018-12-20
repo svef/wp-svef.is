@@ -61,8 +61,10 @@
 				<div class="section__info section__info--center cell small-9 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 xlarge-10 xlarge-offset-1">
 					<div class="hide" aria-hidden="true">
 					</div>
-					<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_title; ?></h2>
-					<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_text; ?></p>
+					<div class="section__info--text">
+						<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_title; ?></h2>
+						<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_text; ?></p>
+					</div>
 				</div>
 				<?php  if($hero_link) : ?>
 				<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">

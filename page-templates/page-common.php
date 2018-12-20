@@ -13,7 +13,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="grid-container section--margin-bottom">
-			<div class="grid-x grid-margin-x article__content">
+			<div class="grid-x article__content">
 				<?php the_content(); ?>
 			</div>
 		</div>

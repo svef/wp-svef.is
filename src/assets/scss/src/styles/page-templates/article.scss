@@ -2,6 +2,10 @@
   min-height: 90vh;
   &__header {
     margin-top: 140px;
+    h2, h3, p {
+      @include xy-cell(10);
+      @include xy-cell-offset(1);
+    }
   }
   &__content {
     h2, h3 {

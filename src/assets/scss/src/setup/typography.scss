@@ -18,8 +18,8 @@ h2 {
     font-size: 28px;
   }
   @include breakpoint(small down) {
-    line-height: 32px;
-    font-size: 22px;
+    line-height: 34px;
+    font-size: 24px;
   }
 }
 
@@ -30,7 +30,12 @@ h3 {
   font-size: 24px;
   color: $black;
   @include breakpoint(medium down) {
+    line-height: 30px;
     font-size: 18px;
+  }
+  @include breakpoint(small down) {
+    line-height: 26px;
+    font-size: 16px;
   }
 }
 
@@ -46,6 +51,10 @@ p {
   line-height: 26px;
   font-size: 16px;
   color: $black;
+  @include breakpoint(small down) {
+    line-height: 24px;
+    font-size: 14px;
+  }
 }
 
 ul {
@@ -89,6 +98,10 @@ ul {
     @include breakpoint(medium down) {
       font-size: 24px;
       line-height: 30px;
+    }
+    @include breakpoint(small down) {
+      line-height: 30px;
+      font-size: 20px;
     }
   }
   &--cardsmall {

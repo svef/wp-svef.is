@@ -15,7 +15,7 @@ get_header(); ?>
 		<h2 class="grid-x large-10 large-offset-1"><?php the_title(); ?></h2>
 
 	</div>
-	<div class="grid-x grid-margin-x article__content">
+	<div class="grid-x article__content">
 		<?php the_content(); ?>
 	</div>
 </div>

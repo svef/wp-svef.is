@@ -9,6 +9,9 @@
   @include breakpoint(medium down) {
     padding: 60px 0px;
   }
+  @include breakpoint(small down) {
+    padding: 40px 0px;
+  }
   &__page {
     position: relative;
     svg {
@@ -20,13 +23,16 @@
 }
 .section__event {
   padding: 60px 0;
+  @include breakpoint(small down) {
+    padding: 40px 0px;
+  }
   &:first-child {
     padding: 100px 0  60px;
     @include breakpoint(medium down) {
       padding: 20px 0  10px;
     }
     @include breakpoint(small down) {
-      padding: 60px 0;
+      padding: 40px 0;
     }
   }
   &--last {
