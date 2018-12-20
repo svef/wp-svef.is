@@ -27,10 +27,10 @@ get_header(); ?>
 	?>
 	<div class="grid-container">
 		<div class="grid-x">
-			<h2 class="large-5 large-offset-1"><?php the_title(); ?></h2>
+			<h2 class="small-10 small-offset-1 large-5 large-offset-1"><?php the_title(); ?></h2>
 		</div>
 	</div>
-	<div class="grid-container section--margin-bottom">
+	<div class="section--margin-bottom">
 		<div class="grid-x article__content">
 			<?php the_content(); ?>
 		</div>

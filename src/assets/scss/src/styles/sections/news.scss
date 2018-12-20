@@ -4,7 +4,9 @@
 .section__news {
   &--item {
     margin-bottom: 105px;
-
+    @include breakpoint(small down) {
+    margin-bottom: 60px;
+    }
   & > .img {
     display: flex;
     align-items: center;

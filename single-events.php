@@ -24,7 +24,7 @@ get_header(); ?>
 				<p class="grid-x large-4 large-offset-2"><?php echo $local_date; ?></p>
 				<h3 class="grid-x large-4 large-offset-2"><?php echo $s_where; ?></h3>
 			</div>
-			<div class="grid-x grid-margin-x article__content">
+			<div class="grid-x article__content">
 				<?php the_content(); ?>
 
 			</div>
