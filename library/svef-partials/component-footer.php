@@ -21,10 +21,10 @@
                     <div>
                         <ul>
                             <li>
-                                <a href="tel:+354 7674400" target="_blank"><?php echo $footer_svef_phonenumber; ?></a>
+                                <a href="tel:<?php echo $footer_svef_phonenumber; ?>" target="_blank" aria-lable="svefs phonenumber"><?php echo $footer_svef_phonenumber; ?></a>
                             </li>
                             <li>
-                                <a href="mailto:svef@svef.is" target="_blank"><?php echo $footer_svef_email; ?></a>
+                                <a href="mailto:<?php echo $footer_svef_email; ?>" target="_blank" aria-lable="svefs email"><?php echo $footer_svef_email; ?></a>
                             </li>
                             <li class="socialmedia">
                                 <a href="<?php echo $footer_social_facebook; ?>"  aria-label="svef on facebook" target="_blank">
