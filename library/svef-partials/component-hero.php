@@ -1,6 +1,6 @@
 <?php
 	$arrow_class = $hero_background_color['value'] == 'default' ? 'link-arrow' : 'link-arrow link-arrow--white';
-	$hero_link_has_title = isset($hero_link['title']) ? $hero_link['title'] : pll__('Lesa grein');
+	$hero_link_has_title = isset($hero_link['title']) && !empty($hero_link['title']) ? $hero_link['title'] : pll__('Lesa grein');
 
 ?>
 <section class="section section--margin-bottom section--hero" >
@@ -20,7 +20,9 @@
 				$hero_slider_title = get_sub_field('hero_slider_title');
 				$hero_slider_text = get_sub_field('hero_slider_text');
 				$hero_slider_link = get_sub_field('hero_slider_link');
-				$hero_slider_links_has_title = isset($hero_slider_link['title']) ? $hero_slider_link['title'] : pll__('Lesa grein');
+
+				$hero_slider_links_has_title = isset($hero_slider_link['title']) && !empty($hero_slider_link['title']) ? $hero_slider_link['title'] : pll__('Lesa grein');
+				// var_dump($hero_slider_links_has_title);
 		?>
 			<div class="hero grid-container-fluid" >
 				<div class="grid-x" >
@@ -34,9 +36,10 @@
 								<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_slider_title; ?></h2>
 								<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_slider_text; ?></p>
 							</div>
-							<?php if($hero_slider_link) : ?>
+							<?php if(isset($hero_slider_link)) : ?>
 								<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
-									<a href="<?php echo $hero_slider_link['url'] ?>" aria-label="<?php echo $hero_slider_title; ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_slider_links_has_title; ?></a>
+									<a href="<?php echo $hero_slider_link['url'] ?>" aria-label="<?php echo $hero_slider_title; ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>">
+									<?php echo $hero_slider_links_has_title; ?></a>
 									<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
 								</div>
 							<?php else: ?>
