@@ -70,6 +70,7 @@
         margin: 0 auto;
       }
       @include breakpoint(small down) {
+        background-attachment: scroll;
         height: 260px;
         top: 0;
 

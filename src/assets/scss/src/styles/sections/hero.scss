@@ -4,6 +4,9 @@
 .section--hero {
   position: relative;
   min-height: 740px;
+  @include breakpoint(medium down) {
+    min-height: 840px;
+  }
   @include breakpoint(small down) {
     min-height: 540px;
     max-height: 640px;
@@ -14,7 +17,6 @@
     overflow: hidden;
   }
 }
-
 
 .section__info {
   position: relative;
@@ -46,6 +48,17 @@
       margin: 0 auto;
     }
     max-height: 70vh;
+    @include breakpoint(large down) {
+      // min-height: 640px;
+    }
+    @include breakpoint(medium down) {
+      // min-height: 70px;
+      max-height: 840px;
+    }
+    @include breakpoint(small down) {
+      // min-height: 540px;
+      max-height: 640px;
+    }
   }
   .owl-dots {
     position: relative;
