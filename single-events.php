@@ -36,7 +36,6 @@ get_header(); ?>
 				'image_gallery' => get_field('image_gallery')
 			);
 			svef_partial("library/svef-partials/component-imagegallery", $a_image_slider);
-			svef_partial("library/svef-partials/component-map", ['location' => $map_obj, 'show_map' => $show_map]);
 			?>
 
 
