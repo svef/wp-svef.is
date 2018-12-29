@@ -3,9 +3,9 @@
 	// NOTE!!! margin_bottom and margin_bottom_inside can never have the same value
 	$margin_bottom_class = isset($margin_bottom_inside) ? ' section--margin-bottom-inside ' : ' section--margin-bottom ';
 	// this will be nessisary when we do the front page ticker, for now switch like this
-	$set_title = $title ? $title : 'missing title';
+	$set_title = $title ? $title : '';
 	// setup a way to change content dynamically (like above) but we have a fallback text
-	$set_paragraph = $paragraph ? $paragraph : 'missing text';
+	$set_paragraph = $paragraph ? $paragraph : '';
 
 
 
