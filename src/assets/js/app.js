@@ -1,6 +1,6 @@
 import $ from 'jquery'
-import Global from './global-functions'
 import whatInput from 'what-input'
+import Global from './global-functions'
 import Header from './partials/component-header'
 import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'

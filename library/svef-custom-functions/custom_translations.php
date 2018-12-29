@@ -9,6 +9,7 @@
 
 		// c2a section
 		pll_register_string('c2a', 'Nánar', 'SVEF');
+		pll_register_string('c2a', 'Lesa meira', 'SVEF');
 
 		// Header section
 		pll_register_string('Header', 'valm', 'SVEF');
