@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Global from '../global-functions'
-import Translate from './component-translate'
+import Translate from '../dictionary'
 
 const Signup = {
   init() {
@@ -34,7 +34,7 @@ const Signup = {
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
       this.body.style.overflow = 'auto'
       btnOpenSignup.blur()
-      btnOpenSignup.innerHTML = 'Skráning í SVEF'
+      btnOpenSignup.innerHTML = Translate.languageSwitch('Skráning í SVEF', Translate.currentLanguage())
     } else {
       this.sideMenu.classList.remove('side-menu--active')
       this.btnMenu.classList.remove('nav__menu-button--clicked')
@@ -42,7 +42,7 @@ const Signup = {
       btnOpenSignup.classList.add('btnSignup--clicked')
       this.sideSignup.classList.add('side-signup--active')
       this.sideSignupOverlay.classList.add('side-signup-overlay--active')
-      btnOpenSignup.innerHTML = 'Loka'
+      btnOpenSignup.innerHTML = Translate.languageSwitch('Loka', Translate.currentLanguage())
       this.body.style.overflow = 'hidden'
     }
   },
@@ -74,7 +74,7 @@ const Signup = {
       this.sideSignupOverlay.classList.remove('side-signup-overlay--active')
       this.body.style.overflow = 'auto'
       // this.btnOpenSignup.blur()
-      this.btnOpenSignup.innerHTML = 'Skráning í SVEF'
+      this.btnOpenSignup.innerHTML = Translate.languageSwitch('Skráning í SVEF', Translate.currentLanguage())
     }
   },
   escapeSignupForm(e) {
@@ -85,7 +85,7 @@ const Signup = {
       this.body.style.overflow = 'auto'
       // this.btnOpenSignup.blur()
       this.body.focus()
-      this.btnOpenSignup.innerHTML = 'Skráning í SVEF'
+      this.btnOpenSignup.innerHTML = Translate.languageSwitch('Skráning í SVEF', Translate.currentLanguage())
     }
   },
   fixFormRequired() {
