@@ -6,7 +6,7 @@
 			array(
 				'labels' => array(
 					'name' => _x('Board members', 'Post Type General Name', 'foundationpress'),
-					'singular_name' => _x('Board members', 'Post Type Singular Name', 'foundationpress'),
+					'singular_name' => _x('Board member', 'Post Type Singular Name', 'foundationpress'),
 					'menu_name' => __('Board members', 'foundationpress'),
 					'name_admin_bar' => __('Board member posts', 'foundationpress'),
 					'archives' => __('Board member Archives', 'foundationpress'),
