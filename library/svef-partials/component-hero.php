@@ -38,7 +38,7 @@
 								<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_slider_text; ?></p>
 							</div>
 
-							<?php if(isset($hero_slider_link)) : ?>
+							<?php if(isset($hero_slider_link) && !empty($hero_slider_link)) : ?>
 								<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
 									<a href="<?php echo $hero_slider_link['url'] ?>" aria-label="<?php echo $hero_slider_title; ?>" target="<?php echo $hero_slider_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>">
 									<?php echo $hero_slider_links_has_title; ?></a>
@@ -68,7 +68,7 @@
 					<div class="section__info--text">
 						<h2 class="section__title text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_title; ?></h2>
 						<p class="section__paragraphTall--off text-color--<?php echo $hero_background_color['value'];?> small-12 small-offset-0 medium-10 medium-offset-1 large-offset-0"><?php echo $hero_text; ?></p>
-						<?php  if($hero_link) : ?>
+						<?php  if(isset($hero_link) && !empty($hero_link)) : ?>
 							<div class="section__link section__link--hero cell small-10 small-offset-0 medium-5 medium-offset-1 large-5 large-offset-0">
 								<a href="<?php echo $hero_link['url'] ?>" aria-label="<?php echo $hero_title; ?>" target="<?php echo $hero_link['target'] ?>" class="text-color--<?php echo $hero_background_color['value'];?>"><?php echo $hero_link_has_title; ?></a>
 								<?php svef_partial('library/svef/icons/linkarrow.svg', ['link_arrow' => $arrow_class]); ?>
