@@ -21,11 +21,24 @@ const Loader = {
     this.heroBanner = this.body.querySelector('.section--hero')
     this.heroBackCol1 = this.body.querySelector('.back-col-1')
     this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
+    this.anchors = this.body.querySelectorAll('a, .menu-item, .section__link')
+    // this.menuItems = this.body.querySelector('.menu-item')
+    // this.sectionLink = this.body.querySelector('.section__link')
   },
   addEvents(){
     document.addEventListener("DOMContentLoaded", this.loadReadyHandler.bind(this))
+    for (let i = 0; i < this.anchors.length; i++) {
+      this.anchors[i].addEventListener('click', this.handleAclick.bind(this))
+    }
+    // this.menuItems.addEventListener('click', this.handleAclick.bind(this))
+    // this.sectionLink.addEventListener('click', this.handleAclick.bind(this))
   },
-
+  handleAclick(e) {
+    // e.preventDefault()
+    console.log('hhhhaaaa')
+    this.loaderDiv.style.display = 'flex'
+    this.loaderDiv.style.opacity = 1
+  },
   stopScroll() {
     this.body.style.overflow = 'hidden'
 
