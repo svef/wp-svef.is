@@ -21,7 +21,7 @@
 				$hero_slider_link = get_sub_field('hero_slider_link');
 
 				$hero_slider_links_has_title = isset($hero_slider_link['title']) && !empty($hero_slider_link['title']) ? $hero_slider_link['title'] : pll__('Lesa grein');
-				// var_dump($hero_slider_links_has_title);
+
 		?>
 			<div class="hero grid-container-fluid" >
 				<div class="grid-x" >
