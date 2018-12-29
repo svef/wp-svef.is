@@ -28,6 +28,7 @@ get_header(); ?>
 
 
 		<?php
+
 		$a_intro = array('title' => get_field('intro_title'),
 		'paragraph' => get_field('intro_text'),
 		'is_ticker' => true,

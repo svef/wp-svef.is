@@ -38,23 +38,23 @@
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 					$image_gallery = get_field('image_gallery');
 					$event_date = get_field('event_start_date');
-					$direct_link_isset = get_field('direct_link_off_page');
-					$direct_link = get_field('direct_link');
+					// $direct_link_isset = get_field('direct_link_off_page');
+					// $direct_link = get_field('direct_link');
 					$location_name = get_field('event_location_name');
 					$location = get_field('event_location');
-					$link_is_external = $direct_link_isset ? $direct_link  : get_permalink();
-					$link_target = $direct_link_isset ? '_blank' : '' ;
+					// $link_is_external = $direct_link_isset ? $direct_link  : get_permalink();
+					// $link_target = $direct_link_isset ? '_blank' : '' ;
 					$event_is_over = strtotime($event_date) < time() ? true : false;
 					$local_date = date_i18n("d M Y", strtotime($event_date));
 
 					$event_is_over_class = $event_is_over ? ' section__event--passed ' : '';
 					$event_count++;
 					$event_offset = $event_count % 2 ? 7 : 2;
-					$render_link = $event_is_over ? '' : $link_is_external;
+					// $render_link = $event_is_over ? '' : $link_is_external;
 				?>
 						<div class="section__event <?php echo $event_is_over_class; ?> small-10 small-offset-1 medium-5 medium-offset-<?php echo $event_offset; ?> large-5 large-offset-<?php echo $event_offset; ?> ">
 							<?php if(!$event_is_over): ?>
-							<a href="<?php echo $link_is_external; ?>" target="<?php echo $link_target; ?>">
+							<a href="<?php the_permalink(); ?>">
 						  <?php endif; ?>
 								<span class="link-text--menu link-text--dull"><?php echo $local_date; ?></span>
 								<h2 class="less-margin--top less-margin--bottom"><?php the_title(); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></h2>
@@ -74,7 +74,7 @@
 			<div class="section__inner grid-container">
 				<div class="grid-x">
 					<div class="section__link section__link--event small-8 small-offset-2 medium-10 medium-offset-1 large-2 large-offset-10">
-						<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php echo pll__('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
+						<a href="<?php echo get_permalink( get_page_by_path( 'vidburdir' ) ) ?>" class="section--events__page "><?php  pll_e('Skoða alla viðburði'); svef_partial('library/svef/icons/linkarrow.svg', $a_link_arrow); ?></a>
 					</div>
 				</div>
 			</div>
