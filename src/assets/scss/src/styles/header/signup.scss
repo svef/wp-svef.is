@@ -407,6 +407,11 @@
   position: relative;
 }
 
+.gform_confirmation_message {
+  @extend p;
+  font-weight: 600;
+}
+
 
 .body--contrast {
   .side-signup {

@@ -20,11 +20,13 @@
 		pll_register_string('Elements', 'Skoða nánar', 'SVEF');
 		// open form button
 		pll_register_string('Elements', 'Skráning í svef', 'SVEF');
+		// open award link page
+		pll_register_string('Elements', 'Skoða vef', 'SVEF');
+
 		// cookie message
 		pll_register_string('Cookie', get_field('cookie_message', 'option'), 'SVEF');
 		pll_register_string('Cookie', 'Vefstefna SVEF', 'SVEF');
 		pll_register_string('Cookie', 'OK takk', 'SVEF');
-
 		// form acf info repeater we can regiseter the strings like so
 		pll_register_string('Gform info header title', get_field('signup_title', 'option'), 'SVEF');
 		$gForm_info_options = get_field('signup_options', 'option');

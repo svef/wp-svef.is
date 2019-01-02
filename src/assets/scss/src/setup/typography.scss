@@ -154,6 +154,7 @@ ul {
     li {
       @extend p;
       font-weight: 600;
+      font-size: 14px;
     }
   }
   &--collapse {
@@ -179,7 +180,7 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   color: $black;
   a:hover {

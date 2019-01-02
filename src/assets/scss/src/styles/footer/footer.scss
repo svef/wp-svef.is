@@ -3,6 +3,12 @@
   .footer {
     width: 100%;
     padding: 100px 0 80px 0;
+    &__copyright {
+      padding: 0;
+      p {
+        color: $white-40;
+      }
+    }
     .socialmedia {
       margin: 24px 0;
       a {
