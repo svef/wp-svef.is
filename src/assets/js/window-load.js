@@ -1,6 +1,5 @@
 import $ from 'jquery'
 import Global from './global-functions';
-// import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min';
 import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';
 import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';
 import TweenMax from 'gsap/src/minified/TweenMax.min';
@@ -21,24 +20,13 @@ const Loader = {
     this.heroBanner = this.body.querySelector('.section--hero')
     this.heroBackCol1 = this.body.querySelector('.back-col-1')
     this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
-    this.anchors = this.body.querySelectorAll('a, .menu-item, .section__link')
-    // this.menuItems = this.body.querySelector('.menu-item')
-    // this.sectionLink = this.body.querySelector('.section__link')
+
   },
   addEvents(){
     document.addEventListener("DOMContentLoaded", this.loadReadyHandler.bind(this))
-    for (let i = 0; i < this.anchors.length; i++) {
-      this.anchors[i].addEventListener('click', this.handleAclick.bind(this))
-    }
-    // this.menuItems.addEventListener('click', this.handleAclick.bind(this))
-    // this.sectionLink.addEventListener('click', this.handleAclick.bind(this))
+
   },
-  handleAclick(e) {
-    // e.preventDefault()
-    console.log('hhhhaaaa')
-    this.loaderDiv.style.display = 'flex'
-    this.loaderDiv.style.opacity = 1
-  },
+
   stopScroll() {
     this.body.style.overflow = 'hidden'
 
@@ -48,7 +36,7 @@ const Loader = {
       // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
       window.requestAnimationFrame(() => {
         // GSAP custom code goes here
-        let loaderTween = TweenMax.to(this.loaderDiv, 0.5, { opacity: 0, ease: Sine.easeInOut, onComplete: this.tweenComplete.bind(this) })
+        TweenMax.to(this.loaderDiv, 0.5, { opacity: 0, ease: Sine.easeInOut, onComplete: this.tweenComplete.bind(this) })
         $(this.heroBanner).exists( () => {
             this.heroBanerSetup()
         })
@@ -83,6 +71,5 @@ const Loader = {
     let tl = new TimelineMax();
         tl.fromTo(this.btnOpenSignup,0.5,{opacity: 0, x:-20}, {delay: 2, x: 0, opacity: 1, ease: Sine.easeInOut})
   }
-
 }
 module.exports = Loader
