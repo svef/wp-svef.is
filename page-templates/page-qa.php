@@ -10,6 +10,7 @@ get_header(); ?>
 				<div class="grid-x grid-margin-x">
 					<h2 class="cell large-5 large-offset-1"><?php the_title(); ?></h2>
 				</div>
+			</div>
 		</div>
 		<div class="grid-container section--margin-bottom">
 			<div class="grid-x grid-margin-x article__content">
