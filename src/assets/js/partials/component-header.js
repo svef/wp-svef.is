@@ -9,7 +9,7 @@ const Header = {
     Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'language selector for Iceladic')
     Global.addAriaLabel(this.languageLinkEn, 'aria-label', 'language selector for English')
   },
-  cacheDom: function () {
+  cacheDom() {
     this.body = Global.body;
     // this.body = document.querySelector('body')
     this.header = this.body.querySelector('.site-header')
@@ -134,10 +134,11 @@ const Header = {
       // Edge 20+
       isEdge: !this.isIE && !!window.StyleMedia ? 'edge' : false,
       // Chrome 1 - 68
-      isChrome: !!window.chrome && !!window.chrome.webstore ? 'chrome' : false,
+      isChrome: !!window.chrome ? 'chrome' : false,
       // Blink engine detection
       isBlink: (this.isChrome || this.isOpera) && !!window.CSS ? 'blink' : false
     }
+    console.log(window)
     Object.keys(browsers).forEach( (item) => {
       if (browsers[item]) {
         this.body.classList.add(browsers[item])
@@ -145,6 +146,5 @@ const Header = {
     })
   }
 }
-
 
 module.exports = Header;

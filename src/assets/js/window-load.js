@@ -71,6 +71,5 @@ const Loader = {
     let tl = new TimelineMax();
         tl.fromTo(this.btnOpenSignup,0.5,{opacity: 0, x:-20}, {delay: 2, x: 0, opacity: 1, ease: Sine.easeInOut})
   }
-
 }
 module.exports = Loader

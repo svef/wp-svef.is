@@ -11,12 +11,12 @@ import Logowall from './partials/component-logowall'
 import LoadMorePosts from './partials/component-loadmore'
 import Textticker from './partials/component-textticker'
 import Statisticslider from './partials/component-statistic'
-import CookieConsent from './partials/component-cookie-consent'
+// import CookieConsent from './partials/component-cookie-consent'
 import MemberPage from './partials/component-member-page'
 import OwleByClass from './partials/component-set-carousel-by-class'
 import SectionsApear from './scrollmagic-functions'
 import Loader from './window-load'
-window.$ = $;
+window.$ = $
 
 // import Foundation from 'foundation-sites';
 // If you want to pick and choose which modules to include, comment out the above and uncomment
@@ -28,7 +28,7 @@ Global.cacheBody()
 
 // A function that checks if a element exists, Comes in handy when we dont want to load scripts that run on other pages than are currently loaded
 $.fn.exists = function (callback) {
-  var args = [].slice.call(arguments, 1);
+  let args = [].slice.call(arguments, 1);
   if (this.length) {
     callback.call(this, args);
   }
@@ -47,7 +47,7 @@ Logowall.init()
 LoadMorePosts.init()
 Textticker.init()
 Statisticslider.init()
-CookieConsent.init()
+// CookieConsent.init()
 MemberPage.init()
 OwleByClass.init()
 SectionsApear.init()
