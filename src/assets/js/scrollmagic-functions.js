@@ -12,7 +12,7 @@ const SectionsApear = {
     this.fadeIn(this.sectionEvent, 40)
     this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
-    this.flipIn(this.sectionFlip)
+    this.scaleIn(this.sectionFlip)
 
     if (window.innerWidth > 640) {
       this.backgroundParalax(this.imgMask)
@@ -54,7 +54,7 @@ const SectionsApear = {
 
     })
   },
-  flipIn(el) {
+  scaleIn(el) {
     let controller = new ScrollMagic.Controller()
     $(el).each(function (i) {
       let self = this

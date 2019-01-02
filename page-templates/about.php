@@ -34,6 +34,22 @@ get_header(); ?>
 			svef_partial("library/svef-partials/component-introtext" , $a_about);
 		?>
 
+		<?php
+			if(get_field('add_second_c2a')):
+				$a_c2a_2nd = array(
+					'intro_title' 	=> get_field('intro_title_inner-2'),
+					'intro_text' 		=> get_field('intro_text_inner-2'),
+					'c2a_title' 		=> get_field('c2a_title-2'),
+					'c2a_text' 			=> get_field('c2a_text-2'),
+					'c2a_cool_mask' => get_field('c2a_cool_mask-2'),
+					'c2a_image' 		=> get_field('c2a_image-2'),
+					'c2a_action' 		=> get_field('c2a_action-2'),
+					'c2a_bg_color'  => get_field('c2a_bg_color-2')
+				);
+
+				svef_partial("library/svef-partials/component-c2a", $a_c2a_2nd);
+			endif;
+		?>
 
 		<?php
 			$a_board_section_text = array(
@@ -43,6 +59,8 @@ get_header(); ?>
 			);
 			svef_partial("library/svef-partials/component-boardmembers-cards", $a_board_section_text);
 		?>
+
+
 
 
 	</article>
