@@ -88,6 +88,8 @@ get_header(); ?>
 
 		<?php svef_partial("library/svef-partials/component-jobfeed", $a_jobfeed ); ?>
 
+		<?php svef_partial('library/svef-partials/component-winners-slider', ['winners_title' => get_field('winners_title')]); ?>
+
 
 		<?php
 			if(get_field('add_second_c2a')):
