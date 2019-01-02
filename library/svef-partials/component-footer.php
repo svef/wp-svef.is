@@ -55,4 +55,7 @@
             <?php echo do_shortcode('[gravityform id="2" title="true" description="true" ajax="true"]'); ?>
         </div>
     </div>
+    <div class="footer__copyright grid-container grid-x">
+        <div class="cell small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1"><p class="text--small">&copy; SVEF <?php echo date('Y'); ?></p></div>
+    </div>
 </footer>

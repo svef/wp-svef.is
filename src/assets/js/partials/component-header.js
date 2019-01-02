@@ -1,4 +1,6 @@
 import Global from '../global-functions'
+import TimelineMax from 'gsap/src/minified/TimelineMax.min';
+import { Sine } from 'gsap';
 
 const Header = {
   init() {
@@ -24,6 +26,7 @@ const Header = {
     this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
     this.languageLinkIs = this.body.querySelectorAll('.lang-item-is a')
     this.languageLinkEn = this.body.querySelectorAll('.lang-item-en a')
+    this.menuListItems = this.body.querySelectorAll('.menu-item')
   },
 
   addEvents() {
@@ -33,6 +36,15 @@ const Header = {
     this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
     this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
+  },
+  animateMenuItems(element){
+    let delayTime = 0
+    $(element).each(function (){
+      let self = this
+      let tl = new TimelineMax();
+      tl.fromTo(self, 0.8, {opacity: 0, x: 120},{delay: delayTime, opacity: 1, x: 0, ease: Expo.easeOut})
+      delayTime += 0.04
+    })
   },
   handleMenuClick(e) {
     if(this.btnMenu.classList.contains('nav__menu-button--clicked')) {
@@ -53,6 +65,7 @@ const Header = {
       btnOpenSignup.innerHTML = 'Skráning í SVEF'
     } else {
       this.btnMenu.classList.add('nav__menu-button--clicked')
+      this.animateMenuItems(this.menuListItems)
       this.sideMenu.classList.add('side-menu--active')
       this.menuOverlay.classList.add('menu-overlay--active')
       this.body.style.overflow = 'hidden'

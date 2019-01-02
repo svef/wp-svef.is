@@ -1,4 +1,4 @@
-<svg width="270px" height="432px" viewBox="0 0 270 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg aria-hidden="true" width="270px" height="432px" viewBox="0 0 270 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>human25</title>
     <desc>Created with Sketch.</desc>

@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import 'owl.carousel'
 import Global from '../global-functions'
+import Translate from '../dictionary'
 
 const WinnersSlider = {
   init() {
@@ -50,18 +51,18 @@ const WinnersSlider = {
     let winnerHasUrl
     let winnerHasUrlBegin
     let winnerHasUrlEnd
-    let winnerHasUrlSvg
+    let winnerHasUrlLabel
     console.dir(res);
     for (let i = 0; i < aWinners.length; i++) {
       winner = aWinners[i]
 
       winnerHasUrlBegin = winner.winner_url ? `<a class="winners-slide__link" href="${winner.winner_url.url}" target="_blank">` : '';
       winnerHasUrlEnd = winner.winner_url ? `</a>` : '';
-      winnerHasUrlSvg = winner.winner_url ? Global.svgLibrary('winnersCursor') : '';
+      winnerHasUrlLabel = winner.winner_url ? `<span class="winners-slide__link-indicator">${Translate.languageSwitch('Skoða vef', Translate.currentLanguage())}</span>`: '';
       newSlider += winner.winner_screenshot.sizes ? `
         <div class="winners-slide">
           ${winnerHasUrlBegin}
-          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.large});">${winnerHasUrlSvg}</div>
+          <div class="winners-slide__img" style="background-image: url(${winner.winner_screenshot.sizes.large});">${winnerHasUrlLabel}</div>
           <div class="section__text-color--white winners-slide__category">${winner.winner_category}</div>
           <h3 class="section__text-color--white winners-slide__heading">${winner.winner_name}</h3>
           <div class="section__text-color--white text--small winners-slide__text">

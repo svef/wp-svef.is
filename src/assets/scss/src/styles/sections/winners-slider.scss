@@ -53,6 +53,25 @@
       filter: grayscale(0);
     }
   }
+  &__link-indicator {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 31, 45, 0.75);
+    color: $white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 12px;
+    padding: 4px;
+    padding-top: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 50%;
+  }
   &__img {
     height: 294px;
     position: relative;
