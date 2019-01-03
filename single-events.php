@@ -20,9 +20,9 @@ get_header(); ?>
 
 		<div class="grid-container section--margin-bottom">
 			<div class="article__header">
-				<h2 class="grid-x large-10 large-offset-1"><?php the_title(); ?></h2>
-				<p class="grid-x large-4 large-offset-2"><?php echo $local_date; ?></p>
-				<h3 class="grid-x large-4 large-offset-2"><?php echo $s_where; ?></h3>
+				<p class="grid-x large-4 large-offset-2 text--date text-color--black-40 no-margin-bottom"><?php echo $local_date; ?></p>
+				<h2 class="grid-x large-10 large-offset-1 no-margin-top-bottom"><?php the_title(); ?></h2>
+				<h3 class="grid-x large-4 large-offset-2 no-margin-top"><?php echo $s_where; ?></h3>
 			</div>
 			<div class="grid-x article__content">
 				<?php the_content(); ?>

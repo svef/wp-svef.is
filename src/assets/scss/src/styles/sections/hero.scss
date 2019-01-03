@@ -29,7 +29,7 @@
     min-height: 300px;
   }
   @include breakpoint(small down) {
-    min-height: 400px;
+    min-height: 360px;
     max-height: 600px;
     justify-content: flex-start;
   }

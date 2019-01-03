@@ -8,6 +8,7 @@
             padding-top: 160px;
             @include breakpoint(small down) {
                 order: -1;
+                padding-top: 60px;
                 margin-bottom: 40px;
             }
             .board-info-text {

@@ -3,7 +3,7 @@
 	$hero_link_has_title = isset($hero_link['title']) && !empty($hero_link['title']) ? $hero_link['title'] : pll__('Lesa grein');
 
 ?>
-<section class="section section--margin-bottom section--hero" >
+<section class="section section--margin-bottom-less section--hero" >
 	<div class="section__hero--relative grid-container" >
 		<div class="grid-x grid-margin-x">
 			<div class="section__bg-color--<?php echo $hero_background_color['value'];?> section__bg-color--absolute section__bg-height--slide-show back-col-1 small-12 small-offset-0 medium-11 medium-offset-1 large-11 large-offset-1 xlarge-11 xlarge-offset-1" >
