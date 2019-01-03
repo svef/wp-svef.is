@@ -151,7 +151,7 @@ const Header = {
       // Blink engine detection
       isBlink: (this.isChrome || this.isOpera) && !!window.CSS ? 'blink' : false
     }
-    console.log(window)
+
     Object.keys(browsers).forEach( (item) => {
       if (browsers[item]) {
         this.body.classList.add(browsers[item])
