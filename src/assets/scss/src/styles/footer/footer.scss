@@ -22,6 +22,11 @@
         margin: 0;
         li {
           padding: 2px 0;
+          &:hover {
+            a {
+              color: $orange;
+            }
+          }
         }
       }
       @include breakpoint(medium down) {
@@ -76,7 +81,7 @@
       .gfield .ginput_container input {
         border-bottom: 1px solid $white;
         &::placeholder {
-          color: $white-40;
+          color: $white-60;
         }
       }
     }

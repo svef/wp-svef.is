@@ -14,7 +14,7 @@
         ?>
             <div class="footer__intro">
                 <?php svef_partial("library/svef/icons/sveflogo.svg"); ?>
-                <p class="text--small"><?php echo $footer_svef_introtext; ?></p>
+                <p class="text--small"><?php pll_e($footer_svef_introtext) ; ?></p>
             </div>
             <div class="grid-x footer__links" >
                 <div class="cell small-10 small-offset-0 medium-4 medium-offset-1 large-6 large-offset-0">
