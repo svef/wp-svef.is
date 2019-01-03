@@ -4,12 +4,13 @@
 		<div class="grid-x">
 			<?php
 				$args = array (
-					'post_type'       => 'winners',
-					'posts_per_page'	=>  1,
-					'order'						=> 'ASC',
+					'post_type' => 'winners',
+					'posts_per_page' =>  1,
+					'order'	=> 'ASC',
 				);
 				$the_winners_query = new WP_Query( $args );
 				$first_post_title = $the_winners_query->posts[0];
+				$sliderMenuName = array('is' => 'winners-select', 'en' => 'winners-english');
 			?>
 
 		</div>
@@ -17,7 +18,7 @@
 			<div class="small-10 small-offset-1 medium-6 large-6">
 				<h2><?php echo $winners_title; ?></h2>
 				<label for="selectYear" class="section__label">
-					<?php echo get_menu_to_select('winners-select'); ?>
+					<?php echo get_menu_to_select($sliderMenuName[pll_current_language()]); ?>
 					<?php svef_partial('library/svef/icons/down-caret.svg'); ?>
 				</label>
 			</div>
