@@ -57,7 +57,16 @@
       margin-bottom: 80px !important;
     }
     @include breakpoint(small down) {
-      margin-bottom: 100px !important;
+      margin-bottom: 80px !important;
+    }
+  }
+  &--margin-bottom-less {
+    margin-bottom: 140px !important;
+    @include breakpoint(medium down) {
+      margin-bottom: 80px !important;
+    }
+    @include breakpoint(small down) {
+      margin-bottom: 40px !important;
     }
   }
   &--margin-top {
@@ -93,7 +102,7 @@
         min-height: 840px;
       }
       @include breakpoint(small down) {
-        min-height: 640px;
+        min-height: 580px;
       }
     }
     &--c2a {
@@ -324,7 +333,7 @@
       }
       @include breakpoint(small down) {
         margin-bottom: 10px;
-        //margin-top: 100px;
+        margin-top: 20px;
       }
     }
   }
