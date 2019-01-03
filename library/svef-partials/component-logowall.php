@@ -1,7 +1,7 @@
 <?php
 	$a_infotext = array(
-		'title' => get_field('logo_intro_title', 'option'),
-		'paragraph' => get_field('logo_intro_text', 'option'),
+		'title' => pll__(get_field('logo_intro_title', 'option')),
+		'paragraph' => pll__(get_field('logo_intro_text', 'option')),
 		'margin_bottom_inside' => true);
 ?>
 <?php svef_partial('library/svef-partials/component-introtext', $a_infotext); ?>

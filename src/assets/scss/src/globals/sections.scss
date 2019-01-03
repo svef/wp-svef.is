@@ -172,6 +172,22 @@
           fill: $white;
         }
       }
+      .socialmedia {
+        a {
+            svg {
+              path {
+                fill: $white;
+              }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $orange;
+              }
+            }
+          }
+        }
+      }
       .svef-logo {
         fill: $orange;
         path {

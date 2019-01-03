@@ -6,7 +6,7 @@
 </button>
     <div class="side-signup__inner">
         <div class="side-signup__info">
-            <h3><?php echo $signup_title; ?></h3>
+            <h3><?php pll_e($signup_title) ; ?></h3>
             <div class="side-signup__steps">
 						<?php if( have_rows('signup_options', 'option') ): ?>
 						<?php while( have_rows('signup_options', 'option') ): the_row();
@@ -14,8 +14,8 @@
 							$step_text = get_sub_field('step_text');
 						?>
 							<div class="step">
-									<h4><?php echo $step_title; ?></h4>
-									<?php echo $step_text; ?>
+									<h4><?php pll_e($step_title) ; ?></h4>
+									<?php pll_e($step_text) ; ?>
 							</div>
 						<?php endwhile; ?>
 						<?php endif; ?>

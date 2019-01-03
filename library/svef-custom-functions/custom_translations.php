@@ -23,10 +23,18 @@
 		// open award link page
 		pll_register_string('Elements', 'Skoða vef', 'SVEF');
 
+		// footer info text
+		pll_register_string('Footer', get_field('footer_svef_introtext', 'option'), 'SVEF');
+
+		// Logowall info text
+		pll_register_string('Logowall', get_field('logo_intro_title', 'option'), 'SVEF');
+		pll_register_string('Logowall', get_field('logo_intro_text', 'option'), 'SVEF');
+		
 		// cookie message
 		pll_register_string('Cookie', get_field('cookie_message', 'option'), 'SVEF');
 		pll_register_string('Cookie', 'Vefstefna SVEF', 'SVEF');
 		pll_register_string('Cookie', 'OK takk', 'SVEF');
+	
 		// form acf info repeater we can regiseter the strings like so
 		pll_register_string('Gform info header title', get_field('signup_title', 'option'), 'SVEF');
 		$gForm_info_options = get_field('signup_options', 'option');
