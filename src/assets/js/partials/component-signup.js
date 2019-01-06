@@ -1,4 +1,4 @@
-import $ from 'jquery'
+// import $ from 'jquery'
 import Global from '../global-functions'
 import Translate from '../dictionary'
 
@@ -19,6 +19,11 @@ const Signup = {
     this.sideSignupOverlay = this.body.querySelector('.side-signup-overlay')
     this.gfieldRequired = this.body.querySelectorAll('.gfield_required')
     this.btnCloseSignupMobile = this.body.querySelector('#closeSignupMobile')
+    this.frmRegisterMember = this.body.querySelector('.frmsignup')
+    this.inpRegisterMemberEmail = this.body.querySelector('#input_1_5')
+    this.btnSubmitRegistration = this.body.querySelector('#gform_submit_button_1')
+    this.checkBoxAddToPostList = this.body.querySelector('#choice_1_17_1')
+
   },
   addEvents() {
     this.btnOpenSignup.addEventListener('click', this.handleOpenSignup.bind(this))
@@ -26,6 +31,27 @@ const Signup = {
     this.btnCloseSignupMobile.addEventListener('click', this.handleMobileCloseSignup.bind(this))
     this.body.addEventListener('click', this.clickedOutSignupForm.bind(this))
     this.body.addEventListener('keyup', this.escapeSignupForm.bind(this))
+    this.btnSubmitRegistration.addEventListener('click', this.formComplete.bind(this))
+
+  },
+  formComplete(event) {
+    console.dir(this.checkBoxAddToPostList.checked)
+    let boolAddToPostlist = this.checkBoxAddToPostList.checked
+    if (boolAddToPostlist) {
+      let ajaxObj = {}
+      ajaxObj.action = 'submitPostlist'
+      ajaxObj.email = this.inpRegisterMemberEmail.value
+      ajaxObj.formId = 1
+      Global.postAjax(ajaxObj).done(function (response) {
+        console.log(response)
+        let is_valid = response.is_valid
+        if (!is_valid) {
+          console.log('Error, something wehent wrong');
+          return
+        }
+        console.log('Subscribe success')
+      })
+    }
   },
   handleOpenSignup(e) {
     if (btnOpenSignup.classList.contains('btnSignup--clicked')) {

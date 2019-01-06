@@ -107,4 +107,18 @@ function set_darkmode(){
 	}
 }
 
+
+add_action('wp_ajax_nopriv_submitPostlist', 'submitPostlist'); // make shure you dont have to be logged in to the backend to access this.
+add_action('wp_ajax_submitPostlist', 'submitPostlist');
+function submitPostlist(){
+
+	$input_values['input_2'] = $_POST['email'];
+	$form_id = (int)$_POST['formId'];
+	$result = GFAPI::submit_form( 2, $input_values );
+	$j_result = json_encode($result, true);
+	echo $j_result;
+
+	exit;
+}
+
 ?>
