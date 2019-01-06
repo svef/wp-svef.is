@@ -39,7 +39,7 @@
 				<div class="winners-slide">
 				<?php $site_url = $winner['winner_url'] ? $winner['winner_url'] : ''; echo $winner['winner_url'] ? '<a class="winners-slide__link" href="'.$site_url['url'].'" target="_blank" alt="open link in new tab">' : ''; ?>
 				<div class="winners-slide__img" style="background-image: url(<?php echo $winner['winner_screenshot']['sizes']['medium_large']; ?>);"><?php if($winner['winner_url']) : ?><span class="winners-slide__link-indicator"><?php pll_e('Skoða vef'); ?></span><?php endif; ?></div>
-					<div class="section__text-color--white winners-slide__category"><?php echo $winner['winner_category']; ?></div>
+					<div class="section__text-color--white winners-slide__category category-text"><?php echo $winner['winner_category']; ?></div>
 					<h3 class="section__text-color--white winners-slide__heading"><?php echo $winner['winner_name']; ?></h3>
 					<div class="section__text-color--white text--small winners-slide__text">
 						<?php echo $winner['winner_notes']; ?>

@@ -187,6 +187,9 @@ a {
     text-decoration: none;
   }
 }
+.category-text {
+  @extend a;
+}
 
 .link-text {
   &--menu {
