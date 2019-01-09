@@ -4,6 +4,7 @@ const GlobalFunctions = {
     this.body = document.querySelector('body')
     return this.body
   },
+
   isDescendant(parent, child) {
     let node = child.parentNode;
     while (node != null) {
@@ -14,6 +15,7 @@ const GlobalFunctions = {
     }
     return false;
   },
+
   postAjax(dataObj) {
     let ajaxOptions = {
       type: 'POST',
@@ -27,9 +29,11 @@ const GlobalFunctions = {
     }
     return $.ajax(ajaxOptions)
   },
+
   calculateDots(itemsCount) {
     return itemsCount >= 6 ? 2 : 1
   },
+
   getAjax(url) {
     return $.get(url)
   },

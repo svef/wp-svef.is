@@ -35,7 +35,7 @@ const Logowall = {
     setInterval(() => {
       // On each interwal we have rearanged the dom element so we fetch the updated dom so we have the right data
       this.cacheDom()
-      //  we use our Dom to array function to build the three arrays we need
+      // we use our Dom to array function to build the three arrays we need
       // we need ann instanse of all the logos for when we update the hidden logos because we have already contaminated/mutated the hidded logo array
       aAllLogos = this.getImgSrcArray(this.allLogos)
       aVisibleImageSrc = this.getImgSrcArray(this.visibleLogo)
