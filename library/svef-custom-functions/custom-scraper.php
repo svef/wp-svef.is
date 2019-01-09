@@ -54,13 +54,14 @@ if(!function_exists('parseRssToJson')){
 		try {
 				// we have a rss feed url taht we can use to get the XML string
 			$content = file_get_contents($url); // get XML string
+			// var_dump($content);
 			$x = new SimpleXmlElement($content); // load XML string into object
 
 			$arrOfJobs = array();
 			// loop through posts
 			$i = 0;
 			foreach($x->channel->item as $entry) {
-
+				// guid is the URL provided from the RSS feed
 				$arrOfJobs[] = array( 'rss' => $entry, 'scrape' => scrapeTvinna($entry->guid));
 				$i++;
 				// we limit our response to 4 items because we are only goint to show 4 cards on the page

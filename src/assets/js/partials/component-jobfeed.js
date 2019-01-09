@@ -7,6 +7,7 @@ const JobFeed = {
     $(this.jobFeed).exists(() => {
       this.getJobFeed()
     })
+
   },
   cacheDOM() {
     this.body = Global.body;

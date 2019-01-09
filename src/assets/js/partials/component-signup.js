@@ -31,22 +31,20 @@ const Signup = {
     this.btnCloseSignupMobile.addEventListener('click', this.handleMobileCloseSignup.bind(this))
     this.body.addEventListener('click', this.clickedOutSignupForm.bind(this))
     this.body.addEventListener('keyup', this.escapeSignupForm.bind(this))
-    this.btnSubmitRegistration.addEventListener('click', this.formComplete.bind(this))
-
+    this.frmRegisterMember.addEventListener('submit', this.formComplete.bind(this))
   },
   formComplete(event) {
-    console.dir(this.checkBoxAddToPostList.checked)
     let boolAddToPostlist = this.checkBoxAddToPostList.checked
     if (boolAddToPostlist) {
       let ajaxObj = {}
       ajaxObj.action = 'submitPostlist'
       ajaxObj.email = this.inpRegisterMemberEmail.value
-      ajaxObj.formId = 1
+      ajaxObj.formId = 2
       Global.postAjax(ajaxObj).done(function (response) {
-        console.log(response)
+        // console.log(response)
         let is_valid = response.is_valid
         if (!is_valid) {
-          console.log('Error, something wehent wrong');
+          console.log('Error, something went wrong');
           return
         }
         console.log('Subscribe success')
