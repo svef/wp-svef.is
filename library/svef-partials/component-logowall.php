@@ -14,11 +14,22 @@
 		<div class="logos-all grid-x cell small-12 small-offset-0 medium-12 medium-offset-0 large-10 large-offset-2 ">
 			<?php
 				$a_supporter_logos = get_field('supporter_logo', 'option');
+				$a_supporter_logos_count = count($a_supporter_logos);
 				shuffle($a_supporter_logos);
-				for( $i=0; $i < count($a_supporter_logos); $i++ ) :
-					$visability = $i>5 ? 'hidden_logo' : 'visible_logo';
+				if($a_supporter_logos_count > 6) {
+					$start_hidden = 5;
+					$grid_size = '4';
+				} elseif($a_supporter_logos_count > 5) {
+					$start_hidden = 3;
+					$grid_size = '6';
+				} else {
+					$start_hidden = 2;
+					$grid_size = '4';
+				}
+				for( $i=0; $i < $a_supporter_logos_count; $i++ ) :
+					$visability = $i>$start_hidden ? 'hidden_logo' : 'visible_logo';
 				?>
-				<div class="client-logo logo-each cell small-6 medium-6 large-4 <?php echo $visability; ?>">
+				<div class="client-logo logo-each cell small-6 medium-6 large-<?php echo $grid_size; ?> <?php echo $visability; ?>">
 					<img src="<?php echo $a_supporter_logos[$i]['sizes']['large']; ?>" alt="">
 				</div>
 				<?php endfor; ?>

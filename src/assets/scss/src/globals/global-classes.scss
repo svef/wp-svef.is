@@ -109,6 +109,8 @@ button {
 }
 .hidden_logo {
   opacity: 0 !important;
+  display: none;
+  position: absolute;
 }
 .visible_logo {
   opacity: 1 !important;
