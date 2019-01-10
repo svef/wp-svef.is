@@ -53,19 +53,22 @@ get_header(); ?>
 		?>
 
 		<?php
-			$a_c2a = array(
-				'intro_title' 	=> get_field('intro_title_inner'),
-				'intro_text' 		=> get_field('intro_text_inner'),
-				'c2a_title' 		=> get_field('c2a_title'),
-				'c2a_text' 			=> get_field('c2a_text'),
-				'c2a_cool_mask' => get_field('c2a_cool_mask'),
-				'c2a_image' 		=> get_field('c2a_image'),
-				'c2a_action' 		=> get_field('c2a_action'),
-				'c2a_bg_color'  => get_field('c2a_bg_color')
-			);
+			$show_c2a = get_field('show_c2a');
+			if($show_c2a) {
+				$a_c2a = array(
+					'intro_title' 	=> get_field('intro_title_inner'),
+					'intro_text' 		=> get_field('intro_text_inner'),
+					'c2a_title' 		=> get_field('c2a_title'),
+					'c2a_text' 			=> get_field('c2a_text'),
+					'c2a_cool_mask' => get_field('c2a_cool_mask'),
+					'c2a_image' 		=> get_field('c2a_image'),
+					'c2a_action' 		=> get_field('c2a_action'),
+					'c2a_bg_color'  => get_field('c2a_bg_color')
+				);
+				svef_partial("library/svef-partials/component-c2a", $a_c2a);
+			}
 
 
-			svef_partial("library/svef-partials/component-c2a", $a_c2a);
 		?>
 
 		<?php

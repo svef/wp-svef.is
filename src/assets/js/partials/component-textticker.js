@@ -11,7 +11,7 @@ const Textticker = {
     },
     mainTextTicker() {
     //hér er fyrir orða ticker
-        (function() {
+        // (function() {
             var delete_speed, letters, next_delay, next_ticker, split, text_delete, text_write, write_speed;
 
             write_speed = 100;
@@ -90,7 +90,7 @@ const Textticker = {
 
             text_write();
 
-        }).call(this);
+        // }).call(this);
 
 
     }

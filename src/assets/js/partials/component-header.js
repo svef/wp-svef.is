@@ -135,6 +135,7 @@ const Header = {
     });
   },
   checkForBrowserType() {
+
     const browsers = {
       // Opera 8.0+
       isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0 ? 'opera' : false,

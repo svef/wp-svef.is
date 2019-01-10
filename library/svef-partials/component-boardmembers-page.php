@@ -22,6 +22,7 @@
 						$args = array (
 								'post_type'       => 'boardmembers',
 								'posts_per_page'	=>  7,
+								'orderby' => 'title',
 								'order'						=> 'ASC',
 								'tax_query' => array(
 										'relation' => 'AND',

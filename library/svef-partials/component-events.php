@@ -28,8 +28,6 @@
 					'order'						=> 'DESC',
 					'meta_key'		=> 'event_start_date',
 					'orderby'			=> 'meta_value',
-
-
 				);
 				$the_query = new WP_Query( $args );
 

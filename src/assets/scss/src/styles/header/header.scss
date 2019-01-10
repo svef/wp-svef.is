@@ -99,6 +99,7 @@
     width: 20px;
     height: 9px;
     z-index: -1;
+    margin-right:3px;
     &__line {
       position: absolute;
       right: 0;
@@ -113,11 +114,11 @@
     }
   }
   &__menu-button {
-    width: 64px;
+    // width: 64px;
     height: 100%;
-    display: flex;
+    display: inline-flex;
     background-color: transparent;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     z-index: 1;

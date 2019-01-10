@@ -20,17 +20,15 @@ const Loader = {
     this.heroBanner = this.body.querySelector('.section--hero')
     this.heroBackCol1 = this.body.querySelector('.back-col-1')
     this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
-
   },
   addEvents(){
     document.addEventListener("DOMContentLoaded", this.loadReadyHandler.bind(this))
-
   },
 
   stopScroll() {
     this.body.style.overflow = 'hidden'
-
   },
+
   loadReadyHandler(e) {
     window.onload = () => {
       // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
@@ -40,10 +38,11 @@ const Loader = {
         $(this.heroBanner).exists( () => {
             this.heroBanerSetup()
         })
-        this.signupApears()
+        this.signupAppears()
       })
     }
   },
+
   tweenComplete() {
     this.loaderDiv.style.display = 'none'
     this.body.style.overflow = 'auto'
@@ -51,23 +50,25 @@ const Loader = {
       this.heroBanerIntro()
     })
   },
+
   heroBanerSetup() {
     this.heroImg.style.opacity = 0
     this.heroInfoText.style.opacity = 0
     this.heroBackCol1.style.opacity = 0
-
   },
+
   heroBanerIntro() {
     let tl = new TimelineMax();
         tl.fromTo(this.heroBackCol1, 0.5, {opacity: 0, x:40}, {opacity:1, x: 0, ease: Sine.easeInOut})
         tl.fromTo(this.heroImg,0.4,{opacity: 0, x:-20}, {opacity: 1, x: 0, ease: Sine.easeInOut})
         tl.fromTo(this.heroInfoText,0.7,{opacity: 0, x:20}, {opacity: 1,x: 0, ease: Sine.easeInOut})
   },
+
   signupBtnSetup() {
     this.btnOpenSignup.style.opacity = 0
   },
 
-  signupApears() {
+  signupAppears() {
     let tl = new TimelineMax();
         tl.fromTo(this.btnOpenSignup,0.5,{opacity: 0, x:-20}, {delay: 2, x: 0, opacity: 1, ease: Sine.easeInOut})
   }
