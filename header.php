@@ -1,5 +1,7 @@
 <?php
-
+ if(!session_id()) {
+	session_start();
+}
 /**
  * The template for displaying the header
  *
@@ -9,7 +11,7 @@
  * @since FoundationPress 1.0.0
  */
 
-	$dark_mode = isset($_COOKIE['isDark']) && $_COOKIE['isDark'] == 'true' ? 'body--contrast' : '';
+	$dark_mode = isset($_SESSION['isDark']) && $_SESSION['isDark'] == 'true' ? 'body--contrast' : '';
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -21,15 +23,13 @@
 
 		<?php wp_head(); ?>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131131160-1"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-131131160-1');
-		</script>
+		<?php
+			$analytics_gtag_code = get_field('analytics_gtag_code', 'option');
+		?>
+		<!-- Global site tag gtag.js - Google Analytics -->
+		<?php if($analytics_gtag_code) : ?>
+			<?php echo $analytics_gtag_code; ?>
+        <?php endif; ?>
 
 	</head>
 	<body <?php body_class($dark_mode); ?>>
