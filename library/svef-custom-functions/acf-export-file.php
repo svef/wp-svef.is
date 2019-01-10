@@ -162,7 +162,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'label' => 'Boardmember image',
 				'name' => 'boardmember_image',
 				'type' => 'image',
-				'instructions' => '',
+				'instructions' => 'You can choose to upload only an image of a member. Below you have the option of adding an animated gif version of the member image for hover effects. If you choose to use a gif then make sure that it is not higher than 700px or wider than 500px.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -444,7 +444,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'key' => 'field_5be98da314b0d',
 				'label' => 'Direct link',
 				'name' => 'direct_link',
-				'type' => 'oembed',
+				'type' => 'url',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => array(
@@ -461,8 +461,8 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'width' => '',
-				'height' => '',
+				'default_value' => '',
+				'placeholder' => '',
 			),
 			array(
 				'key' => 'field_5be98f1a2011d',
@@ -482,51 +482,6 @@ if( function_exists('acf_add_local_field_group') ):
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
-			),
-			array(
-				'key' => 'field_5c110038b628e',
-				'label' => 'Show map',
-				'name' => 'show_map',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 1,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-			array(
-				'key' => 'field_5be98f3b2011e',
-				'label' => 'Event location',
-				'name' => 'event_location',
-				'type' => 'google_map',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => array(
-					array(
-						array(
-							'field' => 'field_5c110038b628e',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-				),
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'center_lat' => '64.150299',
-				'center_lng' => '-21.932316,13',
-				'zoom' => '',
-				'height' => '',
 			),
 		),
 		'location' => array(
@@ -815,7 +770,6 @@ if( function_exists('acf_add_local_field_group') ):
 					'default' => 'Default',
 					'red' => 'Red',
 					'blue' => 'Blue',
-					'dark' => 'Dark',
 				),
 				'allow_null' => 0,
 				'default_value' => '',
@@ -850,6 +804,51 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'page-templates/page-iceweb.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5c1528a15401d',
+		'title' => 'How many SVEF members',
+		'fields' => array(
+			array(
+				'key' => 'field_5c1528ac18be0',
+				'label' => 'SVEF members number',
+				'name' => 'svef_members_number',
+				'type' => 'number',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
 				),
 			),
 		),
@@ -1026,6 +1025,49 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'page-templates/front.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5c153051708e8',
+		'title' => 'Launch english version',
+		'fields' => array(
+			array(
+				'key' => 'field_5c153068600ce',
+				'label' => 'Launch english site',
+				'name' => 'launch_english_site',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 1,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
 				),
 			),
 		),
@@ -1478,6 +1520,71 @@ if( function_exists('acf_add_local_field_group') ):
 				'prepend' => '',
 				'append' => '',
 			),
+			array(
+				'key' => 'field_5c1512eaa276e',
+				'label' => 'Cookie consent',
+				'name' => '',
+				'type' => 'tab',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'placement' => 'top',
+				'endpoint' => 0,
+			),
+			array(
+				'key' => 'field_5c151300a276f',
+				'label' => 'Cookie message',
+				'name' => 'cookie_message',
+				'type' => 'textarea',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => 255,
+				'rows' => '',
+				'new_lines' => '',
+			),
+			array(
+				'key' => 'field_5c15132ca2770',
+				'label' => 'Cookie link',
+				'name' => 'cookie_link',
+				'type' => 'link',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+			),
+			array(
+				'key' => 'field_5c151344a2771',
+				'label' => 'Cookie link en',
+				'name' => 'cookie_link_en',
+				'type' => 'link',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+			),
 		),
 		'location' => array(
 			array(
@@ -1610,6 +1717,127 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'page-templates/front.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5c14c25b707ef',
+		'title' => 'Video Section',
+		'fields' => array(
+			array(
+				'key' => 'field_5c14c2962dfe4',
+				'label' => 'Add video',
+				'name' => 'add_video',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 1,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_5c14c2852dfe3',
+				'label' => 'Video Title',
+				'name' => 'video_title',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5c14c2962dfe4',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5c14c45f54249',
+				'label' => 'Video text',
+				'name' => 'video_text',
+				'type' => 'textarea',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5c14c2962dfe4',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => 255,
+				'rows' => '',
+				'new_lines' => '',
+			),
+			array(
+				'key' => 'field_5c14c2b92dfe5',
+				'label' => 'VIdeo',
+				'name' => 'video',
+				'type' => 'oembed',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5c14c2962dfe4',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'width' => '',
+				'height' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-templates/page-awards.php',
 				),
 			),
 		),
@@ -1796,6 +2024,89 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
+		'key' => 'group_5c14d2656628c',
+		'title' => 'Boardmembers section',
+		'fields' => array(
+			array(
+				'key' => 'field_5c14d27c08879',
+				'label' => 'Board title',
+				'name' => 'board_title',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5c14d2a40887a',
+				'label' => 'Board text',
+				'name' => 'board_text',
+				'type' => 'textarea',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => 255,
+				'rows' => '',
+				'new_lines' => '',
+			),
+			array(
+				'key' => 'field_5c14dacd9277c',
+				'label' => 'Board link',
+				'name' => 'board_link',
+				'type' => 'page_link',
+				'instructions' => 'Very important to use this field to link to the board/stjórn landing page. It might have a different name but should have a template named "board"',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'allow_null' => 0,
+				'allow_archives' => 1,
+				'multiple' => 0,
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-templates/about.php',
+				),
+			),
+		),
+		'menu_order' => 2,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
 		'key' => 'group_5bf188af725eb',
 		'title' => 'Events component text',
 		'fields' => array(
@@ -1957,7 +2268,8 @@ if( function_exists('acf_add_local_field_group') ):
 				'label' => 'c2a cool image mask',
 				'name' => 'c2a_cool_mask',
 				'type' => 'true_false',
-				'instructions' => '',
+				'instructions' => 'This effect is nice for atmospheric images. It might not be nice for portraits. But try it you can alway turn this switch off and the image appears normally.
+	This may not work with Safari browsers at this time. But don\'t worry the image will appear without the mask instead.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -2005,7 +2317,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'conditional_logic' => 0,
 				'wrapper' => array(
 					'width' => '',
-					'class' => '',
+					'class' => 'test',
 					'id' => '',
 				),
 				'return_format' => 'array',
@@ -2014,7 +2326,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'key' => 'field_5beb3e73932a8',
 				'label' => 'c2a Background color',
 				'name' => 'c2a_bg_color',
-				'type' => 'select',
+				'type' => 'button_group',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => 0,
@@ -2024,18 +2336,14 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'choices' => array(
-					'#F1F1F9' => 'default',
-					'#2F7E98' => 'blue',
-					'#A4405C' => 'red',
-				),
-				'default_value' => array(
+					'default' => 'Default',
+					'red' => 'Red',
+					'blue' => 'Blue',
 				),
 				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 1,
-				'ajax' => 0,
-				'return_format' => 'array',
-				'placeholder' => '',
+				'default_value' => '',
+				'layout' => 'horizontal',
+				'return_format' => 'value',
 			),
 		),
 		'location' => array(
@@ -2152,9 +2460,9 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				array(
-					'param' => 'post_type',
+					'param' => 'post_template',
 					'operator' => '==',
-					'value' => 'events',
+					'value' => 'page-templates/page-events.php',
 				),
 			),
 		),
@@ -2170,7 +2478,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
 		'key' => 'group_5bed985c18021',
-		'title' => 'c2a 2nd',
+		'title' => 'c2a with show hide option',
 		'fields' => array(
 			array(
 				'key' => 'field_5bed986cec909',
@@ -2196,7 +2504,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'label' => 'Intro title',
 				'name' => 'intro_title_inner-2',
 				'type' => 'text',
-				'instructions' => '',
+				'instructions' => 'Optional. If you leave this blank it will not show on the webpage',
 				'required' => 0,
 				'conditional_logic' => array(
 					array(
@@ -2223,7 +2531,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'label' => 'Intro text',
 				'name' => 'intro_text_inner-2',
 				'type' => 'textarea',
-				'instructions' => '',
+				'instructions' => 'Optional. If you leave blank it will now show on the site.',
 				'required' => 0,
 				'conditional_logic' => array(
 					array(
@@ -2304,7 +2612,8 @@ if( function_exists('acf_add_local_field_group') ):
 				'label' => 'c2a cool image mask',
 				'name' => 'c2a_cool_mask-2',
 				'type' => 'true_false',
-				'instructions' => '',
+				'instructions' => 'This effect is nice for atmospheric images. It might not be nice for portraits. But try it you can always turn this switch off and the image appears normally.
+	This may not work with Safari browsers at this time. But don\'t worry the image will appear without the mask instead.',
 				'required' => 0,
 				'conditional_logic' => array(
 					array(
@@ -2385,7 +2694,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'key' => 'field_5bed985c1be20',
 				'label' => 'c2a Background color',
 				'name' => 'c2a_bg_color-2',
-				'type' => 'select',
+				'type' => 'button_group',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => array(
@@ -2403,18 +2712,14 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'choices' => array(
-					'#F1F1F9' => 'default',
-					'#2F7E98' => 'blue',
-					'#A4405C' => 'red',
-				),
-				'default_value' => array(
+					'default' => 'Default',
+					'red' => 'Red',
+					'blue' => 'Blue',
 				),
 				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 1,
-				'ajax' => 0,
-				'return_format' => 'array',
-				'placeholder' => '',
+				'default_value' => '',
+				'layout' => 'horizontal',
+				'return_format' => 'value',
 			),
 		),
 		'location' => array(
@@ -2430,6 +2735,27 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'post',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'events',
+				),
+			),
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-templates/page-common.php',
+				),
+			),
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-templates/about.php',
 				),
 			),
 		),

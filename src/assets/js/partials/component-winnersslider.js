@@ -52,7 +52,7 @@ const WinnersSlider = {
     let winnerHasUrlBegin
     let winnerHasUrlEnd
     let winnerHasUrlLabel
-    console.dir(res);
+    // console.dir(res);
     for (let i = 0; i < aWinners.length; i++) {
       winner = aWinners[i]
 

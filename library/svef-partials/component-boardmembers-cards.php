@@ -5,7 +5,8 @@
             <?php
                 $args = array (
                     'post_type'       => 'boardmembers',
-                    'posts_per_page'	=>  1,
+										'posts_per_page'	=>  1,
+										'orderby' => 'title',
                     'order'						=> 'ASC',
                     'tax_query' => array(
                         'relation' => 'AND',
@@ -71,7 +72,8 @@
 
                 $args2 = array (
                     'post_type'       => 'boardmembers',
-                    'posts_per_page'	=>  6,
+										'posts_per_page'	=>  6,
+										'orderby' => 'title',
                     'order'						=> 'ASC',
                     'tax_query' => array(
                         'relation' => 'AND',

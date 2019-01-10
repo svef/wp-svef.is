@@ -13,12 +13,9 @@ const SectionsApear = {
     this.fadeIn(this.sectionEventLink, '-300')
     this.fadeIn(this.section, 0)
     this.scaleIn(this.sectionFlip)
-
     if (window.innerWidth > 640) {
       this.backgroundParalax(this.imgMask)
-
     }
-
   },
   cacheDom(){
     this.body = Global.body
@@ -31,7 +28,6 @@ const SectionsApear = {
   },
   fadeIn(el, offset) {
     let controller = new ScrollMagic.Controller()
-
     $(el).each(function () {
       let self = this
       let movethebox = new TimelineMax()
@@ -51,7 +47,6 @@ const SectionsApear = {
       // colorEnd: 'green',
       // indent: 100
       // })
-
     })
   },
   scaleIn(el) {
@@ -63,7 +58,7 @@ const SectionsApear = {
       .fromTo(self, 0.1, {y: 10, scale: '0.8', opacity: 0 }, {delay: delay, y: 0, scale: '1', opacity: 1, ease: Expo.easeOut,  yoyoEase:true})
       new ScrollMagic.Scene({
         triggerElement: self,
-        duration: '60%',
+        duration: '30%',
         offset: 0,
         triggerHook: "onEnter",
         reverse: false
@@ -77,13 +72,10 @@ const SectionsApear = {
       // indent: 100
       // })
     })
-
-
   },
 
   backgroundParalax(el){
     let controller = new ScrollMagic.Controller()
-
     $(el).each(function () {
       let self = this
       let movethebox = new TimelineMax()
@@ -103,21 +95,16 @@ const SectionsApear = {
       // colorEnd: 'green',
       // indent: 100
       // })
-
     })
   },
   fadeInOnLoadmore(el) {
-
     let delayTime = 0.3
     $(el).each(function () {
       let self = this
       delayTime += 0.3
       TweenMax.set(self, {y:10, ease: Sine.easeInOut })
       TweenMax.to(self, 0.5, {delay: delayTime, opacity: 1,y:0, ease: Sine.easeInOut })
-
     })
   }
-
-
 }
 module.exports = SectionsApear
