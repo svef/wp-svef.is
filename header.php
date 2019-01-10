@@ -23,14 +23,6 @@
 
 		<?php wp_head(); ?>
 
-		<?php
-			$analytics_gtag_code = get_field('analytics_gtag_code', 'option');
-		?>
-		<!-- Global site tag gtag.js - Google Analytics -->
-		<?php if($analytics_gtag_code) : ?>
-			<?php echo $analytics_gtag_code; ?>
-        <?php endif; ?>
-
 	</head>
 	<body <?php body_class($dark_mode); ?>>
 
