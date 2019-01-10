@@ -95,22 +95,13 @@ const Header = {
     }
   },
   clickSiteContrast(e) {
-    let ajaxObj = {}
-    ajaxObj.action = "set_darkmode"
+
     if (!this.body.classList.contains('body--contrast')) {
       this.body.classList.add('body--contrast')
-      ajaxObj.isDark = true
-      Global.postAjax(ajaxObj).done(function (jData) {
-        // we could add some kind of easter egg when darkmode is turned on here
-        return true
-      })
+      Global.setCookie('isDark', 'true', 1)
     } else {
       this.body.classList.remove('body--contrast')
-      ajaxObj.isDark = false
-      Global.postAjax(ajaxObj).done(function (jData) {
-        // same with easter egg when darkmod is turned off
-        return false
-      })
+      Global.setCookie('isDark', 'false', 1)
     }
   },
   navBarScrollBehaviour(header) {

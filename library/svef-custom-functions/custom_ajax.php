@@ -95,18 +95,6 @@ function get_next_page(){
 }
 
 
-add_action('wp_ajax_nopriv_set_darkmode', 'set_darkmode'); // make shure you dont have to be logged in to the backend to access this.
-add_action('wp_ajax_set_darkmode', 'set_darkmode');
-function set_darkmode(){
-	try {
-		$_SESSION['isDark'] = $_POST['isDark'];
-		echo  $_POST['isDark'] == 'true' ? '{"success": "session is dark"}' : '{"success": "session is light"}' ;
-		exit;
-	} catch (Exception $err ) {
-		echo json_encode($err, true);
-	}
-}
-
 
 add_action('wp_ajax_nopriv_submitPostlist', 'submitPostlist'); // make sure you dont have to be logged in to the backend to access this.
 add_action('wp_ajax_submitPostlist', 'submitPostlist');
