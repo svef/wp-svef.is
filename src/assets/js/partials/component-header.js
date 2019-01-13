@@ -108,8 +108,11 @@ const Header = {
   },
   ceckForDarkmode() {
     let isDark = Global.getCookie('isDark')
-    if (isDark && isDark == 'true') {
+    if (isDark && isDark == 'true' && ! this.body.classList.contains('body--contrast')) {
       this.body.classList.add('body--contrast')
+    }
+    if (isDark && isDark == 'false' && this.body.classList.contains('body--contrast')) {
+      this.body.classList.remove('body--contrast')
     }
   },
   navBarScrollBehaviour(header) {
