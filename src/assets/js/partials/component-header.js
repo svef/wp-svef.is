@@ -10,6 +10,7 @@ const Header = {
     this.checkForBrowserType()
     Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'language selector for Iceladic')
     Global.addAriaLabel(this.languageLinkEn, 'aria-label', 'language selector for English')
+    this.ceckForDarkmode()
   },
   cacheDom() {
     this.body = Global.body;
@@ -105,7 +106,12 @@ const Header = {
       Global.setCookie('isDark', 'false', 1)
     }
   },
-
+  ceckForDarkmode() {
+    let isDark = Global.getCookie('isDark')
+    if (isDark && isDark == 'true') {
+      this.body.classList.add('body--contrast')
+    }
+  },
   navBarScrollBehaviour(header) {
     let statPos = 0
     let scrollPos = 0
