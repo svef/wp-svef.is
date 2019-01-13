@@ -60,7 +60,7 @@ function get_next_page(){
 				'paged' 					=> $page_number + 1,
 		)
 	);
-	;
+
 	$the_query = new WP_Query( $args[$s_post_type] );
 	$a_combined_post_data = [];
 	$a_wp_posts = $the_query->posts;

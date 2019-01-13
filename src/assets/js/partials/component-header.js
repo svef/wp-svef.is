@@ -37,6 +37,7 @@ const Header = {
     this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
+
   animateMenuItems(element){
     let delayTime = 0
     $(element).each(function (){
@@ -104,6 +105,7 @@ const Header = {
       Global.setCookie('isDark', 'false', 1)
     }
   },
+
   navBarScrollBehaviour(header) {
     let statPos = 0
     let scrollPos = 0
