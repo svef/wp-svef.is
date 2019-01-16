@@ -37,7 +37,7 @@ const JobFeed = {
     for (let i = 0; i <= 3; i++) {
       // we are using a css grid and our cards are offest in a different way. We use an extended ternary to set the correct large-offset-(n)
       offset = i < 1 ? 2 : i == 1 ? 0 : i > 1 && i % 2 ? 0 : 1
-      // Who likes writint square brackets and i over and oever again
+      // Who likes writing square brackets and i over and over again
       feedData = feed[i]
       cardTitle = feedData.rss.title
       // some titles are to long and we cant realy controll that. but we can shorten them a little

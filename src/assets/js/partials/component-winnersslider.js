@@ -36,14 +36,14 @@ const WinnersSlider = {
   getSelectValue(e) {
     // console.log(e.target.value)
     const ajaxReques = {'action' : 'ajax_request', 'id': e.target.value}
-    Global.postAjax(ajaxReques).done(this.changeSlider)
+    Global.postAjax(ajaxReques).done(this.changeSlider.bind(this))
 
   },
 
   changeSlider(res) {
     // console.log(res)
     // WinnersSlider.sliderHeader.innerHTML = ''
-    WinnersSlider.destroyCarousel(WinnersSlider.slider)
+    this.destroyCarousel(this.slider)
     let newSlider = ''
     const acf = res.acf
     const aWinners = acf.winners_slider
@@ -72,9 +72,9 @@ const WinnersSlider = {
         </div>` : ''
     }
     // WinnersSlider.sliderHeader.innerHTML = res.post.post_title
-    WinnersSlider.slider.innerHTML = ''
-    WinnersSlider.slider.insertAdjacentHTML('beforeend', newSlider)
-    WinnersSlider.setCarousel(WinnersSlider.slider, WinnersSlider.sliderOptions)
+    this.slider.innerHTML = ''
+    this.slider.insertAdjacentHTML('beforeend', newSlider)
+    this.setCarousel(this.slider, this.sliderOptions)
   },
 
   sliderOptions : {

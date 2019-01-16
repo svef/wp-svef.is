@@ -22,8 +22,6 @@
 					<?php svef_partial('library/svef/icons/down-caret.svg'); ?>
 				</label>
 			</div>
-
-
 		</div>
 	</div>
 

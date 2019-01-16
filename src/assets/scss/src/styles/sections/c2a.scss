@@ -34,7 +34,7 @@
       clip-path: url('#mask');
       height: 460px;
       left:0;
-      background-attachment: scroll;
+      // background-attachment: scroll;
       background-attachment: fixed;
       &-landscape{
         background-size: 100%;
@@ -59,7 +59,7 @@
         top: 0;
         background-position: center;
         background-size: cover;
-
+        background-attachment: scroll;
       }
     }
     &--no-mask {
@@ -72,12 +72,12 @@
         margin: 0 auto;
       }
       @include breakpoint(small down) {
-        background-attachment: scroll;
         height: 260px;
         top: 0;
 
         background-size: cover;
         background-position: center;
+        background-attachment: scroll;
       }
     }
 
