@@ -1,7 +1,4 @@
 <?php
-// if(!session_id()) {
-// 	session_start();
-// }
 /**
  * The template for displaying the header
  *
@@ -18,8 +15,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Samtök vefiðnaðarins á Íslandi (SVEF) eru samtök einstaklinga sem hafa áhuga á vefmálum og/eða starfa innan vefgeirans. SVEF stendur fyrir ýmsum viðburðum fyrir félagsmenn sína eins og umræðukvöldum, ráðstefnum t.d. ICEWEB. SVEF er jafnframt umsjónaraðili Íslensku vefverðlaunanna sem veitt eru árlega.">
-		<meta name="keywords" content="vefsíður, vefir, vefsvæði, vefgeirinn, vefiðnaður, ICEWEB, Íslensku vefverðlaunin, vefverðlaun, veflausnir, vefsíðugerð, vefarar, vefsmiðir, vefforritari, vefforritarar">
+
 
 		<?php wp_head(); ?>
 
