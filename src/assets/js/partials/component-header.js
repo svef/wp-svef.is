@@ -8,7 +8,7 @@ const Header = {
     this.addEvents()
     this.navBarScrollBehaviour(this.header)
     this.checkForBrowserType()
-    Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'language selector for Iceladic')
+    Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'Túngumála tengill til að velja Íslensku')
     Global.addAriaLabel(this.languageLinkEn, 'aria-label', 'language selector for English')
     this.ceckForDarkmode()
   },
@@ -140,10 +140,11 @@ const Header = {
         if (st < statPos){
           scrollUp = true;
           $(header).removeClass('scrolledTop');
-          $(this.btnOpenSignup).css('margin-top', '-60px')
+          // $(this.btnOpenSignup).css('margin-top', '0px')
+          $(this.btnOpenSignup).css('margin-top', '-'+$(header).height()+'px')
         } else {
           scrollUp = false;
-          $(this.btnOpenSignup).css('margin-top', '0px')
+          $(this.btnOpenSignup).css('margin-top','0')
         }
         statPos = st;
       }
