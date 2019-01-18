@@ -18,8 +18,8 @@ const Header = {
     this.header = this.body.querySelector('.site-header')
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
-    this.btnContrast = this.body.querySelector('.nav__suprise')
-    this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
+    //this.btnContrast = this.body.querySelector('.nav__suprise')
+    //this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
     this.menuOverlay = this.body.querySelector('.menu-overlay')
     this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
     this.btnOpenSignupMobile = this.body.querySelector('#btnOpenSignupMobile')
@@ -34,8 +34,8 @@ const Header = {
     this.btnMenu.addEventListener('click', this.handleMenuClick.bind(this))
     this.body.addEventListener('click', this.clickedOutSideMenu.bind(this))
     this.body.addEventListener('keyup', this.escapeMenu.bind(this))
-    this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
-    this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
+    //this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
+    //this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
 

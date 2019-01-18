@@ -22,7 +22,6 @@
 						}
 					?>
 				</ul>
-				<button class="nav__suprise show-for-medium" aria-label="Change backround contrast"></button>
 				<button id="btnMenu" class="nav__menu-button link-text--menu"  aria-label="menu">
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
@@ -46,7 +45,6 @@
 							}
 						?>
 					</ul>
-					<button class="nav__suprise nav__suprise--mobile show-for-small-only" aria-label="Change backround contrast"></button>
 				</div>
 				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
 			</div>

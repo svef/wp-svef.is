@@ -190,6 +190,9 @@ a {
 .category-text {
   @extend a;
 }
+.winners-slide__category {
+  @extend a;
+}
 
 .link-text {
   &--menu {

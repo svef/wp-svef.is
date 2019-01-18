@@ -81,15 +81,15 @@ get_header(); ?>
 
 		<?php
 
-			$a_jobfeed = array(
+			/* $a_jobfeed = array(
 				'jobfeed_title' => get_field('jobfeed_title'),
 				'jobfeed_text' => get_field('jobfeed_text'),
 				'jobfeed_image' => get_field('jobfeed_image')
-			);
+			); */
 		?>
 
 
-		<?php svef_partial("library/svef-partials/component-jobfeed", $a_jobfeed ); ?>
+		<?php /* svef_partial("library/svef-partials/component-jobfeed", $a_jobfeed ); */ ?>
 
 		<?php svef_partial('library/svef-partials/component-winners-slider', ['winners_title' => get_field('winners_title')]); ?>
 
