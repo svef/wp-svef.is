@@ -57,8 +57,12 @@ get_header(); ?>
 			'paragraph' => get_field('video_text'),
 			'video' => get_field('video')
 		);
-
-		svef_partial('library/svef-partials/component-video', $a_video );
+		if (get_field('add_video')) {
+			svef_partial('library/svef-partials/component-video', $a_video );
+		} else {
+			echo '';
+		}
+		
 
 		svef_partial('library/svef-partials/component-logowall');
 
