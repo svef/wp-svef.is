@@ -8,6 +8,7 @@ get_header(); ?>
 
 		<?php
 			svef_partial("library/svef-partials/component-boardmembers-page");
+			svef_partial('library/svef-partials/component-logowall');
 		?>
 
 	</article>

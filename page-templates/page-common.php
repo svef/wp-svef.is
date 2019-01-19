@@ -33,6 +33,7 @@ get_header(); ?>
 
 				svef_partial("library/svef-partials/component-c2a", $a_c2a_2nd);
 			endif;
+			svef_partial('library/svef-partials/component-logowall');
 		?>
 	</article>
 <?php endwhile; ?>

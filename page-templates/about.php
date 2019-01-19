@@ -58,6 +58,7 @@ get_header(); ?>
 				'board_link' => get_field('board_link')
 			);
 			svef_partial("library/svef-partials/component-boardmembers-cards", $a_board_section_text);
+			svef_partial('library/svef-partials/component-logowall');
 		?>
 
 

@@ -36,6 +36,10 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<?php
+			svef_partial('library/svef-partials/component-logowall');
+		?>
+
 
 
 	</article>
