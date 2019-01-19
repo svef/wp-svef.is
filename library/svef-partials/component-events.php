@@ -43,7 +43,7 @@
 					// $link_is_external = $direct_link_isset ? $direct_link  : get_permalink();
 					// $link_target = $direct_link_isset ? '_blank' : '' ;
 					$event_is_over = strtotime($event_date) < time() ? true : false;
-					$local_date = date_i18n("d M Y", strtotime($event_date));
+					$local_date = date_i18n("d. M Y", strtotime($event_date));
 
 					$event_is_over_class = $event_is_over ? ' section__event--passed ' : '';
 					$event_count++;
