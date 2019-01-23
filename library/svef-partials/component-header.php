@@ -1,3 +1,28 @@
+<script>
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	};
+	var isDark = getCookie('isDark');
+	var body = document.querySelector('body');
+	if (isDark && isDark == 'true' && ! body.classList.contains('body--contrast')) {
+		body.classList.add('body--contrast')
+	}
+	if (isDark && isDark == 'false' && body.classList.contains('body--contrast')) {
+		body.classList.remove('body--contrast')
+	}
+</script>
 <header class="site-header">
 		<nav class="nav" role="navigation">
 				<div class="nav__logo">
@@ -22,6 +47,7 @@
 						}
 					?>
 				</ul>
+				<button class="nav__suprise show-for-medium" aria-label="Change background contrast"></button>
 				<button id="btnMenu" class="nav__menu-button link-text--menu"  aria-label="menu">
 					<span class="nav__icon">
 						<span class="nav__icon__line"></span>
@@ -45,6 +71,7 @@
 							}
 						?>
 					</ul>
+					<button class="nav__suprise nav__suprise--mobile show-for-small-only" aria-label="Change background contrast"></button>
 				</div>
 				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
 			</div>

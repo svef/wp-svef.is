@@ -10,16 +10,16 @@ const Header = {
     this.checkForBrowserType()
     Global.addAriaLabel(this.languageLinkIs, 'aria-label', 'Túngumála tengill til að velja Íslensku')
     Global.addAriaLabel(this.languageLinkEn, 'aria-label', 'language selector for English')
-    this.ceckForDarkmode()
+    // this.checkForDarkmode()
   },
   cacheDom() {
     this.body = Global.body;
-    // this.body = document.querySelector('body')
+    this.body = document.querySelector('body')
     this.header = this.body.querySelector('.site-header')
     this.btnMenu = this.body.querySelector('#btnMenu')
     this.sideMenu = this.body.querySelector('.side-menu')
-    //this.btnContrast = this.body.querySelector('.nav__suprise')
-    //this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
+    this.btnContrast = this.body.querySelector('.nav__suprise')
+    this.btnContrastMobile = this.body.querySelector('.nav__suprise--mobile')
     this.menuOverlay = this.body.querySelector('.menu-overlay')
     this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
     this.btnOpenSignupMobile = this.body.querySelector('#btnOpenSignupMobile')
@@ -34,8 +34,8 @@ const Header = {
     this.btnMenu.addEventListener('click', this.handleMenuClick.bind(this))
     this.body.addEventListener('click', this.clickedOutSideMenu.bind(this))
     this.body.addEventListener('keyup', this.escapeMenu.bind(this))
-    //this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
-    //this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
+    this.btnContrast.addEventListener('click', this.clickSiteContrast.bind(this))
+    this.btnContrastMobile.addEventListener('click', this.clickSiteContrast.bind(this))
     window.addEventListener('scroll', this.windowScrollHandler.bind(this))
   },
 
@@ -119,7 +119,7 @@ const Header = {
       })
     }
   },
-  ceckForDarkmode() {
+/*   checkForDarkmode() {
     let isDark = Global.getCookie('isDark')
     if (isDark && isDark == 'true' && ! this.body.classList.contains('body--contrast')) {
       this.body.classList.add('body--contrast')
@@ -127,7 +127,7 @@ const Header = {
     if (isDark && isDark == 'false' && this.body.classList.contains('body--contrast')) {
       this.body.classList.remove('body--contrast')
     }
-  },
+  }, */
   navBarScrollBehaviour(header) {
     let statPos = 0
     let scrollPos = 0
