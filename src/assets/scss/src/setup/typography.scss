@@ -187,10 +187,7 @@ a {
     text-decoration: none;
   }
 }
-.category-text {
-  @extend a;
-}
-.winners-slide__category {
+.winners-slide__category, .winners-slide__text {
   @extend a;
 }
 
