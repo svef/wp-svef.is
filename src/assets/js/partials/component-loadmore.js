@@ -46,9 +46,9 @@ const LoadMorePosts = {
     for (let i = 0; i < posts.length; i++) {
       const post = posts[i];
       postLink = post.wp.permalink
-      newsImgGallery = post.acf.news_image_gallery.length > 0 ? `<div class="img small-11 medium-4">
+      newsImgGallery = post.acf.news_image_gallery && post.acf.news_image_gallery.length > 0 ? `<div class="img small-11 medium-4">
       <img src="${post.acf.news_image_gallery[0].sizes.medium}" alt=""></div>` : ''
-      infoContainerClasses = post.acf.news_image_gallery.length > 0 ? 'small-12 medium-6' : 'small-12 medium-10'
+      infoContainerClasses = post.acf.news_image_gallery && post.acf.news_image_gallery.length > 0 ? 'small-12 medium-6' : 'small-12 medium-10'
       date = post.wp.localised_date
       postTitle = post.wp.post_title
       excerpt = post.wp.custom_excerpt
