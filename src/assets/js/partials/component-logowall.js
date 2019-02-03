@@ -4,7 +4,11 @@ const Logowall = {
   init() {
     this.cacheDom()
     $(this.visibleLogo).exists(() => {
-      this.randomLogoSwap()
+      let iAllLogos = this.allLogos.lenght
+      if (iAllLogos > 3) {
+        this.randomLogoSwap()
+
+      }
     })
   },
   cacheDom() {
