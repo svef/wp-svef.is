@@ -4,7 +4,7 @@ const Logowall = {
   init() {
     this.cacheDom()
     $(this.visibleLogo).exists(() => {
-      let iAllLogos = this.allLogos.length
+      let iAllLogos = this.body.querySelectorAll('.client-logo').length
       if (iAllLogos > 3) {
         this.randomLogoSwap()
 
