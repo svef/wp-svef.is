@@ -304,6 +304,72 @@
   color: #aaa;
 }
 
+#gform_wrapper_3 {
+  width: 100%;
+
+  h2.section_title {
+    font-size: 1.5em;
+  }
+}
+
+
+.gform_page_footer {
+  text-align: right;
+  .button {
+    @extend .btnMain;
+    @extend button;
+    font-size: 11px !important;
+  }
+}   
+
+#gform_3 {
+  
+  margin: 0 auto;
+  max-width: 80%;
+  
+  .gf_page_steps {
+    font-family: Overpass, sans-serif;
+    margin-bottom: 30px;
+  }
+
+  .gsection_description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.75;
+
+    h4 {
+      margin: 30px 0 10px;
+    }
+  }
+
+  .gfield {
+    margin: 0 0 16px;
+  }
+
+  .ginput_total {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  ul {
+    width: 100%;
+    li {
+      margin: 0 0 40px;
+    }
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .frmsignup [type=checkbox]:not(:checked)+label:after, 
+  [type=checkbox]:checked+label:after {
+    width: 11px;
+    height: 12px;
+  }
+}
+
 .gfield {
   width: calc(100% - 16px);
   .gfield_label {

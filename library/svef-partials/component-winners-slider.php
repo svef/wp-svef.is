@@ -7,6 +7,7 @@
 					'post_type' => 'winners',
 					'posts_per_page' =>  1,
 					'order'	=> 'ASC',
+					'orderby' => 'post_date'
 				);
 				$the_winners_query = new WP_Query( $args );
 				$first_post_title = $the_winners_query->posts[0];

@@ -1,7 +1,7 @@
 {
   "name": "svef",
   "title": "SVEF",
-  "version": "2.10.4",
+  "version": "2.10.5",
   "description": "FoundationPress is a WordPress starter theme based on Foundation 6 by Zurb",
   "homepage": "https://foundationpress.olefredrik.com",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "foundation-sites": "6.4.3",
     "jquery": "~3.0.0",
     "motion-ui": "~1.2.2",
+    "node-sass": "^4.13.0",
     "owl.carousel": "^2.3.4",
     "what-input": "^4.1.3"
   },
