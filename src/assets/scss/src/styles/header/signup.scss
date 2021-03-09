@@ -304,12 +304,32 @@
   color: #aaa;
 }
 
-#gform_wrapper_3 {
+#gform_wrapper_3, #gform_wrapper_4 {
   width: 100%;
 
   h2.section_title {
     font-size: 1.5em;
   }
+
+  .form_saved_message {
+    color: black;
+    border: 1px solid lightgray;
+    background-color: inherit;
+
+    .resume_form_link_wrapper {
+      margin-left: 0;
+      a.resume_form_link {
+        color: black;
+      }
+    }
+    #gform_send_resume_link_button_4 {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 0;
+    }
+  }
+
 }
 
 
@@ -326,6 +346,7 @@
   
   margin: 0 auto;
   max-width: 80%;
+  width: 1200px;
   
   .gf_page_steps {
     font-family: Overpass, sans-serif;
@@ -349,6 +370,12 @@
   .ginput_total {
     font-size: 18px;
     font-weight: 800;
+  }
+
+  .gform_save_link {
+    float: left;
+    padding: 20px 20px 0 0;
+    margin: 0;
   }
 
   ul {
