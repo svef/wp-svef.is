@@ -92,14 +92,10 @@
   left: calc((-184px / 2) + 30px);
   top: 50vh;
   transform: rotate(-90deg);
-  opacity: 0;
+  opacity: 1;
   transition: all 400ms $transition;
-  &--clicked {
-      left: calc(50vw - (184/2)*1px);
-      @include breakpoint(medium down) {
-        left: calc(100vw - ((184px / 2) - -30px));
-      }
-  }
+  text-transform: uppercase;
+
   @include breakpoint(small down) {
     transform: rotate(0);
     left: 50%;
@@ -342,7 +338,7 @@
   }
 }   
 
-#gform_3, #gform_4 {
+.frmsignup.frmsignup {
   
   margin: 0 auto;
   max-width: 80%;

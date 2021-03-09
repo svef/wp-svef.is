@@ -10,7 +10,6 @@ const Loader = {
     this.cacheDom()
     this.addEvents()
     this.stopScroll()
-    this.signupBtnSetup()
   },
   cacheDom(){
     this.body = Global.body
@@ -19,7 +18,6 @@ const Loader = {
     this.heroInfoText = this.body.querySelector('.section__info')
     this.heroBanner = this.body.querySelector('.section--hero')
     this.heroBackCol1 = this.body.querySelector('.back-col-1')
-    this.btnOpenSignup = this.body.querySelector('#btnOpenSignup')
   },
   addEvents(){
     document.addEventListener("DOMContentLoaded", this.loadReadyHandler.bind(this))
@@ -38,7 +36,7 @@ const Loader = {
         $(this.heroBanner).exists( () => {
             this.heroBanerSetup()
         })
-        this.signupAppears()
+        
       })
     }
   },
@@ -62,10 +60,6 @@ const Loader = {
         tl.fromTo(this.heroBackCol1, 0.5, {opacity: 0, x:40}, {opacity:1, x: 0, ease: Sine.easeInOut})
         tl.fromTo(this.heroImg,0.4,{opacity: 0, x:-20}, {opacity: 1, x: 0, ease: Sine.easeInOut})
         tl.fromTo(this.heroInfoText,0.7,{opacity: 0, x:20}, {opacity: 1,x: 0, ease: Sine.easeInOut})
-  },
-
-  signupBtnSetup() {
-    this.btnOpenSignup.style.opacity = 0
   },
 
   signupAppears() {

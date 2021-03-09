@@ -2,7 +2,6 @@ import $ from 'jquery'
 import whatInput from 'what-input'
 import Global from './global-functions'
 import Header from './partials/component-header'
-import Signup from './partials/component-signup'
 import Imagegallery from './partials/component-imagegallery'
 import WinnersSlider from './partials/component-winnersslider'
 import JobFeed from './partials/component-jobfeed'
@@ -37,7 +36,6 @@ $.fn.exists = function (callback) {
 /** invoke our scipts */
 Loader.init()
 Header.init()
-Signup.init()
 HeroSlider.init()
 Imagegallery.init()
 WinnersSlider.init()

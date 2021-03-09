@@ -73,10 +73,10 @@
 					</ul>
 					<button class="nav__suprise nav__suprise--mobile show-for-small-only" aria-label="Change background contrast"></button>
 				</div>
-				<button id="btnOpenSignupMobile" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></button>
+				<a href="/skraning" class="btnMain btnSignup btnFixedOff show-for-small-only"><?php pll_e('Skráning í svef') ?></a>
 			</div>
 		</div>
-		<button id="btnOpenSignup" class="btnMain btnSignup show-for-medium" tabindex="0"><?php pll_e('Skráning í svef') ?></button>
+		<a href="/skraning" class="btnMain btnSignup show-for-medium" tabindex="0"><?php pll_e('Skráning í svef') ?></a>
 		<?php svef_partial('library/svef-partials/component-signup'); ?>
 		<div class="side-signup-overlay"></div>
 		<div class="menu-overlay"></div>
