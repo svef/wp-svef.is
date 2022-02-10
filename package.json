@@ -29,7 +29,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "jquery": "~3.0.0",
     "motion-ui": "~1.2.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "owl.carousel": "^2.3.4",
     "what-input": "^4.1.3"
   },
